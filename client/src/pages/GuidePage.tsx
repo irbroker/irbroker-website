@@ -104,6 +104,7 @@ export default function GuidePage({ guide }: { guide: Guia }) {
               <li key={source.url}>
                 <a href={source.url} target="_blank" rel="noopener">
                   {source.nome}
+                  <span className="sr-only"> (abre em nova aba)</span>
                 </a>
               </li>
             ))}

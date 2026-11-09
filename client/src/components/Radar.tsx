@@ -11,7 +11,7 @@ export function RadarNotes({ notes, showContact = true }: { notes: RadarNote[]; 
     <h3>{note.titulo}</h3>
     <p className="radar-summary">{note.resumo}</p>
     <div className="radar-impact"><p className="radar-impact-label">O que muda para a sua empresa</p><p>{note.oQueMuda}</p></div>
-    <p className="radar-sources"><span>Fonte: </span>{note.fontes.map((source, index) => <span key={source.url}>{index > 0 && <span aria-hidden="true"> · </span>}<a href={source.url} target="_blank" rel="noopener">{source.nome}</a></span>)}</p>
+    <p className="radar-sources"><span>Fonte: </span>{note.fontes.map((source, index) => <span key={source.url}>{index > 0 && <span aria-hidden="true"> · </span>}<a href={source.url} target="_blank" rel="noopener">{source.nome}<span className="sr-only"> (abre em nova aba)</span></a></span>)}</p>
     {showContact && <a className="content-text-link" href={`/contato?frente=${encodeURIComponent(note.frente)}`}>{note.botao}</a>}
   </article>)}</div>;
 }
