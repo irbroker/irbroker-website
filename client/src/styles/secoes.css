@@ -98,21 +98,9 @@ p {
   color: var(--on-dark-muted);
   max-width: 355px;
 }
-/* Momento autoral (só com JS, desktop e sem movimento reduzido: classe .method-pinned).
-   A seção ocupa ~2,75 telas; o conteúdo fica fixo por ~1,75 tela enquanto a linha se desenha. */
-.method-pinned.method-section {
-  height: 275vh;
-  padding-block: 0;
-}
-.method-pinned .method-sticky {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 64px;
-}
+/* Momento autoral (só com JS e sem movimento reduzido: classe .method-animated).
+   Quando a seção entra na tela, a linha se desenha uma vez (~1,5s) e acende os passos em sequência;
+   a seção rola normalmente, sem fixar. Ao final os três passos ficam plenos. */
 .method-progress {
   position: absolute;
   left: 0;
