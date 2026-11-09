@@ -146,7 +146,7 @@
 .guide-list-item a:hover {
   text-decoration-color: var(--teal);
 }
-.contents-guides {
+.contents-radar {
   margin-top: 72px;
 }
 .guide-list {
@@ -345,7 +345,7 @@
   .guide-list-item h3 {
     font-size: 26px;
   }
-  .contents-guides {
+  .contents-radar {
     margin-top: 56px;
   }
   .home-radar {
@@ -397,4 +397,129 @@
   padding-bottom: 17px;
   background: var(--paper);
   border-bottom: 1px solid var(--graphite-a18);
+}
+
+/* Grade editorial do radar (como .home-radar): área e data na coluna lateral, conteúdo na principal. */
+.radar-note,
+.radar-item summary,
+.radar-detail {
+  display: grid;
+  grid-template-columns: minmax(160px, .35fr) minmax(0, 1fr);
+  column-gap: 30px;
+}
+.radar-note > * {
+  grid-column: 2;
+}
+.radar-note > .content-meta {
+  grid-column: 1;
+  grid-row: 1 / span 5;
+  align-self: start;
+}
+.radar-note h3 {
+  margin-top: 0;
+}
+.radar-detail > div {
+  grid-column: 2;
+}
+.radar-list {
+  margin-top: 30px;
+  padding: 0;
+  list-style: none;
+}
+.radar-list > li {
+  border-top: 1px solid var(--graphite-a18);
+}
+.radar-list > li:last-child {
+  border-bottom: 1px solid var(--graphite-a18);
+}
+.radar-item {
+  scroll-margin-top: 150px;
+}
+.radar-item summary {
+  position: relative;
+  padding-block: 24px;
+  cursor: pointer;
+  list-style: none;
+}
+.radar-item summary::-webkit-details-marker {
+  display: none;
+}
+/* Seta desenhada em CSS: aponta para baixo fechada e para cima aberta. */
+.radar-item summary::after {
+  content: '';
+  position: absolute;
+  top: 34px;
+  right: 6px;
+  width: 10px;
+  height: 10px;
+  border-right: 1.5px solid var(--graphite);
+  border-bottom: 1.5px solid var(--graphite);
+  transform: rotate(45deg);
+}
+.radar-item[open] summary::after {
+  top: 39px;
+  transform: rotate(-135deg);
+}
+.radar-item summary h3 {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1.3;
+  max-width: 48ch;
+}
+.radar-item summary:hover h3 {
+  text-decoration: underline;
+  text-decoration-color: var(--teal);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+.radar-detail {
+  padding-bottom: 30px;
+}
+.radar-detail .radar-summary {
+  margin-top: 0;
+  color: var(--ink-soft);
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 68ch;
+}
+/* Guias em /conteudos na mesma grade: área na coluna lateral. */
+@media (min-width: 768px) {
+  .contents-guides .guide-list-item {
+    display: grid;
+    grid-template-columns: minmax(160px, .35fr) minmax(0, 1fr);
+    column-gap: 30px;
+  }
+  .contents-guides .guide-list-item > * {
+    grid-column: 2;
+  }
+  .contents-guides .guide-list-item > .content-meta {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    align-self: start;
+  }
+  .contents-guides .guide-list-item h3 {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .radar-note,
+  .radar-detail {
+    display: block;
+  }
+  .radar-note h3 {
+    margin-top: 12px;
+  }
+  .radar-item summary {
+    display: block;
+    padding-right: 36px;
+  }
+  .radar-item summary h3 {
+    margin-top: 12px;
+    font-size: 23px;
+  }
+  .radar-detail .radar-summary {
+    font-size: 17px;
+  }
 }
