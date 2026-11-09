@@ -36,8 +36,7 @@ export default function Home() {
     </section>
     <section className="section process-section">
       <div className="wrap"><div className="process-heading"><p className="section-label"><span className="small-rule" />Como trabalhamos</p><AnimatedHeading>A seguradora emite a apólice.<br />A irbroker trabalha do seu lado.</AnimatedHeading></div>
-        <ProcessDiagram />
-        <div className="process-descriptions">{process.map(([title, text]) => <p key={title}><span className="sr-only">{title}: </span>{text}</p>)}</div>
+        <ProcessDiagram steps={process} />
       </div>
     </section>
     <MethodSteps />

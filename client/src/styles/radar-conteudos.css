@@ -110,8 +110,8 @@
 }
 .radar-impact .radar-impact-label {
   font-family: 'Source Sans 3', sans-serif;
-  font-size: 13px;
-  color: var(--muted);
+  font-size: 14px;
+  color: var(--ink-soft);
   margin-bottom: 7px;
 }
 .radar-impact > p:last-child {

@@ -147,8 +147,7 @@ export default function Contact() {
               items={[{ label: "Contato" }]}
             />
             <h1>
-              Vamos conversar sobre
-              <br className="desktop-break" /> a sua empresa.
+              Vamos conversar sobre a sua empresa.
             </h1>
             <p className="contact-aside__lead">
               Conte como a sua operação funciona. Um especialista da irbroker

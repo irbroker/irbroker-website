@@ -211,9 +211,6 @@ img {
   .section-intro {
     margin-top: 23px;
   }
-  .desktop-break {
-    display: none;
-  }
   .site {
     position: relative;
     overflow-y: auto;

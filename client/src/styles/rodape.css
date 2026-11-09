@@ -643,9 +643,11 @@
   }
   .site-footer.footer-editorial .footer-editorial-social {
     margin-top: 38px;
+    justify-self: start; /* o Chrome aplica justify-self também em bloco */
   }
   .site-footer.footer-editorial .footer-editorial-social-links {
     margin-top: 14px;
+    margin-left: -12px; /* o alvo de 44px centra o ícone de 20px: puxa o ícone para a margem */
   }
   .site-footer.footer-editorial .footer-editorial-legal {
     align-items: flex-start;
