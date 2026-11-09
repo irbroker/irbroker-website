@@ -1,0 +1,354 @@
+/* Painéis das frentes (home) e indicador móvel. */
+.panel-link::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 1px;
+  transform-origin: left;
+}
+.vertical-panel:hover .panel-link::after,
+.vertical-panel:focus-visible .panel-link::after {
+  transform: scaleX(1);
+}
+.verticals-section {
+  padding-top: 111px;
+}
+.verticals-heading {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 58px;
+}
+.verticals-heading .section-label {
+  width: 24%;
+  flex-shrink: 0;
+}
+.verticals-heading h2 {
+  flex: 1;
+}
+.vertical-panels {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--paper);
+}
+.vertical-panel {
+  flex: 1 0 20%;
+  min-width: 215px;
+  min-height: 495px;
+  position: relative;
+  color: var(--paper);
+  isolation: isolate;
+  overflow: hidden;
+  scroll-snap-align: start;
+  border-right: 1px solid var(--white-a22);
+}
+.vertical-panel:last-child {
+  border: 0;
+}
+.vertical-panel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.5);
+  z-index: -3;
+}
+.panel-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+.panel-copy {
+  position: absolute;
+  inset: auto 26px 35px;
+}
+.panel-copy h3 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -.03em;
+  margin-bottom: 21px;
+}
+.panel-copy p {
+  min-height: 76px;
+  color: var(--on-photo-panel);
+}
+.panel-link {
+  position: relative;
+  display: inline-block;
+  font-size: 15px;
+  margin-top: 26px;
+}
+.panel-link::after {
+  transform: scaleX(1);
+  background: var(--paper-a60);
+  transition: none;
+}
+.vertical-panel:hover .panel-link::after {
+  background: var(--accent);
+}
+.panel-brand {
+  position: absolute;
+  top: 37px;
+  left: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.panel-wordmark {
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: -.035em;
+}
+.panel-wordmark.comex {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+.panel-wordmark.wellcare {
+  font-family: 'Figtree', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+@media (min-width: 1600px) {
+  .vertical-panel {
+    min-height: 565px;
+  }
+  .panel-copy {
+    left: 36px;
+    right: 36px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .verticals-heading .section-label {
+    width: 20%;
+  }
+  .vertical-panel {
+    min-width: 222px;
+  }
+}
+
+@media (max-width: 767px) {
+  .verticals-section {
+    padding-top: 70px;
+  }
+  .verticals-heading {
+    display: block;
+    margin-bottom: 34px;
+  }
+  .verticals-heading .section-label {
+    width: auto;
+    margin-bottom: 27px;
+  }
+  .verticals-heading h2 {
+    max-width: 380px;
+  }
+  .vertical-panels {
+    padding-left: 22px;
+    padding-right: 22px;
+    gap: 2px;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 22px;
+    touch-action: pan-x pan-y;
+    scrollbar-width: none;
+  }
+  .vertical-panel {
+    flex: 0 0 77%;
+    min-width: 255px;
+  }
+  .panel-copy {
+    inset: auto 26px 31px;
+  }
+  .panel-copy h3 {
+    font-size: 34px;
+  }
+  .panel-copy p {
+    min-height: 63px;
+    max-width: 245px;
+  }
+  .panel-brand {
+    top: 31px;
+  }
+  .vertical-panel {
+    min-height: 490px;
+  }
+}
+
+@media (max-width: 420px) {
+  .vertical-panel {
+    flex-basis: 84%;
+  }
+}
+
+.vertical-panels {
+  position: relative;
+}
+.panel-shade {
+  background: var(--graphite-a66);
+}
+.verticals-section {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+}
+.vertical-panel .panel-photo {
+  filter: saturate(.75);
+}
+.vertical-panel .panel-logo {
+  position: static;
+  inset: auto;
+  display: block;
+  width: 100%;
+  max-width: 182px;
+  height: auto;
+  max-height: 56px;
+  object-fit: contain;
+  object-position: left center;
+  z-index: auto;
+  filter: none;
+}
+.vertical-panel .panel-logo.comex {
+  max-width: 190px;
+}
+.vertical-panel .panel-logo.wellcare {
+  max-width: 169px;
+}
+.panel-brand {
+  gap: 19px;
+  right: 22px;
+}
+.panel-transport .panel-photo {
+  object-position: 46% center;
+}
+.panel-port .panel-photo {
+  object-position: 28% center;
+}
+.panel-construction .panel-photo {
+  object-position: 49% center;
+}
+.panel-corporate .panel-photo {
+  object-position: 55% center;
+}
+
+@media (max-width: 767px) {
+  .vertical-panel .panel-logo {
+    max-width: 212px;
+    max-height: 65px;
+  }
+  .vertical-panel .panel-logo.comex {
+    max-width: 220px;
+  }
+  .vertical-panel .panel-logo.wellcare {
+    max-width: 202px;
+  }
+}
+
+.vertical-indicator {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .vertical-indicator {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    height: 55px;
+  }
+  .vertical-indicator button {
+    display: flex;
+    flex: 1;
+    height: 44px;
+    min-width: 44px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 0;
+  }
+  .vertical-indicator button span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--indicator);
+  }
+  .vertical-indicator button[aria-current] span {
+    background: var(--graphite);
+  }
+  .vertical-panels::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.panel-copy p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .vertical-panels {
+    overflow: hidden;
+    scroll-snap-type: none;
+  }
+  .vertical-panel {
+    flex-basis: 0;
+    flex-shrink: 1;
+    min-width: 0;
+    min-height: 550px;
+    container-type: inline-size;
+  }
+  .vertical-panel .panel-copy {
+    left: 26px;
+    right: 26px;
+    bottom: 35px;
+  }
+  .vertical-panel .panel-details {
+    max-height: 0;
+    overflow: hidden;
+  }
+  .vertical-panel.panel-active .panel-details {
+    max-height: none;
+  }
+  .vertical-panel .panel-copy p {
+    min-height: 0;
+    max-width: 34ch;
+  }
+  .vertical-panel .panel-link {
+    margin-top: 24px;
+  }
+  .vertical-panel .panel-brand {
+    left: 26px;
+    right: 26px;
+  }
+  .vertical-panel .panel-logo {
+    max-height: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .panel-copy p {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .vertical-panel .panel-details {
+    max-height: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .vertical-panel .panel-copy h3 {
+    font-size: clamp(18px, 12cqw, 34px);
+    overflow-wrap: anywhere;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+

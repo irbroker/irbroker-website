@@ -1,0 +1,116 @@
+/* Identidades Comex Broker e WellCare. */
+.bridge-wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+  margin-bottom: 39px;
+}
+.bridge-wordmark > span:first-child {
+  font-size: 30px;
+  line-height: 1;
+}
+.bridge-wordmark.comex > span:first-child {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+.bridge-wordmark.wellcare > span:first-child {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 500;
+  font-size: 34px;
+}
+.theme-comex {
+  background: var(--comex-navy);
+  color: var(--paper);
+  --line: var(--white-a19);
+  --body: var(--comex-body);
+  --accent: var(--comex-gold);
+}
+.theme-comex h1,
+.theme-comex h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  letter-spacing: -.04em;
+}
+.theme-comex .hero-shade {
+  background: var(--comex-navy-a67);
+}
+.theme-comex .editorial-label {
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: .06em;
+}
+.theme-wellcare {
+  background: var(--wellcare-navy);
+  color: var(--paper);
+  --line: var(--white-a19);
+  --body: var(--wellcare-body);
+  --accent: var(--wellcare-cyan);
+  font-family: 'Figtree', sans-serif;
+}
+.theme-wellcare h1,
+.theme-wellcare h2,
+.theme-wellcare .signals-list li {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 300;
+}
+.theme-wellcare .hero-shade {
+  background: var(--wellcare-navy-a69);
+}
+.site-comex .header-contact {
+  border-color: var(--comex-gold);
+}
+.site-wellcare .header-contact {
+  border-color: var(--wellcare-cyan);
+}
+
+@media (max-width: 767px) {
+  .bridge-wordmark {
+    margin-bottom: 33px;
+  }
+}
+
+.theme-comex .vertical-hero .hero-shade {
+  background: var(--comex-navy-a70);
+}
+.theme-wellcare .vertical-hero .hero-shade {
+  background: var(--wellcare-navy-a70);
+}
+.panel-comex .panel-shade {
+  background: var(--comex-navy-a66);
+}
+.panel-wellcare .panel-shade {
+  background: var(--wellcare-navy-a66);
+}
+.theme-wellcare .small-rule {
+  height: 2px;
+  background: var(--yellow);
+}
+.bridge-logo {
+  width: 310px;
+  max-width: 80%;
+  height: auto;
+  max-height: 84px;
+  object-fit: contain;
+  object-position: left;
+}
+.bridge-wordmark.wellcare .bridge-logo {
+  width: 300px;
+}
+.panel-wellcare .panel-photo {
+  object-position: 44% center;
+}
+.theme-comex .button-solid,
+.theme-wellcare .button-solid {
+  background: var(--teal);
+  color: var(--graphite);
+}
+.theme-comex .button-solid:hover,
+.theme-wellcare .button-solid:hover {
+  background: var(--teal-light);
+}
+.video-hero.brand-comex .hero-shade {
+  background: linear-gradient(90deg, rgba(13,27,42,.8) 0%, rgba(13,27,42,.8) 65%, rgba(13,27,42,0) 100%);
+}

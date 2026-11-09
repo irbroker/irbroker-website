@@ -1,0 +1,12 @@
+/* Ponto único de entrada do CSS do site (carregado por client/index.html). A ordem importa. */
+@import './tokens.css';
+@import './base.css';
+@import './header.css';
+@import './hero.css';
+@import './secoes.css';
+@import './marcas.css';
+@import './paineis.css';
+@import './logos.css';
+@import './radar-conteudos.css';
+@import './contato.css';
+@import './rodape.css';

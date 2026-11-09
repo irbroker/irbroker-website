@@ -126,7 +126,8 @@ def compare(a_dir, b_dir):
         B = json.load(gzip.open(b_dir / 'estilos' / fa.name, 'rt', encoding='utf-8'))
         for state in A:
             sa, sb = A[state], B.get(state, {})
-            keys = set(sa) | set(sb)
+            # <head> e scripts não são renderizados; mudam de posição quando tags são removidas.
+            keys = {k for k in set(sa) | set(sb) if not k.startswith('html:0>head') and not k.rsplit('>', 1)[-1].startswith(('script', 'link', 'style'))}
             for k in sorted(keys):
                 if sa.get(k) == sb.get(k):
                     continue

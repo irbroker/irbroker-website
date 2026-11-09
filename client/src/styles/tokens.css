@@ -1,0 +1,67 @@
+/* Tokens do site. Únicos lugares com cores literais. */
+:root {
+  /* Paleta */
+  --paper: #F5F4F1; /* fundo claro */
+  --graphite: #1F2225; /* texto e fundos escuros */
+  --graphite-soft: #2A2E33;
+  --teal: #33B3BF; /* destaque irbroker */
+  --teal-light: #5DC5CE; /* hover do botão */
+  --yellow: #FDC61B; /* fio amarelo */
+  --yellow-dark: #A47A00; /* número em destaque (contraste AA) */
+  --white: #FFF;
+  --slate: #51565A; /* texto corrido */
+  --stone: #CFD0CA; /* fio sobre papel */
+  --ink-soft: #454B48; /* texto de conteúdos */
+  --muted: #626863; /* metadados */
+  --muted-cool: #9AA0A6; /* rodapé */
+  --sage-dark: #56615E;
+  --steel: #737A78; /* borda do WhatsApp */
+  --field-line: #909790; /* fio dos campos do formulário */
+  --connector: #A6AEAA; /* conector do diagrama */
+  --indicator: #BEC5BF; /* indicador móvel das frentes */
+  --rule-process: #BFC2BC;
+  --on-dark-muted: #C2C5C5;
+  --on-dark-soft: #C6CAC8;
+  --on-dark-lead: #D9DCDA;
+  --on-photo: #E5E5E1;
+  --on-photo-panel: #F0F1EB;
+  --mist: #EBEDE7; /* fundo de seção */
+  --mist-deep: #E9EBE5; /* fundo do bloco de projeto */
+  --sand: #EEECE6; /* caixa informativa */
+  --error: #923E26;
+  --error-dark: #8D2F2F;
+  --comex-navy: #0D1B2A; /* Comex Broker */
+  --comex-gold: #C9A15A; /* Comex Broker */
+  --comex-body: #CED3D7; /* Comex Broker */
+  --wellcare-navy: #06143A; /* WellCare */
+  --wellcare-cyan: #1CE4FB; /* WellCare */
+  --wellcare-body: #CCD6EB; /* WellCare */
+  --graphite-a09: #1F222516;
+  --graphite-a18: #1F22252E; /* fio de conteúdos */
+  --graphite-a40: #1F222566;
+  --graphite-a56: #1F222590;
+  --graphite-a62: #1F22259E;
+  --graphite-a66: #1F2225A8; /* véu de foto */
+  --graphite-a69: #1F2225B0;
+  --comex-navy-a66: #0D1B2AA8;
+  --comex-navy-a67: #0D1B2AAA;
+  --comex-navy-a70: #0D1B2AB3;
+  --wellcare-navy-a66: #06143AA8;
+  --wellcare-navy-a69: #06143AB0;
+  --wellcare-navy-a70: #06143AB3;
+  --paper-a47: #F5F4F178;
+  --paper-a50: #F5F4F180;
+  --paper-a60: #F5F4F199;
+  --white-a12: #FFFFFF1F;
+  --white-a19: #FFFFFF30;
+  --white-a20: #FFFFFF32;
+  --white-a21: #FFFFFF35;
+  --white-a22: #FFFFFF38;
+  --white-a40: #FFFFFF66;
+  --white-a47: #FFFFFF78;
+
+  /* Papéis (as identidades Comex, WellCare e conteúdos redefinem alguns) */
+  --accent: var(--teal);
+  --body: var(--slate);
+  --line: var(--stone);
+}

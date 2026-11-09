@@ -1,0 +1,234 @@
+/* Faixas de prova, números e grades de logos de seguradoras e clientes. */
+.partners-section {
+  padding-block: 84px;
+}
+.logo-band + .logo-band {
+  padding-top: 56px;
+  border-top: 1px solid var(--line);
+  margin-top: 58px;
+}
+.logo-band h2 {
+  font-size: 35px;
+}
+
+@media (max-width: 767px) {
+  .partners-section {
+    padding-block: 65px;
+  }
+  .logo-band h2 {
+    font-size: 33px;
+  }
+  .logo-band + .logo-band {
+    padding-top: 43px;
+  }
+}
+
+.partners-section .logo-band h2 {
+  font-size: 39px;
+}
+
+@media (max-width: 1100px) {
+  .partner-logo-grid {
+    gap: 20px 27px;
+  }
+}
+
+.proof-band {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  padding-block: 27px;
+}
+
+@media (max-width: 767px) {
+  .proof-band {
+    padding-block: 24px;
+  }
+}
+
+.partner-logo-grid {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  display: grid;
+  align-items: center;
+  column-gap: 0;
+  row-gap: 40px;
+  margin-top: 40px;
+}
+.partner-logo {
+  min-height: 60px;
+}
+.partner-logo img {
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 1199px) {
+  .partner-logo-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 959px) and (min-width: 768px) {
+  .partner-logo-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .partner-logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 24px;
+    row-gap: 24px;
+  }
+  .partner-logo {
+    min-height: 50px;
+  }
+}
+
+.partners-section.wrap {
+  width: 100%;
+  max-width: 1296px;
+  padding-inline: 0;
+}
+.grid-insurers {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 64px);
+}
+.grid-clients {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: repeat(3, 64px);
+}
+.partner-logo {
+  display: flex;
+  width: 100%;
+  height: 64px;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+}
+.partner-logo img {
+  display: block;
+  width: 160px;
+  height: 64px;
+  max-width: none;
+  max-height: none;
+  filter: none;
+  mix-blend-mode: normal;
+  opacity: 0.7;
+  transition: none;
+}
+.partner-logo:hover img,
+.partner-logo:focus-visible img {
+  opacity: 1;
+  filter: none;
+  mix-blend-mode: normal;
+}
+.partner-logo:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .grid-insurers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(7, 64px);
+  }
+  .grid-clients {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(6, 64px);
+  }
+}
+
+@media (max-width: 767px) {
+  .partners-section .logo-band h2 {
+    padding-inline: 22px;
+    font-size: 22px;
+  }
+  .grid-insurers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(7, 48px);
+  }
+  .grid-clients {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(6, 48px);
+  }
+  .partner-logo {
+    height: 48px;
+  }
+  .partner-logo img {
+    width: 120px;
+    height: 48px;
+  }
+}
+
+.proof-numbers {
+  padding-block: 30px 23px;
+  background: var(--paper);
+  border-bottom: 1px solid var(--graphite-a18);
+}
+.proof-number-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 32px;
+  row-gap: 24px;
+}
+.proof-number {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+}
+.proof-number strong {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 42px;
+  line-height: 1.05;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.proof-number .number-yellow {
+  color: var(--yellow-dark);
+}
+.proof-number p {
+  font-size: 15px;
+  line-height: 1.45;
+  max-width: 25ch;
+  color: var(--ink-soft);
+}
+.proof-numbers .proof-data-note {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .proof-number {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .proof-numbers {
+    padding-block: 28px 22px;
+  }
+  .proof-number-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px 22px;
+  }
+  .proof-number {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .proof-number strong {
+    font-size: 36px;
+  }
+  .proof-number p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .proof-numbers .proof-data-note {
+    font-size: 12px;
+  }
+}
+
