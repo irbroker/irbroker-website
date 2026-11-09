@@ -1,5 +1,6 @@
 import { insurerLogos, clientLogos } from "../data/partners";
 import type { PartnerLogo } from "../data/partners";
+import type { CSSProperties } from "react";
 import AnimatedHeading from "./AnimatedHeading";
 
 type LogoGridProps = {
@@ -12,7 +13,7 @@ function LogoGrid({ logos, label, gridClass }: LogoGridProps) {
   return (
     <div className={`partner-logo-grid ${gridClass}`} role="list" aria-label={label}>
       {logos.map(logo => (
-        <div className="partner-logo" key={logo.src} role="listitem">
+        <div className="partner-logo" key={logo.src} role="listitem" style={logo.escala ? { "--escala": logo.escala } as CSSProperties : undefined}>
           <img
             src={logo.src}
             alt={logo.alt}

@@ -89,9 +89,14 @@
   max-width: 1296px;
   padding-inline: 0;
 }
+/* 13 seguradoras: linhas centralizadas (7 + 6 no desktop, a última sozinha no centro no celular). */
 .grid-insurers {
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  grid-template-rows: repeat(2, 64px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.grid-insurers .partner-logo {
+  width: calc(100% / 7);
 }
 .grid-clients {
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -115,6 +120,7 @@
   mix-blend-mode: normal;
   opacity: 0.7;
   transition: none;
+  transform: scale(var(--escala, 1));
 }
 .partner-logo:hover img {
   opacity: 1;
@@ -123,9 +129,8 @@
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-  .grid-insurers {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(7, 64px);
+  .grid-insurers .partner-logo {
+    width: 50%;
   }
   .grid-clients {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -138,9 +143,8 @@
     padding-inline: 22px;
     font-size: 22px;
   }
-  .grid-insurers {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(7, 48px);
+  .grid-insurers .partner-logo {
+    width: 50%;
   }
   .grid-clients {
     grid-template-columns: repeat(3, minmax(0, 1fr));
