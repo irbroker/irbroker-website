@@ -93,10 +93,20 @@
   max-width: 68ch;
 }
 .radar-impact {
-  border-left: 2px solid var(--yellow);
-  padding-left: 22px;
+  position: relative;
+  padding-top: 16px;
   margin: 25px 0;
   max-width: 68ch;
+}
+/* Filete superior curto (o padrão de rótulo do site) no lugar da borda lateral grossa. */
+.radar-impact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  background: var(--yellow);
 }
 .radar-impact .radar-impact-label {
   font-family: 'Source Sans 3', sans-serif;
@@ -269,7 +279,7 @@
   margin-top: 9px;
 }
 .guide-informative {
-  border-left: 2px solid var(--yellow);
+  border-left: 1px solid var(--yellow);
   padding: 17px 22px;
   margin-block: 40px;
   background: var(--sand);
@@ -334,9 +344,6 @@
   .radar-note h3,
   .guide-list-item h3 {
     font-size: 26px;
-  }
-  .radar-impact {
-    padding-left: 17px;
   }
   .contents-guides {
     margin-top: 56px;
