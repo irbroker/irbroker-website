@@ -116,3 +116,4 @@ _detector.json
 
 # Capturas de comparação visual (scripts/capturas.py)
 _visual/
+__pycache__/
