@@ -281,7 +281,7 @@ export function Footer({ path = '/' }: { path?: string }) {
         </div>
       </div>
     </footer>
-    <dialog id="privacy-policy-dialog" className="privacy-dialog" ref={dialog} aria-labelledby="privacy-policy-title" onClick={event => { if (event.target === event.currentTarget) dialog.current?.close(); }}>
+    <dialog id="privacy-policy-dialog" className="privacy-dialog" data-lenis-prevent ref={dialog} aria-labelledby="privacy-policy-title" onClick={event => { if (event.target === event.currentTarget) dialog.current?.close(); }}>
       <button className="dialog-close" autoFocus aria-label="Fechar" onClick={() => dialog.current?.close()}>×</button>
       <h2 id="privacy-policy-title">Política de privacidade</h2><p>[A PREENCHER]</p>
     </dialog>
