@@ -113,3 +113,6 @@ temp/
 client/public/__manus__/version.json
 
 _detector.json
+
+# Capturas de comparação visual (scripts/capturas.py)
+_visual/
