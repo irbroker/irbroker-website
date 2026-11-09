@@ -4,7 +4,7 @@ Uso:
   python scripts/capturas.py _visual/antes            # capturas 1366 e 390 + estilos
   python scripts/capturas.py _visual/depois
   python scripts/capturas.py --comparar _visual/antes _visual/depois
-  python scripts/capturas.py --revisao _visual/final  # páginas inteiras + 404 + método e hover (revisão de design)
+  python scripts/capturas.py --revisao _visual/final  # páginas inteiras + 404 + método (antes/depois de animar) e hover
 Base: variável BASE_URL (padrão http://127.0.0.1:5173).
 """
 import gzip
@@ -100,17 +100,22 @@ def review(out_dir):
                 page.wait_for_timeout(150)
                 page.screenshot(path=str(out / f'{name}.png'), full_page=True)
             ctx.close()
-        # Sem movimento reduzido: método fixo com a linha desenhando e hover do vídeo do topo.
+        # Sem movimento reduzido: o método anima sozinho ao entrar na tela (a linha se desenha uma vez,
+        # useInView com amount .6 na .method-line). Captura antes de a linha entrar e depois da animação.
         ctx = browser.new_context(viewport={'width': 1366, 'height': 800}, device_scale_factor=1)
         page = ctx.new_page()
         page.goto(BASE + '/', wait_until='load')
-        page.wait_for_selector('.method-pinned', timeout=20000)
-        load_images(page, log, 'home_1366_metodo')
-        top, height = page.evaluate("(() => { const s = document.querySelector('.method-section'); return [s.getBoundingClientRect().top + scrollY, s.offsetHeight - innerHeight]; })()")
-        for suffix, frac in (('metodo', .5), ('metodo_fim', .92)):
-            page.evaluate(f'window.scrollTo(0, {top + height * frac})')
-            page.wait_for_timeout(1200)
-            page.screenshot(path=str(out / f'home_1366_{suffix}.png'))
+        page.wait_for_selector('.method-section.method-animated .method-line', timeout=20000)
+        page.wait_for_timeout(500)  # hidratação
+        # Sem load_images aqui: rolar a página inteira dispararia a animação antes da captura "antes".
+        # Linha logo abaixo da dobra (fora da tela): título do método visível, animação ainda não disparada.
+        page.evaluate("(() => { const l = document.querySelector('.method-line'); window.scrollTo(0, l.getBoundingClientRect().top + scrollY - innerHeight + 4); })()")
+        page.wait_for_timeout(1500)  # a rolagem suave (Lenis) leva ~1s para assentar
+        page.screenshot(path=str(out / 'home_1366_metodo.png'))
+        page.evaluate("(() => { const l = document.querySelector('.method-line'); const r = l.getBoundingClientRect(); window.scrollTo(0, r.top + scrollY - (innerHeight - r.height) / 2); })()")
+        page.wait_for_function("document.querySelectorAll('.method-step.is-active').length === 3", timeout=10000)
+        page.wait_for_timeout(600)
+        page.screenshot(path=str(out / 'home_1366_metodo_fim.png'))
         for route in ('/', '/comex-broker'):
             page.goto(BASE + route, wait_until='load')
             page.wait_for_selector('.hero-video', timeout=20000)
