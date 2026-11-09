@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import { verticals } from '../data/content';
 import { brand } from '../data/media';
 
@@ -7,6 +8,16 @@ export function Header({ light = true, path = '/' }: { light?: boolean; path?: s
   const [solutionsOpen, setSolutionsOpen] = useState(false);
   const [headerScrolled, setHeaderScrolled] = useState(false);
   const header = useRef<HTMLElement>(null);
+  const guide = path.startsWith('/conteudos/');
+  const { scrollY } = useScroll();
+  // Progresso de leitura do artigo do guia (decorativo: o tempo de leitura já está no texto).
+  const reading = useTransform(scrollY, y => {
+    const article = guide && typeof document !== 'undefined' ? document.querySelector<HTMLElement>('article.guide-reading') : null;
+    if (!article) return 0;
+    const top = article.getBoundingClientRect().top + y;
+    const range = article.offsetHeight - window.innerHeight;
+    return Math.min(1, Math.max(0, range > 0 ? (y - top) / range : 1));
+  });
 
   useEffect(() => {
     const desktop = window.matchMedia('(min-width: 768px)');
@@ -103,6 +114,7 @@ export function Header({ light = true, path = '/' }: { light?: boolean; path?: s
         <a className="button header-contact" href="/contato">Falar com um especialista</a>
       </nav>
     </div>
+    {guide && <motion.span className="reading-progress" aria-hidden="true" style={{ scaleX: reading }} />}
   </header>;
 }
 
