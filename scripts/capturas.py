@@ -4,6 +4,7 @@ Uso:
   python scripts/capturas.py _visual/antes            # capturas 1366 e 390 + estilos
   python scripts/capturas.py _visual/depois
   python scripts/capturas.py --comparar _visual/antes _visual/depois
+  python scripts/capturas.py --revisao _visual/final  # páginas inteiras + 404 + método e hover (revisão de design)
 Base: variável BASE_URL (padrão http://127.0.0.1:5173).
 """
 import gzip
@@ -53,6 +54,76 @@ def settle(page):
     page.evaluate('''() => { document.querySelectorAll('video').forEach(v => { v.pause(); v.currentTime = 0; });
       for (const a of document.getAnimations()) { try { a.finish(); } catch (e) { a.cancel(); } } }''')
     page.wait_for_timeout(250)
+
+
+# Rola em passos para disparar loading="lazy", volta ao topo e espera toda <img> decodificar.
+LOAD_IMAGES_JS = r'''async () => {
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  // Faixas com rolagem horizontal (home 390) não disparam lazy com a rolagem vertical.
+  document.querySelectorAll('img[loading="lazy"]').forEach(i => { i.loading = 'eager'; });
+  for (let y = 0; y < document.documentElement.scrollHeight; y += 400) { window.scrollTo(0, y); await sleep(150); }
+  window.scrollTo(0, 0);
+  const deadline = Date.now() + 15000;
+  // Só as visíveis: img lazy dentro de display:none nunca carrega e travaria a espera.
+  const imgs = () => [...document.images].filter(i => { const r = i.getBoundingClientRect(); const cs = getComputedStyle(i); return r.width > 0 && r.height > 0 && cs.visibility !== 'hidden' && cs.display !== 'none'; });
+  while (Date.now() < deadline && imgs().some(i => !(i.complete && i.naturalWidth > 0))) await sleep(200);
+  await Promise.race([Promise.all(imgs().map(i => i.decode().catch(() => {}))), sleep(5000)]);
+  const visible = imgs();
+  return { total: visible.length, broken: visible.filter(i => !i.naturalWidth).map(i => i.currentSrc || i.src) };
+}'''
+
+
+def load_images(page, log, name):
+    res = page.evaluate(LOAD_IMAGES_JS)
+    page.wait_for_timeout(300)
+    log.append(f"{name}: {res['total']} img visíveis, {len(res['broken'])} com naturalWidth 0 {res['broken'] or ''}")
+    print(log[-1], flush=True)
+    return res
+
+
+def review(out_dir):
+    from playwright.sync_api import sync_playwright
+    out = Path(out_dir)
+    out.mkdir(parents=True, exist_ok=True)
+    log = []
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        for width in SHOT_WIDTHS:
+            ctx = browser.new_context(viewport={'width': width, 'height': 900}, reduced_motion='reduce', device_scale_factor=1)
+            page = ctx.new_page()
+            for route in ROUTES + ['/rota-inexistente']:
+                page.goto(BASE + route, wait_until='load')
+                settle(page)
+                name = f'{slug(route)}_{width}'
+                load_images(page, log, name)
+                page.add_style_tag(content=FREEZE_CSS)
+                page.wait_for_timeout(150)
+                page.screenshot(path=str(out / f'{name}.png'), full_page=True)
+            ctx.close()
+        # Sem movimento reduzido: método fixo com a linha desenhando e hover do vídeo do topo.
+        ctx = browser.new_context(viewport={'width': 1366, 'height': 800}, device_scale_factor=1)
+        page = ctx.new_page()
+        page.goto(BASE + '/', wait_until='load')
+        page.wait_for_selector('.method-pinned', timeout=20000)
+        load_images(page, log, 'home_1366_metodo')
+        top, height = page.evaluate("(() => { const s = document.querySelector('.method-section'); return [s.getBoundingClientRect().top + scrollY, s.offsetHeight - innerHeight]; })()")
+        for suffix, frac in (('metodo', .5), ('metodo_fim', .92)):
+            page.evaluate(f'window.scrollTo(0, {top + height * frac})')
+            page.wait_for_timeout(1200)
+            page.screenshot(path=str(out / f'home_1366_{suffix}.png'))
+        for route in ('/', '/comex-broker'):
+            page.goto(BASE + route, wait_until='load')
+            page.wait_for_selector('.hero-video', timeout=20000)
+            load_images(page, log, f'{slug(route)}_1366_hover')
+            page.evaluate("""() => new Promise(r => { const v = document.querySelector('.hero-video');
+              v.addEventListener('seeked', () => { v.pause(); r(); }, { once: true }); v.currentTime = 6; })""")
+            box = page.locator('.hero-video').bounding_box()
+            page.mouse.move(box['x'] + box['width'] / 2, box['y'] + min(box['height'], 800 - box['y']) / 2)
+            page.wait_for_timeout(400)
+            page.screenshot(path=str(out / f'{slug(route)}_1366_hover.png'))
+        ctx.close()
+        browser.close()
+    (out / 'imagens.log').write_text('\n'.join(log) + '\n', encoding='utf-8')
 
 
 def capture(out_dir, only_motion=False):
@@ -145,6 +216,8 @@ def compare(a_dir, b_dir):
 if __name__ == '__main__':
     if sys.argv[1] == '--movimento':
         capture(sys.argv[2], only_motion=True)
+    elif sys.argv[1] == '--revisao':
+        review(sys.argv[2])
     elif sys.argv[1] == '--comparar':
         compare(sys.argv[2], sys.argv[3])
     else:
