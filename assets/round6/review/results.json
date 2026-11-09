@@ -1,0 +1,123 @@
+{
+  "1440": {
+    "logoHeight": 36,
+    "graphite": true,
+    "social": [
+      {
+        "label": "irbroker no Instagram",
+        "href": "https://www.instagram.com/irbroker_/",
+        "svg": {
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "label": "irbroker no LinkedIn",
+        "href": "https://br.linkedin.com/company/irbroker",
+        "svg": {
+          "width": 20,
+          "height": 20
+        }
+      }
+    ],
+    "contactFont": {
+      "size": "28px",
+      "family": "\"Source Serif 4\", Georgia, serif"
+    },
+    "poster": {
+      "width": 1920,
+      "position": "50% 40%"
+    },
+    "waHomeHeroHidden": true,
+    "waMiddleVisible": true,
+    "waFooterHidden": true,
+    "privacyOpens": true,
+    "noOverflow": true,
+    "waContactAlwaysHidden": true,
+    "liaExact15px": true
+  },
+  "375": {
+    "logoHeight": 36,
+    "graphite": true,
+    "social": [
+      {
+        "label": "irbroker no Instagram",
+        "href": "https://www.instagram.com/irbroker_/",
+        "svg": {
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "label": "irbroker no LinkedIn",
+        "href": "https://br.linkedin.com/company/irbroker",
+        "svg": {
+          "width": 20,
+          "height": 20
+        }
+      }
+    ],
+    "contactFont": {
+      "size": "22px",
+      "family": "\"Source Serif 4\", Georgia, serif"
+    },
+    "poster": {
+      "width": 1920,
+      "position": "50% 40%"
+    },
+    "waHomeHeroHidden": true,
+    "waMiddleVisible": true,
+    "waFooterHidden": true,
+    "privacyOpens": true,
+    "noOverflow": true,
+    "waContactAlwaysHidden": true,
+    "liaExact15px": true
+  },
+  "414": {
+    "logoHeight": 36,
+    "graphite": true,
+    "social": [
+      {
+        "label": "irbroker no Instagram",
+        "href": "https://www.instagram.com/irbroker_/",
+        "svg": {
+          "width": 20,
+          "height": 20
+        }
+      },
+      {
+        "label": "irbroker no LinkedIn",
+        "href": "https://br.linkedin.com/company/irbroker",
+        "svg": {
+          "width": 20,
+          "height": 20
+        }
+      }
+    ],
+    "contactFont": {
+      "size": "22px",
+      "family": "\"Source Serif 4\", Georgia, serif"
+    },
+    "poster": {
+      "width": 1920,
+      "position": "50% 40%"
+    },
+    "waHomeHeroHidden": true,
+    "waMiddleVisible": true,
+    "waFooterHidden": true,
+    "privacyOpens": true,
+    "noOverflow": true,
+    "waContactAlwaysHidden": true,
+    "liaExact15px": true
+  },
+  "comex": {
+    "originalBytesIdentical": true,
+    "contentType": "image/svg+xml",
+    "vectorOnly": true,
+    "heroAndPanelSameSVG": true
+  },
+  "reducedMotion": {
+    "footerUnderlineInstant": true
+  },
+  "pageErrors": []
+}

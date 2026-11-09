@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+# A origem pública ainda não foi configurada.

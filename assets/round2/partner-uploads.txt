@@ -1,0 +1,38 @@
+# WebDev upload results
+# Todos os 32 arquivos foram enviados com sucesso.
+# Formato: arquivo local -> storage path
+
+assets/round2/optimized-logos/insurer-01.png -> /manus-storage/insurer-01_8570960e.png
+assets/round2/optimized-logos/insurer-02.png -> /manus-storage/insurer-02_834bd48c.png
+assets/round2/optimized-logos/insurer-03.png -> /manus-storage/insurer-03_c1c9f209.png
+assets/round2/optimized-logos/insurer-04.png -> /manus-storage/insurer-04_b90a7040.png
+assets/round2/optimized-logos/insurer-05.png -> /manus-storage/insurer-05_113d6722.png
+assets/round2/optimized-logos/insurer-06.png -> /manus-storage/insurer-06_c61c0592.png
+assets/round2/optimized-logos/insurer-07.png -> /manus-storage/insurer-07_5c1e037a.png
+assets/round2/optimized-logos/insurer-08.png -> /manus-storage/insurer-08_e21160a2.png
+assets/round2/optimized-logos/insurer-09.png -> /manus-storage/insurer-09_e8052f48.png
+assets/round2/optimized-logos/insurer-10.png -> /manus-storage/insurer-10_4955a53b.png
+assets/round2/optimized-logos/insurer-11.png -> /manus-storage/insurer-11_337bf939.png
+assets/round2/optimized-logos/insurer-12.png -> /manus-storage/insurer-12_af95ef49.png
+assets/round2/optimized-logos/insurer-13.png -> /manus-storage/insurer-13_0df76c01.png
+assets/round2/optimized-logos/insurer-14.png -> /manus-storage/insurer-14_9fe56eb5.png
+assets/round2/optimized-logos/client-15.png -> /manus-storage/client-15_7e779130.png
+assets/round2/optimized-logos/client-16.png -> /manus-storage/client-16_ee4c129c.png
+assets/round2/optimized-logos/client-17.png -> /manus-storage/client-17_34da17d4.png
+assets/round2/optimized-logos/client-18.png -> /manus-storage/client-18_093ba8f8.png
+assets/round2/optimized-logos/client-19.png -> /manus-storage/client-19_0158244c.png
+assets/round2/optimized-logos/client-20.png -> /manus-storage/client-20_97abde56.png
+assets/round2/optimized-logos/client-21.png -> /manus-storage/client-21_245d3f33.png
+assets/round2/optimized-logos/client-22.png -> /manus-storage/client-22_642eaa91.png
+assets/round2/optimized-logos/client-23.png -> /manus-storage/client-23_5e61b7c4.png
+assets/round2/optimized-logos/client-24.png -> /manus-storage/client-24_d1f8fa09.png
+assets/round2/optimized-logos/client-25.png -> /manus-storage/client-25_32c7fed9.png
+assets/round2/optimized-logos/client-26.png -> /manus-storage/client-26_40817621.png
+assets/round2/optimized-logos/client-27.png -> /manus-storage/client-27_1f9042dd.png
+assets/round2/optimized-logos/client-28.png -> /manus-storage/client-28_29394160.png
+assets/round2/optimized-logos/client-29.png -> /manus-storage/client-29_1981d1e4.png
+assets/round2/optimized-logos/client-30.png -> /manus-storage/client-30_ce30e6a8.png
+assets/round2/optimized-logos/client-31.png -> /manus-storage/client-31_f81cf118.png
+assets/round2/optimized-logos/client-32.png -> /manus-storage/client-32_ff3fa746.png
+
+Total: 32 | Success: 32 | Failed: 0

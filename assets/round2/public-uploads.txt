@@ -1,0 +1,54 @@
+Uploading file: assets/round2/optimized/irbroker-simbolo.png (size: 30721 bytes)
+Upload timeout: 2m0s
+File uploaded successfully!
+CDN URL: https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/LNrvvdjguSXJKslo.png
+Uploading file: assets/round2/optimized/carreta-rodovia-aerea.webp (size: 212128 bytes)
+Upload timeout: 2m0s
+File uploaded successfully!
+CDN URL: https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/ozwuRpmcqdMNVAuW.webp
+Uploading file: assets/round2/optimized/diretoria-skyline.webp (size: 127688 bytes)
+Upload timeout: 2m0s
+File uploaded successfully!
+CDN URL: https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/uIqKBwitXLRisELL.webp
+Uploading file: assets/round2/optimized/equipe-diversa.webp (size: 108336 bytes)
+Upload timeout: 2m0s
+File uploaded successfully!
+CDN URL: https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/GhdtRGvLvYbMtFFS.webp
+Uploading file: assets/round2/optimized/executivos-diversos.webp (size: 121982 bytes)
+Upload timeout: 2m0s
+File uploaded successfully!
+CDN URL: https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/LTGowjxBCnacIfdS.webp
+Uploading file: assets/round2/optimized/floresta-sol.webp (size: 148036 bytes)
+Upload timeout: 2m0s
+File uploaded successfully!
+CDN URL: https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/jHOaJjjPyFaqxOka.webp
+Uploading file: assets/round2/optimized/navio-entardecer.webp (size: 172502 bytes)
+Upload timeout: 2m0s
+File uploaded successfully!
+CDN URL: https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/vGhZCtRurOojeGjT.webp
+Uploading file: assets/round2/optimized/obra-aerea-guindaste.webp (size: 324000 bytes)
+Upload timeout: 2m0s
+File uploaded successfully!
+CDN URL: https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/BmTQpPDGzIRFRjms.webp
+Uploading file: assets/round2/optimized/porto-navio-guindaste.webp (size: 172302 bytes)
+Upload timeout: 2m0s
+File uploaded successfully!
+CDN URL: https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/diCNiEQqtXhArvxc.webp
+Uploading file: assets/round2/optimized/sp-por-do-sol.webp (size: 180434 bytes)
+Upload timeout: 2m0s
+File uploaded successfully!
+CDN URL: https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/veZpuFWWayqQgIqU.webp
+
+========== Upload Summary ==========
+[SUCCESS] assets/round2/optimized/irbroker-simbolo.png -> https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/LNrvvdjguSXJKslo.png
+[SUCCESS] assets/round2/optimized/carreta-rodovia-aerea.webp -> https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/ozwuRpmcqdMNVAuW.webp
+[SUCCESS] assets/round2/optimized/diretoria-skyline.webp -> https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/uIqKBwitXLRisELL.webp
+[SUCCESS] assets/round2/optimized/equipe-diversa.webp -> https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/GhdtRGvLvYbMtFFS.webp
+[SUCCESS] assets/round2/optimized/executivos-diversos.webp -> https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/LTGowjxBCnacIfdS.webp
+[SUCCESS] assets/round2/optimized/floresta-sol.webp -> https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/jHOaJjjPyFaqxOka.webp
+[SUCCESS] assets/round2/optimized/navio-entardecer.webp -> https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/vGhZCtRurOojeGjT.webp
+[SUCCESS] assets/round2/optimized/obra-aerea-guindaste.webp -> https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/BmTQpPDGzIRFRjms.webp
+[SUCCESS] assets/round2/optimized/porto-navio-guindaste.webp -> https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/diCNiEQqtXhArvxc.webp
+[SUCCESS] assets/round2/optimized/sp-por-do-sol.webp -> https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/veZpuFWWayqQgIqU.webp
+=====================================
+Total: 10, Success: 10, Failed: 0

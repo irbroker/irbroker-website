@@ -1,0 +1,86 @@
+Rodada 8: tirar redundâncias, refazer a página de contato, vídeo na Comex e corrigir detalhes. Anexei irbroker-rodada8.zip (pasta logos-padronizados, vídeo comex-loop.mp4 com comex-poster.jpg e o novo hero-loop.mp4 com hero-poster.jpg). Siga item por item. Confira cada página no desktop e no celular.
+
+1. FECHAMENTO + RODAPÉ EM UM BLOCO SÓ
+Hoje a seção "Vamos conversar sobre a sua empresa." fica colada no rodapé "Fale com a gente": são dois convites de contato seguidos.
+- Remova a seção separada "Vamos conversar sobre a sua empresa." de todas as páginas.
+- A primeira faixa do rodapé passa a ser o fechamento. À esquerda, o título "Vamos conversar sobre a sua empresa." em Source Serif 4 (40px no desktop, 30px no celular) com um botão embaixo. À direita, sem o rótulo "Fale com a gente", os links grandes do telefone e do e-mail e o link "Falar no WhatsApp".
+- O botão do fechamento diz "Falar com um especialista". Nas páginas das frentes, diz "Falar sobre <nome da frente>" e leva a /contato?frente=<nome>.
+- O logo branco sai do topo do rodapé e vai para a linha legal, pequeno (24px), antes de "© 2026 irbroker".
+- Na página /contato, o rodapé não mostra a faixa de fechamento nem os endereços (a própria página já mostra os dois). Só aparecem as frentes, as redes e a linha legal.
+
+2. PÁGINAS DAS FRENTES
+- Tire o botão do topo de todas as páginas das frentes e páginas-ponte (hoje "Falar com um especialista" em Transporte, Construção e Corporate, "Falar com a Comex Broker" e "Falar com a WellCare"). Hoje o mesmo convite aparece no topo e no fim. O único convite da página fica no fechamento do rodapé, com o nome da frente ("Falar sobre Transporte de cargas", "Falar com a Comex Broker", "Falar com a WellCare").
+- Remova o bloco com o botão "Falar sobre <frente>" do meio da página (ele passa para o fechamento do rodapé).
+- Nas notas do Radar dentro das páginas das frentes, tire o link "Falar sobre <frente>" de cada nota.
+
+3. CABEÇALHO
+Tire "Contato" do menu, porque o botão "Falar com um especialista" já leva para /contato. O menu fica: Soluções, Sobre, Conteúdos e o botão.
+
+4. NÚMEROS SEM REPETIÇÃO NA HOME
+- A faixa logo abaixo do topo vira a única faixa de números: os 4 números (95% taxa de renovação dos clientes · +50 contratos de benefícios em vida e saúde · +20 seguradoras e resseguradoras parceiras · +20 anos de experiência dos profissionais), compactos e em linha sobre papel, o primeiro em amarelo, com a nota "Dados declarados pela irbroker, consolidados de todas as frentes." em 12px. No celular, em grade 2x2.
+- Remova a seção escura de números mais abaixo.
+- Tire os 6 logos de clientes da faixa do topo. Eles ficam só na seção "Empresas que confiam na irbroker".
+
+5. LOGOS PADRONIZADOS (pasta logos-padronizados do zip)
+Hoje os logos têm tamanhos desencontrados, colunas tortas, linhas incompletas e um logo azul fora do padrão. Anexei os 32 logos já tratados: mesma cor (grafite #3A3F45), fundo transparente, sobra cortada e o mesmo peso visual, todos em tela fixa de 320x128px. Substitua os logos atuais por estes arquivos, com os mesmos números (seguradoras/01 a 14, clientes/15 a 32).
+- Cada logo é exibido em 160x64px (desktop) e 120x48px (celular), sem redimensionar de outro jeito, sem filtro e sem caixa.
+- Seguradoras: grade fixa de 7 colunas x 2 linhas no desktop e 2 colunas no celular.
+- Clientes: grade fixa de 6 colunas x 3 linhas no desktop e 3 colunas no celular.
+- Colunas de largura igual, logos centralizados na célula, espaço vertical igual entre as linhas.
+- Opacidade 0,7, que vai a 1 no hover, sem trocar a cor.
+
+6. LEGENDA DO VÍDEO MAIS LEGÍVEL
+Hoje ela quase não aparece. "Grupo irbroker" fica em 12px, branco a 80%. O nome da frente vai para Source Serif 4 com 22px, branco a 100%. O filete de progresso tem 2px, branco a 60%. Atrás do canto inferior direito, um degradê escuro (rgba(0,0,0,.6) para transparente, cobrindo pelo menos 420x180px) garante o contraste. Medimos: hoje a legenda chega a 1,2:1 na cena do navio, por causa do reflexo do sol; o mínimo é 4,5:1 em todas as cenas.
+
+7. BOTÃO DE PAUSA DO VÍDEO
+Remova o botão visível. Mantenha um botão acessível escondido (classe sr-only) que só aparece no foco pelo teclado (:focus-visible), no mesmo canto. Mantenha a imagem parada para quem usa prefers-reduced-motion.
+
+8. FRENTES NO RODAPÉ EM UMA LINHA
+No desktop, as 5 frentes ficam lado a lado numa linha só, sem quebra (white-space: nowrap; aumente a largura da coluna se precisar). No celular, viram uma lista vertical.
+
+9. SOBRE
+- A foto de executivos no topo dá a entender que é a equipe da irbroker. Troque por um topo só tipográfico, sobre grafite #1F2225, com o mesmo título.
+- Dê o rótulo "Quem somos" (filete amarelo) ao primeiro parágrafo, como em Missão e Visão.
+
+10. PÁGINA DE CONTATO (hoje está genérica)
+- Remova a seção "Política de privacidade [A PREENCHER]" que aparece dentro da página. A política só abre no modal.
+- Layout em duas colunas no desktop (empilhado no celular):
+  - Coluna esquerda, sobre grafite #1F2225 e ocupando a altura do conteúdo:
+    - Rótulo "Contato" e o título "Vamos conversar sobre a sua empresa."
+    - Linha: "Conte como a sua operação funciona. Um especialista da irbroker retorna pelo telefone ou e-mail informado."
+    - Bloco "Outros caminhos": "Falar no WhatsApp", com a frase da Lia em 14px logo abaixo; o telefone (11) 2149-7244; o e-mail comercial@irbroker.com.br.
+    - Bloco "Escritórios": Matriz e Filial, com os endereços atuais e um link "Ver no mapa" em cada um, abrindo em nova aba:
+      https://www.google.com/maps/search/?api=1&query=Rua+Jos%C3%A9+Versolato+101+S%C3%A3o+Bernardo+do+Campo+SP
+      https://www.google.com/maps/search/?api=1&query=Av.+Presidente+Juscelino+Kubitschek+1455+S%C3%A3o+Paulo+SP
+  - Coluna direita, sobre papel: o formulário.
+    - Troque o select "Frente de interesse" por 5 opções clicáveis (radio buttons com visual de botão de texto e borda fina de 1px, uma escolhida por vez): Transporte de cargas, Comex Broker, Construção e imóveis, Corporate, WellCare. O name continua "frente", com os mesmos valores. Mantenha a pré-seleção por ?frente=.
+    - Mantenha os outros campos, a validação e o envio ao webhook exatamente como estão.
+    - Abaixo do botão "Enviar mensagem", em 14px: "Depois do envio: entendemos a operação, comparamos alternativas entre seguradoras e acompanhamos a sua empresa depois da contratação."
+
+12. VÍDEO NO TOPO DA PÁGINA COMEX BROKER
+Use comex-loop.mp4 (7,8s, sem som, loop sem emenda) no topo de /comex-broker, no lugar da foto, com as mesmas regras do vídeo da home: autoplay muted loop playsinline, poster comex-poster.jpg, véu marinho #0D1B2A em degradê da esquerda (75%) para a direita (transparente). Com prefers-reduced-motion ou tela abaixo de 768px, só o poster. Sem botão de pausa visível (só o acessível pelo teclado, como na home). Mantenha o logo da Comex, o selo "Grupo irbroker", o título e o texto.
+
+11. FILTROS DE /conteudos
+Ao rolar, a barra de filtros fica por baixo do cabeçalho fixo. Se a barra for fixa, use top de 64px (a altura do cabeçalho), fundo papel #F5F4F1 e filete inferior de 1px, sem sobreposição.
+
+14. NOVA ORDEM DAS FRENTES (em todo o site)
+Use sempre esta ordem: Comex Broker, WellCare, Transporte de cargas, Construção e imóveis, Corporate. Vale para:
+- os painéis "Uma corretora, cinco frentes." da home;
+- o menu Soluções (desktop e celular);
+- as frentes do rodapé;
+- a faixa "Outras frentes" das páginas;
+- as opções de frente no formulário de contato;
+- os filtros de /conteudos;
+- o sitemap.
+
+15. NOVO VÍDEO DO TOPO DA HOME (hero-loop.mp4 do zip, substitui o atual)
+As cenas agora seguem a nova ordem. A legenda sincronizada passa a ser: 0 a 2,2s São Paulo (só "Grupo irbroker"); 2,2 a 4,8 Comex Broker; 4,8 a 7,4 WellCare; 7,4 a 10,0 Transporte de cargas; 10,0 a 12,6 Construção e imóveis; 12,6 a 15,2 Corporate; depois volta a São Paulo. Troque também o poster pelo novo hero-poster.jpg.
+
+16. TEXTO SOBRE VÍDEO E FOTO: CONTRASTE MEDIDO
+Medi o contraste real de todo texto sobre imagem. As páginas das frentes e os painéis da home passam (5,8:1 ou mais). O problema está no vídeo da home: em 3 das 6 cenas (navio, diretoria e equipe), o título fica entre 3,2:1 e 3,7:1, e o subtítulo e o botão do WhatsApp ficam em 4,5:1 na cena da equipe.
+- Peso dos títulos de topo: 400 no lugar de 300, em todas as páginas, para manter o mesmo padrão (mesma fonte, Source Serif 4).
+- Véu dos vídeos da home e da Comex: degradê da esquerda com 80%, chegando a transparente só depois de 65% da largura, mais uma camada uniforme de rgba(31,34,37,.25) sobre o vídeo inteiro.
+- Sombra suave no título e no subtítulo dos topos com vídeo: text-shadow 0 2px 24px rgba(0,0,0,.35).
+- Meta: título com pelo menos 4,5:1 e textos pequenos com pelo menos 4,5:1 em todas as cenas dos dois vídeos. Confira pausando o vídeo em cada cena.
+
+Continue sem publicar e sem domínio. Não invente textos além dos indicados aqui.

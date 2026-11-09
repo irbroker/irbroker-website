@@ -1,0 +1,125 @@
+Importante: gere o site e me mostre a prévia para revisão. Não conecte domínio próprio. Vou enviar os arquivos de logo em seguida; até lá, use a palavra "irbroker" em texto como marcador do logo.
+
+Crie o site institucional da irbroker, corretora de seguros corporativos de São Paulo. Site em português do Brasil, responsivo (celular primeiro), rápido, com SEO básico (title, description, Open Graph, sitemap.xml, robots.txt) e acessível (contraste AA, textos alternativos, navegação por teclado).
+
+REGRAS DE MARCA (obrigatórias)
+- O nome da marca é sempre irbroker, em minúsculas. Nunca escreva "Insurance Risk Broker", "IRB" ou "IR Broker".
+- Use os arquivos de logo enviados, sem redesenhar. Logo = símbolo (raio teal e amarelo) + palavra "irbroker".
+- Cores: papel #F5F4F1 e grafite #1F2225 / #2A2E33 dominam. Teal #33B3BF é a cor funcional (links, filetes, foco). Amarelo #FDC61B só no símbolo e em marcações raras (em texto sobre claro, #B8860B). Sem gradiente, sem brilho colorido, sem neon.
+- Tipografia: títulos em Source Serif 4 (pesos 300-400, grandes, entrelinha justa); texto e menu em Source Sans 3. Escala com contraste forte: título do hero perto de 72-96px no desktop, corpo 18px.
+
+DIREÇÃO VISUAL: "a operação em primeiro plano" (alto nível, sem cara de IA)
+O assunto do site são operações reais de empresas: estrada, porto, obra, prédio corporativo, equipe. A fotografia carrega o site, e a tipografia fica sóbria por cima dela.
+- Hero com foto em tela cheia (estrada ou porto ao entardecer, tratamento frio, levemente dessaturado), título em serifa fina e grande alinhado à esquerda, menu fino e transparente por cima. Nada de hero centralizado sobre três cards.
+- Assinatura da marca: as facetas do raio do símbolo irbroker viram um recorte geométrico sobre as fotos (máscara diagonal), usado em poucos pontos (hero, divisória das verticais, CTA final). É o único gesto ousado do site.
+- Seções editoriais em duas colunas: rótulo curto à esquerda e texto à direita, separados por um filete vertical fino (como um relatório anual).
+- Verticais: painéis altos de foto lado a lado (rolagem horizontal no celular), cada um com nome, uma linha e o link "Conhecer". Comex Broker e WellCare mostram o próprio logo em branco e o selo "Grupo irbroker".
+- Soluções dentro das páginas: lista com filetes finos e expansão (acordeão), sem cards, sem ícone em quadradinho.
+- Botões retangulares com cantos retos ou raio de até 2px, texto direto ("Falar com a irbroker"), sem seta grudada no texto. Campos de formulário retos, com só a linha de baixo.
+- Movimento: só um fade curto nas fotos e um sublinhado animado nos links. Respeitar prefers-reduced-motion. Nada de contador de números animado, nada de fade-up em todo bloco.
+- Proibido: gradiente roxo ou azul, texto com gradiente, palavra colorida destacada no meio do título, glassmorphism/blur, sombras grandes e cantos muito arredondados em tudo, três cards iguais com ícone, numeração decorativa 01/02/03, rótulos em caixa alta mono, emoji, ícones Lucide genéricos, ilustração 3D, "Elevate/Transforme seu negócio", rodapé padrão de quatro colunas, foto de banco "equipe sorrindo no notebook".
+- Fotos reais de banco livre (Pexels/Unsplash) de logística, portos, obras, prédios de São Paulo e equipes brasileiras, com equilíbrio entre raças. Nada de ilustração ou imagem gerada por IA.
+- Não invente números, clientes, depoimentos, prêmios, ofertas gratuitas, "diagnóstico grátis", "24h" nem garantia de cobertura ou aceitação. Use só os textos abaixo.
+- Em toda página de produto, inclua a nota: "Disponibilidade, aceitação e coberturas dependem da análise de cada seguradora."
+
+MAPA DO SITE
+1. Home (/)
+2. Transporte de cargas (/transporte-de-cargas)
+3. Construção e imóveis (/construcao-e-imoveis)
+4. Corporate (/corporate)
+5. Comex Broker (/comex-broker): página-ponte com a identidade da Comex Broker (marinho #0D1B2A, dourado #C9A15A, títulos Montserrat 300, rótulos em Cinzel caixa alta). Selo "Grupo irbroker". Botão "Conhecer a Comex Broker" que, por enquanto, leva ao contato; depois vai para www.comexbroker.com.br.
+6. WellCare (/wellcare): página-ponte com a identidade WellCare (azul #0046F4, ciano #1CE4FB, fundo #06143A, fonte Figtree). Selo "Grupo irbroker". Mesmo comportamento do botão.
+7. Sobre (/sobre)
+8. Contato (/contato)
+Menu: Soluções (dropdown com as 5 verticais) · Sobre · Contato · botão "Falar com a irbroker".
+
+HOME, SEÇÃO POR SEÇÃO
+Hero (foto de São Paulo, overlay grafite)
+- Kicker: Corretora de seguros corporativos
+- Título: Seguros corporativos começam pela sua operação.
+- Subtítulo: Corretora consultiva para empresas que precisam proteger patrimônio, operações e pessoas.
+- Botões: "Falar com a irbroker" (contato) · "Ver soluções" (rola até verticais)
+
+Gatilhos
+- Título: A operação muda. A apólice nem sempre acompanha.
+- Texto: Estes são os momentos em que vale rever a proteção com a corretora:
+- Lista em duas colunas separada por filetes (sem cards): "Nova rota, nova carga ou nova frota" — Mudanças na operação podem mexer nas condições da apólice. / "Contrato ou edital que exige garantia" — A garantia certa depende do que o contrato pede. / "Conselho ou investidor que pede D&O" — Os gestores passam a precisar de proteção própria. / "Equipe que cresceu" — O benefício que servia para dez pessoas pode não servir para cinquenta.
+
+Como trabalhamos (diagrama em 3 colunas: Empresa → irbroker → Seguradoras)
+- Título: A seguradora emite a apólice. A irbroker trabalha do seu lado.
+- Empresa: Mostra como a operação funciona: atividade, contratos, frota, equipe e patrimônio.
+- irbroker: Entende a operação, compara alternativas entre seguradoras, explica cada cobertura e acompanha o cliente depois da contratação.
+- Seguradoras: Oferecem os próprios produtos, analisam o risco e emitem a apólice.
+- Linha: +20 seguradoras e resseguradoras parceiras, no Brasil e no exterior.
+
+Método (fundo grafite, os 3 verbos em linha ligados por um filete horizontal, sem numeração grande)
+- Título: Entender antes de cotar.
+- Entender: Mapeamos a atividade, os contratos e as responsabilidades da empresa antes de falar em produto.
+- Comparar: Buscamos alternativas junto às seguradoras e explicamos cada cobertura, para uma decisão informada.
+- Acompanhar: Seguimos com o cliente na renovação, nas mudanças da operação e quando houver sinistro.
+
+Verticais (5 painéis altos de foto lado a lado, como descrito na direção visual; Comex Broker e WellCare mostram o próprio logo e o selo "Grupo irbroker")
+- Título: Uma corretora, cinco frentes.
+- Transporte de cargas — Seguros de responsabilidade para quem transporta carga de terceiros.
+- Comex Broker — Seguro internacional de cargas para quem importa e exporta.
+- Construção e imóveis — Do terreno à entrega das chaves.
+- Corporate — Patrimônio, responsabilidade e quem decide.
+- WellCare — Benefícios desenhados para o grupo da sua empresa.
+
+Números (fundo grafite)
+- 95% taxa de renovação dos clientes · +50 contratos de benefícios em vida e saúde · +20 seguradoras e resseguradoras parceiras · +20 anos de experiência dos profissionais
+- Nota pequena: Dados declarados pela irbroker, consolidados de todas as frentes.
+
+Seguradoras parceiras: faixa de logos (vou enviar os arquivos; até lá deixe espaço reservado). Título: Alternativas entre as principais seguradoras.
+Clientes: faixa de logos (idem). Título: Empresas que confiam na irbroker.
+
+Projeto 365: Cada apólice, uma nova árvore. Para cada apólice emitida, a irbroker planta uma árvore em nome do cliente.
+
+CTA final: Vamos conversar sobre a sua empresa. Botão "Falar com a irbroker".
+
+PÁGINAS DE VERTICAL (modelo: hero com foto, para quem é, soluções, sinais de que é hora de revisar, nota de aceitação, CTA)
+Transporte de cargas
+- Título: A mercadoria e quem a transporta.
+- Para quem: Transportadoras e operadores logísticos; Agentes de carga e despachantes.
+- Soluções: Seguro de transporte nacional; seguros de responsabilidade do transportador.
+- Sinais: Novas origens, destinos ou mercadorias · Cliente ou contrato exigindo seguro específico · Toda carga é averbada, com limite acima do valor da carga mais cara?
+
+Construção e imóveis
+- Título: Do terreno à entrega das chaves.
+- Texto: Garantias e proteção patrimonial para quem incorpora, constrói, administra e investe.
+- Para quem: Incorporadoras e construtoras · Administradoras de condomínios · Investidores.
+- Soluções: Seguro garantia: licitação e execução · Risco de engenharia e RC obras · Patrimonial e condomínios.
+- Sinais: Edital pedindo garantia de proposta ou de execução · Aditivo que aumentou o valor do contrato · Fiador que desistiu ou caução travando o caixa.
+
+Corporate
+- Título: Patrimônio, responsabilidade e quem decide.
+- Texto: Proteção para a empresa e para os gestores, em empresas de todos os portes.
+- Para quem: Pequenas e médias empresas · Empresas de médio e grande porte.
+- Soluções: Patrimonial e empresarial (PME) · D&O e riscos cibernéticos · Garantia judicial e contratual.
+- Sinais: Conselho, investidor ou novo sócio pedindo D&O · Cliente grande exigindo RC, cyber ou garantia · Depósito judicial travando o caixa.
+
+Comex Broker (página-ponte)
+- Título: A mercadoria que cruza fronteiras.
+- Texto: Seguro internacional de cargas para importadores e exportadores. A Comex Broker é a vertical de comércio exterior do Grupo irbroker.
+- Sinais: Novas origens, destinos ou mercadorias · Compra em CIF sem saber o que o seguro do fornecedor cobre.
+
+WellCare (página-ponte)
+- Título: Benefícios desenhados para o grupo da sua empresa.
+- Texto: Saúde, odonto, vida e acidentes pessoais, da escolha à renovação. A WellCare é a área de benefícios do Grupo irbroker.
+- Sinais: Aviso de reajuste ou aniversário do contrato · Equipe nova em outra cidade · Pedido de odonto, dependentes ou vida em grupo.
+
+SOBRE
+- Título: Mais de 20 anos de mercado segurador na equipe.
+- Texto: A irbroker reúne profissionais com mais de 20 anos de experiência no mercado segurador. Escritórios em São Bernardo do Campo e em São Paulo, na Faria Lima.
+- Missão: Proteger o patrimônio e a continuidade dos negócios dos nossos clientes com soluções personalizadas em gestão de riscos e seguros corporativos.
+- Visão: Ser referência nacional em corretagem de seguros corporativos, reconhecida pela excelência técnica e pelo relacionamento consultivo de longo prazo.
+
+CONTATO
+- Formulário: nome, empresa, e-mail, telefone, frente de interesse (as 5 verticais), mensagem, aceite de privacidade (LGPD). Por enquanto envia para comercial@irbroker.com.br.
+- Telefone: (11) 2149-7244 · E-mail: comercial@irbroker.com.br
+- WhatsApp (Lia, atendimento da irbroker): +55 41 96349-1818, link https://wa.me/5541963491818. Botão discreto fixo no canto inferior direito em todas as páginas, com texto "Falar no WhatsApp".
+- Matriz: Rua José Versolato, 101, 12º andar, Torre A, Centro, São Bernardo do Campo/SP, 09750-730
+- Filial: Av. Presidente Juscelino Kubitschek, 1455, 4º andar, Faria Lima, São Paulo/SP, 04543-011
+
+RODAPÉ
+Logo irbroker · links das verticais · contatos · Política de privacidade · espaço para CNPJ e registro SUSEP (deixar marcador [A PREENCHER], não inventar).

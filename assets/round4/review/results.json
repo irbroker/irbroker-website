@@ -1,0 +1,411 @@
+{
+  "desktop": {
+    "top": {
+      "position": "fixed",
+      "height": 112,
+      "background": "rgba(0, 0, 0, 0)",
+      "logo": "https://8328-iycb45aoga883j1dr60g9-a539bc94.us5.manus.computer/manus-storage/irbroker-logo-branco_0c489336.webp"
+    },
+    "scrolled": {
+      "height": 64,
+      "background": "rgb(245, 244, 241)",
+      "logo": "https://8328-iycb45aoga883j1dr60g9-a539bc94.us5.manus.computer/manus-storage/irbroker-logo-escuro_e701814b.webp",
+      "border": "1px"
+    },
+    "scenes": [
+      {
+        "time": 1,
+        "name": "São Paulo",
+        "href": "/"
+      },
+      {
+        "time": 3,
+        "name": "Transporte de cargas",
+        "href": "/transporte-de-cargas"
+      },
+      {
+        "time": 6,
+        "name": "Comex Broker",
+        "href": "/comex-broker"
+      },
+      {
+        "time": 8,
+        "name": "Construção e imóveis",
+        "href": "/construcao-e-imoveis"
+      },
+      {
+        "time": 11,
+        "name": "Corporate",
+        "href": "/corporate"
+      },
+      {
+        "time": 13.8,
+        "name": "WellCare",
+        "href": "/wellcare"
+      },
+      {
+        "time": 15.3,
+        "name": "São Paulo",
+        "href": "/"
+      }
+    ],
+    "pauseStable": true,
+    "panels": [
+      {
+        "width": 223.03125,
+        "flex": "1",
+        "active": false,
+        "hidden": "true"
+      },
+      {
+        "width": 533.875,
+        "flex": "2.4",
+        "active": true,
+        "hidden": null
+      },
+      {
+        "width": 223.03125,
+        "flex": "1",
+        "active": false,
+        "hidden": "true"
+      },
+      {
+        "width": 223.03125,
+        "flex": "1",
+        "active": false,
+        "hidden": "true"
+      },
+      {
+        "width": 222.03125,
+        "flex": "1",
+        "active": false,
+        "hidden": "true"
+      }
+    ],
+    "paths": [
+      {
+        "length": "1",
+        "dash": "1px 1px"
+      },
+      {
+        "length": "1",
+        "dash": "1px 1px"
+      }
+    ],
+    "logos": [
+      {
+        "alt": "Logo Porto",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Bradesco Seguros",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo SulAmérica",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Zurich",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Mapfre",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo AXA",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.55",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Chubb",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo AIG",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Sompo",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo MetLife",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Icatu",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Omint",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Fator",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Seguros",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo BTG Pactual",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Brookfield Properties",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Kinea, uma empresa Itaú",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Riobravo",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Seneca Evercore",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Banco Safra",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Prevent Senior",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo O Boticário",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Indeed",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Tractian",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Snap-on",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Pioneer",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Embelleze",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Bemol",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo São Carlos",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Granja Faria",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Sektor Logistics",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      },
+      {
+        "alt": "Logo Afianci Global Networking",
+        "height": 30,
+        "blend": "multiply",
+        "opacity": "0.7",
+        "filter": "grayscale(1)"
+      }
+    ],
+    "footer": {
+      "columns": "582.906px 582.906px",
+      "addresses": 2,
+      "contact": "/contato"
+    }
+  },
+  "375": {
+    "mobile": {
+      "width": 375,
+      "scrollWidth": 360,
+      "body": "17px",
+      "lineHeight": "27.2px",
+      "whatsapp": {
+        "width": 52,
+        "height": 52,
+        "radius": "50%",
+        "label": "Falar no WhatsApp"
+      },
+      "title": "45px"
+    },
+    "nodeTops": [
+      269.859375,
+      399.859375,
+      577.859375
+    ],
+    "carousel": true,
+    "formWhatsAppHidden": true,
+    "preselected": true
+  },
+  "414": {
+    "mobile": {
+      "width": 414,
+      "scrollWidth": 399,
+      "body": "17px",
+      "lineHeight": "27.2px",
+      "whatsapp": {
+        "width": 52,
+        "height": 52,
+        "radius": "50%",
+        "label": "Falar no WhatsApp"
+      },
+      "title": "49.68px"
+    },
+    "nodeTops": [
+      270.28125,
+      400.28125,
+      578.28125
+    ],
+    "carousel": true,
+    "formWhatsAppHidden": true,
+    "preselected": true
+  },
+  "fronts": [
+    {
+      "slug": "transporte-de-cargas",
+      "solutions": 2,
+      "button": "Falar sobre Transporte de cargas",
+      "others": 4
+    },
+    {
+      "slug": "comex-broker",
+      "solutions": 0,
+      "button": "Falar sobre Comex Broker",
+      "others": 4
+    },
+    {
+      "slug": "construcao-e-imoveis",
+      "solutions": 3,
+      "button": "Falar sobre Construção e imóveis",
+      "others": 4
+    },
+    {
+      "slug": "corporate",
+      "solutions": 3,
+      "button": "Falar sobre Corporate",
+      "others": 4
+    },
+    {
+      "slug": "wellcare",
+      "solutions": 0,
+      "button": "Falar sobre WellCare",
+      "others": 4
+    }
+  ],
+  "reducedMotion": {
+    "posterOnly": true,
+    "staticTitles": true,
+    "instantPanels": true
+  },
+  "pageErrors": []
+}

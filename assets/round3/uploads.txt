@@ -1,0 +1,46 @@
+# Uploads WebDev (42/42 concluídos sem falhas)
+assets/round3/hero-poster.jpg -> /manus-storage/hero-poster_69888ff7.jpg
+assets/round3/porto-distante.jpg -> /manus-storage/porto-distante_bd8d27c1.jpg
+assets/round3/hero-loop.mp4 -> /manus-storage/hero-loop_0407e68b.mp4
+assets/round3/optimized/hero-poster.webp -> /manus-storage/hero-poster_3c4449a6.webp
+assets/round3/optimized/porto-distante.webp -> /manus-storage/porto-distante_24f801da.webp
+assets/round3/optimized/optimized-round3/client-15.webp -> /manus-storage/client-15_acd7883e.webp
+assets/round3/optimized/optimized-round3/client-16.webp -> /manus-storage/client-16_af32777d.webp
+assets/round3/optimized/optimized-round3/client-17.webp -> /manus-storage/client-17_095416ae.webp
+assets/round3/optimized/optimized-round3/client-18.webp -> /manus-storage/client-18_5b1d120a.webp
+assets/round3/optimized/optimized-round3/client-19.webp -> /manus-storage/client-19_0f09be09.webp
+assets/round3/optimized/optimized-round3/client-20.webp -> /manus-storage/client-20_9af94905.webp
+assets/round3/optimized/optimized-round3/client-21.webp -> /manus-storage/client-21_9c736932.webp
+assets/round3/optimized/optimized-round3/client-22.webp -> /manus-storage/client-22_41decd99.webp
+assets/round3/optimized/optimized-round3/client-23.webp -> /manus-storage/client-23_c98e5e91.webp
+assets/round3/optimized/optimized-round3/client-24.webp -> /manus-storage/client-24_80c1e014.webp
+assets/round3/optimized/optimized-round3/client-25.webp -> /manus-storage/client-25_929b0787.webp
+assets/round3/optimized/optimized-round3/client-26.webp -> /manus-storage/client-26_63e62da5.webp
+assets/round3/optimized/optimized-round3/client-27.webp -> /manus-storage/client-27_8ed6adb5.webp
+assets/round3/optimized/optimized-round3/client-28.webp -> /manus-storage/client-28_27279dbf.webp
+assets/round3/optimized/optimized-round3/client-29.webp -> /manus-storage/client-29_f1065639.webp
+assets/round3/optimized/optimized-round3/client-30.webp -> /manus-storage/client-30_ccadd055.webp
+assets/round3/optimized/optimized-round3/client-31.webp -> /manus-storage/client-31_dec78227.webp
+assets/round3/optimized/optimized-round3/client-32.webp -> /manus-storage/client-32_87c59f37.webp
+assets/round3/optimized/optimized-round3/insurer-01.webp -> /manus-storage/insurer-01_d949507b.webp
+assets/round3/optimized/optimized-round3/insurer-02.webp -> /manus-storage/insurer-02_4b7da94d.webp
+assets/round3/optimized/optimized-round3/insurer-03.webp -> /manus-storage/insurer-03_5ed15df1.webp
+assets/round3/optimized/optimized-round3/insurer-04.webp -> /manus-storage/insurer-04_76b60687.webp
+assets/round3/optimized/optimized-round3/insurer-05.webp -> /manus-storage/insurer-05_cf1a00d5.webp
+assets/round3/optimized/optimized-round3/insurer-06.webp -> /manus-storage/insurer-06_793f4277.webp
+assets/round3/optimized/optimized-round3/insurer-07.webp -> /manus-storage/insurer-07_7b5d6a53.webp
+assets/round3/optimized/optimized-round3/insurer-08.webp -> /manus-storage/insurer-08_43df601a.webp
+assets/round3/optimized/optimized-round3/insurer-09.webp -> /manus-storage/insurer-09_4c7bdab2.webp
+assets/round3/optimized/optimized-round3/insurer-10.webp -> /manus-storage/insurer-10_3563d0bd.webp
+assets/round3/optimized/optimized-round3/insurer-11.webp -> /manus-storage/insurer-11_d10e5692.webp
+assets/round3/optimized/optimized-round3/insurer-12.webp -> /manus-storage/insurer-12_17f4e2af.webp
+assets/round3/optimized/optimized-round3/insurer-13.webp -> /manus-storage/insurer-13_1715a618.webp
+assets/round3/optimized/optimized-round3/insurer-14.webp -> /manus-storage/insurer-14_e28e1cd9.webp
+assets/round3/optimized/optimized-round3/irbroker-logo-branco.webp -> /manus-storage/irbroker-logo-branco_0c489336.webp
+assets/round3/optimized/optimized-round3/irbroker-logo-escuro.webp -> /manus-storage/irbroker-logo-escuro_e701814b.webp
+assets/round3/optimized/optimized-round3/irbroker-simbolo.webp -> /manus-storage/irbroker-simbolo_bd6c0f49.webp
+assets/round3/optimized/optimized-round3/wellcare-horizontal-branco.webp -> /manus-storage/wellcare-horizontal-branco_2a7f59d1.webp
+assets/round3/optimized/optimized-round3/wellcare-horizontal-cor.webp -> /manus-storage/wellcare-horizontal-cor_09b9e2d1.webp
+
+# Upload público adicional para Open Graph (somente poster WebP)
+assets/round3/optimized/hero-poster.webp -> https://files.manuscdn.com/user_upload_by_module/session_file/310519663934267436/rpnpZVquTzpoGHuk.webp

@@ -1,0 +1,165 @@
+{
+  "panels-1440": [
+    {
+      "name": "Transporte de cargas",
+      "visible": "visible",
+      "display": "block",
+      "left": 26,
+      "right": 196.03125,
+      "innerWidth": 170,
+      "scrollWidth": 170
+    },
+    {
+      "name": "Comex Broker",
+      "visible": "visible",
+      "display": "block",
+      "left": 249.03125,
+      "right": 729.90625,
+      "innerWidth": 481,
+      "scrollWidth": 481
+    },
+    {
+      "name": "Construção e imóveis",
+      "visible": "visible",
+      "display": "block",
+      "left": 782.90625,
+      "right": 952.9375,
+      "innerWidth": 170,
+      "scrollWidth": 170
+    },
+    {
+      "name": "Corporate",
+      "visible": "visible",
+      "display": "block",
+      "left": 1005.9375,
+      "right": 1175.96875,
+      "innerWidth": 170,
+      "scrollWidth": 170
+    },
+    {
+      "name": "WellCare",
+      "visible": "visible",
+      "display": "block",
+      "left": 1228.96875,
+      "right": 1399,
+      "innerWidth": 170,
+      "scrollWidth": 170
+    }
+  ],
+  "panels-1024": [
+    {
+      "name": "Transporte de cargas",
+      "visible": "visible",
+      "display": "block",
+      "left": 26,
+      "right": 131.03125,
+      "innerWidth": 105,
+      "scrollWidth": 105
+    },
+    {
+      "name": "Comex Broker",
+      "visible": "visible",
+      "display": "block",
+      "left": 184.03125,
+      "right": 508.90625,
+      "innerWidth": 325,
+      "scrollWidth": 325
+    },
+    {
+      "name": "Construção e imóveis",
+      "visible": "visible",
+      "display": "block",
+      "left": 561.90625,
+      "right": 666.9375,
+      "innerWidth": 105,
+      "scrollWidth": 105
+    },
+    {
+      "name": "Corporate",
+      "visible": "visible",
+      "display": "block",
+      "left": 719.9375,
+      "right": 824.96875,
+      "innerWidth": 105,
+      "scrollWidth": 105
+    },
+    {
+      "name": "WellCare",
+      "visible": "visible",
+      "display": "block",
+      "left": 877.96875,
+      "right": 983,
+      "innerWidth": 105,
+      "scrollWidth": 105
+    }
+  ],
+  "panels-768": [
+    {
+      "name": "Transporte de cargas",
+      "visible": "visible",
+      "display": "block",
+      "left": 26,
+      "right": 91.03125,
+      "innerWidth": 65,
+      "scrollWidth": 65
+    },
+    {
+      "name": "Comex Broker",
+      "visible": "visible",
+      "display": "block",
+      "left": 144.03125,
+      "right": 372.90625,
+      "innerWidth": 229,
+      "scrollWidth": 229
+    },
+    {
+      "name": "Construção e imóveis",
+      "visible": "visible",
+      "display": "block",
+      "left": 425.90625,
+      "right": 490.9375,
+      "innerWidth": 65,
+      "scrollWidth": 65
+    },
+    {
+      "name": "Corporate",
+      "visible": "visible",
+      "display": "block",
+      "left": 543.9375,
+      "right": 608.96875,
+      "innerWidth": 65,
+      "scrollWidth": 65
+    },
+    {
+      "name": "WellCare",
+      "visible": "visible",
+      "display": "block",
+      "left": 661.96875,
+      "right": 727,
+      "innerWidth": 65,
+      "scrollWidth": 65
+    }
+  ],
+  "privacy": {
+    "clickOpens": true,
+    "keyboardOpens": true,
+    "doesNotAcceptAutomatically": true,
+    "submit": "Enviar mensagem",
+    "addressesEqual": true
+  },
+  "comex-broker": {
+    "text": "Falar com a Comex Broker",
+    "contactPreselected": true
+  },
+  "wellcare": {
+    "text": "Falar com a WellCare",
+    "contactPreselected": true
+  },
+  "video": {
+    "pauseLabel": "Retomar vídeo",
+    "playLabel": "Pausar vídeo",
+    "saoPauloGroupOnlyNoLink": true,
+    "frontLinkRetained": true
+  },
+  "pageErrors": []
+}

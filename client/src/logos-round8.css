@@ -1,0 +1,102 @@
+/* Round 8: every supplied mark is a uniform 320x128 transparent canvas. */
+.partners-section.wrap {
+  width: 100%;
+  max-width: 1296px;
+  padding-inline: 0;
+}
+
+.partner-logo-grid {
+  display: grid;
+  align-items: center;
+  column-gap: 0;
+  row-gap: 40px;
+  margin-top: 40px;
+}
+
+/* Full desktop layout: exact 7x2 insurer and 6x3 client grids. */
+.grid-insurers {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 64px);
+}
+
+.grid-clients {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: repeat(3, 64px);
+}
+
+.partner-logo {
+  display: flex;
+  width: 100%;
+  height: 64px;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo img {
+  display: block;
+  width: 160px;
+  height: 64px;
+  max-width: none;
+  max-height: none;
+  filter: none;
+  mix-blend-mode: normal;
+  opacity: 0.7;
+  transition: none;
+}
+
+.partner-logo:hover img,
+.partner-logo:focus-visible img {
+  opacity: 1;
+  filter: none;
+  mix-blend-mode: normal;
+}
+
+.partner-logo:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 5px;
+}
+
+/* At 768-1199px, keep the required 160x64 mark size and avoid a 7-column overflow. */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .grid-insurers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(7, 64px);
+  }
+
+  .grid-clients {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(6, 64px);
+  }
+}
+
+@media (max-width: 767px) {
+  .partners-section .logo-band h2 {
+    padding-inline: 22px;
+    font-size: 22px;
+  }
+
+  .partner-logo-grid {
+    margin-top: 24px;
+    row-gap: 24px;
+  }
+
+  .grid-insurers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(7, 48px);
+  }
+
+  .grid-clients {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(6, 48px);
+  }
+
+  .partner-logo {
+    height: 48px;
+  }
+
+  .partner-logo img {
+    width: 120px;
+    height: 48px;
+  }
+}

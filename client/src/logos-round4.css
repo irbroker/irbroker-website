@@ -1,0 +1,127 @@
+/* Round 4: quiet, optically balanced partner marks without logo containers. */
+.partner-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  column-gap: 28px;
+  row-gap: 24px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.partner-logo {
+  display: flex;
+  min-width: 0;
+  min-height: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo.logo-wide {
+  grid-column: span 2;
+}
+
+.partner-logo img,
+.proof-logos img {
+  display: block;
+  width: auto;
+  height: 30px;
+  max-width: 100%;
+  max-height: 32px;
+  object-fit: contain;
+  object-position: center;
+  mix-blend-mode: multiply;
+  filter: grayscale(1);
+  opacity: 0.7;
+  transition: none;
+}
+
+.partner-logo img {
+  max-width: min(100%, 170px);
+}
+
+.partner-logo.logo-wide img {
+  max-width: 100%;
+}
+
+.partner-logo.logo-axa img {
+  opacity: 0.55;
+}
+
+.partner-logo:hover img,
+.partner-logo:focus-visible img,
+.proof-logos img:hover,
+.proof-logos img:focus-visible {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.partner-logo.logo-axa:hover img,
+.partner-logo.logo-axa:focus-visible img {
+  opacity: 1;
+}
+
+.partner-logo:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 5px;
+}
+
+.proof-logos {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 27px;
+  align-items: center;
+}
+
+.proof-logos img {
+  justify-self: center;
+}
+
+@media (max-width: 1199px) {
+  .partner-logo-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    column-gap: 24px;
+  }
+}
+
+@media (max-width: 959px) and (min-width: 768px) {
+  .partner-logo-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 24px;
+    row-gap: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .partner-logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 22px;
+    row-gap: 18px;
+    margin-top: 30px;
+  }
+
+  .partner-logo {
+    min-height: 50px;
+  }
+
+  .partner-logo img,
+  .partner-logo.logo-wide img {
+    max-width: 100%;
+  }
+
+  .partner-logo.logo-wide {
+    grid-column: span 2;
+  }
+
+  .proof-logos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 22px;
+    row-gap: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partner-logo img,
+  .proof-logos img {
+    transition: none;
+  }
+}

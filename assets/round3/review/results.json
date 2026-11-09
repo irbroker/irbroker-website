@@ -1,0 +1,59 @@
+{
+  "reducedMotion": {
+    "videoCount": 0,
+    "requests": 0
+  },
+  "desktopVideo": {
+    "muted": true,
+    "loop": true,
+    "playsInline": true,
+    "preload": "metadata",
+    "width": 1920,
+    "height": 1080,
+    "paused": false,
+    "duration": 15.6
+  },
+  "webhookValidation": {
+    "status": 400,
+    "data": {
+      "ok": false,
+      "erros": [
+        "Informe seu nome.",
+        "Informe um e-mail válido.",
+        "Informe um telefone com DDD.",
+        "É preciso aceitar a política de privacidade."
+      ]
+    }
+  },
+  "sendingLabel": "Enviando…",
+  "sendingDisabled": true,
+  "form": {
+    "validationBlockedEmpty": true,
+    "mask": true,
+    "fields": [
+      "site",
+      "nome",
+      "empresa",
+      "email",
+      "telefone",
+      "frente",
+      "mensagem",
+      "aceite",
+      "pagina",
+      "t0"
+    ],
+    "honeypot": {
+      "display": "block",
+      "left": -10000,
+      "tab": -1,
+      "auto": "off",
+      "aria": "true"
+    },
+    "400Retained": true,
+    "networkRetained": true,
+    "successReplaced": true,
+    "stableT0": true,
+    "mockRequests": 2
+  },
+  "pageErrors": []
+}

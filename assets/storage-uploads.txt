@@ -1,0 +1,36 @@
+Uploading file (webdev private): assets/photos/about.webp (size: 267854 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/about_0d877d62.webp
+Uploading file (webdev private): assets/photos/construction.webp (size: 254594 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/construction_d18db294.webp
+Uploading file (webdev private): assets/photos/corporate.webp (size: 208990 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/corporate_5120dec7.webp
+Uploading file (webdev private): assets/photos/forest.webp (size: 1218562 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/forest_7db2f2e2.webp
+Uploading file (webdev private): assets/photos/hero.webp (size: 433502 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/hero_a8054a44.webp
+Uploading file (webdev private): assets/photos/port.webp (size: 209240 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/port_1ee0ed54.webp
+Uploading file (webdev private): assets/photos/transport.webp (size: 178214 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/transport_84548a1b.webp
+Uploading file (webdev private): assets/photos/wellcare.webp (size: 355100 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/wellcare_29b1ce88.webp
+
+========== Upload Summary ==========
+[SUCCESS] assets/photos/about.webp -> /manus-storage/about_0d877d62.webp
+[SUCCESS] assets/photos/construction.webp -> /manus-storage/construction_d18db294.webp
+[SUCCESS] assets/photos/corporate.webp -> /manus-storage/corporate_5120dec7.webp
+[SUCCESS] assets/photos/forest.webp -> /manus-storage/forest_7db2f2e2.webp
+[SUCCESS] assets/photos/hero.webp -> /manus-storage/hero_a8054a44.webp
+[SUCCESS] assets/photos/port.webp -> /manus-storage/port_1ee0ed54.webp
+[SUCCESS] assets/photos/transport.webp -> /manus-storage/transport_84548a1b.webp
+[SUCCESS] assets/photos/wellcare.webp -> /manus-storage/wellcare_29b1ce88.webp
+=====================================
+Total: 8, Success: 8, Failed: 0

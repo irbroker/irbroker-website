@@ -1,0 +1,90 @@
+{
+  "home": {
+    "width": 375,
+    "scrollWidth": 375,
+    "logos": 32,
+    "panels": 5,
+    "facetOpacity": "0.85",
+    "menuHidden": "none"
+  },
+  "menu": {
+    "expanded": "true",
+    "verticalLinks": 5,
+    "navWidth": 360,
+    "navHeight": 534.546875
+  },
+  "panels": {
+    "width": 360,
+    "scrollWidth": 1379,
+    "scrollLeft": 1019
+  },
+  "partners": {
+    "count": 32,
+    "loaded": 32,
+    "gridColumns": "92px 92px 92px"
+  },
+  "routes": [
+    {
+      "route": "/transporte-de-cargas",
+      "width": 375,
+      "scrollWidth": 375,
+      "h1": "A mercadoria e quem a transporta.",
+      "heroPhoto": "/manus-storage/carreta-rodovia-aerea_386f78b3.webp",
+      "loaded": []
+    },
+    {
+      "route": "/construcao-e-imoveis",
+      "width": 375,
+      "scrollWidth": 375,
+      "h1": "Do terreno à entrega das chaves.",
+      "heroPhoto": "/manus-storage/obra-aerea-guindaste_7bf7cd35.webp",
+      "loaded": []
+    },
+    {
+      "route": "/corporate",
+      "width": 375,
+      "scrollWidth": 375,
+      "h1": "Patrimônio, responsabilidade e quem decide.",
+      "heroPhoto": "/manus-storage/diretoria-skyline_2872041a.webp",
+      "loaded": []
+    },
+    {
+      "route": "/comex-broker",
+      "width": 375,
+      "scrollWidth": 375,
+      "h1": "A mercadoria que cruza fronteiras.",
+      "heroPhoto": "/manus-storage/navio-entardecer_e4c2785a.webp",
+      "loaded": []
+    },
+    {
+      "route": "/wellcare",
+      "width": 375,
+      "scrollWidth": 375,
+      "h1": "Benefícios desenhados para o grupo da sua empresa.",
+      "heroPhoto": "/manus-storage/equipe-diversa_15429b91.webp",
+      "loaded": []
+    },
+    {
+      "route": "/sobre",
+      "width": 375,
+      "scrollWidth": 375,
+      "h1": "Mais de 20 anos de mercado segurador na equipe.",
+      "heroPhoto": "/manus-storage/executivos-diversos_babafc8c.webp",
+      "loaded": []
+    },
+    {
+      "route": "/contato",
+      "width": 375,
+      "scrollWidth": 375,
+      "h1": "Vamos conversar sobre a sua empresa.",
+      "heroPhoto": null,
+      "loaded": []
+    }
+  ],
+  "footer": {
+    "footerBottom": 714.359375,
+    "whatsappTop": 752,
+    "overlap": false
+  },
+  "pageErrors": []
+}

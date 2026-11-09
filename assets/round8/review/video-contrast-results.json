@@ -1,0 +1,138 @@
+[
+  {
+    "route": "/",
+    "time": 1.1,
+    "scene": "São Paulo",
+    "contrast": {
+      ".hero-content h1": 12.115,
+      ".hero-description": 11.129,
+      ".hero-actions .button-outline": 13.651,
+      ".video-caption > p": 12.716
+    }
+  },
+  {
+    "route": "/",
+    "time": 3.5,
+    "scene": "Comex Broker",
+    "contrast": {
+      ".hero-content h1": 9.81,
+      ".hero-description": 12.084,
+      ".hero-actions .button-outline": 13.705,
+      ".video-caption > p": 7.451,
+      ".video-caption-name a": 9.914
+    }
+  },
+  {
+    "route": "/",
+    "time": 6.1,
+    "scene": "WellCare",
+    "contrast": {
+      ".hero-content h1": 9.197,
+      ".hero-description": 7.937,
+      ".hero-actions .button-outline": 9.208,
+      ".video-caption > p": 8.668,
+      ".video-caption-name a": 12.261
+    }
+  },
+  {
+    "route": "/",
+    "time": 8.7,
+    "scene": "Transporte de cargas",
+    "contrast": {
+      ".hero-content h1": 11.077,
+      ".hero-description": 11.528,
+      ".hero-actions .button-outline": 12.033,
+      ".video-caption > p": 12.041,
+      ".video-caption-name a": 18.631
+    }
+  },
+  {
+    "route": "/",
+    "time": 11.3,
+    "scene": "Construção e imóveis",
+    "contrast": {
+      ".hero-content h1": 9.084,
+      ".hero-description": 8.28,
+      ".hero-actions .button-outline": 9.827,
+      ".video-caption > p": 8.106,
+      ".video-caption-name a": 12.722
+    }
+  },
+  {
+    "route": "/",
+    "time": 13.9,
+    "scene": "Corporate",
+    "contrast": {
+      ".hero-content h1": 9.585,
+      ".hero-description": 9.505,
+      ".hero-actions .button-outline": 10.75,
+      ".video-caption > p": 10.942,
+      ".video-caption-name a": 14.873
+    }
+  },
+  {
+    "route": "/",
+    "time": 15.4,
+    "scene": "São Paulo",
+    "contrast": {
+      ".hero-content h1": 11.724,
+      ".hero-description": 11.14,
+      ".hero-actions .button-outline": 13.846,
+      ".video-caption > p": 12.357
+    }
+  },
+  {
+    "route": "/comex-broker",
+    "time": 0.5,
+    "scene": "Comex",
+    "contrast": {
+      ".hero-content h1": 10.854,
+      ".hero-description": 13.025
+    }
+  },
+  {
+    "route": "/comex-broker",
+    "time": 2,
+    "scene": "Comex",
+    "contrast": {
+      ".hero-content h1": 11.082,
+      ".hero-description": 12.593
+    }
+  },
+  {
+    "route": "/comex-broker",
+    "time": 3.5,
+    "scene": "Comex",
+    "contrast": {
+      ".hero-content h1": 11.566,
+      ".hero-description": 10.679
+    }
+  },
+  {
+    "route": "/comex-broker",
+    "time": 5,
+    "scene": "Comex",
+    "contrast": {
+      ".hero-content h1": 10.537,
+      ".hero-description": 9.73
+    }
+  },
+  {
+    "route": "/comex-broker",
+    "time": 6.5,
+    "scene": "Comex",
+    "contrast": {
+      ".hero-content h1": 10.01,
+      ".hero-description": 9.263
+    }
+  },
+  {
+    "route": "/comex-broker",
+    "time": 7.5,
+    "scene": "Comex",
+    "contrast": {
+      ".hero-content h1": 11.383,
+      ".hero-description": 11.821
+    }
+  }
+]

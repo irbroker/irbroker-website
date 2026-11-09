@@ -1,0 +1,64 @@
+Uploading file (webdev private): assets/round2/optimized/carreta-rodovia-aerea.webp (size: 212128 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/carreta-rodovia-aerea_386f78b3.webp
+Uploading file (webdev private): assets/round2/optimized/comex-broker-horizontal-mono-branco.svg (size: 39033 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/comex-broker-horizontal-mono-branco_2b7c0526.svg
+Uploading file (webdev private): assets/round2/optimized/diretoria-skyline.webp (size: 127688 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/diretoria-skyline_2872041a.webp
+Uploading file (webdev private): assets/round2/optimized/equipe-diversa.webp (size: 108336 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/equipe-diversa_15429b91.webp
+Uploading file (webdev private): assets/round2/optimized/executivos-diversos.webp (size: 121982 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/executivos-diversos_babafc8c.webp
+Uploading file (webdev private): assets/round2/optimized/floresta-sol.webp (size: 148036 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/floresta-sol_ada40792.webp
+Uploading file (webdev private): assets/round2/optimized/irbroker-logo-branco.png (size: 65879 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/irbroker-logo-branco_fb8093ad.png
+Uploading file (webdev private): assets/round2/optimized/irbroker-logo-escuro.png (size: 66859 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/irbroker-logo-escuro_bfb53fbe.png
+Uploading file (webdev private): assets/round2/optimized/irbroker-simbolo.png (size: 30721 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/irbroker-simbolo_4433011c.png
+Uploading file (webdev private): assets/round2/optimized/navio-entardecer.webp (size: 172502 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/navio-entardecer_e4c2785a.webp
+Uploading file (webdev private): assets/round2/optimized/obra-aerea-guindaste.webp (size: 324000 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/obra-aerea-guindaste_7bf7cd35.webp
+Uploading file (webdev private): assets/round2/optimized/porto-navio-guindaste.webp (size: 172302 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/porto-navio-guindaste_13d947c5.webp
+Uploading file (webdev private): assets/round2/optimized/sp-por-do-sol.webp (size: 180434 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/sp-por-do-sol_e8f34e89.webp
+Uploading file (webdev private): assets/round2/optimized/wellcare-horizontal-branco.png (size: 57717 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/wellcare-horizontal-branco_eead3f79.png
+Uploading file (webdev private): assets/round2/optimized/wellcare-horizontal-cor.png (size: 147037 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/wellcare-horizontal-cor_ec801d44.png
+
+========== Upload Summary ==========
+[SUCCESS] assets/round2/optimized/carreta-rodovia-aerea.webp -> /manus-storage/carreta-rodovia-aerea_386f78b3.webp
+[SUCCESS] assets/round2/optimized/comex-broker-horizontal-mono-branco.svg -> /manus-storage/comex-broker-horizontal-mono-branco_2b7c0526.svg
+[SUCCESS] assets/round2/optimized/diretoria-skyline.webp -> /manus-storage/diretoria-skyline_2872041a.webp
+[SUCCESS] assets/round2/optimized/equipe-diversa.webp -> /manus-storage/equipe-diversa_15429b91.webp
+[SUCCESS] assets/round2/optimized/executivos-diversos.webp -> /manus-storage/executivos-diversos_babafc8c.webp
+[SUCCESS] assets/round2/optimized/floresta-sol.webp -> /manus-storage/floresta-sol_ada40792.webp
+[SUCCESS] assets/round2/optimized/irbroker-logo-branco.png -> /manus-storage/irbroker-logo-branco_fb8093ad.png
+[SUCCESS] assets/round2/optimized/irbroker-logo-escuro.png -> /manus-storage/irbroker-logo-escuro_bfb53fbe.png
+[SUCCESS] assets/round2/optimized/irbroker-simbolo.png -> /manus-storage/irbroker-simbolo_4433011c.png
+[SUCCESS] assets/round2/optimized/navio-entardecer.webp -> /manus-storage/navio-entardecer_e4c2785a.webp
+[SUCCESS] assets/round2/optimized/obra-aerea-guindaste.webp -> /manus-storage/obra-aerea-guindaste_7bf7cd35.webp
+[SUCCESS] assets/round2/optimized/porto-navio-guindaste.webp -> /manus-storage/porto-navio-guindaste_13d947c5.webp
+[SUCCESS] assets/round2/optimized/sp-por-do-sol.webp -> /manus-storage/sp-por-do-sol_e8f34e89.webp
+[SUCCESS] assets/round2/optimized/wellcare-horizontal-branco.png -> /manus-storage/wellcare-horizontal-branco_eead3f79.png
+[SUCCESS] assets/round2/optimized/wellcare-horizontal-cor.png -> /manus-storage/wellcare-horizontal-cor_ec801d44.png
+=====================================
+Total: 15, Success: 15, Failed: 0

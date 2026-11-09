@@ -1,0 +1,14 @@
+[
+  {
+    "route": "/conteudos",
+    "fabNotCoveringText": true,
+    "skipHiddenNormally": true,
+    "skipVisibleOnTab": true
+  },
+  {
+    "route": "/conteudos/vida-saude-odonto-beneficios",
+    "fabNotCoveringText": true,
+    "skipHiddenNormally": true,
+    "skipVisibleOnTab": true
+  }
+]
