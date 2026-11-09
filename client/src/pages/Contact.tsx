@@ -146,12 +146,10 @@ export default function Contact() {
               className="contact-aside__label section-label"
               items={[{ label: "Contato" }]}
             />
-            <h1>
-              Vamos conversar sobre a sua empresa.
-            </h1>
+            <h1>Conte como a sua empresa opera.</h1>
             <p className="contact-aside__lead">
-              Conte como a sua operação funciona. Um especialista da irbroker
-              retorna pelo telefone ou e-mail informado.
+              Um especialista da irbroker retorna pelo telefone ou e-mail
+              informado.
             </p>
           </div>
 
@@ -175,42 +173,6 @@ export default function Contact() {
               <a href="tel:+551121497244">(11) 2149-7244</a>
               <a href="mailto:comercial@irbroker.com.br">
                 comercial@irbroker.com.br
-              </a>
-            </div>
-          </div>
-
-          <div className="contact-aside__block contact-aside__offices">
-            <h2>Escritórios</h2>
-            <div className="contact-office">
-              <h3>Matriz</h3>
-              <p>
-                Rua José Versolato, 101, 12º andar, Torre A, Centro, São
-                Bernardo do Campo/SP, 09750-730
-              </p>
-              <a
-                className="contact-map-link"
-                href="https://www.google.com/maps/search/?api=1&query=Rua+Jos%C3%A9+Versolato+101+S%C3%A3o+Bernardo+do+Campo+SP"
-                target="_blank"
-                rel="noopener"
-                aria-label="Ver Matriz no mapa (abre em nova aba)"
-              >
-                Ver no mapa
-              </a>
-            </div>
-            <div className="contact-office">
-              <h3>Filial</h3>
-              <p>
-                Av. Presidente Juscelino Kubitschek, 1455, 4º andar, Faria Lima,
-                São Paulo/SP, 04543-011
-              </p>
-              <a
-                className="contact-map-link"
-                href="https://www.google.com/maps/search/?api=1&query=Av.+Presidente+Juscelino+Kubitschek+1455+S%C3%A3o+Paulo+SP"
-                target="_blank"
-                rel="noopener"
-                aria-label="Ver Filial no mapa (abre em nova aba)"
-              >
-                Ver no mapa
               </a>
             </div>
           </div>
@@ -301,7 +263,7 @@ export default function Contact() {
                 </label>
               </div>
               <fieldset className="contact-form__fieldset">
-                <legend>Frente de interesse</legend>
+                <legend>Área de interesse</legend>
                 <div className="contact-form__options">
                   {verticals.map(vertical => (
                     <label
@@ -373,6 +335,42 @@ export default function Contact() {
               </p>
             </form>
           )}
+        </div>
+
+        <div className="contact-aside contact-aside__offices">
+          <h2>Escritórios</h2>
+          <div className="contact-office">
+            <h3>Matriz</h3>
+            <p>
+              Rua José Versolato, 101, 12º andar, Torre A, Centro, São
+              Bernardo do Campo/SP, 09750-730
+            </p>
+            <a
+              className="contact-map-link"
+              href="https://www.google.com/maps/search/?api=1&query=Rua+Jos%C3%A9+Versolato+101+S%C3%A3o+Bernardo+do+Campo+SP"
+              target="_blank"
+              rel="noopener"
+              aria-label="Ver Matriz no mapa (abre em nova aba)"
+            >
+              Ver no mapa
+            </a>
+          </div>
+          <div className="contact-office">
+            <h3>Filial</h3>
+            <p>
+              Av. Presidente Juscelino Kubitschek, 1455, 4º andar, Faria Lima,
+              São Paulo/SP, 04543-011
+            </p>
+            <a
+              className="contact-map-link"
+              href="https://www.google.com/maps/search/?api=1&query=Av.+Presidente+Juscelino+Kubitschek+1455+S%C3%A3o+Paulo+SP"
+              target="_blank"
+              rel="noopener"
+              aria-label="Ver Filial no mapa (abre em nova aba)"
+            >
+              Ver no mapa
+            </a>
+          </div>
         </div>
       </div>
     </section>

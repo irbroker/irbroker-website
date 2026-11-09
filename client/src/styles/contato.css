@@ -584,3 +584,48 @@
   background: var(--yellow);
   height: 2px;
 }
+
+/* Escritórios vêm depois do formulário no DOM (ordem do celular: título e caminhos, formulário, escritórios);
+   no desktop a grade os devolve à coluna escura, abaixo de "Outros caminhos". */
+@media (min-width: 768px) {
+  .contact-page__layout {
+    grid-template-rows: auto 1fr;
+  }
+  .contact-aside {
+    grid-column: 1;
+    grid-row: 1;
+    padding-bottom: 0;
+  }
+  .contact-form-column {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  .contact-aside.contact-aside__offices {
+    grid-row: 2;
+    padding-top: 66px;
+    padding-bottom: 96px;
+  }
+}
+.contact-aside__offices {
+  max-width: none;
+}
+.contact-aside__offices > * {
+  max-width: 520px;
+}
+
+/* Mesmo gutter da .wrap (logo do cabeçalho) a partir de 1101px. */
+@media (min-width: 1101px) {
+  .contact-aside {
+    padding-left: max(72px, calc((100vw - 1296px) / 2));
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-aside {
+    padding-bottom: 58px;
+  }
+  .contact-aside.contact-aside__offices {
+    padding-top: 58px;
+    padding-bottom: 70px;
+  }
+}
