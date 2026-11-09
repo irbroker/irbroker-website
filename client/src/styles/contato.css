@@ -205,15 +205,6 @@
     color: var(--paper);
     border-color: var(--white-a47);
   }
-  .guide-contact .button {
-    white-space: normal;
-    text-align: left;
-    max-width: 100%;
-  }
-}
-
-.guide-contact {
-  margin: 34px 0 55px;
 }
 
 @media (min-width: 768px) and (max-width: 1150px) {

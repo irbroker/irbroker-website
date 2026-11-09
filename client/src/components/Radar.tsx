@@ -1,25 +1,26 @@
 import { orderedRadar, type RadarNote } from '../data/radar';
+import { verticals } from '../data/content';
 
 export function RadarMeta({ note }: { note: RadarNote }) {
   const date = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(note.data);
   return <div className="content-meta"><span>{note.frente}</span><span aria-hidden="true">·</span>{date ? <time dateTime={`${date[3]}-${date[2]}-${date[1]}`}>{note.data}</time> : <span>{note.data}</span>}</div>;
 }
 
-export function RadarNotes({ notes, showContact = true }: { notes: RadarNote[]; showContact?: boolean }) {
+export function RadarNotes({ notes, showFront = true }: { notes: RadarNote[]; showFront?: boolean }) {
   return <div className="radar-notes">{notes.map(note => <article className="radar-note" key={note.titulo}>
     <RadarMeta note={note} />
     <h3>{note.titulo}</h3>
     <p className="radar-summary">{note.resumo}</p>
     <div className="radar-impact"><p className="radar-impact-label">O que muda para a sua empresa</p><p>{note.oQueMuda}</p></div>
     <p className="radar-sources"><span>Fonte: </span>{note.fontes.map((source, index) => <span key={source.url}>{index > 0 && <span aria-hidden="true"> · </span>}<a href={source.url} target="_blank" rel="noopener">{source.nome}<span className="sr-only"> (abre em nova aba)</span></a></span>)}</p>
-    {showContact && <a className="content-text-link" href={`/contato?frente=${encodeURIComponent(note.frente)}`}>{note.botao}</a>}
+    {showFront && <a className="content-text-link" href={`/${verticals.find(vertical => vertical.name === note.frente)?.slug ?? ''}`}>Ver a frente {note.frente}</a>}
   </article>)}</div>;
 }
 
 export function FrontRadar({ front }: { front: string }) {
   const notes = orderedRadar.filter(note => note.frente === front);
   if (!notes.length) return null;
-  return <section className="front-radar content-surface"><div className="wrap"><h2>Radar do mercado</h2><RadarNotes notes={notes} showContact={false} /></div></section>;
+  return <section className="front-radar content-surface"><div className="wrap"><h2>Radar do mercado</h2><RadarNotes notes={notes} showFront={false} /></div></section>;
 }
 
 export function HomeRadar() {

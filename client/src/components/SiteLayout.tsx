@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { verticals } from '../data/content';
+import { guides } from '../data/guides';
 import { brand } from '../data/media';
 
 export function Header({ light = true, path = '/' }: { light?: boolean; path?: string }) {
@@ -241,7 +242,9 @@ export function Footer({ path = '/' }: { path?: string }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const normalizedPath = normalizeSitePath(path);
   const contactPage = normalizedPath === '/contato';
-  const footerVertical = verticals.find(vertical => `/${vertical.slug}` === normalizedPath);
+  // Nas páginas de guia, o convite do fechamento aponta para a frente do guia.
+  const guideFront = guides.find(guide => guide.slug === normalizedPath)?.frente;
+  const footerVertical = verticals.find(vertical => `/${vertical.slug}` === normalizedPath || vertical.name === guideFront);
   const footerCtaLabel = footerVertical
     ? footerVertical.name === 'Comex Broker'
       ? 'Falar com a Comex Broker'
@@ -294,7 +297,8 @@ export function Footer({ path = '/' }: { path?: string }) {
         <div className="footer-editorial-legal">
           <div className="footer-editorial-legal-copy">
             <a href="/" className="footer-editorial-legal-brand" aria-label="irbroker"><img src={brand.light} alt="irbroker" width="1594" height="400" loading="lazy" /></a>
-            <p>© 2026 irbroker · CNPJ 54.769.677/0001-18 · Registro SUSEP [A PREENCHER]</p>
+            {/* TODO: acrescentar " · Registro SUSEP <número>" quando o cliente fornecer o número. */}
+            <p>© 2026 irbroker · CNPJ 54.769.677/0001-18</p>
           </div>
           <button className="footer-editorial-policy footer-editorial-link" type="button" onClick={() => dialog.current?.showModal()}>Política de privacidade</button>
         </div>

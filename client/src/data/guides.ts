@@ -14,7 +14,6 @@ export interface Guia {
   corpo: string;
   nota: string;
   fontes: { nome: string; url: string }[];
-  botao: string;
 }
 
 export const guides: Guia[] = [
@@ -52,7 +51,6 @@ export const guides: Guia[] = [
         url: "https://www.gov.br/antt/pt-br/assuntos/ultimas-noticias/antt-reforca-exigencia-de-seguros-obrigatorios-para-transportadores-de-cargas-e-garante-mais-seguranca-nas-estradas",
       },
     ],
-    botao: "Falar sobre Transporte de cargas",
   },
   {
     frente: "Comex Broker",
@@ -82,7 +80,6 @@ export const guides: Guia[] = [
         url: "https://iccwbo.org/business-solutions/incoterms-rules/incoterms-2020/",
       },
     ],
-    botao: "Falar com a Comex Broker",
   },
   {
     frente: "Construção e imóveis",
@@ -110,7 +107,6 @@ export const guides: Guia[] = [
         url: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l15040.htm",
       },
     ],
-    botao: "Falar sobre Construção e imóveis",
   },
   {
     frente: "WellCare",
@@ -149,6 +145,5 @@ export const guides: Guia[] = [
         url: "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452compilado.htm",
       },
     ],
-    botao: "Falar com a WellCare",
   },
 ];

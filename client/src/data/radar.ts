@@ -5,7 +5,6 @@ export type RadarNote = {
   resumo: string;
   oQueMuda: string;
   fontes: { nome: string; url: string }[];
-  botao: string;
 };
 
 // Only the four supplied, non-pending notes belong to the website.
@@ -21,8 +20,7 @@ export const radar: RadarNote[] = [
         "nome": "CNN Brasil, \"Frete marítimo dispara e provoca mudança de rotas de cargas no Brasil\", 05/10/2026",
         "url": "https://www.cnnbrasil.com.br/blogs/jenifer-ribeiro/infra/frete-maritimo-dispara-e-provoca-mudanca-de-rotas-de-cargas-no-brasil/"
       }
-    ],
-    "botao": "Falar com a Comex Broker"
+    ]
   },
   {
     "frente": "Transporte de cargas",
@@ -39,8 +37,7 @@ export const radar: RadarNote[] = [
         "nome": "ANTT, 03/09/2025",
         "url": "https://www.gov.br/antt/pt-br/assuntos/ultimas-noticias/antt-reforca-exigencia-de-seguros-obrigatorios-para-transportadores-de-cargas-e-garante-mais-seguranca-nas-estradas"
       }
-    ],
-    "botao": "Falar sobre Transporte de cargas"
+    ]
   },
   {
     "frente": "Corporate",
@@ -53,8 +50,7 @@ export const radar: RadarNote[] = [
         "nome": "Susep, \"Nova norma do CNSP estabelece regras gerais para contratos de seguros de danos\", 19/08/2026",
         "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2026/agosto/nova-norma-do-cnsp-estabelece-regras-gerais-para-contratos-de-seguros-de-danos"
       }
-    ],
-    "botao": "Falar sobre Corporate"
+    ]
   },
   {
     "frente": "WellCare",
@@ -67,8 +63,7 @@ export const radar: RadarNote[] = [
         "nome": "ANS, Agenda Regulatória 2026-2028 (PDF)",
         "url": "https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedade/agenda-regulatoria/Agenda_Regulatria_20262028_B.pdf"
       }
-    ],
-    "botao": "Falar com a WellCare"
+    ]
   }
 ];
 

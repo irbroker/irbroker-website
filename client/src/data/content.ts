@@ -193,7 +193,7 @@ const metadata: Record<string, PageMeta> = {
   "/sobre": {
     title: "Quem somos: corretora de seguros para empresas | irbroker",
     description:
-      "Corretora de seguros para empresas, com equipe de mais de duas décadas no mercado segurador e escritórios em São Bernardo do Campo e na Faria Lima (SP).",
+      "Corretora de seguros para empresas, com equipe de longa experiência no mercado segurador e escritórios em São Bernardo do Campo e na Faria Lima (SP).",
     imageKey: "about",
   },
   "/conteudos": {

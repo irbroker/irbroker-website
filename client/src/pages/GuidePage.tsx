@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { guides, type Guia } from "../data/guides";
-import { Breadcrumb, Button } from "../components/SiteLayout";
+import { Breadcrumb } from "../components/SiteLayout";
 
 function inline(text: string) {
   return text
@@ -110,11 +110,6 @@ export default function GuidePage({ guide }: { guide: Guia }) {
             ))}
           </ul>
         </section>
-        <div className="guide-contact">
-          <Button href={`/contato?frente=${encodeURIComponent(guide.frente)}`}>
-            {guide.botao}
-          </Button>
-        </div>
       </article>
       <section className="other-guides guide-reading">
         <h2>Outros guias</h2>
