@@ -155,6 +155,10 @@
 .vertical-hero .hero-shade {
   background: var(--graphite-a66);
 }
+/* Transporte: véu mais leve à direita para o caminhão aparecer; o lado do texto segue escuro. */
+.photo-transport.vertical-hero .hero-shade {
+  background: linear-gradient(90deg, rgba(31,34,37,.6) 0%, rgba(31,34,37,.45) 55%, rgba(31,34,37,.2) 100%);
+}
 .home-hero .hero-content {
   z-index: 2;
 }
@@ -228,7 +232,7 @@
 .video-toggle {
   position: absolute;
   bottom: 29px;
-  left: max(40px, calc((100vw - 1296px) / 2));
+  left: max(72px, calc((100% - 1296px) / 2)); /* mesma margem da .wrap */
   z-index: 5;
   width: 44px;
   height: 44px;
@@ -342,7 +346,7 @@
 }
 .video-caption {
   position: absolute;
-  right: max(40px, calc((100vw - 1296px) / 2));
+  right: max(72px, calc((100% - 1296px) / 2)); /* mesma margem da .wrap */
   z-index: 5;
   font-size: 14px;
   line-height: 1.6;
@@ -433,7 +437,7 @@
   background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.6) 30%, rgba(0,0,0,.6) 100%);
 }
 .video-caption > p {
-  font-size: 12px;
+  font-size: 14px;
   color: rgba(255,255,255,.8);
   line-height: 1.6;
   margin-bottom: 6px;
@@ -499,3 +503,12 @@
   }
 }
 
+/* Abaixo de 1100px a .wrap tem 40px de margem. */
+@media (max-width: 1100px) {
+  .video-toggle {
+    left: 40px;
+  }
+  .video-caption {
+    right: 40px;
+  }
+}

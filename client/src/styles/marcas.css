@@ -35,12 +35,41 @@
 .theme-comex .hero-shade {
   background: var(--comex-navy-a67);
 }
+/* Rótulos por marca: Comex em Cinzel caixa alta; WellCare em Figtree, caixa normal. */
 .theme-comex .editorial-label {
   font-family: 'Cinzel', serif;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.7;
   letter-spacing: .06em;
+}
+.theme-wellcare .editorial-label {
+  font-family: 'Figtree', sans-serif;
+  text-transform: none;
+  letter-spacing: 0;
+}
+/* Topo das páginas-ponte na tipografia de cada marca. */
+.theme-comex .photo-hero .hero-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  letter-spacing: -.04em;
+}
+.theme-comex .photo-hero .hero-description {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+.theme-wellcare .photo-hero .hero-content h1 {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 300;
+  letter-spacing: -.04em;
+}
+.theme-wellcare .photo-hero .hero-description {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 400;
+}
+/* Filetes na cor de cada marca. */
+.theme-comex .small-rule {
+  background: var(--comex-gold);
 }
 .theme-wellcare {
   background: var(--wellcare-navy);
@@ -86,7 +115,7 @@
 }
 .theme-wellcare .small-rule {
   height: 2px;
-  background: var(--yellow);
+  background: var(--wellcare-cyan);
 }
 .bridge-logo {
   width: 310px;
@@ -110,6 +139,30 @@
 .theme-comex .button-solid:hover,
 .theme-wellcare .button-solid:hover {
   background: var(--teal-light);
+}
+/* Convite do rodapé na cor de cada marca. */
+.site-comex .site-footer .footer-editorial-closure .button-solid {
+  background: var(--comex-gold);
+  color: var(--comex-navy);
+}
+.site-comex .site-footer .footer-editorial-closure .button-solid:hover {
+  background: var(--comex-gold-light);
+}
+.site-wellcare .site-footer .footer-editorial-closure .button-solid {
+  background: var(--wellcare-blue);
+  color: var(--white);
+}
+.site-wellcare .site-footer .footer-editorial-closure .button-solid:hover {
+  background: var(--wellcare-blue-dark);
+}
+/* Escurecimento local atrás do título e do subtítulo: leitura estável em quadros claros do vídeo. */
+.video-hero.brand-comex .hero-content::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0 -12% 0 calc(-1 * max(72px, (100vw - 1296px) / 2));
+  pointer-events: none;
+  background: radial-gradient(ellipse 60% 55% at 28% 62%, rgba(13,27,42,.6) 0%, rgba(13,27,42,.35) 55%, rgba(13,27,42,0) 100%);
 }
 .video-hero.brand-comex .hero-shade {
   background: linear-gradient(90deg, rgba(13,27,42,.8) 0%, rgba(13,27,42,.8) 65%, rgba(13,27,42,0) 100%);

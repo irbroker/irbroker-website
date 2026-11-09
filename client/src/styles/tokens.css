@@ -32,9 +32,12 @@
   --error-dark: #8D2F2F;
   --comex-navy: #0D1B2A; /* Comex Broker */
   --comex-gold: #C9A15A; /* Comex Broker */
+  --comex-gold-light: #D6B57A; /* hover do botão Comex */
   --comex-body: #CED3D7; /* Comex Broker */
   --wellcare-navy: #06143A; /* WellCare */
   --wellcare-cyan: #1CE4FB; /* WellCare */
+  --wellcare-blue: #0046F4; /* botão WellCare (7,0:1 com branco) */
+  --wellcare-blue-dark: #0037C2; /* hover do botão WellCare */
   --wellcare-body: #CCD6EB; /* WellCare */
   --graphite-a09: #1F222516;
   --graphite-a18: #1F22252E; /* fio de conteúdos */
