@@ -428,7 +428,7 @@
 .video-caption::before {
   content: '';
   position: absolute;
-  right: -40px;
+  right: calc(-1 * max(72px, (100vw - 1296px) / 2)); /* fundo até a borda da tela */
   bottom: -45px;
   width: max(420px, calc(100% + 120px));
   height: 180px;
@@ -510,5 +510,8 @@
   }
   .video-caption {
     right: 40px;
+  }
+  .video-caption::before {
+    right: -40px;
   }
 }
