@@ -116,15 +116,10 @@
   opacity: 0.7;
   transition: none;
 }
-.partner-logo:hover img,
-.partner-logo:focus-visible img {
+.partner-logo:hover img {
   opacity: 1;
   filter: none;
   mix-blend-mode: normal;
-}
-.partner-logo:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 5px;
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {

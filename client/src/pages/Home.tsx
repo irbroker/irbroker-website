@@ -41,10 +41,10 @@ export default function Home() {
     <section className="section process-section">
       <div className="wrap"><div className="process-heading"><p className="section-label"><span className="small-rule" />Como trabalhamos</p><AnimatedHeading>A seguradora emite a apólice.<br />A irbroker trabalha do seu lado.</AnimatedHeading></div>
         <ProcessDiagram />
-        <div className="process-descriptions">{process.map(([title, text]) => <p key={title} aria-label={title}>{text}</p>)}</div>
+        <div className="process-descriptions">{process.map(([title, text]) => <p key={title}><span className="sr-only">{title}: </span>{text}</p>)}</div>
       </div>
     </section>
-    <section className="section method-section"><div className="wrap"><Editorial label="Método"><AnimatedHeading>Entender antes de cotar.</AnimatedHeading></Editorial><div className="method-line">{method.map(([title, text]) => <div key={title}><span className="method-node" aria-hidden="true" /><h3>{title}</h3><p>{text}</p></div>)}</div></div></section>
+    <section className="section method-section"><div className="wrap"><Editorial label="Método" heading={false}><AnimatedHeading>Entender antes de cotar.</AnimatedHeading></Editorial><div className="method-line">{method.map(([title, text]) => <div key={title}><span className="method-node" aria-hidden="true" /><h3>{title}</h3><p>{text}</p></div>)}</div></div></section>
     <Verticals />
     <PartnerLogos />
     <section className="project-section"><div className="project-photo"><img src={media.forest.src} alt={media.forest.alt} width={media.forest.width} height={media.forest.height} loading="lazy" /><span aria-hidden="true" /></div><div className="project-copy"><p className="section-label"><span className="small-rule" />Projeto 365</p><AnimatedHeading>Cada apólice,<br />uma nova árvore.</AnimatedHeading><p>Para cada apólice emitida, a irbroker planta uma árvore em nome do cliente.</p></div></section>

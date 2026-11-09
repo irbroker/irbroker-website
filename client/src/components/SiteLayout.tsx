@@ -63,20 +63,24 @@ export function Header({ light = true, path = '/' }: { light?: boolean; path?: s
         setSolutionsOpen(false);
       }
     }
-    function escape(event: KeyboardEvent) {
-      if (event.key === 'Escape') {
-        if (header.current?.contains(document.activeElement)) header.current?.querySelector<HTMLElement>('.menu-toggle')?.focus();
-        setMobileOpen(false);
-        setSolutionsOpen(false);
-      }
-    }
     document.addEventListener('click', dismiss);
-    document.addEventListener('keydown', escape);
-    return () => {
-      document.removeEventListener('click', dismiss);
-      document.removeEventListener('keydown', escape);
-    };
+    return () => document.removeEventListener('click', dismiss);
   }, []);
+
+  useEffect(() => {
+    if (!mobileOpen && !solutionsOpen) return;
+    function escape(event: KeyboardEvent) {
+      if (event.key !== 'Escape') return;
+      // O toggle do menu só aparece no celular; no desktop o foco volta para "Soluções".
+      const toggle = header.current?.querySelector<HTMLElement>('.menu-toggle');
+      const target = mobileOpen && toggle && toggle.getClientRects().length > 0 ? toggle : header.current?.querySelector<HTMLElement>('.solutions-toggle');
+      if (header.current?.contains(document.activeElement)) target?.focus();
+      setMobileOpen(false);
+      setSolutionsOpen(false);
+    }
+    document.addEventListener('keydown', escape);
+    return () => document.removeEventListener('keydown', escape);
+  }, [mobileOpen, solutionsOpen]);
 
   const logo = mobileOpen ? brand.light : (headerScrolled ? brand.dark : (light ? brand.light : brand.dark));
   const headerTone = headerScrolled ? 'header-dark' : (light ? 'header-light' : 'header-dark');
@@ -84,11 +88,11 @@ export function Header({ light = true, path = '/' }: { light?: boolean; path?: s
   return <header ref={header} className={`site-header ${headerTone} ${headerScrolled ? 'header-scrolled' : ''} ${mobileOpen ? 'menu-open' : ''}`}>
     <div className="header-inner">
       <a className="wordmark" href="/" aria-label="irbroker"><img src={logo} alt="irbroker" width="1594" height="400" /></a>
-      <button className="menu-toggle" aria-label={mobileOpen ? 'Fechar menu' : 'Abrir menu'} aria-expanded={mobileOpen} aria-controls="main-navigation" onClick={() => setMobileOpen(!mobileOpen)}>
+      <button className="menu-toggle" aria-label="Menu" aria-expanded={mobileOpen} aria-controls="main-navigation" onClick={() => setMobileOpen(!mobileOpen)}>
         <span /><span />
       </button>
       <nav id="main-navigation" aria-label="Navegação principal" className={mobileOpen ? 'nav-open' : ''}>
-        <div className="solutions-nav">
+        <div className="solutions-nav" onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setSolutionsOpen(false); }}>
           <button className="nav-link solutions-toggle" aria-expanded={solutionsOpen} aria-controls="solutions-navigation" onClick={() => setSolutionsOpen(!solutionsOpen)}>Soluções<span className="chevron" aria-hidden="true" /></button>
           {solutionsOpen && <div id="solutions-navigation" className="solutions-dropdown">
             {verticals.map(vertical => <a key={vertical.slug} href={`/${vertical.slug}`} aria-current={path === `/${vertical.slug}` ? 'page' : undefined}>{vertical.name}</a>)}
@@ -106,8 +110,8 @@ export function Button({ children, href = '/contato', secondary = false }: { chi
   return <a href={href} className={`button ${secondary ? 'button-outline' : 'button-solid'}`}>{children}</a>;
 }
 
-export function Editorial({ label, children, className = '' }: { label: string; children: ReactNode; className?: string }) {
-  return <div className={`editorial ${className}`}><div className="editorial-label"><span className="small-rule" />{label}</div><div className="editorial-content">{children}</div></div>;
+export function Editorial({ label, children, className = '', heading = true }: { label: string; children: ReactNode; className?: string; heading?: boolean }) {
+  return <div className={`editorial ${className}`}><div className="editorial-label"><span className="small-rule" />{heading ? <h2 className="editorial-title">{label}</h2> : label}</div><div className="editorial-content">{children}</div></div>;
 }
 
 function WhatsAppIcon() {
@@ -190,7 +194,7 @@ function WhatsAppLink({ floating = false, suppressed = false }: { floating?: boo
     };
   }, [floating, suppressed]);
 
-  return <a ref={floating ? link : undefined} className={floating ? 'whatsapp-link' : 'footer-whatsapp-link footer-editorial-link'} href="https://wa.me/5541963491818" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" hidden={suppressed || undefined}><WhatsAppIcon /><span className="whatsapp-label">Falar no WhatsApp</span></a>;
+  return <a ref={floating ? link : undefined} className={floating ? 'whatsapp-link' : 'footer-whatsapp-link footer-editorial-link'} href="https://wa.me/5541963491818" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp (abre em nova aba)" hidden={suppressed || undefined}><WhatsAppIcon /><span className="whatsapp-label">Falar no WhatsApp</span></a>;
 }
 
 function InstagramIcon() {
@@ -258,11 +262,11 @@ export function Footer({ path = '/' }: { path?: string }) {
               <div className="footer-editorial-front-links">{verticals.map(vertical => <a className="footer-editorial-link" key={vertical.slug} href={`/${vertical.slug}`}>{vertical.name}</a>)}</div>
               {!contactPage && <div className="footer-editorial-site-links"><a className="footer-editorial-link" href="/sobre">Sobre</a><a className="footer-editorial-link" href="/conteudos">Conteúdos</a><a className="footer-editorial-link" href="/contato">Contato</a></div>}
             </nav>
-            <div className="footer-editorial-block footer-editorial-social" aria-label="Redes sociais">
+            <div className="footer-editorial-block footer-editorial-social" role="group" aria-label="Redes sociais">
               <span className="footer-editorial-label">Siga</span>
               <div className="footer-editorial-social-links">
-                <a className="footer-editorial-social-link" href="https://www.instagram.com/irbroker_/" target="_blank" rel="noopener" aria-label="irbroker no Instagram"><InstagramIcon /></a>
-                <a className="footer-editorial-social-link" href="https://br.linkedin.com/company/irbroker" target="_blank" rel="noopener" aria-label="irbroker no LinkedIn"><LinkedInIcon /></a>
+                <a className="footer-editorial-social-link" href="https://www.instagram.com/irbroker_/" target="_blank" rel="noopener" aria-label="irbroker no Instagram (abre em nova aba)"><InstagramIcon /></a>
+                <a className="footer-editorial-social-link" href="https://br.linkedin.com/company/irbroker" target="_blank" rel="noopener" aria-label="irbroker no LinkedIn (abre em nova aba)"><LinkedInIcon /></a>
               </div>
             </div>
           </div>

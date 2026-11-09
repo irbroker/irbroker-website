@@ -10,9 +10,9 @@ type LogoGridProps = {
 
 function LogoGrid({ logos, label, gridClass }: LogoGridProps) {
   return (
-    <div className={`partner-logo-grid ${gridClass}`} aria-label={label}>
+    <div className={`partner-logo-grid ${gridClass}`} role="list" aria-label={label}>
       {logos.map(logo => (
-        <div className="partner-logo" key={logo.src} tabIndex={0}>
+        <div className="partner-logo" key={logo.src} role="listitem">
           <img
             src={logo.src}
             alt={logo.alt}

@@ -382,7 +382,14 @@
 .contact-form-column .contact-form input:not([type="checkbox"]):not([type="radio"]):focus,
 .contact-form-column .contact-form textarea:focus {
   border-bottom-color: var(--graphite);
-  outline: 0;
+  outline: 2px solid var(--graphite);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+.contact-form__required {
+  margin: 0 0 28px;
+  color: var(--body);
+  font-size: 15px;
 }
 .contact-form-column .contact-form__fieldset {
   min-width: 0;
@@ -422,8 +429,8 @@
   color: var(--paper);
 }
 .contact-form-column .contact-option:focus-within {
-  outline: 2px solid var(--teal);
-  outline-offset: 3px;
+  outline: 0;
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--graphite);
 }
 .contact-form-column .contact-option input[type="radio"] {
   position: absolute;

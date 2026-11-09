@@ -244,6 +244,15 @@
 .video-toggle:hover {
   border-color: var(--paper);
 }
+/* Pausa discreta: aparece com o mouse sobre o topo ou com o foco do teclado. */
+.video-toggle {
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+.video-hero:hover .video-toggle,
+.video-toggle:focus-visible {
+  opacity: 1;
+}
 .video-pause-icon {
   display: flex;
   gap: 5px;
@@ -448,31 +457,7 @@
   height: 2px;
   background: rgba(255,255,255,.6);
 }
-.video-toggle.sr-only:not(:focus-visible) {
-  position: absolute;
-  left: 40px;
-  bottom: 29px;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
-.video-toggle.sr-only:focus-visible {
-  position: absolute;
-  left: max(40px, calc((100vw - 1296px) / 2));
-  bottom: 29px;
-  width: 44px;
-  height: 44px;
-  margin: 0;
-  padding: 0;
-  overflow: visible;
-  clip: auto;
-  clip-path: none;
-  white-space: normal;
+.video-toggle:focus-visible {
   background: var(--graphite);
   border: 1px solid var(--white);
   color: var(--white);

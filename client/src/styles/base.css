@@ -235,6 +235,23 @@ img {
   }
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+/* Rótulo editorial é um h2 por semântica, mas mantém o visual do rótulo. */
+.editorial-label h2.editorial-title {
+  font: inherit;
+  letter-spacing: inherit;
+}
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;

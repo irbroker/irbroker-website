@@ -80,7 +80,7 @@ export default function HeroVideo({ kind = 'home' }: { kind?: 'home' | 'comex' }
 
   return <>
     <video ref={video} className="hero-video" autoPlay muted loop playsInline preload="metadata" poster={asset.poster} src={asset.src} width={asset.width} height={asset.height} aria-hidden="true" tabIndex={-1} onPause={() => setPaused(true)} onPlay={() => setPaused(false)} onError={() => setFailed(true)} />
-    <button className="video-toggle sr-only" type="button" aria-label={paused ? 'Retomar vídeo' : 'Pausar vídeo'} onClick={togglePlayback}><span className={paused ? 'video-play-icon' : 'video-pause-icon'} aria-hidden="true">{!paused && <><i /><i /></>}</span></button>
-    {kind === 'home' && <div className="video-caption"><p>Grupo irbroker</p>{sceneIndex !== 0 && <div className="video-caption-name"><motion.a key={scene.name} href={scene.href} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .3 }}>{scene.name}</motion.a></div>}<div className="video-caption-track" aria-hidden="true"><motion.span style={{ scaleX: progress, transformOrigin: 'left' }} /></div></div>}
+    <button className="video-toggle" type="button" aria-label={paused ? 'Retomar vídeo' : 'Pausar vídeo'} onClick={togglePlayback}><span className={paused ? 'video-play-icon' : 'video-pause-icon'} aria-hidden="true">{!paused && <><i /><i /></>}</span></button>
+    {kind === 'home' && <div className="video-caption"><p>Grupo irbroker</p>{sceneIndex !== 0 && <div className="video-caption-name"><motion.a href={scene.href} tabIndex={-1} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .3 }}>{scene.name}</motion.a></div>}<div className="video-caption-track" aria-hidden="true"><motion.span style={{ scaleX: progress, transformOrigin: 'left' }} /></div></div>}
   </>;
 }
