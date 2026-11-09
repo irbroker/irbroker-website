@@ -1,7 +1,6 @@
 import { Fragment } from 'react';
 import { guides, type Guia } from '../data/guides';
 import { Button } from '../components/SiteLayout';
-import { previewSiteOrigin } from '../../../shared/site-origin';
 
 function inline(text: string) {
   return text.split(/(\*\*[^*]+\*\*)/g).map((part, index) => part.startsWith('**') && part.endsWith('**') ? <strong key={index}>{part.slice(2, -2)}</strong> : <Fragment key={index}>{part}</Fragment>);
@@ -31,14 +30,8 @@ function MarkdownBody({ markdown }: { markdown: string }) {
 }
 
 export default function GuidePage({ guide }: { guide: Guia }) {
-  const structured = {
-    '@context': 'https://schema.org', '@type': 'Article', headline: guide.titulo,
-    description: guide.linhaFina, datePublished: '2026-11-09', inLanguage: 'pt-BR',
-    author: { '@type': 'Organization', name: 'irbroker' }, publisher: { '@type': 'Organization', name: 'irbroker' },
-    mainEntityOfPage: new URL(guide.slug, previewSiteOrigin).href,
-  };
+  // O JSON-LD (Article + BreadcrumbList) vai no <head>, gerado no build por components/StructuredData.tsx.
   return <div className="guide-page content-surface">
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structured).replace(/</g, '\u003c') }} />
     <article className="guide-reading">
       <header className="guide-heading"><p className="section-label"><span className="small-rule" />{guide.frente}</p><h1>{guide.titulo}</h1><p className="guide-subtitle">{guide.linhaFina}</p><p className="content-meta"><time dateTime="2026-11-09">{guide.data}</time><span aria-hidden="true">·</span><span>{guide.tempoLeitura}</span></p></header>
       <div className="guide-body"><MarkdownBody markdown={guide.corpo} /></div>

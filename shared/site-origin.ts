@@ -1,4 +1,2 @@
-export const PREVIEW_SITE_ORIGIN =
-  "https://8328-iycb45aoga883j1dr60g9-a539bc94.us5.manus.computer";
-
-export const previewSiteOrigin = PREVIEW_SITE_ORIGIN;
+// Domínio canônico do site (sem barra final). O build estático (scripts/ssg.mjs) usa PUBLIC_SITE_URL e cai neste valor só pelo script `build`.
+export const SITE_ORIGIN = "https://www.irbroker.com.br";

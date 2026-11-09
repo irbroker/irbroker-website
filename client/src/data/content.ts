@@ -150,61 +150,72 @@ export type PageMeta = {
   description: string;
   imageKey: PageImageKey;
   ogType?: "article" | "website";
+  noindex?: boolean;
 };
 
 const metadata: Record<string, PageMeta> = {
   "/": {
-    title: "irbroker | Seguros corporativos",
+    title: "Corretora de seguros corporativos em São Paulo | irbroker",
     description:
-      "Corretora consultiva para empresas que precisam proteger patrimônio, operações e pessoas.",
+      "Corretora de seguros para empresas em São Paulo (Faria Lima) e São Bernardo do Campo: comércio exterior, benefícios, transporte, construção e corporate.",
     imageKey: "hero",
   },
-  "/transporte-de-cargas": {
-    title: "irbroker | Transporte de cargas",
-    description:
-      "Seguros de responsabilidade para quem transporta carga de terceiros.",
-    imageKey: "transport",
-  },
-  "/construcao-e-imoveis": {
-    title: "irbroker | Construção e imóveis",
-    description:
-      "Garantias e proteção patrimonial para quem incorpora, constrói, administra e investe.",
-    imageKey: "construction",
-  },
-  "/corporate": {
-    title: "irbroker | Corporate",
-    description:
-      "Proteção para a empresa e para os gestores, em empresas de todos os portes.",
-    imageKey: "corporate",
-  },
   "/comex-broker": {
-    title: "irbroker | Comex Broker",
+    title: "Seguro de carga internacional para importadores | irbroker",
     description:
-      "Seguro internacional de cargas para importadores e exportadores. A Comex Broker é a área de comércio exterior do Grupo irbroker.",
+      "Seguro internacional de cargas para empresas importadoras e exportadoras. A Comex Broker é a área de comércio exterior do Grupo irbroker, em São Paulo.",
     imageKey: "comexHero",
   },
   "/wellcare": {
-    title: "irbroker | WellCare",
+    title: "Plano de saúde e benefícios empresariais | irbroker",
     description:
-      "Saúde, odonto, vida e acidentes pessoais, da escolha à renovação. A WellCare é a área de benefícios do Grupo irbroker.",
+      "Plano de saúde, odonto, vida em grupo e acidentes pessoais para empresas, da escolha à renovação. A WellCare é a área de benefícios do Grupo irbroker.",
     imageKey: "wellcare",
   },
-  "/sobre": {
-    title: "irbroker | Sobre",
+  "/transporte-de-cargas": {
+    title: "Seguro de transporte de cargas e RCTR-C | irbroker",
     description:
-      "Uma equipe com mais de duas décadas no mercado segurador. Escritórios em São Bernardo do Campo e em São Paulo, na Faria Lima.",
-    imageKey: "hero",
+      "Seguro de transporte e seguros obrigatórios do transportador (RCTR-C, RC-DC e RC-V) para transportadoras, operadores logísticos e agentes de carga.",
+    imageKey: "transport",
+  },
+  "/construcao-e-imoveis": {
+    title: "Seguro garantia e risco de engenharia | irbroker",
+    description:
+      "Seguro garantia de licitação e execução, risco de engenharia, RC obras e seguro de condomínio para incorporadoras, construtoras e administradoras.",
+    imageKey: "construction",
+  },
+  "/corporate": {
+    title: "Seguro empresarial, D&O e responsabilidade civil | irbroker",
+    description:
+      "Seguro patrimonial e empresarial, D&O, riscos cibernéticos e garantia judicial para pequenas, médias e grandes empresas e para os seus gestores.",
+    imageKey: "corporate",
+  },
+  "/sobre": {
+    title: "Quem somos: corretora de seguros para empresas | irbroker",
+    description:
+      "Corretora de seguros para empresas, com equipe de mais de duas décadas no mercado segurador e escritórios em São Bernardo do Campo e na Faria Lima (SP).",
+    imageKey: "about",
   },
   "/conteudos": {
-    title: "Conteúdos | irbroker",
-    description: "Notícias e guias, frente por frente.",
+    title: "Radar do mercado e guias de seguros para empresas | irbroker",
+    description:
+      "Notícias do mercado segurador e guias de seguros para empresas, frente por frente: comércio exterior, benefícios, transporte, construção e corporate.",
     imageKey: "hero",
   },
   "/contato": {
-    title: "irbroker | Contato",
-    description: "Vamos conversar sobre a sua empresa.",
+    title: "Fale com a corretora em São Bernardo e Faria Lima | irbroker",
+    description:
+      "Fale com a irbroker sobre o seguro da sua empresa. Escritórios em São Bernardo do Campo e na Faria Lima, em São Paulo. Telefone (11) 2149-7244.",
     imageKey: "hero",
   },
+};
+
+/** Rota desconhecida: gerada como 404.html, com noindex e sem canonical. */
+export const notFoundMeta: PageMeta = {
+  title: "Página não encontrada | irbroker",
+  description: "A página procurada não existe ou mudou de endereço. Acesse a home ou uma das frentes da irbroker.",
+  imageKey: "hero",
+  noindex: true,
 };
 
 const guideImageKeys: Record<string, PageImageKey> = {
@@ -216,8 +227,8 @@ const guideImageKeys: Record<string, PageImageKey> = {
 
 for (const guide of guides) {
   metadata[guide.slug] = {
-    title: `${guide.titulo} | irbroker`,
-    description: guide.linhaFina,
+    title: `${guide.seoTitle ?? guide.titulo} | irbroker`,
+    description: guide.seoDescription ?? guide.linhaFina,
     imageKey: guideImageKeys[guide.frente] ?? "hero",
     ogType: "article",
   };
@@ -230,5 +241,5 @@ function normalizePath(path: string): string {
 }
 
 export function pageMeta(path: string): PageMeta {
-  return metadata[normalizePath(path)] ?? metadata["/"];
+  return metadata[normalizePath(path)] ?? notFoundMeta;
 }

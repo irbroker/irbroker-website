@@ -1,18 +1,22 @@
 import React from "react";
 import { renderToString } from "react-dom/server";
-import { PREVIEW_SITE_ORIGIN } from "../../shared/site-origin";
+import { SITE_ORIGIN } from "../../shared/site-origin";
 import App from "./App";
 import { media } from "./data/media";
-import { pageMeta, routes, type PageMeta } from "./data/content";
+import { pageMeta, routes } from "./data/content";
+import { structuredData } from "./components/StructuredData";
 
-export { PREVIEW_SITE_ORIGIN };
+export { SITE_ORIGIN };
 
 export type RenderedPage = {
   body: string;
   title: string;
   description: string;
   image: string;
+  imageAlt: string;
   ogType?: "article" | "website";
+  noindex?: boolean;
+  jsonLd?: object;
 };
 
 export const paths = routes.map((route) => route.path);
@@ -26,22 +30,23 @@ function normalizePath(path: string): string {
   return `/${pathname.replace(/^\/+|\/+$/g, "")}`;
 }
 
-function mediaSource(meta: PageMeta): string {
-  return media[meta.imageKey].ogSrc;
-}
-
-export function renderPage(path: string): RenderedPage {
+export function renderPage(path: string, origin?: string): RenderedPage {
   const normalizedPath = normalizePath(path);
   const meta = pageMeta(normalizedPath);
   const body = renderToString(
     React.createElement(AppWithPath, { path }),
   );
 
+  const image = media[meta.imageKey];
   return {
     body,
     title: meta.title,
     description: meta.description,
-    image: mediaSource(meta),
+    image: image.ogSrc,
+    // O alt de media.ts pode ficar vazio (imagem decorativa no site); no compartilhamento usa o título.
+    imageAlt: image.alt || meta.title,
     ogType: meta.ogType,
+    noindex: meta.noindex,
+    jsonLd: origin && !meta.noindex ? structuredData(normalizedPath, origin, image.ogSrc) : undefined,
   };
 }

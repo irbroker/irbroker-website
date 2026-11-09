@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && vite build --ssr src/ssg.tsx --outDir ../dist/ssr --emptyOutDir && node scripts/ssg.mjs",
-    "build:static": "vite build && vite build --ssr src/ssg.tsx --outDir ../dist/ssr --emptyOutDir && node scripts/ssg.mjs",
+    "build": "vite build && vite build --ssr src/ssg.tsx --outDir ../dist/ssr --emptyOutDir && node scripts/ssg.mjs --default-origin",
+    "build:static": "vite build && vite build --ssr src/ssg.tsx --outDir ../dist/ssr --emptyOutDir && node scripts/ssg.mjs --default-origin",
     "check": "tsc --noEmit",
     "format": "prettier --write ."
   },

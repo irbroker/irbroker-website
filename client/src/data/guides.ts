@@ -2,7 +2,11 @@ export interface Guia {
   frente: string;
   slug: string;
   titulo: string;
+  /** Título para busca (sem o sufixo " | irbroker"), quando o título passa de 60 caracteres. */
+  seoTitle?: string;
   linhaFina: string;
+  /** Description para busca (120 a 155 caracteres), quando a linha fina é curta. */
+  seoDescription?: string;
   data: string;
   tempoLeitura: string;
   corpo: string;
@@ -16,6 +20,8 @@ export const guides: Guia[] = [
     frente: "Transporte de cargas",
     slug: "/conteudos/seguros-obrigatorios-do-transportador",
     titulo: "RCTR-C, RC-DC e RC-V: os três seguros obrigatórios do transportador",
+    seoTitle: "RCTR-C, RC-DC e RC-V: seguros obrigatórios",
+    seoDescription: "Desde a Lei 14.599/2023, a pergunta \"qual dos dois?\" ficou para trás. Entenda o RCTR-C, o RC-DC e o RC-V: cada seguro responde a um risco diferente.",
     linhaFina: "Desde a Lei 14.599/2023, a pergunta \"qual dos dois?\" ficou para trás. Cada seguro responde a um risco diferente.",
     data: "09/11/2026",
     tempoLeitura: "4 min de leitura",
@@ -33,6 +39,7 @@ export const guides: Guia[] = [
     frente: "Comex Broker",
     slug: "/conteudos/cif-fob-seguro-da-carga",
     titulo: "Fechou CIF? Saiba quem contrata o seguro da carga, e com qual cobertura",
+    seoTitle: "CIF e FOB: quem contrata o seguro da carga",
     linhaFina: "O Incoterm do contrato define quem faz o seguro da viagem. E, mesmo quando é o vendedor, o nível exigido muda de um termo para outro.",
     data: "09/11/2026",
     tempoLeitura: "4 min de leitura",
@@ -49,6 +56,8 @@ export const guides: Guia[] = [
     frente: "Construção e imóveis",
     slug: "/conteudos/seguro-do-condominio-predio-e-terceiros",
     titulo: "Seguro do condomínio: o prédio e os terceiros são perguntas diferentes",
+    seoTitle: "Seguro de condomínio: prédio e terceiros",
+    seoDescription: "A lei obriga o seguro da edificação do condomínio. Os danos a moradores, visitantes e vizinhos pedem outra análise: a cobertura de responsabilidade civil.",
     linhaFina: "A lei obriga o seguro da edificação. Os danos a moradores, visitantes e vizinhos pedem outra análise.",
     data: "09/11/2026",
     tempoLeitura: "3 min de leitura",
@@ -64,6 +73,8 @@ export const guides: Guia[] = [
     frente: "WellCare",
     slug: "/conteudos/vida-saude-odonto-beneficios",
     titulo: "Vida em grupo, saúde e odonto: três benefícios, duas regras",
+    seoTitle: "Vida em grupo, plano de saúde e odonto na empresa",
+    seoDescription: "Vida em grupo, saúde e odonto chegam juntos no pacote da equipe, mas seguem leis e órgãos diferentes. Saber disso ajuda na próxima revisão de benefícios.",
     linhaFina: "Eles chegam juntos no pacote da equipe, mas seguem leis e órgãos diferentes. Saber disso ajuda na próxima revisão.",
     data: "09/11/2026",
     tempoLeitura: "3 min de leitura",
