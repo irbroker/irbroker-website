@@ -6,6 +6,7 @@ import ProofBand from '../components/ProofBand';
 import AnimatedHeading from '../components/AnimatedHeading';
 import ProcessDiagram from '../components/ProcessDiagram';
 import { HomeRadar } from '../components/Radar';
+import MethodSteps from '../components/MethodSteps';
 
 const triggers = [
   ['Nova rota, nova carga ou nova frota', 'Mudanças na operação podem mexer nas condições da apólice.'],
@@ -17,11 +18,6 @@ const process = [
   ['Empresa', 'A empresa mostra como a operação funciona: atividade, contratos, frota, equipe e patrimônio.'],
   ['irbroker', 'Entende a operação, compara alternativas entre seguradoras, explica cada cobertura e acompanha o cliente depois da contratação.'],
   ['Seguradoras', 'Oferecem os próprios produtos, analisam o risco e emitem a apólice.'],
-];
-const method = [
-  ['Entender', 'Mapeamos a atividade, os contratos e as responsabilidades da empresa antes de falar em produto.'],
-  ['Comparar', 'Buscamos alternativas junto às seguradoras e explicamos cada cobertura, para uma decisão informada.'],
-  ['Acompanhar', 'Seguimos com o cliente na renovação, nas mudanças da operação e quando houver sinistro.'],
 ];
 
 export default function Home() {
@@ -44,7 +40,7 @@ export default function Home() {
         <div className="process-descriptions">{process.map(([title, text]) => <p key={title}><span className="sr-only">{title}: </span>{text}</p>)}</div>
       </div>
     </section>
-    <section className="section method-section"><div className="wrap"><Editorial label="Método" heading={false}><AnimatedHeading>Entender antes de cotar.</AnimatedHeading></Editorial><div className="method-line">{method.map(([title, text]) => <div key={title}><span className="method-node" aria-hidden="true" /><h3>{title}</h3><p>{text}</p></div>)}</div></div></section>
+    <MethodSteps />
     <Verticals />
     <PartnerLogos />
     <section className="project-section"><div className="project-photo"><img src={media.forest.src} alt={media.forest.alt} width={media.forest.width} height={media.forest.height} loading="lazy" /><span aria-hidden="true" /></div><div className="project-copy"><p className="section-label"><span className="small-rule" />Projeto 365</p><AnimatedHeading>Cada apólice,<br />uma nova árvore.</AnimatedHeading><p>Para cada apólice emitida, a irbroker planta uma árvore em nome do cliente.</p></div></section>

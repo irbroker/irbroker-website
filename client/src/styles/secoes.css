@@ -98,6 +98,45 @@ p {
   color: var(--on-dark-muted);
   max-width: 355px;
 }
+/* Momento autoral (só com JS, desktop e sem movimento reduzido: classe .method-pinned).
+   A seção ocupa ~2,75 telas; o conteúdo fica fixo por ~1,75 tela enquanto a linha se desenha. */
+.method-pinned.method-section {
+  height: 275vh;
+  padding-block: 0;
+}
+.method-pinned .method-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 64px;
+}
+.method-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 2px;
+  background: var(--accent);
+  transform-origin: left center;
+}
+.method-step {
+  opacity: .45;
+  transition: opacity 500ms cubic-bezier(.16, 1, .3, 1);
+}
+.method-step.is-active {
+  opacity: 1;
+}
+.method-step .method-node {
+  background: var(--on-dark-muted);
+  z-index: 1;
+  transition: background-color 300ms cubic-bezier(.16, 1, .3, 1);
+}
+.method-step.is-active .method-node {
+  background: var(--accent);
+}
 .group-seal {
   font-family: 'Source Sans 3', sans-serif;
   font-size: 12px;
