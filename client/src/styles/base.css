@@ -346,3 +346,25 @@ a {
     }
   }
 }
+
+/* Trilha de navegação no topo das páginas internas (no lugar do antigo rótulo acima do h1). */
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.breadcrumb li + li::before {
+  content: "›" / "";
+  margin-right: 10px;
+  opacity: .7;
+}
+.breadcrumb a {
+  text-decoration: underline;
+}
+.breadcrumb a:hover {
+  text-decoration-color: var(--teal);
+}

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { verticals } from "../data/content";
+import { Breadcrumb } from "../components/SiteLayout";
 
 const CONTACT_ENDPOINT =
   "https://n8n.syravel.com/webhook/irb-site-contato-8b76e2cd";
@@ -141,10 +142,10 @@ export default function Contact() {
       <div className="contact-page__layout">
         <div className="contact-aside">
           <div className="contact-aside__intro">
-            <p className="contact-aside__label section-label">
-              <span className="small-rule" />
-              Contato
-            </p>
+            <Breadcrumb
+              className="contact-aside__label section-label"
+              items={[{ label: "Contato" }]}
+            />
             <h1>
               Vamos conversar sobre
               <br className="desktop-break" /> a sua empresa.

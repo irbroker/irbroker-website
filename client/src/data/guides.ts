@@ -2,6 +2,8 @@ export interface Guia {
   frente: string;
   slug: string;
   titulo: string;
+  /** Rótulo curto da trilha de navegação. */
+  trilha: string;
   /** Título para busca (sem o sufixo " | irbroker"), quando o título passa de 60 caracteres. */
   seoTitle?: string;
   linhaFina: string;
@@ -19,6 +21,7 @@ export const guides: Guia[] = [
   {
     frente: "Transporte de cargas",
     slug: "/conteudos/seguros-obrigatorios-do-transportador",
+    trilha: "Seguros obrigatórios do transportador",
     titulo:
       "RCTR-C, RC-DC e RC-V: os três seguros obrigatórios do transportador",
     seoTitle: "RCTR-C, RC-DC e RC-V: seguros obrigatórios",
@@ -54,6 +57,7 @@ export const guides: Guia[] = [
   {
     frente: "Comex Broker",
     slug: "/conteudos/cif-fob-seguro-da-carga",
+    trilha: "CIF, FOB e o seguro da carga",
     titulo:
       "Fechou CIF? Saiba quem contrata o seguro da carga, e com qual cobertura",
     seoTitle: "CIF e FOB: quem contrata o seguro da carga",
@@ -83,6 +87,7 @@ export const guides: Guia[] = [
   {
     frente: "Construção e imóveis",
     slug: "/conteudos/seguro-do-condominio-predio-e-terceiros",
+    trilha: "Seguro do condomínio",
     titulo:
       "Seguro do condomínio: o prédio e os terceiros são perguntas diferentes",
     seoTitle: "Seguro de condomínio: prédio e terceiros",
@@ -110,6 +115,7 @@ export const guides: Guia[] = [
   {
     frente: "WellCare",
     slug: "/conteudos/vida-saude-odonto-beneficios",
+    trilha: "Vida, saúde e odonto",
     titulo: "Vida em grupo, saúde e odonto: três benefícios, duas regras",
     seoTitle: "Vida em grupo, plano de saúde e odonto na empresa",
     seoDescription:

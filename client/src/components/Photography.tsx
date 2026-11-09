@@ -5,8 +5,9 @@ import { verticals } from '../data/content';
 import HeroTitle from './HeroTitle';
 import AnimatedHeading from './AnimatedHeading';
 import HeroVideo from './HeroVideo';
+import { Breadcrumb } from './SiteLayout';
 
-export function Hero({ image = 'hero', title, label, description, children, className = '', brand: verticalBrand }: { image?: keyof typeof media; title: string; label: string; description?: string; children?: ReactNode; className?: string; brand?: 'comex' | 'wellcare' }) {
+export function Hero({ image = 'hero', title, label, description, children, className = '', brand: verticalBrand }: { image?: keyof typeof media; title: string; label?: string; description?: string; children?: ReactNode; className?: string; brand?: 'comex' | 'wellcare' }) {
   const comex = verticalBrand === 'comex';
   const photo = media[comex ? 'comexHero' : image];
   const home = className.includes('home-hero');
@@ -15,7 +16,8 @@ export function Hero({ image = 'hero', title, label, description, children, clas
     {(home || comex) && <HeroVideo kind={comex ? 'comex' : 'home'} />}
     <div className="hero-shade" aria-hidden="true" />
     <div className="wrap hero-content">
-      {verticalBrand ? <div className={`bridge-wordmark ${verticalBrand}`}><img className="bridge-logo" src={brand[verticalBrand]} alt={label} width={brandDimensions[verticalBrand].width} height={brandDimensions[verticalBrand].height} /><span className="group-seal">Grupo irbroker</span></div> : <p className="hero-kicker"><span className="small-rule" />{label}</p>}
+      {!home && label && <Breadcrumb className="hero-kicker" items={[{ label: 'Soluções' }, { label }]} />}
+      {verticalBrand && <div className={`bridge-wordmark ${verticalBrand}`}><img className="bridge-logo" src={brand[verticalBrand]} alt={label} width={brandDimensions[verticalBrand].width} height={brandDimensions[verticalBrand].height} /><span className="group-seal">Grupo irbroker</span></div>}
       {home ? <HeroTitle title={title} /> : <h1>{title}</h1>}
       {description && <p className="hero-description">{description}</p>}
       {children && <div className="hero-actions">{children}</div>}

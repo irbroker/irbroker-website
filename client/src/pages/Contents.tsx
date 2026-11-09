@@ -1,5 +1,6 @@
 import { useEffect, useState, type MouseEvent } from 'react';
 import { verticals } from '../data/content';
+import { Breadcrumb } from '../components/SiteLayout';
 import { guides } from '../data/guides';
 import { orderedRadar } from '../data/radar';
 import { RadarNotes } from '../components/Radar';
@@ -31,7 +32,7 @@ export default function Contents({ search = '' }: { search?: string }) {
   }
 
   return <div className="contents-page content-surface">
-    <header className="content-page-heading wrap"><p className="section-label"><span className="small-rule" />Conteúdos</p><h1>O que muda no seguro da sua empresa.</h1><p>Notícias e guias, frente por frente.</p></header>
+    <header className="content-page-heading wrap"><Breadcrumb className="section-label" items={[{ label: 'Conteúdos' }]} /><h1>O que muda no seguro da sua empresa.</h1><p>Notícias e guias, frente por frente.</p></header>
     <nav className="content-filters wrap" aria-label="Frente de interesse">{['', ...verticals.map(vertical => vertical.name)].map(name => <a href={name ? `/conteudos?frente=${encodeURIComponent(name)}` : '/conteudos'} key={name} aria-current={front === name ? 'true' : undefined} onClick={event => filter(event, name)}>{name || 'Todas'}</a>)}</nav>
     <div className="wrap content-feed" aria-live="polite" aria-atomic="false">
       {notes.length > 0 && <section id="radar" className="contents-radar"><h2>Radar do mercado</h2><RadarNotes notes={notes} /></section>}

@@ -22,7 +22,7 @@ const process = [
 
 export default function Home() {
   return <>
-    <Hero title="Seguros corporativos começam pela sua operação." label="Grupo irbroker" description="Corretora consultiva para empresas que precisam proteger patrimônio, operações e pessoas." className="home-hero">
+    <Hero title="Seguros corporativos começam pela sua operação." description="Corretora consultiva para empresas que precisam proteger patrimônio, operações e pessoas." className="home-hero">
       <Button>Falar com um especialista</Button><Button href="https://wa.me/5541963491818" secondary>Falar no WhatsApp</Button>
     </Hero>
     <ProofBand />

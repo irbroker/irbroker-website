@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { guides, type Guia } from "../data/guides";
-import { Button } from "../components/SiteLayout";
+import { Breadcrumb, Button } from "../components/SiteLayout";
 
 function inline(text: string) {
   return text
@@ -77,10 +77,10 @@ export default function GuidePage({ guide }: { guide: Guia }) {
     <div className="guide-page content-surface">
       <article className="guide-reading">
         <header className="guide-heading">
-          <p className="section-label">
-            <span className="small-rule" />
-            {guide.frente}
-          </p>
+          <Breadcrumb
+            className="section-label"
+            items={[{ label: "Conteúdos", href: "/conteudos" }, { label: guide.trilha }]}
+          />
           <h1>{guide.titulo}</h1>
           <p className="guide-subtitle">{guide.linhaFina}</p>
           <p className="content-meta">

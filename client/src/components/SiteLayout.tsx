@@ -118,6 +118,13 @@ export function Header({ light = true, path = '/' }: { light?: boolean; path?: s
   </header>;
 }
 
+export function Breadcrumb({ items, className = '' }: { items: { label: string; href?: string }[]; className?: string }) {
+  return <nav className={`breadcrumb ${className}`} aria-label="Trilha de navegação"><ol>
+    <li><a href="/">Início</a></li>
+    {items.map((item, index) => <li key={item.label}>{index === items.length - 1 ? <span aria-current="page">{item.label}</span> : item.href ? <a href={item.href}>{item.label}</a> : item.label}</li>)}
+  </ol></nav>;
+}
+
 export function Button({ children, href = '/contato', secondary = false }: { children: ReactNode; href?: string; secondary?: boolean }) {
   return <a href={href} className={`button ${secondary ? 'button-outline' : 'button-solid'}`}>{children}</a>;
 }
