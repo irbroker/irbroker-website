@@ -1,70 +1,88 @@
 // JSON-LD de cada rota. Montado no build (client/src/ssg.tsx) e injetado no <head> por scripts/ssg.mjs,
 // para usar a mesma origem do canonical e não depender da hidratação.
-import { brand } from '../data/media';
-import { guides } from '../data/guides';
-import { routes } from '../data/content';
+import { brand } from "../data/media";
+import { guides } from "../data/guides";
+import { routes } from "../data/content";
 
-const PUBLISHED = '2026-11-09';
+const PUBLISHED = "2026-11-09";
 
 export function structuredData(path: string, origin: string, image: string) {
   const abs = (value: string) => new URL(value, `${origin}/`).href;
   const orgId = `${origin}/#organizacao`;
   const organization = {
-    '@type': 'InsuranceAgency',
-    '@id': orgId,
-    name: 'irbroker',
+    "@type": "InsuranceAgency",
+    "@id": orgId,
+    name: "irbroker",
     url: `${origin}/`,
     logo: abs(brand.dark),
     image: abs(brand.dark),
-    telephone: '+55-11-2149-7244',
-    email: 'comercial@irbroker.com.br',
-    areaServed: { '@type': 'Country', name: 'Brasil' },
-    sameAs: ['https://www.instagram.com/irbroker_/', 'https://br.linkedin.com/company/irbroker'],
+    telephone: "+55-11-2149-7244",
+    email: "comercial@irbroker.com.br",
+    areaServed: { "@type": "Country", name: "Brasil" },
+    sameAs: [
+      "https://www.instagram.com/irbroker_/",
+      "https://br.linkedin.com/company/irbroker",
+    ],
     address: [
       {
-        '@type': 'PostalAddress',
-        streetAddress: 'Rua José Versolato, 101, 12º andar, Torre A, Centro',
-        addressLocality: 'São Bernardo do Campo',
-        addressRegion: 'SP',
-        postalCode: '09750-730',
-        addressCountry: 'BR',
+        "@type": "PostalAddress",
+        streetAddress: "Rua José Versolato, 101, 12º andar, Torre A, Centro",
+        addressLocality: "São Bernardo do Campo",
+        addressRegion: "SP",
+        postalCode: "09750-730",
+        addressCountry: "BR",
       },
       {
-        '@type': 'PostalAddress',
-        streetAddress: 'Av. Presidente Juscelino Kubitschek, 1455, 4º andar, Faria Lima',
-        addressLocality: 'São Paulo',
-        addressRegion: 'SP',
-        postalCode: '04543-011',
-        addressCountry: 'BR',
+        "@type": "PostalAddress",
+        streetAddress:
+          "Av. Presidente Juscelino Kubitschek, 1455, 4º andar, Faria Lima",
+        addressLocality: "São Paulo",
+        addressRegion: "SP",
+        postalCode: "04543-011",
+        addressCountry: "BR",
       },
     ],
   };
   const graph: object[] = [organization];
-  if (path === '/') return { '@context': 'https://schema.org', '@graph': graph };
+  if (path === "/")
+    return { "@context": "https://schema.org", "@graph": graph };
 
   const guide = guides.find(item => item.slug === path);
-  const trail = [{ name: 'Início', path: '/' }];
-  if (guide) trail.push({ name: 'Conteúdos', path: '/conteudos' });
-  trail.push({ name: routes.find(route => route.path === path)?.title ?? path, path });
+  const trail = [{ name: "Início", path: "/" }];
+  if (guide) trail.push({ name: "Conteúdos", path: "/conteudos" });
+  trail.push({
+    name: routes.find(route => route.path === path)?.title ?? path,
+    path,
+  });
   graph.push({
-    '@type': 'BreadcrumbList',
-    itemListElement: trail.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: abs(item.path) })),
+    "@type": "BreadcrumbList",
+    itemListElement: trail.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: abs(item.path),
+    })),
   });
 
   if (guide) {
-    const publisher = { '@type': 'Organization', '@id': orgId, name: 'irbroker', logo: abs(brand.dark) };
+    const publisher = {
+      "@type": "Organization",
+      "@id": orgId,
+      name: "irbroker",
+      logo: abs(brand.dark),
+    };
     graph.push({
-      '@type': 'Article',
+      "@type": "Article",
       headline: guide.titulo,
       description: guide.seoDescription ?? guide.linhaFina,
       datePublished: PUBLISHED,
       dateModified: PUBLISHED,
-      inLanguage: 'pt-BR',
+      inLanguage: "pt-BR",
       image: abs(image),
       author: publisher,
       publisher,
       mainEntityOfPage: abs(path),
     });
   }
-  return { '@context': 'https://schema.org', '@graph': graph };
+  return { "@context": "https://schema.org", "@graph": graph };
 }
