@@ -253,7 +253,7 @@ export function Footer({ path = '/' }: { path?: string }) {
       ? 'Falar com a Comex Broker'
       : footerVertical.name === 'WellCare'
         ? 'Falar com a WellCare'
-        : `Falar sobre ${footerVertical.name}`
+        : `Falar sobre ${footerVertical.name === 'Corporate' ? 'Corporate' : footerVertical.name.toLowerCase()}`
     : 'Falar com um especialista';
   const footerCtaHref = footerVertical ? `/contato?frente=${encodeURIComponent(footerVertical.name)}` : '/contato';
 
@@ -279,7 +279,7 @@ export function Footer({ path = '/' }: { path?: string }) {
             <div className="footer-editorial-address footer-office"><strong>Filial</strong><p>Av. Presidente Juscelino Kubitschek, 1455, 4º andar, Faria Lima, São Paulo/SP, <span className="footer-nowrap">04543-011</span></p></div>
           </div>
           <nav className="footer-col" aria-labelledby="footer-frentes">
-            <h2 className="footer-col-title" id="footer-frentes">Frentes</h2>
+            <h2 className="footer-col-title" id="footer-frentes">Áreas</h2>
             <ul className="footer-list footer-editorial-front-links">{FOOTER_FRONTS.map(vertical => <li key={vertical.slug}><a className="footer-editorial-link" href={`/${vertical.slug}`}>{vertical.name}</a></li>)}</ul>
           </nav>
           <nav className="footer-col" aria-labelledby="footer-irbroker">

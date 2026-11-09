@@ -44,7 +44,7 @@ export const radar: RadarNote[] = [
     "data": "19/08/2026",
     "titulo": "Nova norma dos seguros de danos vale para contratos formados ou renovados a partir de 5 de janeiro de 2027",
     "resumo": "A Resolução CNSP 496/2026 fixa regras gerais para os contratos de seguros de danos e revoga a Resolução CNSP 407/2021. Segundo a Susep, as seguradoras têm até 4 de janeiro de 2027 para adaptar os planos, e a regra passa a ser obrigatória para contratos formados ou renovados a partir de 5 de janeiro de 2027. A norma fixa prazo máximo de 30 dias para a seguradora regular o sinistro e se manifestar sobre a cobertura.",
-    "oQueMuda": "Renovações de patrimonial, responsabilidade civil e outros seguros de danos a partir de janeiro seguem as novas regras. É um bom momento para revisar as condições com a corretora antes da renovação, e não depois.",
+    "oQueMuda": "Renovações de patrimonial, responsabilidade civil e outros seguros de danos a partir de janeiro seguem as novas regras. Revise as condições antes da renovação de janeiro.",
     "fontes": [
       {
         "nome": "Susep, \"Nova norma do CNSP estabelece regras gerais para contratos de seguros de danos\", 19/08/2026",

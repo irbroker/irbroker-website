@@ -72,15 +72,15 @@ export function Verticals({ compact = false }: { compact?: boolean }) {
   }
 
   return <section id="verticais" className={`verticals-section ${compact ? 'verticals-compact' : ''}`}>
-    <div className="wrap verticals-heading"><p className="section-label"><span className="small-rule" />Soluções</p><AnimatedHeading>Uma corretora, cinco frentes.</AnimatedHeading></div>
-    <div ref={panels} id="painel-verticais" className="vertical-panels" role="region" aria-label="Cinco verticais da irbroker" tabIndex={0} onMouseLeave={() => setHovered(null)}>
+    <div className="wrap verticals-heading"><p className="section-label"><span className="small-rule" />Soluções</p><AnimatedHeading>Uma corretora, cinco áreas.</AnimatedHeading></div>
+    <div ref={panels} id="painel-verticais" className="vertical-panels" role="region" aria-label="Cinco áreas da irbroker" tabIndex={0} onMouseLeave={() => setHovered(null)}>
       {verticals.map((vertical, index) => <motion.a className={`vertical-panel panel-${vertical.imageKey} ${vertical.bridge ? `panel-${vertical.bridge}` : ''} ${expanded === index ? 'panel-active' : ''}`} href={`/${vertical.slug}`} key={vertical.slug} aria-label={vertical.name} initial={false} animate={desktop === null ? {} : { flexGrow: desktop ? (expanded === index ? 2.4 : 1) : 0 }} transition={{ duration: reduced ? 0 : .5, ease: 'easeOut' }} onMouseEnter={() => setHovered(index)} onFocus={() => setFocused(index)} onBlur={() => setFocused(null)}>
         <img className="panel-photo" src={media[vertical.imageKey].src} alt="" width={media[vertical.imageKey].width} height={media[vertical.imageKey].height} loading="lazy" />
         <span className="panel-shade" aria-hidden="true" />
         {vertical.bridge && <div className="panel-brand"><img className={`panel-logo ${vertical.bridge}`} src={brand[vertical.bridge]} alt={vertical.name} width={brandDimensions[vertical.bridge].width} height={brandDimensions[vertical.bridge].height} loading="lazy" /><span className="group-seal">Grupo irbroker</span></div>}
-        <div className="panel-copy"><h3>{vertical.name}</h3><div className="panel-details" aria-hidden={desktop === true && expanded !== index ? true : undefined}><p>{vertical.tagline}</p><span className="panel-link">Conhecer a frente</span></div></div>
+        <div className="panel-copy"><h3>{vertical.name}</h3><div className="panel-details" aria-hidden={desktop === true && expanded !== index ? true : undefined}><p>{vertical.tagline}</p><span className="panel-link">Conhecer a área</span></div></div>
       </motion.a>)}
     </div>
-    <div className="vertical-indicator wrap" role="group" aria-label="Escolher frente">{verticals.map((vertical, index) => <button key={vertical.slug} type="button" aria-label={vertical.name} aria-controls="painel-verticais" aria-current={active === index ? 'true' : undefined} onClick={() => showPanel(index)}><span aria-hidden="true" /></button>)}</div>
+    <div className="vertical-indicator wrap" role="group" aria-label="Escolher área">{verticals.map((vertical, index) => <button key={vertical.slug} type="button" aria-label={vertical.name} aria-controls="painel-verticais" aria-current={active === index ? 'true' : undefined} onClick={() => showPanel(index)}><span aria-hidden="true" /></button>)}</div>
   </section>;
 }

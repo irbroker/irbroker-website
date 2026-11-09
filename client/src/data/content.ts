@@ -28,18 +28,18 @@ const verticalData: Vertical[] = [
     slug: "transporte-de-cargas",
     name: "Transporte de cargas",
     tagline: "Seguros de responsabilidade para quem transporta carga de terceiros.",
-    title: "A mercadoria e quem a transporta.",
+    title: "Os seguros obrigatórios do transportador, em dia.",
     intro: "Seguros de responsabilidade para quem transporta carga de terceiros.",
     audience: [
       "Transportadoras e operadores logísticos",
       "Agentes de carga e despachantes",
     ],
     solutions: [
+      "RCTR-C, RC-DC e RC-V (seguros obrigatórios)",
       "Seguro de transporte nacional",
-      "Seguros de responsabilidade do transportador",
     ],
     signals: [
-      "Novas origens, destinos ou mercadorias",
+      "Nova rota, novo tipo de carga ou frota maior",
       "Cliente ou contrato exigindo seguro específico",
       "Dúvida se toda carga está averbada, com limite acima da carga mais cara",
     ],
@@ -49,7 +49,7 @@ const verticalData: Vertical[] = [
     slug: "comex-broker",
     name: "Comex Broker",
     tagline: "Seguro internacional de cargas para quem importa e exporta.",
-    title: "A mercadoria que cruza fronteiras.",
+    title: "O seguro da carga que você importa ou exporta.",
     intro:
       "Seguro internacional de cargas para importadores e exportadores. A Comex Broker é a área de comércio exterior do Grupo irbroker.",
     audience: [],
@@ -161,7 +161,7 @@ const metadata: Record<string, PageMeta> = {
     imageKey: "hero",
   },
   "/comex-broker": {
-    title: "Seguro de carga internacional para importadores | irbroker",
+    title: "Seguro de carga para importação e exportação | irbroker",
     description:
       "Seguro internacional de cargas para empresas importadoras e exportadoras. A Comex Broker é a área de comércio exterior do Grupo irbroker, em São Paulo.",
     imageKey: "comexHero",
@@ -173,9 +173,9 @@ const metadata: Record<string, PageMeta> = {
     imageKey: "wellcare",
   },
   "/transporte-de-cargas": {
-    title: "Seguro de transporte de cargas e RCTR-C | irbroker",
+    title: "RCTR-C, RC-DC e RC-V para transportadoras | irbroker",
     description:
-      "Seguro de transporte e seguros obrigatórios do transportador (RCTR-C, RC-DC e RC-V) para transportadoras, operadores logísticos e agentes de carga.",
+      "Seguros obrigatórios do transportador (RCTR-C, RC-DC e RC-V) e seguro de transporte nacional para transportadoras, operadores logísticos e agentes de carga.",
     imageKey: "transport",
   },
   "/construcao-e-imoveis": {
@@ -199,7 +199,7 @@ const metadata: Record<string, PageMeta> = {
   "/conteudos": {
     title: "Radar do mercado e guias de seguros para empresas | irbroker",
     description:
-      "Notícias do mercado segurador e guias de seguros para empresas, frente por frente: comércio exterior, benefícios, transporte, construção e corporate.",
+      "Notícias do mercado segurador e guias de seguros para empresas, área por área: comércio exterior, benefícios, transporte, construção e corporate.",
     imageKey: "hero",
   },
   "/contato": {
@@ -213,7 +213,7 @@ const metadata: Record<string, PageMeta> = {
 /** Rota desconhecida: gerada como 404.html, com noindex e sem canonical. */
 export const notFoundMeta: PageMeta = {
   title: "Página não encontrada | irbroker",
-  description: "A página procurada não existe ou mudou de endereço. Acesse a home ou uma das frentes da irbroker.",
+  description: "A página procurada não existe ou mudou de endereço. Acesse a home ou uma das áreas da irbroker.",
   imageKey: "hero",
   noindex: true,
 };

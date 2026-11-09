@@ -10,13 +10,13 @@ import MethodSteps from '../components/MethodSteps';
 
 const triggers = [
   ['Nova rota, nova carga ou nova frota', 'Mudanças na operação podem mexer nas condições da apólice.'],
-  ['Contrato ou edital que exige garantia', 'A garantia certa depende do que o contrato pede.'],
-  ['Conselho ou investidor que pede D&O', 'Os gestores passam a precisar de proteção própria.'],
+  ['Contrato ou edital que exige garantia', 'Seguro garantia substitui fiança e caução, no valor e prazo que o contrato pede.'],
+  ['Conselho ou investidor que pede D&O', 'O D&O protege o patrimônio pessoal de diretores e conselheiros.'],
   ['Equipe que cresceu', 'O benefício que servia para dez pessoas pode não servir para cinquenta.'],
 ];
 const process = [
   ['Empresa', 'A empresa mostra como a operação funciona: atividade, contratos, frota, equipe e patrimônio.'],
-  ['irbroker', 'Entende a operação, compara alternativas entre seguradoras, explica cada cobertura e acompanha o cliente depois da contratação.'],
+  ['irbroker', 'Leva a operação da sua empresa às seguradoras e traduz as propostas para você decidir.'],
   ['Seguradoras', 'Oferecem os próprios produtos, analisam o risco e emitem a apólice.'],
 ];
 
@@ -29,8 +29,7 @@ export default function Home() {
     <section className="triggers-split">
       <div className="trigger-photo-column"><div className="trigger-photo-sticky"><img src={media.triggers.src} alt={media.triggers.alt} width={media.triggers.width} height={media.triggers.height} loading="lazy" /></div></div>
       <div className="trigger-copy"><p className="section-label"><span className="small-rule" />Quando revisar</p>
-        <AnimatedHeading>A operação muda.<br />A apólice nem sempre acompanha.</AnimatedHeading>
-        <p className="section-intro">Estes são os momentos em que vale rever a proteção com a corretora:</p>
+        <AnimatedHeading>Quando a operação muda, a apólice precisa mudar junto.</AnimatedHeading>
         <div className="trigger-list">{triggers.map(([title, text]) => <article key={title}><h3>{title}</h3><p>{text}</p></article>)}</div>
       </div>
     </section>
@@ -42,7 +41,7 @@ export default function Home() {
     <MethodSteps />
     <Verticals />
     <PartnerLogos />
-    <section className="project-section"><div className="project-photo"><img src={media.forest.src} alt={media.forest.alt} width={media.forest.width} height={media.forest.height} loading="lazy" /><span aria-hidden="true" /></div><div className="project-copy"><p className="section-label"><span className="small-rule" />Projeto 365</p><AnimatedHeading>Cada apólice,<br />uma nova árvore.</AnimatedHeading><p>Para cada apólice emitida, a irbroker planta uma árvore em nome do cliente.</p></div></section>
+    <section className="project-section"><div className="project-photo"><img src={media.forest.src} alt={media.forest.alt} width={media.forest.width} height={media.forest.height} loading="lazy" /><span aria-hidden="true" /></div><div className="project-copy"><AnimatedHeading>Projeto 365</AnimatedHeading><p>Para cada apólice emitida, a irbroker planta uma árvore em nome do cliente.</p></div></section>
     <HomeRadar />
   </>;
 }
