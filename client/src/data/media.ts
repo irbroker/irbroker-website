@@ -56,9 +56,10 @@ export const media = {
     height: 1080,
   },
   about: {
-    src: "/media/executivos-diversos_babafc8c.webp",
+    // Pexels 9476576 (torre na Av. Faria Lima, São Paulo). Não é o prédio do escritório da irbroker.
+    src: "/media/faria-lima-torre.webp",
     ogSrc: "/media/og/about.jpg",
-    alt: "Executivos de diferentes perfis reunidos em um ambiente corporativo.",
+    alt: "Fachada de vidro de um edifício corporativo na Avenida Faria Lima, em São Paulo.",
     width: 1920,
     height: 1080,
   },
