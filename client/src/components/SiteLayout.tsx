@@ -238,6 +238,9 @@ function normalizeSitePath(path: string) {
   return `/${pathname.replace(/^\/+|\/+$/g, '')}`;
 }
 
+const FOOTER_FRONT_ORDER = ['comex-broker', 'wellcare', 'transporte-de-cargas', 'construcao-e-imoveis', 'corporate'];
+const FOOTER_FRONTS = [...verticals].sort((a, b) => FOOTER_FRONT_ORDER.indexOf(a.slug) - FOOTER_FRONT_ORDER.indexOf(b.slug));
+
 export function Footer({ path = '/' }: { path?: string }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const normalizedPath = normalizeSitePath(path);
@@ -255,52 +258,52 @@ export function Footer({ path = '/' }: { path?: string }) {
   const footerCtaHref = footerVertical ? `/contato?frente=${encodeURIComponent(footerVertical.name)}` : '/contato';
 
   return <>
-    <footer className={`site-footer footer-editorial${contactPage ? ' footer-contact-page' : ''}`} aria-label="Rodapé">
-      <div className="wrap footer-editorial-inner">
-        {!contactPage && <div className="footer-editorial-closure">
-          <div className="footer-editorial-closure-copy">
+    <footer className="site-footer" aria-label="Rodapé">
+      <div className="wrap">
+        {!contactPage && <div className="footer-editorial-closure footer-grid">
+          <div className="footer-closure">
             <h2>Vamos conversar sobre a sua empresa.</h2>
             <Button href={footerCtaHref}>{footerCtaLabel}</Button>
           </div>
-          <div className="footer-editorial-contact">
-            <div className="footer-editorial-contact-details">
-              <a className="footer-editorial-link footer-editorial-phone" href="tel:+551121497244">(11) 2149-7244</a>
-              <a className="footer-editorial-link footer-editorial-email" href="mailto:comercial@irbroker.com.br">comercial@irbroker.com.br</a>
-            </div>
+          <div className="footer-contact">
+            <a className="footer-editorial-link footer-contact-big" href="tel:+551121497244">(11) 2149-7244</a>
+            <a className="footer-editorial-link footer-contact-big" href="mailto:comercial@irbroker.com.br">comercial@irbroker.com.br</a>
             <WhatsAppLink />
           </div>
         </div>}
 
-        <div className="footer-editorial-middle">
-          {!contactPage && <div className="footer-editorial-block footer-editorial-addresses">
-            <div className="footer-editorial-address-list">
-              <div className="footer-editorial-address"><span className="footer-editorial-label">Matriz</span><p>Rua José Versolato, 101, 12º andar, Torre A, Centro, São Bernardo do Campo/SP, 09750-730</p></div>
-              <div className="footer-editorial-address"><span className="footer-editorial-label">Filial</span><p>Av. Presidente Juscelino Kubitschek, 1455, 4º andar, Faria Lima, São Paulo/SP, 04543-011</p></div>
-            </div>
-          </div>}
-          <div className="footer-editorial-links-row">
-            <nav className="footer-editorial-block footer-editorial-fronts" aria-label="Frentes">
-              <span className="footer-editorial-label">Frentes</span>
-              <div className="footer-editorial-front-links">{verticals.map(vertical => <a className="footer-editorial-link" key={vertical.slug} href={`/${vertical.slug}`}>{vertical.name}</a>)}</div>
-              {!contactPage && <div className="footer-editorial-site-links"><a className="footer-editorial-link" href="/sobre">Sobre</a><a className="footer-editorial-link" href="/conteudos">Conteúdos</a><a className="footer-editorial-link" href="/contato">Contato</a></div>}
-            </nav>
-            <div className="footer-editorial-block footer-editorial-social" role="group" aria-label="Redes sociais">
-              <span className="footer-editorial-label">Siga</span>
-              <div className="footer-editorial-social-links">
-                <a className="footer-editorial-social-link" href="https://www.instagram.com/irbroker_/" target="_blank" rel="noopener" aria-label="irbroker no Instagram (abre em nova aba)"><InstagramIcon /></a>
-                <a className="footer-editorial-social-link" href="https://br.linkedin.com/company/irbroker" target="_blank" rel="noopener" aria-label="irbroker no LinkedIn (abre em nova aba)"><LinkedInIcon /></a>
-              </div>
+        <div className="footer-cols footer-grid">
+          <div className="footer-col">
+            <h2 className="footer-col-title">Escritórios</h2>
+            <div className="footer-editorial-address footer-office"><strong>Matriz</strong><p>Rua José Versolato, 101, 12º andar, Torre A, Centro, São Bernardo do Campo/SP, <span className="footer-nowrap">09750-730</span></p></div>
+            <div className="footer-editorial-address footer-office"><strong>Filial</strong><p>Av. Presidente Juscelino Kubitschek, 1455, 4º andar, Faria Lima, São Paulo/SP, <span className="footer-nowrap">04543-011</span></p></div>
+          </div>
+          <nav className="footer-col" aria-labelledby="footer-frentes">
+            <h2 className="footer-col-title" id="footer-frentes">Frentes</h2>
+            <ul className="footer-list footer-editorial-front-links">{FOOTER_FRONTS.map(vertical => <li key={vertical.slug}><a className="footer-editorial-link" href={`/${vertical.slug}`}>{vertical.name}</a></li>)}</ul>
+          </nav>
+          <nav className="footer-col" aria-labelledby="footer-irbroker">
+            <h2 className="footer-col-title" id="footer-irbroker">A irbroker</h2>
+            <ul className="footer-list">
+              <li><a className="footer-editorial-link" href="/sobre">Sobre</a></li>
+              <li><a className="footer-editorial-link" href="/conteudos">Conteúdos</a></li>
+              <li><a className="footer-editorial-link" href="/contato">Contato</a></li>
+              <li><button className="footer-editorial-link footer-policy" type="button" aria-haspopup="dialog" onClick={() => dialog.current?.showModal()}>Política de privacidade</button></li>
+            </ul>
+          </nav>
+          <div className="footer-col" role="group" aria-labelledby="footer-siga">
+            <h2 className="footer-col-title" id="footer-siga">Siga</h2>
+            <div className="footer-social">
+              <a className="footer-social-link" href="https://www.instagram.com/irbroker_/" target="_blank" rel="noopener" aria-label="irbroker no Instagram (abre em nova aba)"><InstagramIcon /></a>
+              <a className="footer-social-link" href="https://br.linkedin.com/company/irbroker" target="_blank" rel="noopener" aria-label="irbroker no LinkedIn (abre em nova aba)"><LinkedInIcon /></a>
             </div>
           </div>
         </div>
 
-        <div className="footer-editorial-legal">
-          <div className="footer-editorial-legal-copy">
-            <a href="/" className="footer-editorial-legal-brand" aria-label="irbroker"><img src={brand.light} alt="irbroker" width="1594" height="400" loading="lazy" /></a>
-            {/* TODO: acrescentar " · Registro SUSEP <número>" quando o cliente fornecer o número. */}
-            <p>© 2026 irbroker · CNPJ 54.769.677/0001-18</p>
-          </div>
-          <button className="footer-editorial-policy footer-editorial-link" type="button" onClick={() => dialog.current?.showModal()}>Política de privacidade</button>
+        <div className="footer-legal">
+          <a href="/" className="footer-editorial-legal-brand" aria-label="irbroker"><img src={brand.light} alt="irbroker" width="1594" height="400" loading="lazy" /></a>
+          {/* TODO: acrescentar " · Registro SUSEP <número>" quando o cliente fornecer o número. */}
+          <p>© 2026 irbroker · <span className="footer-nowrap">CNPJ 54.769.677/0001-18</span></p>
         </div>
       </div>
     </footer>
