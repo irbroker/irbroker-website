@@ -155,9 +155,39 @@
 .vertical-hero .hero-shade {
   background: var(--graphite-a66);
 }
-/* Transporte: véu mais leve à direita para o caminhão aparecer; o lado do texto segue escuro. */
-.photo-transport.vertical-hero .hero-shade {
-  background: linear-gradient(90deg, rgba(31,34,37,.6) 0%, rgba(31,34,37,.45) 55%, rgba(31,34,37,.2) 100%);
+/* Transporte e Construção: véu leve na foto inteira e escurecimento local só atrás do bloco de texto. */
+.photo-transport.vertical-hero .hero-shade,
+.photo-construction.vertical-hero .hero-shade {
+  background: rgba(31,34,37,.22);
+}
+.photo-transport.vertical-hero .hero-content::before,
+.photo-construction.vertical-hero .hero-content::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: -10% -8% -14% calc(-1 * max(72px, (100vw - 1296px) / 2));
+  pointer-events: none;
+  background: radial-gradient(ellipse 66% 58% at 30% 50%, rgba(31,34,37,.8) 0%, rgba(31,34,37,.64) 50%, rgba(31,34,37,0) 85%);
+}
+.photo-transport.vertical-hero .hero-description,
+.photo-construction.vertical-hero .hero-description {
+  font-size: 21px;
+  color: var(--paper);
+}
+@media (max-width: 767px) {
+  .photo-transport.vertical-hero .hero-shade,
+  .photo-construction.vertical-hero .hero-shade {
+    background: rgba(31,34,37,.3);
+  }
+  .photo-transport.vertical-hero .hero-content::before,
+  .photo-construction.vertical-hero .hero-content::before {
+    inset: -6% -22px -8%;
+    background: radial-gradient(ellipse 95% 58% at 40% 50%, rgba(31,34,37,.8) 0%, rgba(31,34,37,.64) 55%, rgba(31,34,37,0) 85%);
+  }
+  .photo-transport.vertical-hero .hero-description,
+  .photo-construction.vertical-hero .hero-description {
+    font-size: 20px;
+  }
 }
 .home-hero .hero-content {
   z-index: 2;
@@ -166,12 +196,10 @@
   background: var(--graphite);
   min-width: 0;
 }
+/* A foto cobre a coluna inteira (sem faixa grafite vazia abaixo de uma foto fixa). */
 .trigger-photo-sticky {
-  position: sticky;
-  top: 0;
-  height: 100svh;
+  height: 100%;
   min-height: 620px;
-  max-height: 950px;
 }
 .trigger-photo-sticky img {
   width: 100%;

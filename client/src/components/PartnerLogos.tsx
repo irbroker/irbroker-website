@@ -2,6 +2,7 @@ import { insurerLogos, clientLogos } from "../data/partners";
 import type { PartnerLogo } from "../data/partners";
 import type { CSSProperties } from "react";
 import AnimatedHeading from "./AnimatedHeading";
+import { Editorial } from "./SiteLayout";
 
 type LogoGridProps = {
   logos: PartnerLogo[];
@@ -30,7 +31,7 @@ function LogoGrid({ logos, label, gridClass }: LogoGridProps) {
 export default function PartnerLogos() {
   return (
     <section className="partners-section wrap">
-      <div className="logo-band">
+      <Editorial className="logo-band" label="Seguradoras" heading={false}>
         <AnimatedHeading>
           Alternativas entre as principais seguradoras.
         </AnimatedHeading>
@@ -39,15 +40,15 @@ export default function PartnerLogos() {
           label="Seguradoras parceiras"
           gridClass="grid-insurers"
         />
-      </div>
-      <div className="logo-band">
+      </Editorial>
+      <Editorial className="logo-band" label="Clientes" heading={false}>
         <AnimatedHeading>Empresas que confiam na irbroker.</AnimatedHeading>
         <LogoGrid
           logos={clientLogos}
           label="Clientes"
           gridClass="grid-clients"
         />
-      </div>
+      </Editorial>
     </section>
   );
 }
