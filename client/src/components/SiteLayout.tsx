@@ -173,12 +173,15 @@ function WhatsAppLink({ floating = false, suppressed = false }: { floating?: boo
         visibility.set(target, visible);
       });
       targets.forEach(target => intersectionObserver?.observe(target));
-      if (window.matchMedia('(max-width: 767px)').matches) {
-        const style = getComputedStyle(floatingLink);
-        const bottom = parseFloat(style.bottom) || 16;
-        const height = parseFloat(style.height) || 52;
-        const left = document.documentElement.clientWidth - (parseFloat(style.right) || 16) - 52;
-        const bandTop = viewportBottom - bottom - height;
+      // Em qualquer largura, o botão some enquanto um texto passa pela faixa que ele ocupa.
+      {
+        const wasHidden = floatingLink.hidden;
+        floatingLink.hidden = false;
+        const box = floatingLink.getBoundingClientRect();
+        floatingLink.hidden = wasHidden;
+        const bottom = viewportBottom - box.bottom;
+        const left = box.left - 8;
+        const bandTop = box.top;
         const texts = Array.from(document.querySelectorAll<HTMLElement>('main p, main li, main h1, main h2, main h3'));
         readingObserver = new IntersectionObserver(entries => {
           entries.forEach(entry => readingVisibility.set(entry.target, entry.isIntersecting && entry.boundingClientRect.right > left));
