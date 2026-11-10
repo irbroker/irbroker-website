@@ -42,7 +42,7 @@
   background: var(--graphite);
   color: var(--paper);
   border: 1px solid var(--steel);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.5;
 }
 .whatsapp-link[hidden],
@@ -126,7 +126,7 @@
   margin-bottom: 12px;
   color: var(--footer-muted);
   font-family: 'Source Sans 3', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: .06em;
@@ -197,7 +197,7 @@
   gap: 12px;
   padding: 14px 0 18px;
   color: var(--footer-muted);
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.5;
 }
 .footer-nowrap {

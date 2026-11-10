@@ -127,7 +127,7 @@ p {
 }
 .group-seal {
   font-family: 'Source Sans 3', sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 400;
   letter-spacing: .035em;
   border: 1px solid var(--white-a40);
@@ -203,7 +203,7 @@ p {
   padding-top: 0;
 }
 .acceptance-note {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   margin: 48px 0 0 calc(24% + 72px);
   color: var(--body);
@@ -362,7 +362,7 @@ p {
   }
   .acceptance-note {
     margin: 35px 0 0;
-    font-size: 14px;
+    font-size: 16px;
   }
   .about-values {
     padding-block: 65px;
