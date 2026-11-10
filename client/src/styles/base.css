@@ -66,7 +66,7 @@ img {
 }
 .small-rule {
   width: 28px;
-  flex: 0 0 28px;
+  flex: none;
   display: inline-block;
 }
 .section-label {
@@ -77,12 +77,17 @@ img {
   font-weight: 400;
   letter-spacing: .015em;
 }
+/* Rótulo do Editorial como título de seção (o de 15px ficava apagado, pedido de 10/11). */
 .editorial-label {
   display: flex;
-  gap: 14px;
-  font-size: 15px;
+  flex-direction: column;
+  gap: 18px;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: clamp(24px, 2.2vw, 30px);
   font-weight: 400;
-  letter-spacing: .015em;
+  line-height: 1.15;
+  letter-spacing: -.01em;
+  text-wrap: balance;
 }
 .text-link::after {
   position: absolute;
@@ -143,11 +148,7 @@ img {
 }
 .editorial-label {
   align-self: start;
-  padding-top: 12px;
   align-items: flex-start;
-}
-.editorial-label .small-rule {
-  margin-top: 11px;
 }
 .section-intro {
   margin-top: 26px;
@@ -180,8 +181,7 @@ img {
     padding-block: 86px;
   }
   .editorial-label {
-    font-size: 14px;
-    gap: 10px;
+    gap: 14px;
   }
 }
 
@@ -202,13 +202,8 @@ img {
     padding-block: 70px;
   }
   .editorial-label {
-    padding-top: 0;
     margin-bottom: 28px;
-    align-items: center;
-    font-size: 14px;
-  }
-  .editorial-label .small-rule {
-    margin-top: 0;
+    font-size: 26px;
   }
   h2 {
     font-size: 39px;

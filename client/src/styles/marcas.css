@@ -39,9 +39,9 @@
 .theme-comex .editorial-label {
   font-family: 'Cinzel', serif;
   text-transform: uppercase;
-  font-size: 13px;
-  line-height: 1.7;
-  letter-spacing: .06em;
+  font-size: clamp(19px, 1.7vw, 23px);
+  line-height: 1.3;
+  letter-spacing: .04em;
 }
 .theme-wellcare .editorial-label {
   font-family: 'Figtree', sans-serif;

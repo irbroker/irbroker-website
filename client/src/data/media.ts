@@ -14,9 +14,9 @@ export const media = {
     height: 1080,
   },
   transport: {
-    src: "/media/carreta-rodovia-aerea_386f78b3.webp",
+    src: "/media/carreta-patio.webp", // Pexels 36251074, quadro do vídeo institucional 2026
     ogSrc: "/media/og/transport.jpg",
-    alt: "Vista aérea de uma carreta em uma rodovia.",
+    alt: "Carreta branca estacionada no pátio de uma transportadora.",
     width: 1920,
     height: 1080,
   },
@@ -49,10 +49,10 @@ export const media = {
     height: 1080,
   },
   forest: {
-    // Pexels 18303688 (Pongpoonat Rungrueng); ver media/CREDITOS.md.
-    src: "/media/muda-plantio.webp",
+    // Unsplash CbZh3kaPxrE (Jonathan Kemper), estampa da luva atenuada; ver media/CREDITOS.md.
+    src: "/media/luvas-plantio.webp",
     ogSrc: "/media/og/forest.jpg",
-    alt: "Mãos plantando uma muda na terra.",
+    alt: "Mãos com luvas de jardinagem plantando uma muda na terra.",
     width: 1600,
     height: 1067,
   },
