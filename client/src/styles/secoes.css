@@ -400,7 +400,6 @@ p {
   padding: 92px clamp(48px, 6vw, 108px) 84px;
 }
 .trigger-copy h2 {
-  margin-top: 32px;
   font-size: clamp(36px, 3.4vw, 50px);
   line-height: 1.15;
 }
@@ -431,10 +430,6 @@ p {
   align-items: start;
   justify-content: space-between;
   gap: 40px;
-}
-.process-heading > .section-label {
-  flex: 0 0 24%;
-  padding-top: 12px;
 }
 .process-heading h2 {
   flex: 1;
@@ -511,7 +506,6 @@ p {
     padding: 54px 22px 52px;
   }
   .trigger-copy h2 {
-    margin-top: 26px;
     font-size: 39px;
   }
   .trigger-copy .trigger-list {
@@ -525,10 +519,6 @@ p {
   }
   .process-heading {
     display: block;
-  }
-  .process-heading > .section-label {
-    padding: 0;
-    margin-bottom: 27px;
   }
   .process-heading h2 {
     font-size: 38px;

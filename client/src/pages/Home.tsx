@@ -44,13 +44,13 @@ export default function Home() {
       <div className="trigger-photo-column"><div className="trigger-photo-sticky"><img src={media.triggers.src} alt={swap ? '' : media.triggers.alt} width={media.triggers.width} height={media.triggers.height} loading="lazy" />
         {swap && triggers.map(([title, , , , key], index) => <img key={key} className={`trigger-photo-swap ${active === index ? 'is-active' : previous === index ? 'is-previous' : ''}`} src={media[key].src} alt="" aria-hidden="true" width={media[key].width} height={media[key].height} />)}
       </div></div>
-      <div className="trigger-copy"><p className="section-label"><span className="small-rule" />Quando revisar</p>
+      <div className="trigger-copy">
         <AnimatedHeading>Quando a operação muda, a apólice precisa mudar junto.</AnimatedHeading>
         <div className="trigger-list">{triggers.map(([title, text, href, area], index) => <article key={title} className={swap && active === index ? 'is-active' : undefined} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)}><h3>{title}</h3><p>{text}</p><a className="trigger-link" href={href}>Ver a área<span className="sr-only"> {area}</span></a></article>)}</div>
       </div>
     </section>
     <section className="section process-section">
-      <div className="wrap"><div className="process-heading"><p className="section-label"><span className="small-rule" />Como trabalhamos</p><AnimatedHeading>A seguradora emite a apólice.<br />A irbroker trabalha do seu lado.</AnimatedHeading></div>
+      <div className="wrap"><div className="process-heading"><AnimatedHeading>A seguradora emite a apólice.<br />A irbroker trabalha do seu lado.</AnimatedHeading></div>
         <ProcessDiagram steps={process} />
       </div>
     </section>

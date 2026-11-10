@@ -21,10 +21,6 @@
   align-items: center;
   margin-bottom: 58px;
 }
-.verticals-heading .section-label {
-  width: 24%;
-  flex-shrink: 0;
-}
 .verticals-heading h2 {
   flex: 1;
 }
@@ -128,9 +124,6 @@
 }
 
 @media (max-width: 1100px) {
-  .verticals-heading .section-label {
-    width: 20%;
-  }
   .vertical-panel {
     min-width: 222px;
   }
@@ -143,10 +136,6 @@
   .verticals-heading {
     display: block;
     margin-bottom: 34px;
-  }
-  .verticals-heading .section-label {
-    width: auto;
-    margin-bottom: 27px;
   }
   .verticals-heading h2 {
     max-width: 380px;

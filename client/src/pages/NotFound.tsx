@@ -5,10 +5,6 @@ export default function NotFound() {
   return (
     <div className="content-surface not-found">
       <header className="content-page-heading wrap">
-        <p className="section-label">
-          <span className="small-rule" />
-          Erro 404
-        </p>
         <h1>Página não encontrada</h1>
         <p>O endereço não existe ou mudou. Siga por um dos caminhos abaixo.</p>
       </header>
