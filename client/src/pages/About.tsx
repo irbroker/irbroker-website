@@ -11,11 +11,11 @@ const process = [
 
 export default function About() {
   return <>
-    <section className="photo-hero vertical-hero about-hero photo-about"><img className="hero-photo" src={media.about.src} alt="" aria-hidden="true" width={media.about.width} height={media.about.height} fetchPriority="high" /><div className="hero-shade" aria-hidden="true" /><div className="wrap hero-content"><Breadcrumb className="hero-kicker" items={[{ label: 'Sobre' }]} /><h1>Corretora consultiva de seguros corporativos.</h1><p className="hero-description">Seguros corporativos com atendimento consultivo, da cotação ao sinistro.</p></div></section>
+    <section className="photo-hero vertical-hero about-hero photo-about"><img className="hero-photo" src={media.about.src} alt="" aria-hidden="true" width={media.about.width} height={media.about.height} fetchPriority="high" /><div className="hero-shade" aria-hidden="true" /><div className="wrap hero-content"><Breadcrumb className="hero-kicker" items={[{ label: 'Sobre' }]} /><h1>Corretora consultiva de seguros corporativos.</h1></div></section>
     <section className="section wrap about-intro">
       <h2 className="about-title">Quem somos</h2>
       <div className="about-intro-body">
-        <p className="large-body">Uma equipe com longa experiência no mercado segurador, com escritórios em São Bernardo do Campo e em São Paulo, na Faria Lima.</p>
+        <p className="large-body">Uma equipe com longa experiência no mercado segurador.</p>
         <ul className="about-offices" aria-label="Escritórios">
           <li><PinIcon /><span><strong>São Bernardo do Campo</strong>Matriz</span></li>
           <li><PinIcon /><span><strong>São Paulo</strong>Faria Lima</span></li>
