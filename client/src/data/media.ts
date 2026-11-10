@@ -65,10 +65,10 @@ export const media = {
     height: 1080,
   },
   contents: {
-    // Quadro do clipe Pexels 16836469 (Av. Paulista), do vídeo institucional 2026.
-    src: "/media/sp-paulista.webp",
+    // Quadro do clipe Pixabay 91744 (KM007_), do vídeo institucional 2026; ver media/CREDITOS.md.
+    src: "/media/cidade-entardecer.webp",
     ogSrc: "/media/og/hero.jpg",
-    alt: "Vista aérea da Avenida Paulista, em São Paulo.",
+    alt: "Prédios de uma cidade ao entardecer.",
     width: 1920,
     height: 1080,
   },

@@ -543,22 +543,12 @@
 .contents-page .content-filters {
   padding-top: 28px;
 }
-/* Destaque: o guia mais recente, maior, antes da lista. */
+/* Destaque: o guia mais recente, maior, antes da lista (só texto: o usuário não quis foto aqui, 09/11). */
 .guide-featured {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  gap: clamp(28px, 4vw, 64px);
-  align-items: center;
+  max-width: 760px;
   padding-bottom: 56px;
   margin-bottom: 8px;
   border-bottom: 1px solid var(--line);
-}
-.guide-featured img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  filter: saturate(.85);
 }
 .guide-featured h2 {
   margin-top: 12px;

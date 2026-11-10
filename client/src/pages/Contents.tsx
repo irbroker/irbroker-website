@@ -37,7 +37,6 @@ export default function Contents({ search = '' }: { search?: string }) {
   // Destaque: o guia mais recente da seleção (empate fica com o primeiro da lista); sai da lista abaixo.
   const featured = [...articles].sort((a, b) => dateKey(b.data) - dateKey(a.data))[0];
   const rest = articles.filter(guide => guide !== featured);
-  const featuredPhoto = featured && media[verticals.find(vertical => vertical.name === featured.frente)?.imageKey ?? 'hero'];
   const selected = verticals.find(vertical => vertical.name === front);
 
   function filter(event: MouseEvent<HTMLAnchorElement>, next: string) {
@@ -58,7 +57,6 @@ export default function Contents({ search = '' }: { search?: string }) {
     <nav className="content-filters wrap" aria-label="Área de interesse">{['', ...verticals.map(vertical => vertical.name)].map(name => <a href={name ? `/conteudos?frente=${encodeURIComponent(name)}` : '/conteudos'} key={name} aria-current={front === name ? 'true' : undefined} onClick={event => filter(event, name)}>{name || 'Todas as áreas'}</a>)}</nav>
     <div className="wrap content-feed" aria-live="polite" aria-atomic="false">
       {featured && <article className="guide-featured">
-        <img src={featuredPhoto.src} alt="" width={featuredPhoto.width} height={featuredPhoto.height} loading="lazy" />
         <div className="guide-featured-copy"><p className="content-meta">{featured.frente}</p><h2>{featured.titulo}</h2><p>{featured.linhaFina}</p><a className="button button-solid" href={featured.slug}>Ler o guia<span className="sr-only">: {featured.titulo}</span></a></div>
       </article>}
       {rest.length > 0 && <section className="contents-guides"><h2>{featured ? 'Outros guias' : 'Guias'}</h2><div className="guide-list">{rest.map(guide => <article className="guide-list-item" key={guide.slug}><p className="content-meta">{guide.frente}</p><h3><a href={guide.slug}>{guide.titulo}</a></h3><p>{guide.linhaFina}</p><p className="guide-read-time">{guide.tempoLeitura}</p></article>)}</div></section>}

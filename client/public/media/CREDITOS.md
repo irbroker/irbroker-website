@@ -5,6 +5,7 @@
 | Arquivo | Fonte | Autor | Página | Licença |
 |---|---|---|---|---|
 | muda-plantio.webp (Projeto 365) | Pexels 18303688 | Pongpoonat Rungrueng (https://www.pexels.com/@14saill/) | https://www.pexels.com/photo/woman-hands-planting-plant-in-ground-18303688/ | Licença Pexels (uso comercial livre, sem atribuição obrigatória) |
+| cidade-entardecer.webp (topo de Conteúdos) | Pixabay 91744 (quadro do vídeo) | KM007_ | https://pixabay.com/videos/id-91744/ | Licença Pixabay (uso comercial livre) |
 
 Original (5472x3648) guardado em `_downloads/pexels-18303688/` (fora do build); convertido para WebP 1600px.
 
