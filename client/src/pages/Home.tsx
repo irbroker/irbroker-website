@@ -5,7 +5,6 @@ import { media } from '../data/media';
 import PartnerLogos from '../components/PartnerLogos';
 import ProofBand from '../components/ProofBand';
 import AnimatedHeading from '../components/AnimatedHeading';
-import ProcessDiagram from '../components/ProcessDiagram';
 import { HomeRadar } from '../components/Radar';
 import MethodSteps from '../components/MethodSteps';
 
@@ -16,11 +15,6 @@ const triggers = [
   ['Conselho ou investidor que pede D&O', 'O D&O protege o patrimônio pessoal de diretores e conselheiros.', '/corporate', 'Corporate', 'corporate'],
   ['Equipe que cresceu', 'O benefício que servia para dez pessoas pode não servir para cinquenta.', '/wellcare', 'WellCare', 'wellcare'],
 ] as const;
-const process = [
-  ['Empresa', 'A empresa mostra como a operação funciona: atividade, contratos, frota, equipe e patrimônio.'],
-  ['irbroker', 'Leva a operação da sua empresa às seguradoras e traduz as propostas para você decidir.'],
-  ['Seguradoras', 'Oferecem os próprios produtos, analisam o risco e emitem a apólice.'],
-];
 
 export default function Home() {
   // Troca de foto só no desktop com movimento; sem JS, no celular ou com movimento reduzido fica a foto do porto.
@@ -47,11 +41,6 @@ export default function Home() {
       <div className="trigger-copy">
         <AnimatedHeading>Quando a operação muda, a apólice precisa mudar junto.</AnimatedHeading>
         <div className="trigger-list">{triggers.map(([title, text, href], index) => <article key={title} className={swap && active === index ? 'is-active' : undefined} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)}><h3><a className="trigger-link" href={href}>{title}</a></h3><p>{text}</p></article>)}</div>
-      </div>
-    </section>
-    <section className="section process-section">
-      <div className="wrap"><div className="process-heading"><AnimatedHeading>A seguradora emite a apólice.<br />A irbroker trabalha do seu lado.</AnimatedHeading></div>
-        <ProcessDiagram steps={process} />
       </div>
     </section>
     <MethodSteps />

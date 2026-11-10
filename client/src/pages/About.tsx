@@ -1,6 +1,13 @@
 import { Breadcrumb } from '../components/SiteLayout';
-import MethodSteps from '../components/MethodSteps';
+import AnimatedHeading from '../components/AnimatedHeading';
+import ProcessDiagram from '../components/ProcessDiagram';
 import { media } from '../data/media';
+
+const process = [
+  ['Empresa', 'A empresa mostra como a operação funciona: atividade, contratos, frota, equipe e patrimônio.'],
+  ['irbroker', 'Leva a operação da sua empresa às seguradoras e traduz as propostas para você decidir.'],
+  ['Seguradoras', 'Oferecem os próprios produtos, analisam o risco e emitem a apólice.'],
+];
 
 export default function About() {
   return <>
@@ -19,7 +26,11 @@ export default function About() {
       <article><TargetIcon /><h2 className="about-title">Missão</h2><p className="large-body">Proteger o patrimônio e a continuidade dos negócios dos nossos clientes com soluções personalizadas em gestão de riscos e seguros corporativos.</p></article>
       <article><HorizonIcon /><h2 className="about-title">Visão</h2><p className="large-body">Ser referência nacional em corretagem de seguros corporativos, reconhecida pela excelência técnica e pelo relacionamento consultivo de longo prazo.</p></article>
     </div></section>
-    <MethodSteps />
+    <section className="section process-section">
+      <div className="wrap"><div className="process-heading"><AnimatedHeading>A seguradora emite a apólice.<br />A irbroker trabalha do seu lado.</AnimatedHeading></div>
+        <ProcessDiagram steps={process} />
+      </div>
+    </section>
   </>;
 }
 
