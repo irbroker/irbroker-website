@@ -46,7 +46,7 @@ export default function Home() {
       </div></div>
       <div className="trigger-copy">
         <AnimatedHeading>Quando a operação muda, a apólice precisa mudar junto.</AnimatedHeading>
-        <div className="trigger-list">{triggers.map(([title, text, href, area], index) => <article key={title} className={swap && active === index ? 'is-active' : undefined} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)}><h3>{title}</h3><p>{text}</p><a className="trigger-link" href={href}>Ver a área<span className="sr-only"> {area}</span></a></article>)}</div>
+        <div className="trigger-list">{triggers.map(([title, text, href], index) => <article key={title} className={swap && active === index ? 'is-active' : undefined} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)}><h3><a className="trigger-link" href={href}>{title}</a></h3><p>{text}</p></article>)}</div>
       </div>
     </section>
     <section className="section process-section">
