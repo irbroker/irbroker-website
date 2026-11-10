@@ -125,27 +125,22 @@
 .panel-wellcare .panel-photo {
   object-position: 44% center;
 }
+/* Botão do topo e convite do rodapé na cor de cada marca. */
 .theme-comex .button-solid,
-.theme-wellcare .button-solid {
-  background: var(--teal);
-  color: var(--graphite);
-}
-.theme-comex .button-solid:hover,
-.theme-wellcare .button-solid:hover {
-  background: var(--teal-light);
-}
-/* Convite do rodapé na cor de cada marca. */
 .site-comex .site-footer .footer-editorial-closure .button-solid {
   background: var(--comex-gold);
   color: var(--comex-navy);
 }
+.theme-comex .button-solid:hover,
 .site-comex .site-footer .footer-editorial-closure .button-solid:hover {
   background: var(--comex-gold-light);
 }
+.theme-wellcare .button-solid,
 .site-wellcare .site-footer .footer-editorial-closure .button-solid {
   background: var(--wellcare-blue);
   color: var(--white);
 }
+.theme-wellcare .button-solid:hover,
 .site-wellcare .site-footer .footer-editorial-closure .button-solid:hover {
   background: var(--wellcare-blue-dark);
 }
