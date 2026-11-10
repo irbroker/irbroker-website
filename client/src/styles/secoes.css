@@ -642,3 +642,53 @@ p {
   }
 }
 
+
+/* Quando revisar: a foto da esquerda acompanha o caso em foco (desktop, com movimento). */
+.trigger-photo-sticky {
+  position: relative;
+  overflow: hidden;
+}
+.trigger-photo-swap {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 400ms cubic-bezier(.16, 1, .3, 1);
+}
+.trigger-photo-swap.is-active {
+  z-index: 2;
+  opacity: 1;
+}
+.trigger-photo-swap.is-previous {
+  z-index: 1;
+  opacity: 1;
+  transition: none;
+}
+.trigger-photo-sticky .trigger-photo-swap {
+  object-position: center;
+}
+.trigger-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--graphite);
+  font-size: 16px;
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  transition: text-decoration-color 160ms ease-out;
+}
+.trigger-link:hover,
+.trigger-list article.is-active .trigger-link {
+  text-decoration-color: var(--teal);
+}
+/* Telas largas: os quatro casos em duas colunas, sem sobra à direita do texto. */
+@media (min-width: 1200px) {
+  .trigger-copy .trigger-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+  }
+  .trigger-copy .trigger-list h3 {
+    font-size: 25px;
+  }
+}
