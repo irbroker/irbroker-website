@@ -170,7 +170,6 @@ export default function Contact() {
               consultora.
             </p>
             <div className="contact-aside__direct-links">
-              <a href="tel:+551121497244">(11) 2149-7244</a>
               <a href="mailto:comercial@irbroker.com.br">
                 comercial@irbroker.com.br
               </a>

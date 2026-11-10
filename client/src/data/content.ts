@@ -205,7 +205,7 @@ const metadata: Record<string, PageMeta> = {
   "/contato": {
     title: "Fale com a corretora em São Bernardo e Faria Lima | irbroker",
     description:
-      "Fale com a irbroker sobre o seguro da sua empresa. Escritórios em São Bernardo do Campo e na Faria Lima, em São Paulo. Telefone (11) 2149-7244.",
+      "Fale com a irbroker sobre o seguro da sua empresa. Escritórios em São Bernardo do Campo e na Faria Lima (SP). WhatsApp e comercial@irbroker.com.br.",
     imageKey: "hero",
   },
 };

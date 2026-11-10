@@ -81,15 +81,13 @@
   column-gap: var(--footer-gap);
 }
 .footer-editorial-closure {
-  align-items: start;
+  align-items: center;
   padding: 40px 0 28px;
   border-bottom: 1px solid var(--footer-rule);
 }
 .footer-closure {
   grid-column: span 2;
   min-width: 0;
-}
-.footer-closure h2 {
   color: var(--footer-paper);
   font-family: 'Source Serif 4', Georgia, serif;
   font-size: 40px;
@@ -98,35 +96,17 @@
   letter-spacing: -.03em;
   text-wrap: balance;
 }
-.footer-closure .button {
-  margin-top: 20px;
-}
-.footer-contact {
+/* Principal preenchido e WhatsApp em contorno, lado a lado à direita do convite. */
+.footer-closure-actions {
   grid-column: span 2;
-  display: grid;
-  justify-items: start;
-  align-content: start;
-  gap: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
   min-width: 0;
-  padding-top: 4px;
-}
-.footer-contact-big {
-  color: var(--footer-paper);
-  font-family: 'Source Serif 4', Georgia, serif;
-  font-size: 26px;
-  font-weight: 400;
-  line-height: 1.25;
-  letter-spacing: -.015em;
-  overflow-wrap: anywhere;
 }
 .footer-whatsapp-link {
-  display: inline-flex;
-  align-items: center;
   gap: 9px;
-  margin-top: 12px;
-  color: var(--footer-paper);
-  font-size: 16px;
-  line-height: 1.5;
 }
 .footer-whatsapp-link .whatsapp-icon {
   width: 20px;
@@ -260,12 +240,16 @@
   .footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .footer-closure,
-  .footer-contact {
-    grid-column: span 1;
+  /* Convite e botões empilhados à esquerda: lado a lado eles quebrariam desalinhados. */
+  .footer-editorial-closure {
+    display: block;
   }
-  .footer-closure h2 {
+  .footer-closure {
     font-size: 34px;
+  }
+  .footer-closure-actions {
+    margin-top: 24px;
+    justify-content: flex-start;
   }
 }
 
@@ -302,15 +286,12 @@
     display: block;
     padding: 40px 0 28px;
   }
-  .footer-closure h2 {
+  .footer-closure {
     font-size: 30px;
   }
-  .footer-contact {
-    margin-top: 28px;
-    padding-top: 0;
-  }
-  .footer-contact-big {
-    font-size: 22px;
+  .footer-closure-actions {
+    margin-top: 24px;
+    justify-content: flex-start;
   }
   .footer-cols {
     padding: 28px 0 32px;

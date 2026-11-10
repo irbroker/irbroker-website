@@ -16,7 +16,6 @@ export function structuredData(path: string, origin: string, image: string) {
     url: `${origin}/`,
     logo: abs(brand.dark),
     image: abs(brand.dark),
-    telephone: "+55-11-2149-7244",
     email: "comercial@irbroker.com.br",
     areaServed: { "@type": "Country", name: "Brasil" },
     sameAs: [

@@ -88,12 +88,6 @@
 .theme-wellcare .hero-shade {
   background: var(--wellcare-navy-a69);
 }
-.site-comex .header-contact {
-  border-color: var(--comex-gold);
-}
-.site-wellcare .header-contact {
-  border-color: var(--wellcare-cyan);
-}
 
 @media (max-width: 767px) {
   .bridge-wordmark {

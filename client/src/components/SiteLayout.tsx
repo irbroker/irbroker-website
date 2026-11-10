@@ -214,7 +214,7 @@ function WhatsAppLink({ floating = false, suppressed = false }: { floating?: boo
     };
   }, [floating, suppressed]);
 
-  return <a ref={floating ? link : undefined} className={floating ? 'whatsapp-link' : 'footer-whatsapp-link footer-editorial-link'} href="https://wa.me/5541963491818" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp (abre em nova aba)" hidden={suppressed || undefined}><WhatsAppIcon /><span className="whatsapp-label">Falar no WhatsApp</span></a>;
+  return <a ref={floating ? link : undefined} className={floating ? 'whatsapp-link' : 'button button-outline footer-whatsapp-link'} href="https://wa.me/5541963491818" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp (abre em nova aba)" hidden={suppressed || undefined}><WhatsAppIcon /><span className="whatsapp-label">Falar no WhatsApp</span></a>;
 }
 
 function InstagramIcon() {
@@ -261,13 +261,9 @@ export function Footer({ path = '/' }: { path?: string }) {
     <footer className="site-footer" aria-label="Rodapé">
       <div className="wrap">
         {!contactPage && <div className="footer-editorial-closure footer-grid">
-          <div className="footer-closure">
-            <h2>Vamos conversar sobre a sua empresa.</h2>
+          <h2 className="footer-closure">Vamos conversar sobre a sua empresa.</h2>
+          <div className="footer-closure-actions">
             <Button href={footerCtaHref}>{footerCtaLabel}</Button>
-          </div>
-          <div className="footer-contact">
-            <a className="footer-editorial-link footer-contact-big" href="tel:+551121497244">(11) 2149-7244</a>
-            <a className="footer-editorial-link footer-contact-big" href="mailto:comercial@irbroker.com.br">comercial@irbroker.com.br</a>
             <WhatsAppLink />
           </div>
         </div>}

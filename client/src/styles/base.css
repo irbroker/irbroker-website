@@ -118,21 +118,28 @@ img {
 .button-solid:hover {
   background: var(--teal-light);
 }
-.button-outline,
-.header-contact {
+.button-outline {
   border-color: var(--paper-a47);
   color: var(--paper);
   background: transparent;
 }
-.button-outline:hover,
-.header-contact:hover {
+.button-outline:hover {
   border-color: var(--paper);
 }
+/* Ação principal do cabeçalho: preenchida e compacta (contorno fica para ações secundárias). */
 .header-contact {
-  min-height: 44px;
-  padding: 10px 20px;
-  font-size: 15px;
+  min-height: 40px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
   margin-left: 7px;
+  background: var(--teal);
+  border-color: var(--teal);
+  color: var(--graphite);
+}
+.header-contact:hover {
+  background: var(--teal-light);
+  border-color: var(--teal-light);
 }
 .editorial-label {
   align-self: start;
@@ -185,8 +192,6 @@ img {
   .header-contact {
     margin-top: 20px;
     align-self: start;
-    color: var(--paper);
-    border-color: var(--white-a47);
   }
   .button {
     font-size: 15px;
