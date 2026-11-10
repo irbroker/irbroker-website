@@ -51,7 +51,7 @@ const verticalData: Vertical[] = [
     tagline: "Seguro internacional de cargas para quem importa e exporta.",
     title: "O seguro da carga que você importa ou exporta.",
     intro:
-      "Seguro internacional de cargas para importadores e exportadores. A Comex Broker é a área de comércio exterior do Grupo irbroker.",
+      "Seguro internacional de cargas para importadores e exportadores. Área de comércio exterior do Grupo irbroker.",
     audience: [],
     solutions: [],
     signals: [
