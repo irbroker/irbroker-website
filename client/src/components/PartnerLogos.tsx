@@ -20,7 +20,8 @@ function LogoGrid({ logos, label, gridClass }: LogoGridProps) {
             alt={logo.alt}
             width={logo.width}
             height={logo.height}
-            loading="lazy"
+            /* Sem loading="lazy": 31 logos de ~3 KB; a carga preguiçosa podia deixar a grade vazia. */
+            decoding="async"
           />
         </div>
       ))}
