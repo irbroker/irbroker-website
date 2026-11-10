@@ -113,7 +113,7 @@ const verticalData: Vertical[] = [
     tagline: "Benefícios desenhados para a equipe da sua empresa.",
     title: "Benefícios desenhados para a equipe da sua empresa.",
     intro:
-      "Saúde, odonto, vida e acidentes pessoais, da escolha à renovação. A WellCare é a área de benefícios do Grupo irbroker.",
+      "Saúde, odonto, vida e acidentes pessoais, da escolha à renovação. Área de benefícios do Grupo irbroker.",
     audience: [],
     solutions: [],
     signals: [
