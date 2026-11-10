@@ -523,3 +523,80 @@
     font-size: 17px;
   }
 }
+
+/* Topo de Conteúdos: foto com véu grafite, como as outras páginas internas. */
+.contents-hero {
+  min-height: 560px;
+}
+.contents-hero .hero-shade {
+  background: linear-gradient(90deg, var(--graphite-a69) 0%, var(--graphite-a62) 60%, var(--graphite-a40) 100%);
+}
+.contents-hero .hero-content h1 {
+  font-size: clamp(46px, 5.3vw, 76px);
+  max-width: 18ch;
+  margin-top: 0;
+}
+.contents-hero .hero-description {
+  max-width: 48ch;
+  font-size: 19px;
+}
+.contents-page .content-filters {
+  padding-top: 28px;
+}
+/* Destaque: o guia mais recente, maior, antes da lista. */
+.guide-featured {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 64px);
+  align-items: center;
+  padding-bottom: 56px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+.guide-featured img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  filter: saturate(.85);
+}
+.guide-featured h2 {
+  margin-top: 12px;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  text-wrap: balance;
+}
+.guide-featured-copy > p:not(.content-meta) {
+  margin-top: 16px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.guide-featured .button {
+  margin-top: 26px;
+}
+.guide-featured + .contents-guides {
+  margin-top: 56px;
+}
+@media (max-width: 767px) {
+  .contents-hero {
+    min-height: 460px;
+  }
+  .contents-hero .hero-content h1 {
+    font-size: 44px;
+  }
+  .contents-hero .hero-description {
+    font-size: 17px;
+  }
+  .guide-featured {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-bottom: 40px;
+  }
+  .guide-featured + .contents-guides {
+    margin-top: 40px;
+  }
+}

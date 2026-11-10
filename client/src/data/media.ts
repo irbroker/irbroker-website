@@ -49,17 +49,26 @@ export const media = {
     height: 1080,
   },
   forest: {
-    src: "/media/floresta-sol_ada40792.webp",
+    // Pexels 18303688 (Pongpoonat Rungrueng); ver media/CREDITOS.md.
+    src: "/media/muda-plantio.webp",
     ogSrc: "/media/og/forest.jpg",
-    alt: "Luz do sol entre as árvores de uma floresta.",
-    width: 1920,
-    height: 1080,
+    alt: "Mãos plantando uma muda na terra.",
+    width: 1600,
+    height: 1067,
   },
   about: {
     // Pexels 9476576 (torre na Av. Faria Lima, São Paulo). Não é o prédio do escritório da irbroker.
     src: "/media/faria-lima-torre.webp",
     ogSrc: "/media/og/about.jpg",
     alt: "Fachada de vidro de um edifício corporativo na Avenida Faria Lima, em São Paulo.",
+    width: 1920,
+    height: 1080,
+  },
+  contents: {
+    // Quadro do clipe Pexels 16836469 (Av. Paulista), do vídeo institucional 2026.
+    src: "/media/sp-paulista.webp",
+    ogSrc: "/media/og/hero.jpg",
+    alt: "Vista aérea da Avenida Paulista, em São Paulo.",
     width: 1920,
     height: 1080,
   },
@@ -84,6 +93,14 @@ export const comexVideo = {
   poster: "/media/comex-poster-r8_f40739c3.webp",
   width: 1920,
   height: 1080,
+} as const;
+
+// Topo de cada área: cena própria, sem repetir a home nem a Comex (ver media/CREDITOS.md).
+export const areaVideos = {
+  transport: { src: "/media/transporte-loop_90ab4c5b.mp4", poster: "/media/transporte-poster_90ab4c5b.webp", width: 1920, height: 1080 },
+  construction: { src: "/media/construcao-loop_a6494acd.mp4", poster: "/media/construcao-poster_a6494acd.webp", width: 1920, height: 1080 },
+  corporate: { src: "/media/corporate-loop_f53a255a.mp4", poster: "/media/corporate-poster_f53a255a.webp", width: 1920, height: 1080 },
+  wellcare: { src: "/media/wellcare-loop_2fbb92a4.mp4", poster: "/media/wellcare-poster_2fbb92a4.webp", width: 1920, height: 1080 },
 } as const;
 
 export const brand = {

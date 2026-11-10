@@ -117,3 +117,6 @@ _detector.json
 # Capturas de comparação visual (scripts/capturas.py)
 _visual/
 __pycache__/
+
+# Originais baixados (Pexels), fora do build
+_downloads/

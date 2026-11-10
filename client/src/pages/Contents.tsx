@@ -4,6 +4,10 @@ import { Breadcrumb } from '../components/SiteLayout';
 import { guides } from '../data/guides';
 import { orderedRadar } from '../data/radar';
 import { RadarList } from '../components/Radar';
+import { media } from '../data/media';
+
+// "09/11/2026" -> 20261109, para ordenar do mais recente ao mais antigo.
+const dateKey = (date: string) => Number(date.split('/').reverse().join(''));
 
 function frontFromSearch(search: string) {
   const front = new URLSearchParams(search).get('frente') ?? '';
@@ -30,6 +34,10 @@ export default function Contents({ search = '' }: { search?: string }) {
   }, []);
   const notes = orderedRadar.filter(note => !front || note.frente === front);
   const articles = guides.filter(guide => !front || guide.frente === front);
+  // Destaque: o guia mais recente da seleção (empate fica com o primeiro da lista); sai da lista abaixo.
+  const featured = [...articles].sort((a, b) => dateKey(b.data) - dateKey(a.data))[0];
+  const rest = articles.filter(guide => guide !== featured);
+  const featuredPhoto = featured && media[verticals.find(vertical => vertical.name === featured.frente)?.imageKey ?? 'hero'];
   const selected = verticals.find(vertical => vertical.name === front);
 
   function filter(event: MouseEvent<HTMLAnchorElement>, next: string) {
@@ -42,10 +50,18 @@ export default function Contents({ search = '' }: { search?: string }) {
   }
 
   return <div className="contents-page content-surface">
-    <header className="content-page-heading wrap"><Breadcrumb className="section-label" items={[{ label: 'Conteúdos' }]} /><h1>O que muda no seguro da sua empresa.</h1><p>Guias e notícias do mercado, área por área.</p></header>
+    <section className="photo-hero contents-hero">
+      <img className="hero-photo" src={media.contents.src} alt="" aria-hidden="true" width={media.contents.width} height={media.contents.height} fetchPriority="high" />
+      <div className="hero-shade" aria-hidden="true" />
+      <div className="wrap hero-content"><Breadcrumb className="hero-kicker" items={[{ label: 'Conteúdos' }]} /><h1>O que muda no seguro da sua empresa.</h1><p className="hero-description">Guias e notícias do mercado, área por área.</p></div>
+    </section>
     <nav className="content-filters wrap" aria-label="Área de interesse">{['', ...verticals.map(vertical => vertical.name)].map(name => <a href={name ? `/conteudos?frente=${encodeURIComponent(name)}` : '/conteudos'} key={name} aria-current={front === name ? 'true' : undefined} onClick={event => filter(event, name)}>{name || 'Todas as áreas'}</a>)}</nav>
     <div className="wrap content-feed" aria-live="polite" aria-atomic="false">
-      {articles.length > 0 && <section className="contents-guides"><h2>Guias</h2><div className="guide-list">{articles.map(guide => <article className="guide-list-item" key={guide.slug}><p className="content-meta">{guide.frente}</p><h3><a href={guide.slug}>{guide.titulo}</a></h3><p>{guide.linhaFina}</p><p className="guide-read-time">{guide.tempoLeitura}</p></article>)}</div></section>}
+      {featured && <article className="guide-featured">
+        <img src={featuredPhoto.src} alt="" width={featuredPhoto.width} height={featuredPhoto.height} loading="lazy" />
+        <div className="guide-featured-copy"><p className="content-meta">{featured.frente}</p><h2>{featured.titulo}</h2><p>{featured.linhaFina}</p><a className="button button-solid" href={featured.slug}>Ler o guia<span className="sr-only">: {featured.titulo}</span></a></div>
+      </article>}
+      {rest.length > 0 && <section className="contents-guides"><h2>{featured ? 'Outros guias' : 'Guias'}</h2><div className="guide-list">{rest.map(guide => <article className="guide-list-item" key={guide.slug}><p className="content-meta">{guide.frente}</p><h3><a href={guide.slug}>{guide.titulo}</a></h3><p>{guide.linhaFina}</p><p className="guide-read-time">{guide.tempoLeitura}</p></article>)}</div></section>}
       {notes.length > 0 && <section id="radar" className="contents-radar"><h2>Radar do mercado</h2><RadarList notes={notes} /></section>}
       {notes.length === 0 && articles.length === 0 && <div className="content-empty"><p>Ainda não há conteúdos desta área.</p>{selected && <a className="content-text-link" href={`/${selected.slug}`}>{selected.name}</a>}</div>}
     </div>

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
-import { brand, brandDimensions, media } from '../data/media';
+import { areaVideos, brand, brandDimensions, media } from '../data/media';
 import { verticals } from '../data/content';
 import HeroTitle from './HeroTitle';
 import AnimatedHeading from './AnimatedHeading';
@@ -9,11 +9,13 @@ import { Breadcrumb } from './SiteLayout';
 
 export function Hero({ image = 'hero', title, label, description, children, className = '', brand: verticalBrand }: { image?: keyof typeof media; title: string; label?: string; description?: string; children?: ReactNode; className?: string; brand?: 'comex' | 'wellcare' }) {
   const comex = verticalBrand === 'comex';
-  const photo = media[comex ? 'comexHero' : image];
   const home = className.includes('home-hero');
-  return <section className={`photo-hero photo-${image} ${className} ${home || comex ? 'video-hero' : ''} ${verticalBrand ? `brand-${verticalBrand}` : ''}`}>
+  const areaVideo = !home && !comex && image in areaVideos ? areaVideos[image as keyof typeof areaVideos] : undefined;
+  // Com vídeo de área, o pôster do vídeo é a foto de base (celular e movimento reduzido).
+  const photo = areaVideo ? { src: areaVideo.poster, width: areaVideo.width, height: areaVideo.height } : media[comex ? 'comexHero' : image];
+  return <section className={`photo-hero photo-${image} ${className} ${home || comex || areaVideo ? 'video-hero' : ''} ${verticalBrand ? `brand-${verticalBrand}` : ''}`}>
     <img className="hero-photo" src={photo.src} alt="" aria-hidden="true" width={photo.width} height={photo.height} fetchPriority="high" />
-    {(home || comex) && <HeroVideo kind={comex ? 'comex' : 'home'} />}
+    {(home || comex || areaVideo) && <HeroVideo kind={comex ? 'comex' : areaVideo ? 'area' : 'home'} video={areaVideo} />}
     <div className="hero-shade" aria-hidden="true" />
     <div className="wrap hero-content">
       {!home && label && <Breadcrumb className="hero-kicker" items={[{ label: 'Soluções' }, { label }]} />}

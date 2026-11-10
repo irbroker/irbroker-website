@@ -11,8 +11,10 @@ export const videoScenes = [
   { start: 12.6, end: 15.2, name: 'Corporate', href: '/corporate' },
 ] as const;
 
-export default function HeroVideo({ kind = 'home' }: { kind?: 'home' | 'comex' }) {
-  const asset = kind === 'comex' ? comexVideo : heroVideo;
+type VideoAsset = { src: string; poster: string; width: number; height: number };
+
+export default function HeroVideo({ kind = 'home', video: area }: { kind?: 'home' | 'comex' | 'area'; video?: VideoAsset }) {
+  const asset = area ?? (kind === 'comex' ? comexVideo : heroVideo);
   const [eligible, setEligible] = useState(false);
   const [paused, setPaused] = useState(false);
   const [failed, setFailed] = useState(false);

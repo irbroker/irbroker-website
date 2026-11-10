@@ -31,7 +31,7 @@ export default function App({ path = "/" }: { path?: string }) {
       <a className="skip-link" href="#conteudo">
         Pular para o conteúdo
       </a>
-      <Header path={normalized} light={!contents && !guide && !notFound} />
+      <Header path={normalized} light={!guide && !notFound} />
       <main id="conteudo" tabIndex={-1}>
         {normalized === "/" ? (
           <Home />
