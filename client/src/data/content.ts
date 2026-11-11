@@ -143,7 +143,7 @@ export const routes: SiteRoute[] = [
   { path: "/contato", title: "Contato" },
 ];
 
-type PageImageKey = VerticalImageKey | "hero" | "about" | "comexHero";
+type PageImageKey = VerticalImageKey | "hero" | "about" | "comexHero" | "contents";
 
 export type PageMeta = {
   title: string;
@@ -200,7 +200,7 @@ const metadata: Record<string, PageMeta> = {
     title: "Radar do mercado e guias de seguros para empresas | irbroker",
     description:
       "Notícias do mercado segurador e guias de seguros para empresas, área por área: comércio exterior, benefícios, transporte, construção e corporate.",
-    imageKey: "hero",
+    imageKey: "contents",
   },
   "/contato": {
     title: "Fale com a corretora em São Bernardo e Faria Lima | irbroker",
