@@ -137,6 +137,15 @@
   }
 }
 
+/* Tempo do INMET no fundo marinho da Comex Broker: os tons de grafite acima são para fundo claro. */
+.theme-comex .ind-item-values.is-text dt,
+.theme-comex .ind-item-meta a {
+  color: var(--white);
+}
+.theme-comex .ind-item-meta {
+  color: var(--comex-body);
+}
+
 /* Faixa de câmbio no topo da Comex Broker. */
 .ind-fx {
   background: var(--comex-navy);
