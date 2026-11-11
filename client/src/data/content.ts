@@ -38,9 +38,10 @@ const verticalData: Vertical[] = [
       "Administradoras de condomínios",
     ],
     solutions: [
-      "Seguro garantia: licitação e execução",
-      "Risco de engenharia e RC obras",
-      "Patrimonial e condomínios",
+      "Garantias contratuais: seguro garantia, fiança locatícia e título de capitalização",
+      "Seguros patrimoniais: property, condomínios e risco de engenharia",
+      "Linhas financeiras",
+      "RC Profissional (E&O) e D&O",
     ],
     signals: [
       "Edital pedindo garantia de proposta ou de execução",
@@ -182,7 +183,7 @@ const metadata: Record<string, PageMeta> = {
   "/real-estate": {
     title: "Seguros para o mercado imobiliário: Real Estate | irbroker",
     description:
-      "Seguro garantia, risco de engenharia, RC obras, patrimonial e condomínios para fundos imobiliários, incorporadoras, construtoras e administradoras.",
+      "Garantias, seguros patrimoniais, linhas financeiras, RC Profissional e D&O para fundos imobiliários, incorporadoras, construtoras e condomínios.",
     imageKey: "construction",
   },
   "/corporate": {
