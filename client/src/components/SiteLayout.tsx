@@ -112,7 +112,8 @@ export function Header({ light = true, path = '/' }: { light?: boolean; path?: s
         </div>
         <a className="nav-link" href="/sobre" aria-current={path === '/sobre' ? 'page' : undefined}>Sobre</a>
         <a className="nav-link" href="/conteudos" aria-current={path === '/conteudos' || path.startsWith('/conteudos/') ? 'page' : undefined}>Conteúdos</a>
-        <a className="button header-contact" href="/contato">Falar com um especialista</a>
+        {/* Contato como link do menu: o botão grande fica só no topo/fim das páginas (sem CTA duplicado, decisão de 11/11). */}
+        <a className="nav-link" href="/contato" aria-current={path === '/contato' ? 'page' : undefined}>Contato</a>
       </nav>
     </div>
     {guide && <motion.span className="reading-progress" aria-hidden="true" style={{ scaleX: reading }} />}
