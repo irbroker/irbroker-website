@@ -119,6 +119,10 @@
   padding: 28px 0 28px;
   border-bottom: 1px solid var(--footer-rule);
 }
+/* Contato não tem o convite: o fio separa o rodapé da coluna escura de escritórios da página. */
+.footer-cols:first-child {
+  border-top: 1px solid var(--footer-rule);
+}
 .footer-col {
   min-width: 0;
 }
