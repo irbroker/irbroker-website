@@ -3,7 +3,7 @@ import { Editorial } from "./SiteLayout";
 import IndicadorItem from "./IndicadorItem";
 import { carregarCache, type Indicador } from "../data/indicadores";
 
-// Bloco de tempo (prévia) das páginas de Transporte e de Construção, montado por IndicadorSeguro: avisos do INMET
+// Bloco de tempo (prévia) das páginas Comex Broker e Real Estate, montado por IndicadorSeguro: avisos do INMET
 // para SP e previsão das cidades dos escritórios, lidos do cache da rotina. Sem cache ou sem previsão, não aparece.
 export default function TempoInmet() {
   const [itens, setItens] = useState<Indicador[]>([]);

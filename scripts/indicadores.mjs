@@ -157,8 +157,8 @@ async function sidra(url) {
   return get(url.replace(/\[/g, "%5B").replace(/\]/g, "%5D"));
 }
 async function ipca() {
-  // Tabela 7060: variável 63 (mensal) e 2265 (12 meses); 315[7169] índice geral, 315[7660] Saúde e cuidados pessoais.
-  const j = await sidra("https://servicodados.ibge.gov.br/api/v3/agregados/7060/periodos/-1/variaveis/63|2265?localidades=N1[all]&classificacao=315[7169,7660]");
+  // Tabela 7060: variável 63 (mensal) e 2265 (12 meses); 315[7169] índice geral.
+  const j = await sidra("https://servicodados.ibge.gov.br/api/v3/agregados/7060/periodos/-1/variaveis/63|2265?localidades=N1[all]&classificacao=315[7169]");
   const pega = (variavel, cat) => {
     const res = j.find((v) => v.id === variavel).resultados.find((r) => r.classificacoes[0].categoria[cat]);
     const [[periodo, valor]] = Object.entries(res.series[0].serie);
@@ -167,14 +167,10 @@ async function ipca() {
   const fonte = { nome: "IBGE, SIDRA tabela 7060 (IPCA)", url: "https://sidra.ibge.gov.br/tabela/7060" };
   const ref = (p) => mesAno(p.slice(0, 4), p.slice(4));
   const g = pega("63", "7169");
-  const s = pega("63", "7660");
   return [
     ind("ipca", ["construcao", "corporate"], "IPCA (índice geral)", [
       { rotulo: "No mês", valor: g.valor }, { rotulo: "Em 12 meses", valor: pega("2265", "7169").valor },
     ], "%", ref(g.periodo), fonte),
-    ind("ipca-saude", ["wellcare"], "IPCA, grupo Saúde e cuidados pessoais", [
-      { rotulo: "No mês", valor: s.valor }, { rotulo: "Em 12 meses", valor: pega("2265", "7660").valor },
-    ], "%", ref(s.periodo), fonte),
   ];
 }
 async function sinapi() {
@@ -275,26 +271,7 @@ async function inmetPrevisao() {
   return out;
 }
 
-// ---------- InfoDengue (Fiocruz) ----------
-async function dengue() {
-  const out = [];
-  const ano = agora.getFullYear();
-  for (const [geo, nome] of CIDADES) {
-    const url = `https://info.dengue.mat.br/api/alertcity?geocode=${geo}&disease=dengue&format=json&ew_start=1&ew_end=53&ey_start=${ano}&ey_end=${ano}`;
-    const lista = await get(url);
-    const u = lista.sort((a, b) => b.SE - a.SE)[0];
-    if (!u) throw new Error(`InfoDengue sem dados para ${nome}`);
-    // Mostra só contagens; o "nível de alerta" do InfoDengue não é exibido (sem semáforo no site).
-    out.push(ind(`dengue-${geo}`, ["wellcare"], `Dengue, ${nome}`, [
-      { rotulo: "Casos notificados na semana", valor: u.casos },
-      { rotulo: "Casos estimados na semana (InfoDengue)", valor: Math.round(u.casos_est) },
-    ], "casos", `semana epidemiológica ${String(u.SE).slice(4)}/${String(u.SE).slice(0, 4)}`,
-    { nome: "InfoDengue (Fiocruz e FGV)", url: "https://info.dengue.mat.br/" }));
-  }
-  return out;
-}
-
-const FONTES = { focus, ptax, comexStat, diesel, inmetAvisos, inmetPrevisao, sinapi, ipca, selic, jurosImobiliario, igpm, dengue };
+const FONTES = { focus, ptax, comexStat, diesel, inmetAvisos, inmetPrevisao, sinapi, ipca, selic, jurosImobiliario, igpm };
 
 function validar(doc) {
   assert.equal(typeof doc.geradoEm, "string");

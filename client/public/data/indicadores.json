@@ -350,31 +350,6 @@
    "origem": "ipca"
   },
   {
-   "id": "ipca-saude",
-   "verticais": [
-    "wellcare"
-   ],
-   "nome": "IPCA, grupo Saúde e cuidados pessoais",
-   "valores": [
-    {
-     "rotulo": "No mês",
-     "valor": 0.08
-    },
-    {
-     "rotulo": "Em 12 meses",
-     "valor": 5.75
-    }
-   ],
-   "unidade": "%",
-   "referencia": "set/2026",
-   "fonte": {
-    "nome": "IBGE, SIDRA tabela 7060 (IPCA)",
-    "url": "https://sidra.ibge.gov.br/tabela/7060"
-   },
-   "coletadoEm": "2026-11-11T03:08:46.691Z",
-   "origem": "ipca"
-  },
-  {
    "id": "selic-meta",
    "verticais": [
     "construcao",
@@ -445,56 +420,6 @@
    },
    "coletadoEm": "2026-11-11T03:08:46.691Z",
    "origem": "igpm"
-  },
-  {
-   "id": "dengue-3550308",
-   "verticais": [
-    "wellcare"
-   ],
-   "nome": "Dengue, São Paulo",
-   "valores": [
-    {
-     "rotulo": "Casos notificados na semana",
-     "valor": 428
-    },
-    {
-     "rotulo": "Casos estimados na semana (InfoDengue)",
-     "valor": 1554
-    }
-   ],
-   "unidade": "casos",
-   "referencia": "semana epidemiológica 44/2026",
-   "fonte": {
-    "nome": "InfoDengue (Fiocruz e FGV)",
-    "url": "https://info.dengue.mat.br/"
-   },
-   "coletadoEm": "2026-11-11T03:08:46.691Z",
-   "origem": "dengue"
-  },
-  {
-   "id": "dengue-3548708",
-   "verticais": [
-    "wellcare"
-   ],
-   "nome": "Dengue, São Bernardo do Campo",
-   "valores": [
-    {
-     "rotulo": "Casos notificados na semana",
-     "valor": 2
-    },
-    {
-     "rotulo": "Casos estimados na semana (InfoDengue)",
-     "valor": 21
-    }
-   ],
-   "unidade": "casos",
-   "referencia": "semana epidemiológica 44/2026",
-   "fonte": {
-    "nome": "InfoDengue (Fiocruz e FGV)",
-    "url": "https://info.dengue.mat.br/"
-   },
-   "coletadoEm": "2026-11-11T03:08:46.691Z",
-   "origem": "dengue"
   }
  ]
 }

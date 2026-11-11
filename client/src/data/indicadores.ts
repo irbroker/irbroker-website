@@ -26,15 +26,14 @@ export const CACHE_URL = "/data/indicadores.json";
 
 // Áreas na ordem do site (slug da página -> chave usada no cache).
 export const AREA_POR_SLUG: Record<string, string> = {
-  // 11/11/2026: transporte passou para a Comex; "construcao" é a chave de Real Estate.
+  // 11/11/2026: transporte passou para a Comex; "construcao" é a chave de Real Estate. WellCare sem indicadores (decisão do usuário).
   "real-estate": "construcao",
   corporate: "corporate",
   "comex-broker": "comex",
-  wellcare: "wellcare",
 };
 
 const casas = (unidade: string, n: number) =>
-  unidade === "R$" && n < 100 ? 4 : unidade === "casos" ? 0 : 2;
+  unidade === "R$" && n < 100 ? 4 : 2;
 
 export function formatar(
   { valor, unidade: propria }: Valor,
@@ -61,8 +60,6 @@ export function formatar(
       return `R$ ${n} por m²`;
     case "US$ bilhões":
       return `US$ ${n} bilhões`;
-    case "casos":
-      return `${n} ${valor === 1 ? "caso" : "casos"}`;
     default:
       return unidade ? `${n} ${unidade}` : n;
   }

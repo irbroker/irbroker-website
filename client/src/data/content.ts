@@ -217,7 +217,7 @@ const metadata: Record<string, PageMeta> = {
   "/indicadores": {
     title: "Indicadores de mercado | irbroker",
     description:
-      "Indicadores públicos por área (câmbio, comércio exterior, diesel, tempo, construção, juros, inflação e saúde), com fonte e data de referência.",
+      "Indicadores públicos por área (câmbio, comércio exterior, diesel, tempo, construção, juros e inflação), com fonte e data de referência.",
     imageKey: "hero",
     noindex: true,
   },

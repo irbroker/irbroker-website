@@ -7,7 +7,7 @@ import { AREA_POR_SLUG, AVISO, carregarCache, dataHora, type CacheIndicadores } 
 // Prévia (noindex, fora do menu). Lê só o cache gerado por scripts/indicadores.mjs; nenhuma fonte é chamada daqui.
 const AREAS = [
   { chave: "todas", nome: "Todas as áreas", ancora: "todas-as-areas" },
-  ...verticals.map(v => ({
+  ...verticals.filter(v => AREA_POR_SLUG[v.slug]).map(v => ({
     chave: AREA_POR_SLUG[v.slug],
     nome: v.name,
     ancora: v.slug,
