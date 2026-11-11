@@ -6,7 +6,7 @@
 |---|---|---|---|---|
 | luvas-plantio.webp (Projeto 365) | Unsplash CbZh3kaPxrE | Jonathan Kemper | https://unsplash.com/photos/CbZh3kaPxrE | Licença Unsplash (uso comercial livre); estampa do fabricante na luva atenuada no tratamento |
 | carreta-patio.webp (Transporte de cargas) | Pexels 36251074 (quadro do vídeo) | — | https://www.pexels.com/video/36251074/ | Licença Pexels (uso comercial livre) |
-| cidade-entardecer.webp (topo de Conteúdos) | Pixabay 91744 (quadro do vídeo) | KM007_ | https://pixabay.com/videos/id-91744/ | Licença Pixabay (uso comercial livre) |
+| cidade-entardecer.webp (topo de Conteúdos; recorte 1200x630 em og/contents.jpg) | Pixabay 91744 (quadro do vídeo) | KM007_ | https://pixabay.com/videos/id-91744/ | Licença Pixabay (uso comercial livre) |
 
 Original (3152x4728) e versão retocada em `_downloads/unsplash-CbZh3kaPxrE/` (fora do build); recorte 3:2 convertido para WebP 1600px.
 
