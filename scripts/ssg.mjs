@@ -122,7 +122,7 @@ function xmlEscape(value) {
 function buildSitemap(origin) {
   const header = '<?xml version="1.0" encoding="UTF-8"?>';
   const entries = paths
-    .filter((routePath) => !routePath.includes("?"))
+    .filter((routePath) => !routePath.includes("?") && !renderPage(routePath).noindex)
     .map((routePath) => {
       const url = routePath === "/" ? origin : new URL(routePath, `${origin}/`).toString();
       return `  <url><loc>${xmlEscape(url)}</loc><lastmod>${LASTMOD}</lastmod></url>`;
