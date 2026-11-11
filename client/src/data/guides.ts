@@ -25,7 +25,7 @@ export const guides: Guia[] = [
       "RCTR-C, RC-DC e RC-V: os três seguros obrigatórios do transportador",
     seoTitle: "RCTR-C, RC-DC e RC-V: seguros obrigatórios",
     seoDescription:
-      "RCTR-C, RC-DC e RC-V: o que cada seguro obrigatório cobre, o papel do PGR e por que a carta DDR não dispensa o seguro.",
+      "RCTR-C, RC-DC e RC-V: o que cada seguro obrigatório cobre desde a Lei 14.599/2023, o papel do PGR e por que a carta DDR não dispensa o seguro.",
     linhaFina:
       'Desde a Lei 14.599/2023, a pergunta "qual dos dois?" ficou para trás. Cada seguro responde a um risco diferente.',
     data: "09/11/2026",
