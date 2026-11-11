@@ -5,9 +5,9 @@ import { heroVideo, comexVideo } from '../data/media';
 export const videoScenes = [
   { start: 0, end: 2.2, name: 'São Paulo', href: '/' },
   { start: 2.2, end: 4.8, name: 'Comex Broker', href: '/comex-broker' },
-  { start: 4.8, end: 7.4, name: 'WellCare', href: '/wellcare' },
-  { start: 7.4, end: 10, name: 'Transporte de cargas', href: '/transporte-de-cargas' },
-  { start: 10, end: 12.6, name: 'Construção e imóveis', href: '/construcao-e-imoveis' },
+  { start: 4.8, end: 7.4, name: 'WellCare Broker', href: '/wellcare' },
+  { start: 7.4, end: 10, name: 'Comex Broker', href: '/comex-broker' },
+  { start: 10, end: 12.6, name: 'Real Estate', href: '/real-estate' },
   { start: 12.6, end: 15.2, name: 'Corporate', href: '/corporate' },
 ] as const;
 

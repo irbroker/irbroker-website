@@ -5,7 +5,7 @@ import { FrontRadar } from '../components/Radar';
 
 export default function VerticalPage({ vertical }: { vertical: Vertical }) {
   const bridge = vertical.bridge;
-  const cta = bridge === 'comex' ? 'Falar com a Comex Broker' : bridge === 'wellcare' ? 'Falar com a WellCare' : 'Falar com um especialista';
+  const cta = bridge ? `Falar com a ${vertical.name}` : 'Falar com um especialista';
   return <div className={`vertical-page ${bridge ? `theme-${bridge}` : ''}`}>
     <Hero image={vertical.imageKey} title={vertical.title} label={vertical.name} description={vertical.intro} className="vertical-hero" brand={bridge}><Button href={`/contato?frente=${encodeURIComponent(vertical.name)}`}>{cta}</Button></Hero>
     {vertical.audience.length > 0 && <section className="section wrap"><Editorial label="Para quem é"><ul className="audience-list">{vertical.audience.map(item => <li key={item}>{item}</li>)}</ul></Editorial></section>}

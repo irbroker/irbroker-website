@@ -18,7 +18,7 @@ export interface Guia {
 
 export const guides: Guia[] = [
   {
-    frente: "Transporte de cargas",
+    frente: "Comex Broker",
     slug: "/conteudos/seguros-obrigatorios-do-transportador",
     trilha: "Seguros obrigatórios do transportador",
     titulo:
@@ -82,7 +82,7 @@ export const guides: Guia[] = [
     ],
   },
   {
-    frente: "Construção e imóveis",
+    frente: "Real Estate",
     slug: "/conteudos/seguro-do-condominio-predio-e-terceiros",
     trilha: "Seguro do condomínio",
     titulo:
@@ -109,7 +109,7 @@ export const guides: Guia[] = [
     ],
   },
   {
-    frente: "WellCare",
+    frente: "WellCare Broker",
     slug: "/conteudos/vida-saude-odonto-beneficios",
     trilha: "Vida, saúde e odonto",
     titulo: "Vida em grupo, saúde e odonto: três benefícios, duas regras",

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { verticals } from "../data/content";
+import { frontName, verticals } from "../data/content";
 import { Breadcrumb } from "../components/SiteLayout";
 
 const CONTACT_ENDPOINT =
@@ -65,9 +65,8 @@ export default function Contact() {
     if (!pageRef.current) pageRef.current = window.location.pathname;
     if (t0Ref.current === null) t0Ref.current = Date.now();
 
-    const requested = new URLSearchParams(window.location.search).get("frente");
-    if (requested && verticals.some(item => item.name === requested))
-      setFront(requested);
+    const requested = frontName(new URLSearchParams(window.location.search).get("frente"));
+    if (requested) setFront(requested);
     setReady(true);
   }, []);
 

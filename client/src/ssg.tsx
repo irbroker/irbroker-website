@@ -4,6 +4,7 @@ import { SITE_ORIGIN } from "../../shared/site-origin";
 import App from "./App";
 import { media } from "./data/media";
 import { pageMeta, routes } from "./data/content";
+export { redirects } from "./data/content";
 import { structuredData } from "./components/StructuredData";
 
 export { SITE_ORIGIN };

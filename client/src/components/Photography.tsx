@@ -74,8 +74,8 @@ export function Verticals({ compact = false }: { compact?: boolean }) {
   }
 
   return <section id="verticais" className={`verticals-section ${compact ? 'verticals-compact' : ''}`}>
-    <div className="wrap verticals-heading"><AnimatedHeading>Uma corretora, cinco áreas.</AnimatedHeading></div>
-    <div ref={panels} id="painel-verticais" className="vertical-panels" role="region" aria-label="Cinco áreas da irbroker" tabIndex={0} onMouseLeave={() => setHovered(null)}>
+    <div className="wrap verticals-heading"><AnimatedHeading>Um grupo, quatro áreas.</AnimatedHeading></div>
+    <div ref={panels} id="painel-verticais" className="vertical-panels" role="region" aria-label="Quatro áreas do Grupo irbroker" tabIndex={0} onMouseLeave={() => setHovered(null)}>
       {verticals.map((vertical, index) => <motion.a className={`vertical-panel panel-${vertical.imageKey} ${vertical.bridge ? `panel-${vertical.bridge}` : ''} ${expanded === index ? 'panel-active' : ''}`} href={`/${vertical.slug}`} key={vertical.slug} aria-label={vertical.name} initial={false} animate={desktop === null ? {} : { flexGrow: desktop ? (expanded === index ? 2.4 : 1) : 0 }} transition={{ duration: reduced ? 0 : .5, ease: 'easeOut' }} onMouseEnter={() => setHovered(index)} onFocus={() => setFocused(index)} onBlur={() => setFocused(null)}>
         <img className="panel-photo" src={media[vertical.imageKey].src} alt="" width={media[vertical.imageKey].width} height={media[vertical.imageKey].height} loading="lazy" />
         <span className="panel-shade" aria-hidden="true" />

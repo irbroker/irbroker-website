@@ -25,53 +25,17 @@ export const acceptanceNote =
 
 const verticalData: Vertical[] = [
   {
-    slug: "transporte-de-cargas",
-    name: "Transporte de cargas",
-    tagline: "Seguros de responsabilidade para quem transporta carga de terceiros.",
-    title: "Os seguros obrigatórios do transportador, em dia.",
-    intro: "Seguros de responsabilidade para quem transporta carga de terceiros.",
-    audience: [
-      "Transportadoras e operadores logísticos",
-      "Agentes de carga e despachantes",
-    ],
-    solutions: [
-      "RCTR-C, RC-DC e RC-V (seguros obrigatórios)",
-      "Seguro de transporte nacional",
-    ],
-    signals: [
-      "Nova rota, novo tipo de carga ou frota maior",
-      "Cliente ou contrato exigindo seguro específico",
-      "Dúvida se toda carga está averbada, com limite acima da carga mais cara",
-    ],
-    imageKey: "transport",
-  },
-  {
-    slug: "comex-broker",
-    name: "Comex Broker",
-    tagline: "Seguro internacional de cargas para quem importa e exporta.",
-    title: "O seguro da carga que você importa ou exporta.",
+    slug: "real-estate",
+    name: "Real Estate",
+    tagline: "Mercado imobiliário: do terreno ao ativo em operação.",
+    title: "Seguros para o mercado imobiliário.",
     intro:
-      "Seguro internacional de cargas para importadores e exportadores. Área de comércio exterior do Grupo irbroker.",
-    audience: [],
-    solutions: [],
-    signals: [
-      "Novas origens, destinos ou mercadorias",
-      "Compra em CIF sem saber o que o seguro do fornecedor cobre",
-    ],
-    imageKey: "port",
-    bridge: "comex",
-  },
-  {
-    slug: "construcao-e-imoveis",
-    name: "Construção e imóveis",
-    tagline: "Do terreno à entrega das chaves.",
-    title: "Do terreno à entrega das chaves.",
-    intro:
-      "Garantias e proteção patrimonial para quem incorpora, constrói, administra e investe.",
+      "Real Estate é a vertical da irbroker para o mercado imobiliário: garantias e proteção patrimonial para quem investe, incorpora, constrói e opera imóveis.",
     audience: [
+      "Fundos imobiliários e investidores",
       "Incorporadoras e construtoras",
+      "Condomínios logísticos e torres de escritórios",
       "Administradoras de condomínios",
-      "Investidores",
     ],
     solutions: [
       "Seguro garantia: licitação e execução",
@@ -90,7 +54,8 @@ const verticalData: Vertical[] = [
     name: "Corporate",
     tagline: "Patrimônio, responsabilidade e quem decide.",
     title: "Patrimônio, responsabilidade e quem decide.",
-    intro: "Proteção para a empresa e para os gestores, em empresas de todos os portes.",
+    intro:
+      "Corporate é a vertical da irbroker para o mercado corporativo: proteção para a empresa e para os gestores, em empresas de todos os portes.",
     audience: [
       "Pequenas e médias empresas",
       "Grandes empresas",
@@ -108,8 +73,34 @@ const verticalData: Vertical[] = [
     imageKey: "corporate",
   },
   {
+    slug: "comex-broker",
+    name: "Comex Broker",
+    tagline: "Seguro de transporte de cargas, nacional e internacional.",
+    title: "O seguro da carga, da estrada ao porto.",
+    intro:
+      "Seguro de transporte de cargas, nacional e internacional, para quem transporta, embarca, importa e exporta. Frente de transporte do Grupo irbroker.",
+    audience: [
+      "Transportadoras e operadores logísticos",
+      "Embarcadores e indústrias",
+      "Importadores, exportadores e tradings",
+      "Agentes de carga e despachantes aduaneiros",
+    ],
+    solutions: [
+      "Seguro de transporte nacional e internacional",
+      "RCTR-C, RC-DC e RC-V (seguros obrigatórios do transportador)",
+    ],
+    signals: [
+      "Nova rota, novo tipo de carga ou frota maior",
+      "Novas origens, destinos ou mercadorias",
+      "Compra em CIF sem saber o que o seguro do fornecedor cobre",
+      "Dúvida se toda carga está averbada, com limite acima da carga mais cara",
+    ],
+    imageKey: "port",
+    bridge: "comex",
+  },
+  {
     slug: "wellcare",
-    name: "WellCare",
+    name: "WellCare Broker",
     tagline: "Benefícios desenhados para a equipe da sua empresa.",
     title: "Benefícios desenhados para a equipe da sua empresa.",
     intro:
@@ -126,8 +117,24 @@ const verticalData: Vertical[] = [
   },
 ];
 
-export const frontOrder = ['Comex Broker', 'WellCare', 'Transporte de cargas', 'Construção e imóveis', 'Corporate'] as const;
-export const verticals: Vertical[] = frontOrder.map(name => verticalData.find(vertical => vertical.name === name)!);
+/** Ordem das 4 frentes (decisão de 11/11/2026): irbroker (Real Estate e Corporate), Comex Broker e WellCare Broker. */
+export const verticals: Vertical[] = verticalData;
+
+/** Endereços e nomes antigos (antes de 11/11/2026), mantidos para links já distribuídos. */
+export const redirects: Record<string, string> = {
+  "/transporte-de-cargas": "/comex-broker",
+  "/construcao-e-imoveis": "/real-estate",
+};
+const frontAliases: Record<string, string> = {
+  "Transporte de cargas": "Comex Broker",
+  "Construção e imóveis": "Real Estate",
+  WellCare: "WellCare Broker",
+};
+/** Nome da frente vindo de ?frente= (aceita os nomes antigos); "" se não for uma frente. */
+export function frontName(value: string | null): string {
+  const name = value ? frontAliases[value] ?? value : "";
+  return verticals.some(vertical => vertical.name === name) ? name : "";
+}
 
 export type SiteRoute = {
   path: string;
@@ -157,31 +164,25 @@ const metadata: Record<string, PageMeta> = {
   "/": {
     title: "Corretora de seguros corporativos em São Paulo | irbroker",
     description:
-      "Corretora de seguros para empresas em São Paulo (Faria Lima) e São Bernardo do Campo: comércio exterior, benefícios, transporte, construção e corporate.",
+      "Corretora de seguros para empresas em São Paulo (Faria Lima) e São Bernardo do Campo: mercado imobiliário, corporate, transporte de cargas e benefícios.",
     imageKey: "hero",
   },
   "/comex-broker": {
-    title: "Seguro de carga para importação e exportação | irbroker",
+    title: "Seguro de transporte de cargas nacional e internacional | Comex Broker",
     description:
-      "Seguro internacional de cargas para empresas importadoras e exportadoras. A Comex Broker é a área de comércio exterior do Grupo irbroker, em São Paulo.",
+      "Seguro de transporte de cargas, nacional e internacional, e RCTR-C, RC-DC e RC-V para transportadoras, embarcadores, importadores e exportadores. Grupo irbroker.",
     imageKey: "comexHero",
   },
   "/wellcare": {
     title: "Plano de saúde e benefícios empresariais | irbroker",
     description:
-      "Plano de saúde, odonto, vida em grupo e acidentes pessoais para empresas, da escolha à renovação. A WellCare é a área de benefícios do Grupo irbroker.",
+      "Plano de saúde, odonto, vida em grupo e acidentes pessoais para empresas, da escolha à renovação. A WellCare Broker é a área de benefícios do Grupo irbroker.",
     imageKey: "wellcare",
   },
-  "/transporte-de-cargas": {
-    title: "RCTR-C, RC-DC e RC-V para transportadoras | irbroker",
+  "/real-estate": {
+    title: "Seguros para o mercado imobiliário: Real Estate | irbroker",
     description:
-      "Seguros obrigatórios do transportador (RCTR-C, RC-DC e RC-V) e seguro de transporte nacional para transportadoras, operadores logísticos e agentes de carga.",
-    imageKey: "transport",
-  },
-  "/construcao-e-imoveis": {
-    title: "Seguro garantia e risco de engenharia | irbroker",
-    description:
-      "Seguro garantia de licitação e execução, risco de engenharia, RC obras e seguro de condomínio para incorporadoras, construtoras e administradoras.",
+      "Seguro garantia, risco de engenharia, RC obras, patrimonial e condomínios para fundos imobiliários, incorporadoras, construtoras e administradoras.",
     imageKey: "construction",
   },
   "/corporate": {
@@ -199,7 +200,7 @@ const metadata: Record<string, PageMeta> = {
   "/conteudos": {
     title: "Radar do mercado e guias de seguros para empresas | irbroker",
     description:
-      "Notícias do mercado segurador e guias de seguros para empresas, área por área: comércio exterior, benefícios, transporte, construção e corporate.",
+      "Notícias do mercado segurador e guias de seguros para empresas, área por área: mercado imobiliário, corporate, transporte de cargas e benefícios.",
     imageKey: "contents",
   },
   "/contato": {
@@ -219,10 +220,9 @@ export const notFoundMeta: PageMeta = {
 };
 
 const guideImageKeys: Record<string, PageImageKey> = {
-  "Transporte de cargas": "transport",
   "Comex Broker": "port",
-  "Construção e imóveis": "construction",
-  WellCare: "wellcare",
+  "Real Estate": "construction",
+  "WellCare Broker": "wellcare",
 };
 
 for (const guide of guides) {

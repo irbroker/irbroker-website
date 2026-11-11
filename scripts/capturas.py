@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 BASE = os.environ.get('BASE_URL', 'http://127.0.0.1:5173').rstrip('/')
-ROUTES = ['/', '/comex-broker', '/wellcare', '/transporte-de-cargas', '/construcao-e-imoveis', '/corporate',
+ROUTES = ['/', '/real-estate', '/corporate', '/comex-broker', '/wellcare',
           '/sobre', '/contato', '/conteudos', '/conteudos/seguros-obrigatorios-do-transportador',
           '/conteudos/cif-fob-seguro-da-carga', '/conteudos/seguro-do-condominio-predio-e-terceiros',
           '/conteudos/vida-saude-odonto-beneficios']

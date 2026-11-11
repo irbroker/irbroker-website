@@ -5,8 +5,8 @@ import { fileURLToPath } from "node:url";
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const publicDirectory = path.join(projectRoot, "dist", "public");
 const templatePath = path.join(publicDirectory, "index.html");
-const { renderPage, paths, SITE_ORIGIN } = await import("../dist/ssr/ssg.js");
-const LASTMOD = "2026-11-09";
+const { renderPage, paths, redirects, SITE_ORIGIN } = await import("../dist/ssr/ssg.js");
+const LASTMOD = "2026-11-11";
 
 function escapeHtml(value) {
   return String(value)
@@ -146,6 +146,24 @@ for (const routePath of paths) {
   await fs.writeFile(path.join(outputDirectory, "index.html"), html, "utf8");
 }
 
+// Endereços antigos (antes das 4 frentes, 11/11/2026): página estática que leva ao novo, com noindex e canonical no destino.
+// shortcut: redireciona no navegador; quando a hospedagem estiver definida, trocar por 301 no servidor (ex.: redirects do vercel.json).
+for (const [from, to] of Object.entries(redirects)) {
+  const target = new URL(to, `${origin}/`).toString();
+  const html = `<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8" />
+<title>Página movida | irbroker</title>
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="${escapeHtml(target)}" />
+<script>location.replace(${JSON.stringify(to)} + location.search + location.hash);</script>
+<meta http-equiv="refresh" content="0; url=${escapeHtml(to)}" />
+</head><body><p>Esta página mudou de endereço: <a href="${escapeHtml(to)}">${escapeHtml(target)}</a>.</p></body></html>
+`;
+  const outputDirectory = path.join(publicDirectory, from.replace(/^\/+|\/+$/g, ""));
+  await fs.mkdir(outputDirectory, { recursive: true });
+  await fs.writeFile(path.join(outputDirectory, "index.html"), html, "utf8");
+}
+
 // 404.html: rota desconhecida, com noindex e sem canonical (a hospedagem deve servi-lo com status 404).
 const notFound = renderPage("/404", origin);
 await fs.writeFile(
@@ -161,4 +179,4 @@ const robots = buildRobots(origin);
 await fs.writeFile(path.join(publicDirectory, "robots.txt"), robots, "utf8");
 await fs.writeFile(path.join(projectRoot, "client", "public", "robots.txt"), robots, "utf8");
 
-console.log(`SSG gerado para ${paths.length} rotas + 404.html em ${publicDirectory} (origem ${origin}).`);
+console.log(`SSG gerado para ${paths.length} rotas + ${Object.keys(redirects).length} redirecionamentos + 404.html em ${publicDirectory} (origem ${origin}).`);

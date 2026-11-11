@@ -97,7 +97,6 @@ export const comexVideo = {
 
 // Topo de cada área: cena própria, sem repetir a home nem a Comex (ver media/CREDITOS.md).
 export const areaVideos = {
-  transport: { src: "/media/transporte-loop_d2624561.mp4", poster: "/media/transporte-poster_d2624561.webp", width: 1920, height: 1080 },
   construction: { src: "/media/construcao-loop_a6494acd.mp4", poster: "/media/construcao-poster_a6494acd.webp", width: 1920, height: 1080 },
   corporate: { src: "/media/corporate-loop_f53a255a.mp4", poster: "/media/corporate-poster_f53a255a.webp", width: 1920, height: 1080 },
   wellcare: { src: "/media/wellcare-loop_ed3e7c97.mp4", poster: "/media/wellcare-poster_ed3e7c97.webp", width: 1920, height: 1080 },

@@ -35,6 +35,11 @@
 .theme-comex .hero-shade {
   background: var(--comex-navy-a67);
 }
+/* O fundo claro de Soluções some no marinho: o texto do tema é claro. */
+.theme-comex .solutions-section {
+  background: none;
+  border-block: 1px solid var(--line);
+}
 /* Rótulos por marca: Comex em Cinzel caixa alta; WellCare em Figtree, caixa normal. */
 .theme-comex .editorial-label {
   font-family: 'Cinzel', serif;

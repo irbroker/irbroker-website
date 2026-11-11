@@ -1,5 +1,5 @@
 import { useEffect, useState, type MouseEvent } from "react";
-import { verticals } from "../data/content";
+import { frontName, verticals } from "../data/content";
 import { Breadcrumb } from "../components/SiteLayout";
 import { guides } from "../data/guides";
 import { orderedRadar } from "../data/radar";
@@ -10,8 +10,7 @@ import { media } from "../data/media";
 const dateKey = (date: string) => Number(date.split("/").reverse().join(""));
 
 function frontFromSearch(search: string) {
-  const front = new URLSearchParams(search).get("frente") ?? "";
-  return verticals.some(vertical => vertical.name === front) ? front : "";
+  return frontName(new URLSearchParams(search).get("frente"));
 }
 
 export default function Contents({ search = "" }: { search?: string }) {

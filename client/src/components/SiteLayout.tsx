@@ -242,8 +242,6 @@ function normalizeSitePath(path: string) {
   return `/${pathname.replace(/^\/+|\/+$/g, '')}`;
 }
 
-const FOOTER_FRONT_ORDER = ['comex-broker', 'wellcare', 'transporte-de-cargas', 'construcao-e-imoveis', 'corporate'];
-const FOOTER_FRONTS = [...verticals].sort((a, b) => FOOTER_FRONT_ORDER.indexOf(a.slug) - FOOTER_FRONT_ORDER.indexOf(b.slug));
 
 export function Footer({ path = '/' }: { path?: string }) {
   const dialog = useRef<HTMLDialogElement>(null);
@@ -253,11 +251,7 @@ export function Footer({ path = '/' }: { path?: string }) {
   const guideFront = guides.find(guide => guide.slug === normalizedPath)?.frente;
   const footerVertical = verticals.find(vertical => `/${vertical.slug}` === normalizedPath || vertical.name === guideFront);
   const footerCtaLabel = footerVertical
-    ? footerVertical.name === 'Comex Broker'
-      ? 'Falar com a Comex Broker'
-      : footerVertical.name === 'WellCare'
-        ? 'Falar com a WellCare'
-        : `Falar sobre ${footerVertical.name === 'Corporate' ? 'Corporate' : footerVertical.name.toLowerCase()}`
+    ? footerVertical.bridge ? `Falar com a ${footerVertical.name}` : `Falar sobre ${footerVertical.name}`
     : 'Falar com um especialista';
   const footerCtaHref = footerVertical ? `/contato?frente=${encodeURIComponent(footerVertical.name)}` : '/contato';
 
@@ -280,7 +274,7 @@ export function Footer({ path = '/' }: { path?: string }) {
           </div>
           <nav className="footer-col" aria-labelledby="footer-frentes">
             <h2 className="footer-col-title" id="footer-frentes">Áreas</h2>
-            <ul className="footer-list footer-editorial-front-links">{FOOTER_FRONTS.map(vertical => <li key={vertical.slug}><a className="footer-editorial-link" href={`/${vertical.slug}`}>{vertical.name}</a></li>)}</ul>
+            <ul className="footer-list footer-editorial-front-links">{verticals.map(vertical => <li key={vertical.slug}><a className="footer-editorial-link" href={`/${vertical.slug}`}>{vertical.name}</a></li>)}</ul>
           </nav>
           <nav className="footer-col" aria-labelledby="footer-irbroker">
             <h2 className="footer-col-title" id="footer-irbroker">A irbroker</h2>

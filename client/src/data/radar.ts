@@ -23,7 +23,7 @@ export const radar: RadarNote[] = [
     ]
   },
   {
-    "frente": "Transporte de cargas",
+    "frente": "Comex Broker",
     "data": "01/07/2026",
     "titulo": "Verificação automática dos seguros obrigatórios entrou na fase de produção na ANTT",
     "resumo": "Pelo cronograma da ANTT, o sistema que recebe das seguradoras os dados do RCTR-C, do RC-DC e do RC-V passou do período de homologação para o ambiente de produção a partir de 1º de julho de 2026, para inscrição e manutenção do RNTRC. Segundo a agência, o descumprimento das regras de comprovação pode levar à suspensão do RNTRC.",
@@ -53,7 +53,7 @@ export const radar: RadarNote[] = [
     ]
   },
   {
-    "frente": "WellCare",
+    "frente": "WellCare Broker",
     "data": "2026 (Agenda Regulatória 2026-2028)",
     "titulo": "ANS prevê para o 4º trimestre de 2026 a decisão sobre o aprimoramento das regras de reajuste dos planos coletivos",
     "resumo": "A Agenda Regulatória 2026-2028 da ANS inclui o tema \"Reajuste coletivo\": concluir o aprimoramento das regras de reajuste dos planos coletivos, para reduzir a assimetria de informação. A deliberação final está prevista para o 4º trimestre de 2026.",
@@ -70,7 +70,7 @@ export const radar: RadarNote[] = [
     ]
   },
   {
-    "frente": "Construção e imóveis",
+    "frente": "Real Estate",
     "data": "10/06/2026",
     "titulo": "TCU aponta como indevida a exigência simultânea de garantia de execução e de seguro-garantia com cláusula de retomada",
     "resumo": "No Acórdão 1513/2026-Plenário, de 10/06/2026, o TCU analisou a licitação da nova sede do Crea/SP. O tribunal considerou indevido exigir ao mesmo tempo a garantia de execução do art. 96 da Lei 14.133/2021 e o seguro-garantia com cláusula de retomada do art. 102, porque este é uma espécie do próprio seguro-garantia. Também apontou que fixar 10% para a garantia com retomada, acima do patamar de 5%, exige motivação técnica prévia.",
