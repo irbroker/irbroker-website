@@ -56,13 +56,15 @@ const verticalData: Vertical[] = [
   {
     slug: "corporate",
     name: "Corporate",
-    tagline: "Patrimônio, responsabilidade e quem decide.",
-    title: "Patrimônio, responsabilidade e quem decide.",
+    tagline: "Seguros para a empresa e para quem a dirige.",
+    title: "Seguros para a empresa e para quem a dirige.",
     intro:
-      "Corporate é a área da irbroker para o mercado corporativo: proteção para a empresa e para os gestores, em empresas de todos os portes.",
+      "Corporate é a área da irbroker para o mercado corporativo, de pequenas a grandes empresas.",
     audience: [
-      "Pequenas e médias empresas",
-      "Grandes empresas",
+      "Empresas que fecham contratos com o poder público ou grandes clientes",
+      "Sócios, diretoria e conselhos",
+      "Empresas de serviços profissionais",
+      "Indústrias e operações com risco ambiental",
     ],
     solutions: [
       "Garantias: seguro garantia contratual e judicial",
