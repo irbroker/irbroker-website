@@ -8,6 +8,7 @@
     "build": "vite build && vite build --ssr src/ssg.tsx --outDir ../dist/ssr --emptyOutDir && node scripts/ssg.mjs --default-origin",
     "build:static": "vite build && vite build --ssr src/ssg.tsx --outDir ../dist/ssr --emptyOutDir && node scripts/ssg.mjs --default-origin",
     "check": "tsc --noEmit",
+    "indicadores": "node scripts/indicadores.mjs",
     "format": "prettier --write ."
   },
   "dependencies": {
