@@ -8,7 +8,6 @@ import Contents from "./pages/Contents";
 import NotFound from "./pages/NotFound";
 import GuidePage from "./pages/GuidePage";
 import { guides } from "./data/guides";
-import Indicadores from "./pages/Indicadores";
 
 export default function App({ path = "/" }: { path?: string }) {
   const [pathname, search = ""] = path.split("?", 2);
@@ -16,14 +15,12 @@ export default function App({ path = "/" }: { path?: string }) {
   const vertical = verticals.find(item => `/${item.slug}` === normalized);
   const contact = normalized === "/contato";
   const contents = normalized === "/conteudos";
-  const indicadores = normalized === "/indicadores";
   const guide = guides.find(item => item.slug === normalized);
   const notFound = !(
     normalized === "/" ||
     normalized === "/sobre" ||
     contact ||
     contents ||
-    indicadores ||
     guide ||
     vertical
   );
@@ -34,7 +31,7 @@ export default function App({ path = "/" }: { path?: string }) {
       <a className="skip-link" href="#conteudo">
         Pular para o conteúdo
       </a>
-      <Header path={normalized} light={!guide && !notFound && !indicadores} />
+      <Header path={normalized} light={!guide && !notFound} />
       <main id="conteudo" tabIndex={-1}>
         {normalized === "/" ? (
           <Home />
@@ -44,8 +41,6 @@ export default function App({ path = "/" }: { path?: string }) {
           <Contact />
         ) : contents ? (
           <Contents search={search} />
-        ) : indicadores ? (
-          <Indicadores />
         ) : guide ? (
           <GuidePage guide={guide} />
         ) : vertical ? (
