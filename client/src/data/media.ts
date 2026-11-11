@@ -67,7 +67,7 @@ export const media = {
   contents: {
     // Quadro do clipe Pixabay 91744 (KM007_), do vídeo institucional 2026; ver media/CREDITOS.md.
     src: "/media/cidade-entardecer.webp",
-    ogSrc: "/media/og/hero.jpg",
+    ogSrc: "/media/og/contents.jpg",
     alt: "Prédios de uma cidade ao entardecer.",
     width: 1920,
     height: 1080,
