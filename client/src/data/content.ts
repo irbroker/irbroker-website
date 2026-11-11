@@ -75,10 +75,10 @@ const verticalData: Vertical[] = [
   {
     slug: "comex-broker",
     name: "Comex Broker",
-    tagline: "Seguro de transporte de cargas, nacional e internacional.",
+    tagline: "Seguro e gestão de riscos para o transporte de cargas, nacional e internacional.",
     title: "O seguro da carga, da estrada ao porto.",
     intro:
-      "Seguro de transporte de cargas, nacional e internacional, para quem transporta, embarca, importa e exporta. Frente de transporte do Grupo irbroker.",
+      "Seguro e gestão de riscos para o transporte de cargas, nacional e internacional. Para quem transporta, embarca, importa e exporta. Frente de transporte do Grupo irbroker.",
     audience: [
       "Transportadoras e operadores logísticos",
       "Embarcadores e indústrias",
@@ -170,7 +170,7 @@ const metadata: Record<string, PageMeta> = {
   "/comex-broker": {
     title: "Seguro de transporte de cargas nacional e internacional | Comex Broker",
     description:
-      "Seguro de transporte de cargas, nacional e internacional, e RCTR-C, RC-DC e RC-V para transportadoras, embarcadores, importadores e exportadores. Grupo irbroker.",
+      "Seguro e gestão de riscos para o transporte de cargas, nacional e internacional, de transportadoras a importadores e exportadores. RCTR-C, RC-DC e RC-V.",
     imageKey: "comexHero",
   },
   "/wellcare": {
