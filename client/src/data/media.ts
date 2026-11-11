@@ -107,7 +107,7 @@ export const brand = {
   dark: "/media/irbroker-logo-escuro_e701814b.webp",
   symbol: "/media/irbroker-simbolo_bd6c0f49.webp",
   comex: "/brand/comex-broker-horizontal-mono-branco.svg",
-  wellcare: "/media/wellcare-horizontal-branco_2a7f59d1.webp",
+  wellcare: "/brand/wellcare-broker-empilhada-branco.svg",
 } as const;
 
 export const brandDimensions = {
@@ -115,5 +115,5 @@ export const brandDimensions = {
   dark: { width: 1594, height: 400 },
   symbol: { width: 598, height: 698 },
   comex: { width: 1771, height: 440 },
-  wellcare: { width: 1600, height: 316 },
+  wellcare: { width: 911, height: 646 },
 } as const;

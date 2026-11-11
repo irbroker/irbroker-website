@@ -124,8 +124,15 @@
   object-fit: contain;
   object-position: left;
 }
+.bridge-wordmark.wellcare {
+  align-items: center;
+  width: fit-content;
+}
 .bridge-wordmark.wellcare .bridge-logo {
-  width: 300px;
+  width: auto;
+  height: 150px;
+  max-width: none;
+  max-height: none;
 }
 .panel-wellcare .panel-photo {
   object-position: 44% center;

@@ -208,7 +208,15 @@
   max-width: 190px;
 }
 .vertical-panel .panel-logo.wellcare {
-  max-width: 169px;
+  /* WellCare Broker usa o lockup empilhado (opção C, 11/11): altura própria para "BROKER" seguir legível */
+  width: auto;
+  height: 104px;
+  max-width: none;
+  max-height: none;
+}
+.panel-brand:has(.panel-logo.wellcare) {
+  right: auto;
+  align-items: center;
 }
 .panel-brand {
   gap: 19px;
@@ -231,9 +239,6 @@
   }
   .vertical-panel .panel-logo.comex {
     max-width: 220px;
-  }
-  .vertical-panel .panel-logo.wellcare {
-    max-width: 202px;
   }
 }
 
