@@ -7,7 +7,7 @@ export type RadarNote = {
   fontes: { nome: string; url: string }[];
 };
 
-// Only the four supplied, non-pending notes belong to the website.
+// Só notas conferidas na fonte oficial (WellCare e Construção conferidas em 10/11/2026).
 export const radar: RadarNote[] = [
   {
     "frente": "Comex Broker",
@@ -55,13 +55,30 @@ export const radar: RadarNote[] = [
   {
     "frente": "WellCare",
     "data": "2026 (Agenda Regulatória 2026-2028)",
-    "titulo": "ANS prevê para o fim de 2026 a decisão sobre novas regras de reajuste dos planos coletivos",
+    "titulo": "ANS prevê para o 4º trimestre de 2026 a decisão sobre o aprimoramento das regras de reajuste dos planos coletivos",
     "resumo": "A Agenda Regulatória 2026-2028 da ANS inclui o tema \"Reajuste coletivo\": concluir o aprimoramento das regras de reajuste dos planos coletivos, para reduzir a assimetria de informação. A deliberação final está prevista para o 4º trimestre de 2026.",
-    "oQueMuda": "Os planos coletivos empresariais não seguem o teto que a ANS fixa para os planos individuais. Se as regras de reajuste mudarem, o aniversário do contrato da sua empresa pode ser afetado. Vale acompanhar e revisar o contrato antes da próxima data de reajuste.",
+    "oQueMuda": "A ANS fixa o percentual máximo de reajuste só para os planos individuais e familiares. No coletivo empresarial com 30 vidas ou mais, o reajuste é negociado entre a empresa e a operadora; com menos de 30 vidas, vale um percentual único para todos os contratos agrupados da operadora. Vale acompanhar o tema e revisar o contrato antes da próxima data de reajuste.",
     "fontes": [
       {
         "nome": "ANS, Agenda Regulatória 2026-2028 (PDF)",
         "url": "https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedade/agenda-regulatoria/Agenda_Regulatria_20262028_B.pdf"
+      },
+      {
+        "nome": "ANS, \"Reajuste anual de planos coletivos\"",
+        "url": "https://www.gov.br/ans/pt-br/assuntos/consumidor/reajuste-variacao-de-mensalidade/reajuste-anual-de-planos-coletivos"
+      }
+    ]
+  },
+  {
+    "frente": "Construção e imóveis",
+    "data": "10/06/2026",
+    "titulo": "TCU aponta como indevida a exigência simultânea de garantia de execução e de seguro-garantia com cláusula de retomada",
+    "resumo": "No Acórdão 1513/2026-Plenário, de 10/06/2026, o TCU analisou a licitação da nova sede do Crea/SP. O tribunal considerou indevido exigir ao mesmo tempo a garantia de execução do art. 96 da Lei 14.133/2021 e o seguro-garantia com cláusula de retomada do art. 102, porque este é uma espécie do próprio seguro-garantia. Também apontou que fixar 10% para a garantia com retomada, acima do patamar de 5%, exige motivação técnica prévia.",
+    "oQueMuda": "Em editais de obras regidos pela Lei 14.133/2021, a exigência das duas garantias ao mesmo tempo, ou um percentual acima de 5% sem justificativa técnica, pode ser questionada. Antes de precificar a garantia de uma licitação, vale ler o edital com a corretora.",
+    "fontes": [
+      {
+        "nome": "TCU, Acórdão 1513/2026-Plenário (TC 016.878/2025-6), sessão de 10/06/2026 (PDF)",
+        "url": "https://contas.tcu.gov.br/sagas/SvlVisualizarRelVotoAc?codFiltro=SAGAS-SESSAO-ENCERRADA&seOcultaPagina=S&item0=908266"
       }
     ]
   }
