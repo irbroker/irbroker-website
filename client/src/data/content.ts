@@ -44,7 +44,7 @@ const verticalData: Vertical[] = [
       "RC Profissional (E&O) e D&O",
     ],
     signals: [
-      "Edital pedindo garantia de proposta ou de execução",
+      "Contrato de obra ou de locação exigindo garantia",
       "Aditivo que aumentou o valor do contrato",
       "Fiador que desistiu ou caução travando o caixa",
     ],
@@ -62,13 +62,15 @@ const verticalData: Vertical[] = [
       "Grandes empresas",
     ],
     solutions: [
+      "Garantias: seguro garantia contratual e judicial",
       "Patrimonial e empresarial (PME)",
-      "D&O e riscos cibernéticos",
-      "Garantia judicial e contratual",
+      "Linhas financeiras",
+      "RC geral, RC Profissional (E&O) e D&O",
+      "Riscos cibernéticos, ambiental e risco de engenharia",
     ],
     signals: [
       "Conselho, investidor ou novo sócio pedindo D&O",
-      "Cliente grande exigindo RC, cyber ou garantia",
+      "Edital ou cliente grande exigindo garantia, RC ou cyber",
       "Depósito judicial travando o caixa",
     ],
     imageKey: "corporate",
@@ -190,7 +192,7 @@ const metadata: Record<string, PageMeta> = {
   "/corporate": {
     title: "Seguro empresarial, D&O e responsabilidade civil | irbroker",
     description:
-      "Seguro patrimonial e empresarial, D&O, riscos cibernéticos e garantia judicial para pequenas, médias e grandes empresas e para os seus gestores.",
+      "Seguro garantia, patrimonial e empresarial, linhas financeiras, RC, D&O, cyber, ambiental e engenharia para pequenas, médias e grandes empresas e para os seus gestores.",
     imageKey: "corporate",
   },
   "/sobre": {

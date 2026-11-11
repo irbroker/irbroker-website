@@ -70,7 +70,7 @@ export const radar: RadarNote[] = [
     ]
   },
   {
-    "frente": "Real Estate",
+    "frente": "Corporate",
     "data": "10/06/2026",
     "titulo": "TCU aponta como indevida a exigência simultânea de garantia de execução e de seguro-garantia com cláusula de retomada",
     "resumo": "No Acórdão 1513/2026-Plenário, de 10/06/2026, o TCU analisou a licitação da nova sede do Crea/SP. O tribunal considerou indevido exigir ao mesmo tempo a garantia de execução do art. 96 da Lei 14.133/2021 e o seguro-garantia com cláusula de retomada do art. 102, porque este é uma espécie do próprio seguro-garantia. Também apontou que fixar 10% para a garantia com retomada, acima do patamar de 5%, exige motivação técnica prévia.",
