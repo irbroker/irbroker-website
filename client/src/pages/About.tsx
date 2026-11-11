@@ -2,6 +2,15 @@ import { Breadcrumb } from '../components/SiteLayout';
 import AnimatedHeading from '../components/AnimatedHeading';
 import ProcessDiagram from '../components/ProcessDiagram';
 import { media } from '../data/media';
+import { verticals } from '../data/content';
+
+// Quem somos (11/11): o que cada área atende, conforme a direção de 11/11/2026.
+const escopo: Record<string, string> = {
+  'real-estate': 'Mercado imobiliário: garantias, patrimônio e responsabilidades.',
+  corporate: 'Mercado corporativo: garantias, patrimônio, linhas financeiras e responsabilidade dos gestores.',
+  'comex-broker': 'Seguro de transporte de cargas, nacional e internacional.',
+  wellcare: 'Saúde e benefícios para empresas e pessoas.',
+};
 
 const process = [
   ['Empresa', 'A empresa mostra como a operação funciona: atividade, contratos, frota, equipe e patrimônio.'],
@@ -15,7 +24,10 @@ export default function About() {
     <section className="section wrap about-intro">
       <h2 className="about-title">Quem somos</h2>
       <div className="about-intro-body">
-        <p className="large-body">Uma equipe com longa experiência no mercado segurador.</p>
+        <p className="large-body">A irbroker é uma corretora de seguros para empresas, com profissionais de mais de 20 anos de mercado e mais de 20 seguradoras e resseguradoras parceiras. O grupo atende em quatro áreas:</p>
+        <ul className="about-areas" aria-label="Áreas do Grupo irbroker">
+          {verticals.map(v => <li key={v.slug}><a href={`/${v.slug}`}><strong>{v.name}</strong><span>{escopo[v.slug]}</span></a></li>)}
+        </ul>
         <ul className="about-offices" aria-label="Escritórios">
           <li><PinIcon /><span><strong>São Bernardo do Campo</strong>Matriz</span></li>
           <li><PinIcon /><span><strong>São Paulo</strong>Faria Lima</span></li>
