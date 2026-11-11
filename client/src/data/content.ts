@@ -18,6 +18,8 @@ export type Vertical = {
   signals: string[];
   imageKey: VerticalImageKey;
   bridge?: "comex" | "wellcare";
+  /** Nota de aceitação própria (saúde: quem aceita é a operadora). */
+  acceptance?: string;
 };
 
 export const acceptanceNote =
@@ -30,7 +32,7 @@ const verticalData: Vertical[] = [
     tagline: "Mercado imobiliário: do terreno ao ativo em operação.",
     title: "Seguros para o mercado imobiliário.",
     intro:
-      "Real Estate é a vertical da irbroker para o mercado imobiliário: garantias e proteção patrimonial para quem investe, incorpora, constrói e opera imóveis.",
+      "Real Estate é a área da irbroker para o mercado imobiliário: garantias e proteção patrimonial para quem investe, incorpora, constrói e opera imóveis.",
     audience: [
       "Fundos imobiliários e investidores",
       "Incorporadoras e construtoras",
@@ -40,7 +42,7 @@ const verticalData: Vertical[] = [
     ],
     solutions: [
       "Garantias contratuais: seguro garantia, fiança locatícia e título de capitalização",
-      "Seguros patrimoniais: property, condomínios e risco de engenharia",
+      "Seguros patrimoniais: grandes riscos (property), condomínios e risco de engenharia",
       "Linhas financeiras",
       "RC Profissional (E&O) e D&O",
     ],
@@ -57,7 +59,7 @@ const verticalData: Vertical[] = [
     tagline: "Patrimônio, responsabilidade e quem decide.",
     title: "Patrimônio, responsabilidade e quem decide.",
     intro:
-      "Corporate é a vertical da irbroker para o mercado corporativo: proteção para a empresa e para os gestores, em empresas de todos os portes.",
+      "Corporate é a área da irbroker para o mercado corporativo: proteção para a empresa e para os gestores, em empresas de todos os portes.",
     audience: [
       "Pequenas e médias empresas",
       "Grandes empresas",
@@ -67,11 +69,11 @@ const verticalData: Vertical[] = [
       "Patrimonial e empresarial (PME)",
       "Linhas financeiras",
       "RC geral, RC Profissional (E&O) e D&O",
-      "Riscos cibernéticos, ambiental e risco de engenharia",
+      "Riscos cibernéticos, ambientais e de engenharia",
     ],
     signals: [
       "Conselho, investidor ou novo sócio pedindo D&O",
-      "Edital ou cliente grande exigindo garantia, RC ou cyber",
+      "Edital ou cliente grande exigindo garantia, RC ou seguro de riscos cibernéticos",
       "Depósito judicial travando o caixa",
     ],
     imageKey: "corporate",
@@ -82,7 +84,7 @@ const verticalData: Vertical[] = [
     tagline: "Seguro e gestão de riscos para o transporte de cargas, nacional e internacional.",
     title: "O seguro da carga, da estrada ao porto.",
     intro:
-      "Seguro e gestão de riscos para o transporte de cargas, nacional e internacional. Para quem transporta, embarca, importa e exporta. Frente de transporte do Grupo irbroker.",
+      "Seguro e gestão de riscos para o transporte de cargas, nacional e internacional. Para quem transporta, embarca, importa e exporta. Área de seguro de transporte do Grupo irbroker.",
     audience: [
       "Transportadoras e operadores logísticos",
       "Embarcadores e indústrias",
@@ -129,6 +131,7 @@ const verticalData: Vertical[] = [
     ],
     imageKey: "wellcare",
     bridge: "wellcare",
+    acceptance: "Disponibilidade, aceitação e coberturas dependem da análise de cada seguradora ou operadora.",
   },
 ];
 

@@ -328,7 +328,7 @@ export default function Contact() {
               </button>
               <p className="contact-form__after-note">
                 Depois do envio: entendemos a operação, comparamos alternativas
-                entre seguradoras e acompanhamos a sua empresa depois da
+                entre seguradoras e seguimos com a sua empresa após a
                 contratação.
               </p>
             </form>
