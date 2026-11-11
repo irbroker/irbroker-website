@@ -1,0 +1,205 @@
+/* Indicadores de mercado (prévia em /indicadores) e faixa de câmbio da Comex Broker. */
+.ind-page .content-page-heading > p:last-child {
+  max-width: 62ch;
+}
+.ind-feed {
+  padding-top: 40px;
+  padding-bottom: 104px;
+}
+.ind-status,
+.ind-updated {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.ind-status {
+  min-height: 50vh;
+  font-size: 18px;
+  color: var(--ink-soft);
+}
+.ind-area {
+  padding-block: 56px;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 140px;
+}
+.ind-area:last-child {
+  border-bottom: 0;
+}
+.ind-item-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 56px;
+}
+.ind-item {
+  padding-block: 26px 30px;
+  border-top: 1px solid var(--line);
+}
+.ind-item:nth-child(-n + 2) {
+  border-top: 0;
+  padding-top: 0;
+}
+.ind-item h3 {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+.ind-item-values {
+  margin: 16px 0 0;
+}
+.ind-item-values > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  padding-block: 7px;
+}
+.ind-item-values > div + div {
+  border-top: 1px solid var(--graphite-a09);
+}
+.ind-item-values dt {
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+.ind-item-values dd {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+/* Avisos e previsão: texto em vez de número, rótulo acima. */
+.ind-item-values.is-text > div {
+  display: block;
+}
+.ind-item-values.is-text dd {
+  margin-top: 2px;
+  font-size: 17px;
+  font-weight: 400;
+  text-align: left;
+  white-space: normal;
+}
+.ind-item-values.is-text dt {
+  font-weight: 600;
+  color: var(--graphite);
+}
+.ind-item-meta,
+.ind-item-stale {
+  margin: 14px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.ind-item-meta a {
+  color: var(--graphite);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.ind-item-meta a:hover {
+  text-decoration-color: var(--teal);
+}
+.ind-item-stale {
+  padding-left: 12px;
+  border-left: 2px solid var(--yellow);
+  color: var(--ink-soft);
+}
+
+@media (max-width: 959px) {
+  .ind-item-list {
+    grid-template-columns: 1fr;
+  }
+  .ind-item:nth-child(2) {
+    border-top: 1px solid var(--line);
+    padding-top: 26px;
+  }
+}
+@media (max-width: 767px) {
+  .ind-feed {
+    padding-top: 28px;
+    padding-bottom: 68px;
+  }
+  .ind-area {
+    padding-block: 40px;
+  }
+  .ind-editorial .editorial-content {
+    margin-top: 22px;
+  }
+  .ind-item h3 {
+    font-size: 21px;
+  }
+  .ind-item-values dd {
+    font-size: 18px;
+  }
+}
+
+/* Faixa de câmbio no topo da Comex Broker. */
+.ind-fx {
+  background: var(--comex-navy);
+  color: var(--comex-body);
+  border-top: 1px solid var(--white-a12);
+  border-bottom: 1px solid var(--white-a12);
+}
+.ind-fx-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 36px;
+  min-height: 92px;
+  padding-block: 20px;
+}
+.ind-fx-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 40px;
+  margin: 0;
+  font-size: 15px;
+}
+.ind-fx-values > div {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.ind-fx-values dd {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--white);
+  font-variant-numeric: tabular-nums;
+}
+.ind-fx-meta {
+  flex: 1 1 420px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.ind-fx-meta a {
+  color: var(--white);
+  text-decoration: underline;
+  text-decoration-color: var(--comex-gold);
+  text-underline-offset: 3px;
+}
+@media (max-width: 767px) {
+  .ind-fx-inner {
+    gap: 12px;
+  }
+  .ind-fx .small-rule {
+    display: none;
+  }
+  .ind-fx-values {
+    gap: 6px 28px;
+  }
+  .ind-fx-values > div {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* Bloco de tempo nas páginas de Transporte e de Construção. */
+.ind-tempo {
+  border-top: 1px solid var(--line);
+}

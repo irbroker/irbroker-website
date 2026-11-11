@@ -141,6 +141,7 @@ export const routes: SiteRoute[] = [
   { path: "/conteudos", title: "Conteúdos" },
   ...guides.map((guide) => ({ path: guide.slug, title: guide.titulo, front: guide.frente })).sort((a, b) => verticals.findIndex(item => item.name === a.front) - verticals.findIndex(item => item.name === b.front)).map(({path, title}) => ({path, title})),
   { path: "/contato", title: "Contato" },
+  { path: "/indicadores", title: "Indicadores" },
 ];
 
 type PageImageKey = VerticalImageKey | "hero" | "about" | "comexHero" | "contents";
@@ -207,6 +208,14 @@ const metadata: Record<string, PageMeta> = {
     description:
       "Fale com a irbroker sobre o seguro da sua empresa. Escritórios em São Bernardo do Campo e na Faria Lima (SP). WhatsApp e comercial@irbroker.com.br.",
     imageKey: "hero",
+  },
+  // Prévia: fora do menu e do sitemap (noindex) até a aprovação.
+  "/indicadores": {
+    title: "Indicadores de mercado | irbroker",
+    description:
+      "Indicadores públicos por área (câmbio, comércio exterior, diesel, tempo, construção, juros, inflação e saúde), com fonte e data de referência.",
+    imageKey: "hero",
+    noindex: true,
   },
 };
 
