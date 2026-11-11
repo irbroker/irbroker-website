@@ -36,6 +36,7 @@ const verticalData: Vertical[] = [
       "Incorporadoras e construtoras",
       "Condomínios logísticos e torres de escritórios",
       "Administradoras de condomínios",
+      "Escritórios de advocacia (demandas patrimoniais e tributárias)",
     ],
     solutions: [
       "Garantias contratuais: seguro garantia, fiança locatícia e título de capitalização",
@@ -188,7 +189,7 @@ const metadata: Record<string, PageMeta> = {
     imageKey: "comexHero",
   },
   "/wellcare": {
-    title: "Plano de saúde e benefícios empresariais | irbroker",
+    title: "Plano de saúde e benefícios empresariais | WellCare Broker",
     description:
       "Plano de saúde, odonto, vida em grupo e acidentes pessoais para empresas, da escolha à renovação. A WellCare Broker é a área de benefícios do Grupo irbroker.",
     imageKey: "wellcare",
