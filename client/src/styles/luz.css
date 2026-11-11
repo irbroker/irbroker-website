@@ -1,0 +1,43 @@
+/* TESTE "mais luz" (11/11/2026, branch teste/luz-fotos): fotos em cor natural e véu só atrás do texto.
+   shortcut: !important sobrepõe os véus espalhados em hero.css, marcas.css e paineis.css; se aprovado, incorporar nesses arquivos e apagar este. */
+:root { --veu: 31, 34, 37; }
+.theme-comex, .panel-comex { --veu: 13, 27, 42; }
+.theme-wellcare, .panel-wellcare { --veu: 6, 20, 58; }
+
+.hero-photo,
+.hero-video,
+.trigger-photo-sticky img,
+.vertical-panel .panel-photo,
+.project-photo img {
+  filter: none !important;
+}
+
+.hero-shade {
+  /* faixa no topo para o menu + degradê atrás do texto; o resto da foto fica limpo */
+  background:
+    linear-gradient(180deg, rgba(var(--veu), .8) 0, rgba(var(--veu), .55) 90px, rgba(var(--veu), 0) 210px),
+    linear-gradient(90deg, rgba(var(--veu), .82) 0%, rgba(var(--veu), .74) 46%, rgba(var(--veu), .4) 64%, rgba(var(--veu), 0) 88%) !important;
+}
+.hero-shade::after {
+  background: none !important;
+}
+
+.vertical-panel .panel-shade {
+  background: linear-gradient(180deg, rgba(var(--veu), .78) 0%, rgba(var(--veu), .3) 32%, rgba(var(--veu), .06) 50%, rgba(var(--veu), .72) 100%) !important;
+}
+
+@media (max-width: 767px) {
+  .hero-shade {
+    background: linear-gradient(180deg, rgba(var(--veu), .62) 0%, rgba(var(--veu), .6) 100%) !important;
+  }
+}
+/* WellCare: foto de cortina clara atrás do logo branco */
+.panel-wellcare .panel-shade {
+  background: linear-gradient(180deg, rgba(var(--veu), .9) 0%, rgba(var(--veu), .7) 30%, rgba(var(--veu), .15) 55%, rgba(var(--veu), .72) 100%) !important;
+}
+.panel-wellcare .panel-photo {
+  object-position: 70% center !important;
+}
+.panel-corporate .panel-photo {
+  object-position: 40% center !important;
+}

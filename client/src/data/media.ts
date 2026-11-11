@@ -35,16 +35,16 @@ export const media = {
     height: 1080,
   },
   corporate: {
-    src: "/media/diretoria-skyline_2872041a.webp",
-    ogSrc: "/media/og/corporate.jpg",
-    alt: "Diretoria reunida em um ambiente corporativo com vista para a cidade.",
+    src: "/media/reuniao-clara_c38af6ee.webp", // Pexels 8343950, quadro de 7 s
+    ogSrc: "/media/og/reuniao-clara.jpg",
+    alt: "Executivas em reunião de diretoria, com um gráfico na tela ao fundo.",
     width: 1920,
     height: 1080,
   },
   wellcare: {
-    src: "/media/equipe-diversa_15429b91.webp",
-    ogSrc: "/media/og/wellcare.jpg",
-    alt: "Equipe diversa de profissionais em um ambiente de empresa.",
+    src: "/media/rh-equipe_ff273a3c.webp", // Pexels 8632479, quadro de 4 s
+    ogSrc: "/media/og/rh-equipe.jpg",
+    alt: "Profissional de RH apresentando os benefícios para a equipe.",
     width: 1920,
     height: 1080,
   },
@@ -82,7 +82,7 @@ export const media = {
 } as const;
 
 export const heroVideo = {
-  src: "/media/hero-loop_afed407d.mp4",
+  src: "/media/hero-luz-loop_94e09377.mp4",
   poster: "/media/hero-poster-r8_81a14c67.webp",
   width: 1920,
   height: 1080,
@@ -98,8 +98,8 @@ export const comexVideo = {
 // Topo de cada área: cena própria, sem repetir a home nem a Comex (ver media/CREDITOS.md).
 export const areaVideos = {
   construction: { src: "/media/real-estate-loop_5302d8e7.mp4", poster: "/media/real-estate-poster_5302d8e7.webp", width: 1920, height: 1080 },
-  corporate: { src: "/media/corporate-loop_f53a255a.mp4", poster: "/media/corporate-poster_f53a255a.webp", width: 1920, height: 1080 },
-  wellcare: { src: "/media/wellcare-loop_ed3e7c97.mp4", poster: "/media/wellcare-poster_ed3e7c97.webp", width: 1920, height: 1080 },
+  corporate: { src: "/media/corporate-luz-loop_356cab6a.mp4", poster: "/media/corporate-luz-poster_356cab6a.webp", width: 1920, height: 1080 },
+  wellcare: { src: "/media/wellcare-luz-loop_76109537.mp4", poster: "/media/wellcare-luz-poster_76109537.webp", width: 1920, height: 1080 },
 } as const;
 
 export const brand = {
