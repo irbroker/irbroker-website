@@ -28,9 +28,9 @@ export const media = {
     height: 1080,
   },
   construction: {
-    src: "/media/obra-aerea-guindaste_7bf7cd35.webp",
-    ogSrc: "/media/og/construction.jpg",
-    alt: "Vista aérea de uma obra com guindaste.",
+    src: "/media/paulista-torres_e1236a2d.webp", // Pexels 16836469 (sp-paulista), quadro de 13 s
+    ogSrc: "/media/og/real-estate.jpg",
+    alt: "Torres de escritórios na Avenida Paulista, em São Paulo, vistas do alto.",
     width: 1920,
     height: 1080,
   },
@@ -82,7 +82,7 @@ export const media = {
 } as const;
 
 export const heroVideo = {
-  src: "/media/hero-loop_2369d31a.mp4",
+  src: "/media/hero-loop_afed407d.mp4",
   poster: "/media/hero-poster-r8_81a14c67.webp",
   width: 1920,
   height: 1080,
@@ -97,7 +97,7 @@ export const comexVideo = {
 
 // Topo de cada área: cena própria, sem repetir a home nem a Comex (ver media/CREDITOS.md).
 export const areaVideos = {
-  construction: { src: "/media/construcao-loop_a6494acd.mp4", poster: "/media/construcao-poster_a6494acd.webp", width: 1920, height: 1080 },
+  construction: { src: "/media/real-estate-loop_5302d8e7.mp4", poster: "/media/real-estate-poster_5302d8e7.webp", width: 1920, height: 1080 },
   corporate: { src: "/media/corporate-loop_f53a255a.mp4", poster: "/media/corporate-poster_f53a255a.webp", width: 1920, height: 1080 },
   wellcare: { src: "/media/wellcare-loop_ed3e7c97.mp4", poster: "/media/wellcare-poster_ed3e7c97.webp", width: 1920, height: 1080 },
 } as const;
