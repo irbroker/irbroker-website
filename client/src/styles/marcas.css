@@ -36,7 +36,8 @@
   background: var(--comex-navy-a67);
 }
 /* O fundo claro de Soluções some no marinho: o texto do tema é claro. */
-.theme-comex .solutions-section {
+.theme-comex .solutions-section,
+.theme-wellcare .solutions-section {
   background: none;
   border-block: 1px solid var(--line);
 }

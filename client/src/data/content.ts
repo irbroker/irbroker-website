@@ -108,8 +108,19 @@ const verticalData: Vertical[] = [
     title: "Benefícios desenhados para a equipe da sua empresa.",
     intro:
       "Saúde, odonto, vida e acidentes pessoais, da escolha à renovação. Área de benefícios do Grupo irbroker.",
-    audience: [],
-    solutions: [],
+    audience: [
+      "Empresas de todos os portes",
+      "RH e gestão de benefícios",
+      "Diretoria e financeiro",
+      "Pessoas e famílias",
+    ],
+    // Direção de 11/11 (seção 4). Previdência e o nome do benefício de bem-estar seguem "a confirmar" e ficam de fora.
+    solutions: [
+      "Saúde corporativa e individual",
+      "Odontologia",
+      "Vida em grupo e acidentes pessoais",
+      "Vale-refeição, vale-alimentação e bem-estar",
+    ],
     signals: [
       "Aviso de reajuste ou aniversário do contrato",
       "Equipe nova em outra cidade",
