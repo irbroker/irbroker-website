@@ -37,7 +37,7 @@
   /* Véu só onde há texto (12/11): faixa no topo para o menu + degradê à esquerda; o resto da foto fica limpo.
      Contraste medido escondendo o texto, em 3 quadros por vídeo: h1 >= 4,1:1, texto >= 8,5:1, menu >= 4,9:1. */
   background:
-    linear-gradient(180deg, rgba(var(--veu), .8) 0, rgba(var(--veu), .55) 90px, rgba(var(--veu), 0) 210px),
+    linear-gradient(180deg, rgba(var(--veu), .8) 0, rgba(var(--veu), .58) 110px, rgba(var(--veu), .4) 220px, rgba(var(--veu), 0) 320px), /* menu e trilha */
     linear-gradient(90deg, rgba(var(--veu), .82) 0%, rgba(var(--veu), .74) 46%, rgba(var(--veu), .4) 64%, rgba(var(--veu), 0) 88%);
   z-index: -3;
 }

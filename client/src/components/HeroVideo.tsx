@@ -2,14 +2,15 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, useMotionValue } from 'motion/react';
 import { heroVideo, comexVideo } from '../data/media';
 
+// Cenas do vídeo da Home na ordem do montar_loop.py ("hero-v2", 12/11): uma por área, 2,6 s cada.
 export const videoScenes = [
   { start: 0, end: 2.2, name: 'São Paulo', href: '/' },
   { start: 2.2, end: 4.8, name: 'Comex Broker', href: '/comex-broker' },
   { start: 4.8, end: 7.4, name: 'WellCare Broker', href: '/wellcare' },
-  { start: 7.4, end: 10, name: 'Comex Broker', href: '/comex-broker' },
-  { start: 10, end: 12.6, name: 'Real Estate', href: '/real-estate' },
-  { start: 12.6, end: 15.2, name: 'Corporate', href: '/corporate' },
+  { start: 7.4, end: 10, name: 'Real Estate', href: '/real-estate' },
+  { start: 10, end: 12.6, name: 'Corporate', href: '/corporate' },
 ] as const;
+const FIM_DAS_CENAS = videoScenes[videoScenes.length - 1].end; // depois daqui o vídeo funde de volta na abertura
 
 type VideoAsset = { src: string; poster: string; width: number; height: number };
 
@@ -49,8 +50,8 @@ export default function HeroVideo({ kind = 'home', video: area }: { kind?: 'home
       const next = videoScenes.findIndex(scene => time >= scene.start && time < scene.end);
       setSceneIndex(next < 0 ? 0 : next);
       const scene = videoScenes[next < 0 ? 0 : next];
-      const start = time >= 15.2 ? 15.2 : scene.start;
-      const end = time >= 15.2 ? (Number.isFinite(element.duration) ? element.duration : 15.6) : scene.end;
+      const start = time >= FIM_DAS_CENAS ? FIM_DAS_CENAS : scene.start;
+      const end = time >= FIM_DAS_CENAS ? (Number.isFinite(element.duration) ? element.duration : FIM_DAS_CENAS + .4) : scene.end;
       progress.set(Math.min(1, Math.max(0, (time - start) / Math.max(.01, end - start))));
     };
     const tick = () => { sync(); if (!element.paused) frame.current = requestAnimationFrame(tick); };

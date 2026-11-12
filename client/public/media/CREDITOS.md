@@ -26,3 +26,17 @@ Montados com `04-Marca-e-Materiais/Site-irbroker/_fonte/montar_loop.py`. Fontes 
 hero-loop (11/11/2026): a cena de obra com guindaste (Pexels 4404097) foi trocada pelo sp-paulista a partir de 9 s (Pexels 16836469).
 
 Fotos de 12/11/2026: reuniao-clara (Pexels 8343950, quadro de 7 s; Corporate) e rh-equipe (Pexels 8632479, quadro de 4 s; WellCare). hero-luz-loop: cenas de WellCare e Corporate trocadas por Pexels 7579331 e 8343950. Licença Pexels (uso comercial livre).
+
+## v2 (12/11/2026): imagens próprias do site
+
+Escolhidas pelo usuário em 12/11 para não repetir os vídeos institucionais. Todas do Pexels (licença Pexels, uso comercial livre). Fontes em `04-Marca-e-Materiais/Site-irbroker/_fonte/pexels-site/`, loops montados com `montar_loop.py` (chaves *-v2).
+
+| Uso | Pexels |
+|---|---|
+| Home (topo; montagem com uma cena por área) e hero-v2 | 17758645 (Ibirapuera), 34043267, 5252456, 8477689, 8141547 |
+| Real Estate: real-estate-v2-loop, torres-vidro | 8477689 |
+| Corporate: corporate-v2-loop, diretoria-debate (espelhados) | 8141547 |
+| Comex Broker: comex-v2-loop, navio-porto | 34043267 |
+| WellCare Broker: wellcare-v2-loop, cuidado-colaboradora | 5252456 |
+
+As linhas anteriores de vídeos e fotos ficam como histórico: esses arquivos foram substituídos pela v2 e removidos do site.

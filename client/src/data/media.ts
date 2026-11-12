@@ -1,15 +1,15 @@
 export const media = {
   hero: {
-    src: "/media/hero-poster-r8_edf81ed5.webp",
+    src: "/media/hero-v2-poster_85d370a2.webp",
     ogSrc: "/media/og/hero.jpg",
-    alt: "Vista aérea de São Paulo ao pôr do sol.",
+    alt: "Vista aérea do Parque Ibirapuera e do Obelisco, em São Paulo.",
     width: 1920,
     height: 1080,
   },
   comexHero: {
-    src: "/media/comex-poster-r8_f40739c3.webp",
+    src: "/media/comex-v2-poster_47c36159.webp",
     ogSrc: "/media/og/comex-hero.jpg",
-    alt: "Navio de cargas em navegação ao entardecer.",
+    alt: "Navio de contêineres em alto-mar, visto do alto.",
     width: 1920,
     height: 1080,
   },
@@ -21,30 +21,30 @@ export const media = {
     height: 1080,
   },
   port: {
-    src: "/media/navio-entardecer_ff1fc028.webp",
+    src: "/media/navio-porto_9d08e456.webp", // Pexels 34043267, quadro de 24 s (v2, 12/11)
     ogSrc: "/media/og/port.jpg",
-    alt: "Navio de cargas em navegação ao entardecer.",
+    alt: "Navio de contêineres chegando a uma cidade portuária, visto do alto.",
     width: 1920,
     height: 1080,
   },
   construction: {
-    src: "/media/paulista-torres_7f76c9cf.webp", // Pexels 16836469 (sp-paulista), quadro de 13 s
+    src: "/media/torres-vidro_1409d25b.webp", // Pexels 8477689, quadro de 30 s (v2, 12/11)
     ogSrc: "/media/og/real-estate.jpg",
-    alt: "Torres de escritórios na Avenida Paulista, em São Paulo, vistas do alto.",
+    alt: "Torres de escritórios espelhadas vistas de baixo, com céu azul.",
     width: 1920,
     height: 1080,
   },
   corporate: {
-    src: "/media/reuniao-clara_c38af6ee.webp", // Pexels 8343950, quadro de 7 s
-    ogSrc: "/media/og/reuniao-clara.jpg",
-    alt: "Executivas em reunião de diretoria, com um gráfico na tela ao fundo.",
+    src: "/media/diretoria-debate_c776f516.webp", // Pexels 8141547, quadro de 4 s (v2, 12/11)
+    ogSrc: "/media/og/corporate-v2.jpg",
+    alt: "Diretoria de três executivos em discussão numa sala de reunião.",
     width: 1920,
     height: 1080,
   },
   wellcare: {
-    src: "/media/rh-equipe_ff273a3c.webp", // Pexels 8632479, quadro de 4 s
-    ogSrc: "/media/og/rh-equipe.jpg",
-    alt: "Profissional de RH apresentando os benefícios para a equipe.",
+    src: "/media/cuidado-colaboradora_770a2105.webp", // Pexels 5252456, quadro de 8 s (v2, 12/11)
+    ogSrc: "/media/og/wellcare-v2.jpg",
+    alt: "Profissional de saúde conversando com uma colaboradora perto da janela.",
     width: 1920,
     height: 1080,
   },
@@ -82,24 +82,24 @@ export const media = {
 } as const;
 
 export const heroVideo = {
-  src: "/media/hero-luz-loop_94e09377.mp4",
-  poster: "/media/hero-poster-r8_edf81ed5.webp",
+  src: "/media/hero-v2-loop_85d370a2.mp4",
+  poster: "/media/hero-v2-poster_85d370a2.webp",
   width: 1920,
   height: 1080,
 } as const;
 
 export const comexVideo = {
-  src: "/media/comex-loop_2fd8d079.mp4",
-  poster: "/media/comex-poster-r8_f40739c3.webp",
+  src: "/media/comex-v2-loop_47c36159.mp4",
+  poster: "/media/comex-v2-poster_47c36159.webp",
   width: 1920,
   height: 1080,
 } as const;
 
 // Topo de cada área: cena própria, sem repetir a home nem a Comex (ver media/CREDITOS.md).
 export const areaVideos = {
-  construction: { src: "/media/real-estate-loop_5302d8e7.mp4", poster: "/media/real-estate-poster_5302d8e7.webp", width: 1920, height: 1080 },
-  corporate: { src: "/media/corporate-luz-loop_356cab6a.mp4", poster: "/media/corporate-luz-poster_356cab6a.webp", width: 1920, height: 1080 },
-  wellcare: { src: "/media/wellcare-luz-loop_76109537.mp4", poster: "/media/wellcare-luz-poster_76109537.webp", width: 1920, height: 1080 },
+  construction: { src: "/media/real-estate-v2-loop_53bc82d6.mp4", poster: "/media/real-estate-v2-poster_53bc82d6.webp", width: 1920, height: 1080 },
+  corporate: { src: "/media/corporate-v2-loop_80671d50.mp4", poster: "/media/corporate-v2-poster_80671d50.webp", width: 1920, height: 1080 },
+  wellcare: { src: "/media/wellcare-v2-loop_21b895ca.mp4", poster: "/media/wellcare-v2-poster_21b895ca.webp", width: 1920, height: 1080 },
 } as const;
 
 export const brand = {
