@@ -221,7 +221,7 @@ const metadata: Record<string, PageMeta> = {
   "/conteudos": {
     title: "Radar do mercado e guias de seguros para empresas | irbroker",
     description:
-      "Notícias do mercado segurador e guias de seguros para empresas, de cada empresa do Grupo irbroker: mercado imobiliário, corporate, transporte de cargas e benefícios.",
+      "Notícias do mercado segurador e guias de seguros para empresas, por especialidade do Grupo irbroker: mercado imobiliário, corporate, transporte de cargas e benefícios.",
     imageKey: "contents",
   },
   "/contato": {
@@ -235,7 +235,7 @@ const metadata: Record<string, PageMeta> = {
 /** Rota desconhecida: gerada como 404.html, com noindex e sem canonical. */
 export const notFoundMeta: PageMeta = {
   title: "Página não encontrada | irbroker",
-  description: "A página procurada não existe ou mudou de endereço. Acesse a home ou uma das empresas do Grupo irbroker.",
+  description: "A página procurada não existe ou mudou de endereço. Acesse a home ou uma das especialidades do Grupo irbroker.",
   imageKey: "hero",
   noindex: true,
 };

@@ -276,7 +276,7 @@ export function Footer({ path = '/' }: { path?: string }) {
             <div className="footer-editorial-address footer-office"><strong>Filial</strong><p>Av. Presidente Juscelino Kubitschek, 1455, 4º andar, Faria Lima, São Paulo/SP, <span className="footer-nowrap">04543-011</span></p></div>
           </div>
           <div className="footer-links">
-            <nav aria-label="Empresas do Grupo irbroker"><ul className="footer-inline">{verticals.map(vertical => <li key={vertical.slug}><a className="footer-editorial-link" href={`/${vertical.slug}`}>{vertical.name}</a></li>)}</ul></nav>
+            <nav aria-label="Especialidades do Grupo irbroker"><ul className="footer-inline">{verticals.map(vertical => <li key={vertical.slug}><a className="footer-editorial-link" href={`/${vertical.slug}`}>{vertical.name}</a></li>)}</ul></nav>
             <nav aria-label="A irbroker"><ul className="footer-inline">
               <li><a className="footer-editorial-link" href="/sobre">Sobre</a></li>
               <li><a className="footer-editorial-link" href="/conteudos">Conteúdos</a></li>
