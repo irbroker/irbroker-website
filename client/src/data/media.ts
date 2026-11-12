@@ -1,6 +1,6 @@
 export const media = {
   hero: {
-    src: "/media/hero-poster-r8_81a14c67.webp",
+    src: "/media/hero-poster-r8_edf81ed5.webp",
     ogSrc: "/media/og/hero.jpg",
     alt: "Vista aérea de São Paulo ao pôr do sol.",
     width: 1920,
@@ -21,14 +21,14 @@ export const media = {
     height: 1080,
   },
   port: {
-    src: "/media/navio-entardecer_e4c2785a.webp",
+    src: "/media/navio-entardecer_ff1fc028.webp",
     ogSrc: "/media/og/port.jpg",
     alt: "Navio de cargas em navegação ao entardecer.",
     width: 1920,
     height: 1080,
   },
   construction: {
-    src: "/media/paulista-torres_e1236a2d.webp", // Pexels 16836469 (sp-paulista), quadro de 13 s
+    src: "/media/paulista-torres_7f76c9cf.webp", // Pexels 16836469 (sp-paulista), quadro de 13 s
     ogSrc: "/media/og/real-estate.jpg",
     alt: "Torres de escritórios na Avenida Paulista, em São Paulo, vistas do alto.",
     width: 1920,
@@ -50,7 +50,7 @@ export const media = {
   },
   forest: {
     // Unsplash CbZh3kaPxrE (Jonathan Kemper), estampa da luva atenuada; ver media/CREDITOS.md.
-    src: "/media/luvas-plantio.webp",
+    src: "/media/luvas-plantio_7271ced6.webp",
     ogSrc: "/media/og/forest.jpg",
     alt: "Mãos com luvas de jardinagem plantando uma muda na terra.",
     width: 1600,
@@ -66,24 +66,24 @@ export const media = {
   },
   contents: {
     // Quadro do clipe Pixabay 91744 (KM007_), do vídeo institucional 2026; ver media/CREDITOS.md.
-    src: "/media/cidade-entardecer.webp",
+    src: "/media/cidade-entardecer_3a141ea8.webp",
     ogSrc: "/media/og/contents.jpg",
     alt: "Prédios de uma cidade ao entardecer.",
     width: 1920,
     height: 1080,
   },
   triggers: {
-    src: "/media/porto-distante_24f801da.webp",
+    src: "/media/porto-distante_ba1a3e00.webp",
     ogSrc: "/media/og/triggers.jpg",
     alt: "Vista distante de um porto de contêineres com guindastes, montanhas e mar.",
-    width: 1920,
-    height: 2880,
+    width: 1200,
+    height: 1800,
   },
 } as const;
 
 export const heroVideo = {
   src: "/media/hero-luz-loop_94e09377.mp4",
-  poster: "/media/hero-poster-r8_81a14c67.webp",
+  poster: "/media/hero-poster-r8_edf81ed5.webp",
   width: 1920,
   height: 1080,
 } as const;
