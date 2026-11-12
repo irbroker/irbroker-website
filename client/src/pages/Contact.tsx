@@ -261,7 +261,7 @@ export default function Contact() {
                 </label>
               </div>
               <fieldset className="contact-form__fieldset">
-                <legend>Área de interesse</legend>
+                <legend>Com quem você quer falar</legend>
                 <div className="contact-form__options">
                   {verticals.map(vertical => (
                     <label

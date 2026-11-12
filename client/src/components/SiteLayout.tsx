@@ -273,7 +273,7 @@ export function Footer({ path = '/' }: { path?: string }) {
             <div className="footer-editorial-address footer-office"><strong>Filial</strong><p>Av. Presidente Juscelino Kubitschek, 1455, 4º andar, Faria Lima, São Paulo/SP, <span className="footer-nowrap">04543-011</span></p></div>
           </div>
           <nav className="footer-col" aria-labelledby="footer-frentes">
-            <h2 className="footer-col-title" id="footer-frentes">Áreas</h2>
+            <h2 className="footer-col-title" id="footer-frentes">Grupo irbroker</h2>
             <ul className="footer-list footer-editorial-front-links">{verticals.map(vertical => <li key={vertical.slug}><a className="footer-editorial-link" href={`/${vertical.slug}`}>{vertical.name}</a></li>)}</ul>
           </nav>
           <nav className="footer-col" aria-labelledby="footer-irbroker">

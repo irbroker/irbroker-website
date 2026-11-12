@@ -61,7 +61,7 @@ function RadarBody({
           className="content-text-link"
           href={`/${verticals.find(vertical => vertical.name === note.frente)?.slug ?? ""}`}
         >
-          Ver a área {note.frente}
+          Ver {note.frente}
         </a>
       )}
     </>

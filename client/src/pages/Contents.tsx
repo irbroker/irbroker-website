@@ -86,11 +86,11 @@ export default function Contents({ search = "" }: { search?: string }) {
           />
           <h1>O que muda no seguro da sua empresa.</h1>
           <p className="hero-description">
-            Guias e notícias do mercado, área por área.
+            Guias e notícias do mercado, para cada empresa do Grupo irbroker.
           </p>
         </div>
       </section>
-      <nav className="content-filters wrap" aria-label="Área de interesse">
+      <nav className="content-filters wrap" aria-label="Filtrar por empresa">
         {["", ...verticals.map(vertical => vertical.name)].map(name => (
           <a
             href={
@@ -102,7 +102,7 @@ export default function Contents({ search = "" }: { search?: string }) {
             aria-current={front === name ? "true" : undefined}
             onClick={event => filter(event, name)}
           >
-            {name || "Todas as áreas"}
+            {name || "Todas"}
           </a>
         ))}
       </nav>
@@ -144,7 +144,7 @@ export default function Contents({ search = "" }: { search?: string }) {
         )}
         {notes.length === 0 && articles.length === 0 && (
           <div className="content-empty">
-            <p>Ainda não há conteúdos desta área.</p>
+            <p>Ainda não há conteúdos desta empresa.</p>
             {selected && (
               <a className="content-text-link" href={`/${selected.slug}`}>
                 {selected.name}

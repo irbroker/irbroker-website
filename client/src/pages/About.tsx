@@ -8,7 +8,7 @@ import { verticals } from '../data/content';
 const escopo: Record<string, string> = {
   'real-estate': 'Mercado imobiliário: garantias, patrimônio e responsabilidades.',
   corporate: 'Mercado corporativo: garantias, patrimônio, linhas financeiras e responsabilidade dos gestores.',
-  'comex-broker': 'Seguro de transporte de cargas, nacional e internacional.',
+  'comex-broker': 'Seguro de transporte de cargas, internacional e nacional.',
   wellcare: 'Saúde e benefícios para empresas e pessoas.',
 };
 
@@ -24,8 +24,8 @@ export default function About() {
     <section className="section wrap about-intro">
       <h2 className="about-title">Quem somos</h2>
       <div className="about-intro-body">
-        <p className="large-body">A irbroker é uma corretora de seguros para empresas, com profissionais de mais de 20 anos de mercado e mais de 20 seguradoras e resseguradoras parceiras. O grupo atende em quatro áreas:</p>
-        <ul className="about-areas" aria-label="Áreas do Grupo irbroker">
+        <p className="large-body">A irbroker é uma corretora de seguros para empresas, com profissionais de mais de 20 anos de mercado e mais de 20 seguradoras e resseguradoras parceiras. O Grupo irbroker reúne a irbroker, com as frentes Real Estate e Corporate, e as empresas Comex Broker e WellCare Broker:</p>
+        <ul className="about-areas" aria-label="Empresas e frentes do Grupo irbroker">
           {verticals.map(v => <li key={v.slug}><a href={`/${v.slug}`}><strong>{v.name}</strong><span>{escopo[v.slug]}</span></a></li>)}
         </ul>
         <ul className="about-offices" aria-label="Escritórios">

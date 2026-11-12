@@ -32,7 +32,7 @@ const verticalData: Vertical[] = [
     tagline: "Mercado imobiliário: do terreno ao ativo em operação.",
     title: "Seguros para o mercado imobiliário.",
     intro:
-      "Real Estate é a área da irbroker para o mercado imobiliário: garantias e proteção patrimonial para quem investe, incorpora, constrói e opera imóveis.",
+      "A irbroker Real Estate atende o mercado imobiliário: garantias e proteção patrimonial para quem investe, incorpora, constrói e opera imóveis.",
     audience: [
       "Fundos imobiliários e investidores",
       "Incorporadoras e construtoras",
@@ -59,7 +59,7 @@ const verticalData: Vertical[] = [
     tagline: "Seguros para a empresa e para quem a dirige.",
     title: "Seguros para a empresa e para quem a dirige.",
     intro:
-      "Corporate é a área da irbroker para o mercado corporativo, de pequenas a grandes empresas.",
+      "A irbroker Corporate atende o mercado corporativo, de pequenas a grandes empresas.",
     audience: [
       "Empresas que fecham contratos com o poder público ou grandes clientes",
       "Sócios, diretoria e conselhos",
@@ -83,10 +83,10 @@ const verticalData: Vertical[] = [
   {
     slug: "comex-broker",
     name: "Comex Broker",
-    tagline: "Seguro e gestão de riscos para o transporte de cargas, nacional e internacional.",
+    tagline: "Seguro e gestão de riscos para o transporte de cargas, internacional e nacional.",
     title: "O seguro da carga, da estrada ao porto.",
     intro:
-      "Seguro e gestão de riscos para o transporte de cargas, nacional e internacional. Para quem transporta, embarca, importa e exporta. Área de seguro de transporte do Grupo irbroker.",
+      "Seguro e gestão de riscos para o transporte de cargas, internacional e nacional. Para quem transporta, embarca, importa e exporta. Empresa de seguro de transporte do Grupo irbroker.",
     audience: [
       "Transportadoras e operadores logísticos",
       "Embarcadores e indústrias",
@@ -94,7 +94,7 @@ const verticalData: Vertical[] = [
       "Agentes de carga e despachantes aduaneiros",
     ],
     solutions: [
-      "Seguro de transporte nacional e internacional",
+      "Seguro de transporte internacional e nacional",
       "RCTR-C, RC-DC e RC-V (seguros obrigatórios do transportador)",
     ],
     signals: [
@@ -112,7 +112,7 @@ const verticalData: Vertical[] = [
     tagline: "Benefícios desenhados para a equipe da sua empresa.",
     title: "Benefícios desenhados para a equipe da sua empresa.",
     intro:
-      "Saúde, odonto, vida e acidentes pessoais, da escolha à renovação. Área de benefícios do Grupo irbroker.",
+      "Saúde, odonto, vida e acidentes pessoais, da escolha à renovação. Empresa de benefícios do Grupo irbroker.",
     audience: [
       "Empresas de todos os portes",
       "RH e gestão de benefícios",
@@ -124,6 +124,7 @@ const verticalData: Vertical[] = [
       "Saúde corporativa e individual",
       "Odontologia",
       "Vida em grupo e acidentes pessoais",
+      "Previdência",
       "Vale-refeição, vale-alimentação e bem-estar",
     ],
     signals: [
@@ -188,15 +189,15 @@ const metadata: Record<string, PageMeta> = {
     imageKey: "hero",
   },
   "/comex-broker": {
-    title: "Seguro de transporte de cargas nacional e internacional | Comex Broker",
+    title: "Seguro de transporte de cargas internacional e nacional | Comex Broker",
     description:
-      "Seguro e gestão de riscos para o transporte de cargas, nacional e internacional, de transportadoras a importadores e exportadores. RCTR-C, RC-DC e RC-V.",
+      "Seguro e gestão de riscos para o transporte de cargas, internacional e nacional, de transportadoras a importadores e exportadores. RCTR-C, RC-DC e RC-V.",
     imageKey: "comexHero",
   },
   "/wellcare": {
     title: "Plano de saúde e benefícios empresariais | WellCare Broker",
     description:
-      "Plano de saúde, odonto, vida em grupo e acidentes pessoais para empresas, da escolha à renovação. A WellCare Broker é a área de benefícios do Grupo irbroker.",
+      "Plano de saúde, odonto, vida em grupo e acidentes pessoais para empresas, da escolha à renovação. A WellCare Broker é a empresa de benefícios do Grupo irbroker.",
     imageKey: "wellcare",
   },
   "/real-estate": {
@@ -220,7 +221,7 @@ const metadata: Record<string, PageMeta> = {
   "/conteudos": {
     title: "Radar do mercado e guias de seguros para empresas | irbroker",
     description:
-      "Notícias do mercado segurador e guias de seguros para empresas, área por área: mercado imobiliário, corporate, transporte de cargas e benefícios.",
+      "Notícias do mercado segurador e guias de seguros para empresas, de cada empresa do Grupo irbroker: mercado imobiliário, corporate, transporte de cargas e benefícios.",
     imageKey: "contents",
   },
   "/contato": {
@@ -234,7 +235,7 @@ const metadata: Record<string, PageMeta> = {
 /** Rota desconhecida: gerada como 404.html, com noindex e sem canonical. */
 export const notFoundMeta: PageMeta = {
   title: "Página não encontrada | irbroker",
-  description: "A página procurada não existe ou mudou de endereço. Acesse a home ou uma das áreas da irbroker.",
+  description: "A página procurada não existe ou mudou de endereço. Acesse a home ou uma das empresas do Grupo irbroker.",
   imageKey: "hero",
   noindex: true,
 };
