@@ -29,13 +29,16 @@
   object-fit: cover;
   object-position: center;
   z-index: -4;
-  filter: saturate(.82);
   animation: none;
 }
 .hero-shade {
   position: absolute;
   inset: 0;
-  background: var(--graphite-a56);
+  /* Véu só onde há texto (12/11): faixa no topo para o menu + degradê à esquerda; o resto da foto fica limpo.
+     Contraste medido escondendo o texto, em 3 quadros por vídeo: h1 >= 4,1:1, texto >= 8,5:1, menu >= 4,9:1. */
+  background:
+    linear-gradient(180deg, rgba(var(--veu), .8) 0, rgba(var(--veu), .55) 90px, rgba(var(--veu), 0) 210px),
+    linear-gradient(90deg, rgba(var(--veu), .82) 0%, rgba(var(--veu), .74) 46%, rgba(var(--veu), .4) 64%, rgba(var(--veu), 0) 88%);
   z-index: -3;
 }
 .hero-content {
@@ -129,7 +132,7 @@
     object-position: 61% center;
   }
   .hero-shade {
-    background: var(--graphite-a62);
+    background: linear-gradient(180deg, rgba(var(--veu), .62) 0%, rgba(var(--veu), .6) 100%);
   }
 }
 
@@ -152,9 +155,6 @@
   }
 }
 
-.vertical-hero .hero-shade {
-  background: var(--graphite-a66);
-}
 .home-hero .hero-content {
   z-index: 2;
 }
@@ -172,7 +172,6 @@
   height: 100%;
   object-fit: cover;
   object-position: 45% center;
-  filter: saturate(.8);
 }
 .photo-port .hero-photo {
   object-position: 35% center;
@@ -213,9 +212,6 @@
 }
 .home-hero .hero-photo {
   filter: none;
-}
-.home-hero .hero-shade {
-  background: linear-gradient(90deg, rgba(31,34,37,.7) 0%, rgba(31,34,37,.56) 42%, rgba(31,34,37,0) 100%);
 }
 .home-hero .hero-content {
   padding-bottom: 105px;
@@ -317,9 +313,6 @@
     padding-inline: 21px;
     font-size: 16px;
   }
-  .home-hero .hero-shade {
-    background: linear-gradient(90deg, rgba(31,34,37,.7), rgba(31,34,37,.42) 68%, transparent);
-  }
   .trigger-photo-sticky img {
     object-position: center 43%;
   }
@@ -389,15 +382,6 @@
 .video-hero .hero-photo {
   filter: none;
   animation: none;
-}
-.video-hero .hero-shade {
-  background: linear-gradient(90deg, rgba(31,34,37,.8) 0%, rgba(31,34,37,.8) 65%, rgba(31,34,37,0) 100%);
-}
-.video-hero .hero-shade::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(31,34,37,.25);
 }
 .video-hero .hero-content h1,
 .video-hero .hero-description {
@@ -510,10 +494,3 @@
   }
 }
 
-/* Vídeos das áreas (menos Corporate, de janelas claras): véu mais leve que o da home para a cena aparecer; contraste medido em 3 quadros por vídeo. */
-.vertical-hero.video-hero:not(.brand-wellcare):not(.brand-comex):not(.photo-corporate) .hero-shade {
-  background: linear-gradient(90deg, rgba(31,34,37,.74) 0%, rgba(31,34,37,.6) 55%, rgba(31,34,37,.18) 100%);
-}
-.vertical-hero.video-hero:not(.brand-wellcare):not(.brand-comex):not(.photo-corporate) .hero-shade::after {
-  background: none;
-}

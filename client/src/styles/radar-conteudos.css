@@ -528,9 +528,6 @@
 .contents-hero {
   min-height: 560px;
 }
-.contents-hero .hero-shade {
-  background: linear-gradient(90deg, var(--graphite-a69) 0%, var(--graphite-a62) 60%, var(--graphite-a40) 100%);
-}
 .contents-hero .hero-content h1 {
   font-size: clamp(46px, 5.3vw, 76px);
   max-width: 18ch;

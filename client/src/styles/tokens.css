@@ -1,5 +1,6 @@
 /* Tokens do site. Únicos lugares com cores literais. */
 :root {
+  --veu: 31, 34, 37; /* cor do véu das fotos (rgb); marcas.css troca por marca */
   /* Paleta */
   --paper: #F5F4F1; /* fundo claro */
   --graphite: #1F2225; /* texto e fundos escuros */

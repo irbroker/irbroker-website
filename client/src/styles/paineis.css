@@ -52,7 +52,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(.5);
   z-index: -3;
 }
 .panel-shade {
@@ -181,15 +180,13 @@
   position: relative;
 }
 .panel-shade {
-  background: var(--graphite-a66);
+  /* escuro no alto (logo/selo) e embaixo (nome da área); o meio deixa a foto aparecer */
+  background: linear-gradient(180deg, rgba(var(--veu), .78) 0%, rgba(var(--veu), .3) 32%, rgba(var(--veu), .06) 50%, rgba(var(--veu), .72) 100%);
 }
 .verticals-section {
   position: relative;
   isolation: isolate;
   overflow: clip;
-}
-.vertical-panel .panel-photo {
-  filter: saturate(.75);
 }
 .vertical-panel .panel-logo {
   position: static;
@@ -229,7 +226,7 @@
   object-position: 49% center;
 }
 .panel-corporate .panel-photo {
-  object-position: 55% center;
+  object-position: 40% center;
 }
 
 @media (max-width: 767px) {

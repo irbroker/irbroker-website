@@ -32,8 +32,9 @@
   font-weight: 300;
   letter-spacing: -.04em;
 }
-.theme-comex .hero-shade {
-  background: var(--comex-navy-a67);
+.theme-comex,
+.panel-comex {
+  --veu: 13, 27, 42;
 }
 /* O fundo claro de Soluções some no marinho: o texto do tema é claro. */
 .theme-comex .solutions-section,
@@ -91,8 +92,9 @@
   font-family: 'Figtree', sans-serif;
   font-weight: 300;
 }
-.theme-wellcare .hero-shade {
-  background: var(--wellcare-navy-a69);
+.theme-wellcare,
+.panel-wellcare {
+  --veu: 6, 20, 58;
 }
 
 @media (max-width: 767px) {
@@ -101,17 +103,9 @@
   }
 }
 
-.theme-comex .vertical-hero .hero-shade {
-  background: var(--comex-navy-a70);
-}
-.theme-wellcare .vertical-hero .hero-shade {
-  background: var(--wellcare-navy-a70);
-}
-.panel-comex .panel-shade {
-  background: var(--comex-navy-a66);
-}
+/* WellCare: foto de cortina clara atrás do logo branco */
 .panel-wellcare .panel-shade {
-  background: var(--wellcare-navy-a66);
+  background: linear-gradient(180deg, rgba(var(--veu), .9) 0%, rgba(var(--veu), .7) 30%, rgba(var(--veu), .15) 55%, rgba(var(--veu), .72) 100%);
 }
 .theme-wellcare .small-rule {
   height: 2px;
@@ -136,7 +130,7 @@
   max-height: none;
 }
 .panel-wellcare .panel-photo {
-  object-position: 44% center;
+  object-position: 70% center;
 }
 /* Botão do topo e convite do rodapé na cor de cada marca. */
 .theme-comex .button-solid,
@@ -165,7 +159,4 @@
   inset: 0 -12% 0 calc(-1 * max(72px, (100vw - 1296px) / 2));
   pointer-events: none;
   background: radial-gradient(ellipse 60% 55% at 28% 62%, rgba(13,27,42,.6) 0%, rgba(13,27,42,.35) 55%, rgba(13,27,42,0) 100%);
-}
-.video-hero.brand-comex .hero-shade {
-  background: linear-gradient(90deg, rgba(13,27,42,.8) 0%, rgba(13,27,42,.8) 65%, rgba(13,27,42,0) 100%);
 }

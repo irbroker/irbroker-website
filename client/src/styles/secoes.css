@@ -152,7 +152,6 @@ p {
   inset: 0;
   object-fit: cover;
   object-position: center 46%;
-  filter: saturate(.85);
 }
 .project-photo > span {
   position: absolute;
