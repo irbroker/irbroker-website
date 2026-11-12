@@ -112,8 +112,9 @@ export function Header({ light = true, path = '/' }: { light?: boolean; path?: s
         </div>
         <a className="nav-link" href="/sobre" aria-current={path === '/sobre' ? 'page' : undefined}>Sobre</a>
         <a className="nav-link" href="/conteudos" aria-current={path === '/conteudos' || path.startsWith('/conteudos/') ? 'page' : undefined}>Conteúdos</a>
-        {/* Contato como link do menu: o botão grande fica só no topo/fim das páginas (sem CTA duplicado, decisão de 11/11). */}
-        <a className="nav-link" href="/contato" aria-current={path === '/contato' ? 'page' : undefined}>Contato</a>
+        {/* Contato: link no topo (o botão grande do hero já está visível, sem CTA duplicado, decisão de 11/11);
+            vira botão quando o cabeçalho encolhe na rolagem e o botão do topo sai de vista (auditoria Hallmark, 12/11). */}
+        <a className="nav-link nav-contato" href="/contato" aria-current={path === '/contato' ? 'page' : undefined}>Contato</a>
       </nav>
     </div>
     {guide && <motion.span className="reading-progress" aria-hidden="true" style={{ scaleX: reading }} />}
@@ -131,8 +132,10 @@ export function Button({ children, href = '/contato', secondary = false }: { chi
   return <a href={href} className={`button ${secondary ? 'button-outline' : 'button-solid'}`}>{children}</a>;
 }
 
-export function Editorial({ label, children, className = '', heading = true }: { label: string; children: ReactNode; className?: string; heading?: boolean }) {
-  return <div className={`editorial ${className}`}><div className="editorial-label"><span className="small-rule" />{heading ? <h2 className="editorial-title">{label}</h2> : label}</div><div className="editorial-content">{children}</div></div>;
+// Título em cima do conteúdo, na mesma coluna (12/11: sai o rótulo à esquerda com traço, marca nº 54 do Hallmark).
+// Sem label quando o próprio conteúdo já abre com o título da seção.
+export function Editorial({ label, children, className = '' }: { label?: string; children: ReactNode; className?: string }) {
+  return <div className={`editorial ${className}`}>{label && <h2 className="editorial-label">{label}</h2>}<div className="editorial-content">{children}</div></div>;
 }
 
 function WhatsAppIcon() {
@@ -266,28 +269,21 @@ export function Footer({ path = '/' }: { path?: string }) {
           </div>
         </div>}
 
-        <div className="footer-cols footer-grid">
-          <div className="footer-col">
-            <h2 className="footer-col-title">Escritórios</h2>
+        {/* Rodapé em linha (12/11, auditoria Hallmark): escritórios à esquerda; links e redes à direita, sem colunas com títulos. */}
+        <div className="footer-cols">
+          <div className="footer-offices">
             <div className="footer-editorial-address footer-office"><strong>Matriz</strong><p>Rua José Versolato, 101, 12º andar, Torre A, Centro, São Bernardo do Campo/SP, <span className="footer-nowrap">09750-730</span></p></div>
             <div className="footer-editorial-address footer-office"><strong>Filial</strong><p>Av. Presidente Juscelino Kubitschek, 1455, 4º andar, Faria Lima, São Paulo/SP, <span className="footer-nowrap">04543-011</span></p></div>
           </div>
-          <nav className="footer-col" aria-labelledby="footer-frentes">
-            <h2 className="footer-col-title" id="footer-frentes">Grupo irbroker</h2>
-            <ul className="footer-list footer-editorial-front-links">{verticals.map(vertical => <li key={vertical.slug}><a className="footer-editorial-link" href={`/${vertical.slug}`}>{vertical.name}</a></li>)}</ul>
-          </nav>
-          <nav className="footer-col" aria-labelledby="footer-irbroker">
-            <h2 className="footer-col-title" id="footer-irbroker">A irbroker</h2>
-            <ul className="footer-list">
+          <div className="footer-links">
+            <nav aria-label="Empresas do Grupo irbroker"><ul className="footer-inline">{verticals.map(vertical => <li key={vertical.slug}><a className="footer-editorial-link" href={`/${vertical.slug}`}>{vertical.name}</a></li>)}</ul></nav>
+            <nav aria-label="A irbroker"><ul className="footer-inline">
               <li><a className="footer-editorial-link" href="/sobre">Sobre</a></li>
               <li><a className="footer-editorial-link" href="/conteudos">Conteúdos</a></li>
               <li><a className="footer-editorial-link" href="/contato">Contato</a></li>
               <li><button className="footer-editorial-link footer-policy" type="button" aria-haspopup="dialog" onClick={() => dialog.current?.showModal()}>Política de privacidade</button></li>
-            </ul>
-          </nav>
-          <div className="footer-col" role="group" aria-labelledby="footer-siga">
-            <h2 className="footer-col-title" id="footer-siga">Siga</h2>
-            <div className="footer-social">
+            </ul></nav>
+            <div className="footer-social" role="group" aria-label="Redes sociais">
               <a className="footer-social-link" href="https://www.instagram.com/irbroker_/" target="_blank" rel="noopener" aria-label="irbroker no Instagram (abre em nova aba)"><InstagramIcon /></a>
               <a className="footer-social-link" href="https://br.linkedin.com/company/irbroker" target="_blank" rel="noopener" aria-label="irbroker no LinkedIn (abre em nova aba)"><LinkedInIcon /></a>
             </div>

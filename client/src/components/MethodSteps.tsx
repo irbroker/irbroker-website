@@ -53,7 +53,7 @@ export default function MethodSteps() {
   return (
     <section className={`section method-section${animated ? " method-animated" : ""}`}>
       <div className="wrap">
-        <Editorial label="Método" heading={false}>
+        <Editorial>
           <AnimatedHeading>Entender antes de cotar.</AnimatedHeading>
         </Editorial>
         <div ref={line} className="method-line">

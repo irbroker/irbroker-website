@@ -355,3 +355,20 @@
 .site-header.menu-open .reading-progress {
   display: none;
 }
+
+/* Contato vira botão só com o cabeçalho encolhido (desktop); no topo segue como link. */
+@media (min-width: 768px) {
+  .site-header.header-scrolled .nav-contato {
+    padding: 8px 18px;
+    background: var(--accent);
+    color: var(--graphite);
+    font-weight: 600;
+  }
+  .site-header.header-scrolled .nav-contato:hover {
+    background: var(--teal-light);
+  }
+  .site-header.header-scrolled .nav-contato::after {
+    display: none; /* sem o sublinhado de link */
+  }
+}
+

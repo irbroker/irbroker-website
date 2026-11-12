@@ -32,7 +32,7 @@ function LogoGrid({ logos, label, gridClass }: LogoGridProps) {
 export default function PartnerLogos() {
   return (
     <section className="partners-section wrap">
-      <Editorial className="logo-band" label="Seguradoras" heading={false}>
+      <Editorial className="logo-band">
         <AnimatedHeading>
           Alternativas entre as principais seguradoras.
         </AnimatedHeading>
@@ -42,7 +42,7 @@ export default function PartnerLogos() {
           gridClass="grid-insurers"
         />
       </Editorial>
-      <Editorial className="logo-band" label="Clientes" heading={false}>
+      <Editorial className="logo-band">
         <AnimatedHeading>Empresas que confiam na irbroker.</AnimatedHeading>
         <LogoGrid
           logos={clientLogos}

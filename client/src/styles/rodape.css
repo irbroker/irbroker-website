@@ -115,29 +115,20 @@
 }
 
 .footer-cols {
-  row-gap: 32px;
-  padding: 28px 0 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 32px var(--footer-gap);
+  padding: 36px 0;
   border-bottom: 1px solid var(--footer-rule);
 }
 /* Contato não tem o convite: o fio separa o rodapé da coluna escura de escritórios da página. */
 .footer-cols:first-child {
   border-top: 1px solid var(--footer-rule);
 }
-.footer-col {
-  min-width: 0;
-}
-.footer-col-title {
-  margin-bottom: 12px;
-  color: var(--footer-muted);
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-}
-.footer-office + .footer-office {
-  margin-top: 10px;
+.footer-offices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px var(--footer-gap);
 }
 .footer-office strong {
   display: block;
@@ -152,19 +143,27 @@
   font-size: 15px;
   line-height: 1.55;
 }
-.footer-list {
+.footer-links {
   display: grid;
-  justify-items: start;
-  gap: 10px;
+  align-content: start;
+  justify-items: end;
+  gap: 14px;
+}
+.footer-inline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 24px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.footer-list a,
+.footer-inline a,
 .footer-policy {
   color: var(--footer-paper);
   font-size: 16px;
   line-height: 1.4;
+  white-space: nowrap; /* link nunca quebra em duas linhas */
 }
 .footer-policy {
   padding: 0;
@@ -176,7 +175,7 @@
 }
 .footer-social {
   display: flex;
-  margin: -10px 0 0 -12px; /* o alvo de 44px centra o ícone de 20px: alinha o ícone à coluna */
+  margin: -6px -12px 0 0; /* o alvo de 44px centra o ícone de 20px: alinha o ícone à borda */
 }
 .footer-social-link {
   display: inline-flex;
@@ -244,6 +243,18 @@
   .footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .footer-cols {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .footer-links {
+    justify-items: start;
+  }
+  .footer-inline {
+    justify-content: flex-start;
+  }
+  .footer-social {
+    margin: -6px 0 0 -12px;
+  }
   /* Convite e botões empilhados à esquerda: lado a lado eles quebrariam desalinhados. */
   .footer-editorial-closure {
     display: block;
@@ -299,6 +310,9 @@
   }
   .footer-cols {
     padding: 28px 0 32px;
+  }
+  .footer-offices {
+    grid-template-columns: minmax(0, 1fr);
   }
   .footer-legal {
     align-items: flex-start;

@@ -17,7 +17,7 @@ export const radar: RadarNote[] = [
     "oQueMuda": "Atraso e troca de porto alongam o tempo da carga em trânsito e podem mudar o trajeto previsto. Vale conferir se o seguro da viagem acompanha a rota real, o destino final e o prazo do embarque, e se o valor declarado reflete os custos atuais.",
     "fontes": [
       {
-        "nome": "CNN Brasil, \"Frete marítimo dispara e provoca mudança de rotas de cargas no Brasil\", 05/10/2026",
+        "nome": "CNN Brasil, “Frete marítimo dispara e provoca mudança de rotas de cargas no Brasil”, 05/10/2026",
         "url": "https://www.cnnbrasil.com.br/blogs/jenifer-ribeiro/infra/frete-maritimo-dispara-e-provoca-mudanca-de-rotas-de-cargas-no-brasil/"
       }
     ]
@@ -30,7 +30,7 @@ export const radar: RadarNote[] = [
     "oQueMuda": "A comprovação deixa de depender de papel. Se uma das três apólices vencer ou não estiver vinculada ao RNTRC, a falha aparece no cruzamento de dados. Vale conferir vigência e vínculo das três antes da próxima renovação.",
     "fontes": [
       {
-        "nome": "ANTT, \"ANTT inicia integração nacional para verificação automática dos seguros obrigatórios do transporte de cargas\", 10/03/2026",
+        "nome": "ANTT, “ANTT inicia integração nacional para verificação automática dos seguros obrigatórios do transporte de cargas”, 10/03/2026",
         "url": "https://www.gov.br/antt/pt-br/assuntos/ultimas-noticias/antt-inicia-integracao-nacional-para-verificacao-automatica-dos-seguros-obrigatorios-do-transporte-de-cargas"
       },
       {
@@ -47,7 +47,7 @@ export const radar: RadarNote[] = [
     "oQueMuda": "Renovações de patrimonial, responsabilidade civil e outros seguros de danos a partir de janeiro seguem as novas regras. Revise as condições antes da renovação de janeiro.",
     "fontes": [
       {
-        "nome": "Susep, \"Nova norma do CNSP estabelece regras gerais para contratos de seguros de danos\", 19/08/2026",
+        "nome": "Susep, “Nova norma do CNSP estabelece regras gerais para contratos de seguros de danos”, 19/08/2026",
         "url": "https://www.gov.br/susep/pt-br/central-de-conteudos/noticias/2026/agosto/nova-norma-do-cnsp-estabelece-regras-gerais-para-contratos-de-seguros-de-danos"
       }
     ]
@@ -56,7 +56,7 @@ export const radar: RadarNote[] = [
     "frente": "WellCare Broker",
     "data": "2026 (Agenda Regulatória 2026-2028)",
     "titulo": "ANS prevê para o 4º trimestre de 2026 a decisão sobre o aprimoramento das regras de reajuste dos planos coletivos",
-    "resumo": "A Agenda Regulatória 2026-2028 da ANS inclui o tema \"Reajuste coletivo\": concluir o aprimoramento das regras de reajuste dos planos coletivos, para reduzir a assimetria de informação. A deliberação final está prevista para o 4º trimestre de 2026.",
+    "resumo": "A Agenda Regulatória 2026-2028 da ANS inclui o tema “Reajuste coletivo”: concluir o aprimoramento das regras de reajuste dos planos coletivos, para reduzir a assimetria de informação. A deliberação final está prevista para o 4º trimestre de 2026.",
     "oQueMuda": "A ANS fixa o percentual máximo de reajuste só para os planos individuais e familiares. No coletivo empresarial com 30 vidas ou mais, o reajuste é negociado entre a empresa e a operadora; com menos de 30 vidas, vale um percentual único para todos os contratos agrupados da operadora. Vale acompanhar o tema e revisar o contrato antes da próxima data de reajuste.",
     "fontes": [
       {
@@ -64,7 +64,7 @@ export const radar: RadarNote[] = [
         "url": "https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedade/agenda-regulatoria/Agenda_Regulatria_20262028_B.pdf"
       },
       {
-        "nome": "ANS, \"Reajuste anual de planos coletivos\"",
+        "nome": "ANS, “Reajuste anual de planos coletivos”",
         "url": "https://www.gov.br/ans/pt-br/assuntos/consumidor/reajuste-variacao-de-mensalidade/reajuste-anual-de-planos-coletivos"
       }
     ]
