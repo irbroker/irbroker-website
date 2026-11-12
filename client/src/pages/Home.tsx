@@ -33,7 +33,9 @@ export default function Home() {
     <Hero title="Seguros corporativos começam pela sua operação." description="Corretora consultiva para empresas que precisam proteger patrimônio, operações e pessoas." className="home-hero">
       <Button>Falar com um especialista</Button><Button href="https://wa.me/5541963491818" secondary>Falar no WhatsApp</Button>
     </Hero>
-    <ProofBand />
+    {/* Ordem testada em 12/11: áreas logo após o topo, Método separa as duas faixas de fotos, números + seguradoras + clientes juntos como prova. */}
+    <Verticals />
+    <MethodSteps />
     <section className="triggers-split">
       <div className="trigger-photo-column"><div className="trigger-photo-sticky"><img src={media.triggers.src} alt={swap ? '' : media.triggers.alt} width={media.triggers.width} height={media.triggers.height} loading="lazy" />
         {swap && triggers.map(([title, , , , key], index) => <img key={key} className={`trigger-photo-swap ${active === index ? 'is-active' : previous === index ? 'is-previous' : ''}`} src={media[key].src} alt="" aria-hidden="true" width={media[key].width} height={media[key].height} />)}
@@ -43,8 +45,7 @@ export default function Home() {
         <div className="trigger-list">{triggers.map(([title, text, href], index) => <article key={title} className={swap && active === index ? 'is-active' : undefined} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)}><h3><a className="trigger-link" href={href}>{title}</a></h3><p>{text}</p></article>)}</div>
       </div>
     </section>
-    <MethodSteps />
-    <Verticals />
+    <ProofBand />
     <PartnerLogos />
     <section className="project-section"><div className="project-photo"><img src={media.forest.src} alt={media.forest.alt} width={media.forest.width} height={media.forest.height} loading="lazy" /><span aria-hidden="true" /></div><div className="project-copy"><AnimatedHeading>Projeto 365</AnimatedHeading><p>Para cada apólice emitida, a irbroker planta uma árvore em nome do cliente.</p></div></section>
     <HomeRadar />

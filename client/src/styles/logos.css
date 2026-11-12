@@ -155,7 +155,7 @@
 }
 
 .proof-numbers {
-  padding-block: 30px 23px;
+  padding-block: 72px 40px; /* abre o bloco de prova da Home (12/11), não é mais uma faixa colada ao topo */
   background: var(--paper);
   border-bottom: 1px solid var(--graphite-a18);
 }
