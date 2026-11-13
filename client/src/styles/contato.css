@@ -710,7 +710,7 @@
   min-height: 560px;
 }
 .contact-hero .hero-photo {
-  object-position: 60% center;
+  object-position: center;
 }
 .contact-page .contact-form-wrap {
   display: block;

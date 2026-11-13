@@ -149,7 +149,7 @@ export default function Contact() {
     {/* Contato v3 (12/11): topo com foto como as outras páginas, formulário largo no centro e faixa curta no fim.
         Os endereços ficam só no rodapé (sem repetir). */}
     <section className="photo-hero vertical-hero contact-hero">
-      <img className="hero-photo" src="/media/contato-reuniao_6d512840.webp" alt="" aria-hidden="true" width="1920" height="1080" fetchPriority="high" />
+      <img className="hero-photo" src="/media/contato-sala-cidade_69546238.webp" alt="" aria-hidden="true" width="1920" height="1080" fetchPriority="high" />
       <div className="hero-shade" aria-hidden="true" />
       <div className="wrap hero-content">
         <Breadcrumb className="hero-kicker" items={[{ label: "Contato" }]} />
