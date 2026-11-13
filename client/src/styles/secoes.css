@@ -156,8 +156,9 @@ p {
 .project-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: var(--mist-deep);
-  min-height: 474px;
+  background: var(--forest);
+  color: var(--paper);
+  min-height: 560px;
 }
 .project-photo {
   position: relative;
@@ -184,13 +185,24 @@ p {
   align-items: start;
   padding: 72px 11%;
 }
+.project-label {
+  margin: 0;
+  color: var(--leaf);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: .02em;
+}
 .project-copy h2 {
-  margin-top: 28px;
-  font-size: 54px;
+  margin-top: 18px;
+  font-size: clamp(44px, 4.6vw, 68px);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -.02em;
+  max-width: 14ch;
 }
 .project-copy > p:last-child {
   margin-top: 26px;
-  color: var(--body);
+  color: var(--on-dark-muted);
   max-width: 415px;
 }
 .audience-list,

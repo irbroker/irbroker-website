@@ -7,6 +7,7 @@ import ProofBand from '../components/ProofBand';
 import AnimatedHeading from '../components/AnimatedHeading';
 import { HomeRadar } from '../components/Radar';
 import MethodSteps from '../components/MethodSteps';
+import Projeto365 from '../components/Projeto365';
 
 // Cada caso: título, texto, página da área e foto que entra na coluna da esquerda (desktop).
 const triggers = [
@@ -57,7 +58,7 @@ export default function Home() {
     </section>
     <ProofBand />
     <PartnerLogos />
-    <section className="project-section"><div className="project-photo"><img src={media.forest.src} alt={media.forest.alt} width={media.forest.width} height={media.forest.height} loading="lazy" /><span aria-hidden="true" /></div><div className="project-copy"><AnimatedHeading>Projeto 365</AnimatedHeading><p>Para cada apólice emitida, a irbroker planta uma árvore em nome do cliente.</p></div></section>
+    <Projeto365 />
     <HomeRadar />
   </>;
 }
