@@ -34,10 +34,10 @@ export default function About() {
         </ul>
       </div>
     </section>
-    {/* Missão e visão em faixa escura, frase grande, sem ícones (12/11). Texto institucional ajustado para incluir benefícios. */}
+    {/* Missão e visão em faixa escura, frase grande, sem ícones (12/11). Texto refeito em 12/11 a partir do conteúdo do site, sem citar sinistro (pedido do usuário). */}
     <section className="about-values"><div className="wrap about-values-grid">
-      <article><h2 className="about-values-label">Missão</h2><p className="about-values-text">Proteger o patrimônio, as operações e as pessoas das empresas que atendemos, com soluções personalizadas em gestão de riscos, seguros e benefícios.</p></article>
-      <article><h2 className="about-values-label">Visão</h2><p className="about-values-text">Ser referência nacional em corretagem de seguros e benefícios para empresas, reconhecida pela excelência técnica e pelo relacionamento consultivo de longo prazo.</p></article>
+      <article><h2 className="about-values-label">Missão</h2><p className="about-values-text">Entender a operação de cada empresa antes de propor um seguro e acompanhá-la em todas as etapas da relação, protegendo patrimônio, operações e pessoas.</p></article>
+      <article><h2 className="about-values-label">Visão</h2><p className="about-values-text">Ser a referência das empresas que buscam um especialista em cada frente: transporte de cargas, benefícios, riscos corporativos e mercado imobiliário.</p></article>
     </div></section>
     <section className="section process-section">
       <div className="wrap"><div className="process-heading"><AnimatedHeading>A seguradora emite a apólice.<br />A irbroker trabalha do seu lado.</AnimatedHeading></div>
