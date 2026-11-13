@@ -107,8 +107,7 @@ export const brand = {
   dark: "/media/irbroker-logo-escuro_e701814b.webp",
   symbol: "/media/irbroker-simbolo_bd6c0f49.webp",
   comex: "/brand/comex-broker-horizontal-escuro-metal.svg",
-  wellcare: "/brand/wellcare-broker-empilhada-branco.svg",
-  wellcareHorizontal: "/brand/wellcare-broker-horizontal-branco.svg", // card da Home, ao lado da Comex (12/11)
+  wellcare: "/brand/wellcare-broker-horizontal-branco.svg", // horizontal (opção A) no topo e no card, mesmo padrão da Comex (12/11)
 } as const;
 
 export const brandDimensions = {
@@ -116,6 +115,5 @@ export const brandDimensions = {
   dark: { width: 1594, height: 400 },
   symbol: { width: 598, height: 698 },
   comex: { width: 1771, height: 440 },
-  wellcare: { width: 911, height: 646 },
-  wellcareHorizontal: { width: 1270, height: 315 },
+  wellcare: { width: 1270, height: 315 },
 } as const;
