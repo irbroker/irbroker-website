@@ -201,19 +201,10 @@
   z-index: auto;
   filter: none;
 }
-.vertical-panel .panel-logo.comex {
-  max-width: 190px;
-}
+/* Comex e WellCare Broker (versão horizontal) têm a mesma proporção, ~4:1: mesma largura, mesmo tamanho no card. */
+.vertical-panel .panel-logo.comex,
 .vertical-panel .panel-logo.wellcare {
-  /* WellCare Broker usa o lockup empilhado (opção C, 11/11): altura própria para "BROKER" seguir legível */
-  width: auto;
-  height: 104px;
-  max-width: none;
-  max-height: none;
-}
-.panel-brand:has(.panel-logo.wellcare) {
-  right: auto;
-  align-items: center;
+  max-width: 190px;
 }
 .panel-brand {
   gap: 19px;
@@ -234,7 +225,8 @@
     max-width: 212px;
     max-height: 65px;
   }
-  .vertical-panel .panel-logo.comex {
+  .vertical-panel .panel-logo.comex,
+  .vertical-panel .panel-logo.wellcare {
     max-width: 220px;
   }
 }
