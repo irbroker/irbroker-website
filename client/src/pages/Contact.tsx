@@ -49,6 +49,14 @@ export function errorField(error: string) {
   return ERROR_FIELDS.find(([, pattern]) => pattern.test(error))?.[0];
 }
 
+// Linha curta sob cada opção de "Com quem você quer falar" (12/11).
+const RESUMO: Record<string, string> = {
+  "comex-broker": "Seguro de transporte de cargas",
+  wellcare: "Saúde e benefícios da equipe",
+  corporate: "Riscos da empresa e dos gestores",
+  "real-estate": "Mercado imobiliário",
+};
+
 export default function Contact() {
   const [front, setFront] = useState("");
   const [phone, setPhone] = useState("");
@@ -150,6 +158,12 @@ export default function Contact() {
               Um especialista da irbroker retorna pelo telefone ou e-mail
               informado.
             </p>
+            {/* 12/11: o que acontece depois do envio, em passos (antes era uma nota solta sob o botão). */}
+            <ol className="contact-steps">
+              <li><strong>Você conta como a empresa opera</strong><span>Atividade, contratos, equipe ou cargas: o que pesa hoje.</span></li>
+              <li><strong>Um especialista retorna</strong><span>Pelo telefone ou e-mail informado, para entender o caso.</span></li>
+              <li><strong>Você recebe alternativas comparadas</strong><span>Opções entre seguradoras, explicadas para você decidir.</span></li>
+            </ol>
           </div>
 
           <div className="contact-aside__block">
@@ -277,6 +291,7 @@ export default function Contact() {
                         required
                       />
                       <span>{vertical.name}</span>
+                      <small>{RESUMO[vertical.slug]}</small>
                     </label>
                   ))}
                 </div>
@@ -326,11 +341,6 @@ export default function Contact() {
               >
                 {submitting ? "Enviando…" : "Enviar mensagem"}
               </button>
-              <p className="contact-form__after-note">
-                Depois do envio: entendemos a operação, comparamos alternativas
-                entre seguradoras e seguimos com a sua empresa após a
-                contratação.
-              </p>
             </form>
           )}
         </div>
