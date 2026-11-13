@@ -9,14 +9,6 @@ import { HomeRadar } from '../components/Radar';
 import MethodSteps from '../components/MethodSteps';
 
 // Cada caso: título, texto, página da área e foto que entra na coluna da esquerda (desktop).
-// Seletor do topo (12/11): o visitante entra pelo caso dele, na língua dele, e cai na especialidade certa.
-const casos = [
-  ['Imóveis e empreendimentos', '/real-estate'],
-  ['Empresa e diretoria', '/corporate'],
-  ['Transporte de cargas', '/comex-broker'],
-  ['Benefícios da equipe', '/wellcare'],
-] as const;
-
 const triggers = [
   ['Contrato ou edital que exige garantia', 'Seguro garantia substitui fiança e caução, no valor e prazo que o contrato pede.', '/real-estate', 'Real Estate', 'construction'],
   ['Conselho ou investidor que pede D&O', 'O D&O protege o patrimônio pessoal de diretores e conselheiros.', '/corporate', 'Corporate', 'corporate'],
@@ -38,7 +30,7 @@ export default function Home() {
     return () => query.removeEventListener('change', update);
   }, []);
   return <>
-    <Hero title="Seguros corporativos começam pela sua operação." description="Corretora consultiva para empresas que precisam proteger patrimônio, operações e pessoas." className="home-hero" after={<nav className="hero-casos" aria-label="Comece pelo seu caso"><p>Comece pelo seu caso</p><ul>{casos.map(([nome, href]) => <li key={href}><a href={href}>{nome}</a></li>)}</ul></nav>}>
+    <Hero title="Seguros corporativos começam pela sua operação." description="Corretora consultiva para empresas que precisam proteger patrimônio, operações e pessoas." className="home-hero">
       <Button>Falar com um especialista</Button><Button href="https://wa.me/5541963491818" secondary>Falar no WhatsApp</Button>
     </Hero>
     {/* Ordem testada em 12/11: áreas logo após o topo, Método separa as duas faixas de fotos, números + seguradoras + clientes juntos como prova. */}

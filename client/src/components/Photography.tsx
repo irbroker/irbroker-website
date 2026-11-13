@@ -7,7 +7,7 @@ import AnimatedHeading from './AnimatedHeading';
 import HeroVideo from './HeroVideo';
 import { Breadcrumb } from './SiteLayout';
 
-export function Hero({ image = 'hero', title, label, description, children, after, className = '', brand: verticalBrand }: { image?: keyof typeof media; title: string; label?: string; description?: string; children?: ReactNode; after?: ReactNode; className?: string; brand?: 'comex' | 'wellcare' }) {
+export function Hero({ image = 'hero', title, label, description, children, className = '', brand: verticalBrand }: { image?: keyof typeof media; title: string; label?: string; description?: string; children?: ReactNode; className?: string; brand?: 'comex' | 'wellcare' }) {
   const comex = verticalBrand === 'comex';
   const home = className.includes('home-hero');
   const areaVideo = !home && !comex && image in areaVideos ? areaVideos[image as keyof typeof areaVideos] : undefined;
@@ -23,7 +23,6 @@ export function Hero({ image = 'hero', title, label, description, children, afte
       {home ? <HeroTitle title={title} /> : <h1>{title}</h1>}
       {description && <p className="hero-description">{description}</p>}
       {children && <div className="hero-actions">{children}</div>}
-      {after}
     </div>
   </section>;
 }
