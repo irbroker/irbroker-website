@@ -1,3 +1,4 @@
+import type { NomeIcone } from "../components/IconeSolucao";
 import { guides } from "./guides";
 
 export type VerticalImageKey =
@@ -14,7 +15,8 @@ export type Vertical = {
   title: string;
   intro?: string;
   audience: string[];
-  solutions: string[];
+  /** [título, uma linha, ícone] (12/11: grade com ícones de traço). */
+  solutions: [string, string, NomeIcone][];
   signals: string[];
   imageKey: VerticalImageKey;
   bridge?: "comex" | "wellcare";
@@ -43,10 +45,10 @@ const verticalData: Vertical[] = [
       "Escritórios de advocacia (demandas patrimoniais e tributárias)",
     ],
     solutions: [
-      "Garantias contratuais: seguro garantia, fiança locatícia e título de capitalização",
-      "Seguros patrimoniais: grandes riscos (property), condomínios e risco de engenharia",
-      "Linhas financeiras",
-      "RC Profissional (E&O) e D&O",
+      ["Garantias contratuais", "Seguro garantia, fiança locatícia e título de capitalização.", "chave"],
+      ["Seguros patrimoniais", "Grandes riscos (property), condomínios e risco de engenharia.", "predio"],
+      ["Linhas financeiras", "Soluções para riscos financeiros de fundos e empreendimentos.", "financeiro"],
+      ["RC Profissional (E&O) e D&O", "Responsabilidade dos profissionais e dos gestores.", "balanca"],
     ],
     signals: [
       "Contrato de obra ou de locação exigindo garantia",
@@ -76,11 +78,11 @@ const verticalData: Vertical[] = [
       "Indústrias e operações com risco ambiental",
     ],
     solutions: [
-      "Garantias: seguro garantia contratual e judicial",
-      "Patrimonial e empresarial (PME)",
-      "Linhas financeiras",
-      "RC geral, RC Profissional (E&O) e D&O",
-      "Riscos cibernéticos, ambientais e de engenharia",
+      ["Seguro garantia", "Garantia contratual e judicial, no lugar de caução e depósito.", "garantia"],
+      ["Patrimonial e empresarial", "Proteção do patrimônio e da operação, inclusive para PMEs.", "predio"],
+      ["Linhas financeiras", "Soluções para riscos financeiros da empresa.", "financeiro"],
+      ["RC, E&O e D&O", "Responsabilidade civil da empresa, dos profissionais e dos gestores.", "balanca"],
+      ["Cyber, ambiental e engenharia", "Riscos cibernéticos, ambientais e de obras.", "cadeado"],
     ],
     signals: [
       "Conselho, investidor ou novo sócio pedindo D&O",
@@ -111,9 +113,9 @@ const verticalData: Vertical[] = [
       "Transportadoras e operadores logísticos",
     ],
     solutions: [
-      "Seguro de transporte internacional e nacional",
-      "RCTR-C, RC-DC e RC-V (seguros obrigatórios do transportador)",
-      "Certificado do embarque emitido na hora, com as informações em mãos",
+      ["Transporte internacional e nacional", "Seguro da carga na importação, na exportação e nas rotas pelo país.", "navio"],
+      ["RCTR-C, RC-DC e RC-V", "Os três seguros obrigatórios do transportador rodoviário de cargas.", "caminhao"],
+      ["Certificado na hora", "Certificado do embarque emitido assim que as informações chegam.", "certificado"],
     ],
     signals: [
       "Novas origens, destinos ou mercadorias",
@@ -148,11 +150,11 @@ const verticalData: Vertical[] = [
     ],
     // Direção de 11/11 (seção 4). Previdência e o nome do benefício de bem-estar seguem "a confirmar" e ficam de fora.
     solutions: [
-      "Saúde corporativa e individual",
-      "Odontologia",
-      "Vida em grupo e acidentes pessoais",
-      "Previdência",
-      "Vale-refeição, vale-alimentação e bem-estar",
+      ["Saúde corporativa e individual", "Planos para a equipe da empresa e para pessoas e famílias.", "saude"],
+      ["Odontologia", "Planos odontológicos para colaboradores e dependentes.", "dente"],
+      ["Vida em grupo e acidentes pessoais", "Proteção financeira para a família do colaborador.", "familia"],
+      ["Previdência", "Planos para o futuro da equipe.", "previdencia"],
+      ["Vale-refeição, vale-alimentação e bem-estar", "Benefícios do dia a dia da equipe.", "refeicao"],
     ],
     signals: [
       "Aviso de reajuste ou aniversário do contrato",
