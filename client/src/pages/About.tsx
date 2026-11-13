@@ -34,9 +34,10 @@ export default function About() {
         </ul>
       </div>
     </section>
+    {/* Missão e visão em faixa escura, frase grande, sem ícones (12/11). Texto institucional ajustado para incluir benefícios. */}
     <section className="about-values"><div className="wrap about-values-grid">
-      <article><TargetIcon /><h2 className="about-title">Missão</h2><p className="large-body">Proteger o patrimônio e a continuidade dos negócios dos nossos clientes com soluções personalizadas em gestão de riscos e seguros corporativos.</p></article>
-      <article><HorizonIcon /><h2 className="about-title">Visão</h2><p className="large-body">Ser referência nacional em corretagem de seguros corporativos, reconhecida pela excelência técnica e pelo relacionamento consultivo de longo prazo.</p></article>
+      <article><h2 className="about-values-label">Missão</h2><p className="about-values-text">Proteger o patrimônio, as operações e as pessoas das empresas que atendemos, com soluções personalizadas em gestão de riscos, seguros e benefícios.</p></article>
+      <article><h2 className="about-values-label">Visão</h2><p className="about-values-text">Ser referência nacional em corretagem de seguros e benefícios para empresas, reconhecida pela excelência técnica e pelo relacionamento consultivo de longo prazo.</p></article>
     </div></section>
     <section className="section process-section">
       <div className="wrap"><div className="process-heading"><AnimatedHeading>A seguradora emite a apólice.<br />A irbroker trabalha do seu lado.</AnimatedHeading></div>
@@ -49,10 +50,4 @@ export default function About() {
 const iconProps = { className: 'about-icon', viewBox: '0 0 48 48', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, 'aria-hidden': true, focusable: false } as const;
 function PinIcon() {
   return <svg {...iconProps}><path d="M24 43s13-12.4 13-23a13 13 0 0 0-26 0c0 10.6 13 23 13 23Z" /><circle cx="24" cy="20" r="4.5" /></svg>;
-}
-function TargetIcon() {
-  return <svg {...iconProps}><circle cx="24" cy="24" r="18" /><circle cx="24" cy="24" r="10" /><circle cx="24" cy="24" r="2.5" fill="currentColor" /></svg>;
-}
-function HorizonIcon() {
-  return <svg {...iconProps}><path d="M5 34h38M11 34a13 13 0 0 1 26 0" /><path d="M24 9v6M10.5 15.5l4.2 4.2M37.5 15.5l-4.2 4.2" /></svg>;
 }
