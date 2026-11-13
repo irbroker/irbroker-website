@@ -296,10 +296,11 @@ export function Footer({ path = '/' }: { path?: string }) {
 
         {/* Rodapé em linha (12/11, auditoria Hallmark): escritórios à esquerda; links e redes à direita, sem colunas com títulos. */}
         <div className="footer-cols">
-          <div className="footer-offices">
+          {/* No Contato os escritórios já estão na página, com mapa: o rodapé não repete (12/11). */}
+          {!contactPage &&           <div className="footer-offices">
             <div className="footer-editorial-address footer-office"><strong>Matriz</strong><p>Rua José Versolato, 101, 12º andar, Torre A, Centro, São Bernardo do Campo/SP, <span className="footer-nowrap">09750-730</span></p></div>
             <div className="footer-editorial-address footer-office"><strong>Filial</strong><p>Av. Presidente Juscelino Kubitschek, 1455, 4º andar, Faria Lima, São Paulo/SP, <span className="footer-nowrap">04543-011</span></p></div>
-          </div>
+          </div>}
           <div className="footer-links">
             <nav aria-label="Especialidades do Grupo irbroker"><ul className="footer-inline">{verticals.map(vertical => <li key={vertical.slug}><a className="footer-editorial-link" href={`/${vertical.slug}`}>{vertical.name}</a></li>)}</ul></nav>
             <nav aria-label="A irbroker"><ul className="footer-inline">

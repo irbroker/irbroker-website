@@ -384,3 +384,17 @@
     transition: none;
   }
 }
+/* Sem a coluna de escritórios (Contato), os links ocupam a linha toda. */
+.footer-cols:not(:has(.footer-offices)) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.footer-cols:not(:has(.footer-offices)) .footer-links {
+  justify-items: start;
+}
+.footer-cols:not(:has(.footer-offices)) .footer-inline {
+  justify-content: flex-start;
+}
+.footer-cols:not(:has(.footer-offices)) .footer-social {
+  margin: -6px 0 0 -12px;
+}
