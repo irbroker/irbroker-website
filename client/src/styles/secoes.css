@@ -112,15 +112,6 @@ p {
 .method-step.is-active .method-node {
   background: var(--accent);
 }
-.group-seal {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  letter-spacing: .035em;
-  border: 1px solid var(--white-a40);
-  padding: 3px 9px;
-  display: inline-block;
-}
 .project-section {
   display: grid;
   grid-template-columns: 1fr 1fr;

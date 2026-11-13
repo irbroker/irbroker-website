@@ -19,7 +19,7 @@ export function Hero({ image = 'hero', title, label, description, children, clas
     <div className="hero-shade" aria-hidden="true" />
     <div className="wrap hero-content">
       {!home && label && <Breadcrumb className="hero-kicker" items={[{ label: 'Soluções' }, { label }]} />}
-      {verticalBrand && <div className={`bridge-wordmark ${verticalBrand}`}><img className="bridge-logo" src={brand[verticalBrand]} alt={label} width={brandDimensions[verticalBrand].width} height={brandDimensions[verticalBrand].height} /><span className="group-seal">Empresa do Grupo irbroker</span></div>}
+      {verticalBrand && <div className={`bridge-wordmark ${verticalBrand}`}><img className="bridge-logo" src={brand[verticalBrand]} alt={label} width={brandDimensions[verticalBrand].width} height={brandDimensions[verticalBrand].height} /></div>}
       {home ? <HeroTitle title={title} /> : <h1>{title}</h1>}
       {description && <p className="hero-description">{description}</p>}
       {children && <div className="hero-actions">{children}</div>}
@@ -79,7 +79,7 @@ export function Verticals({ compact = false }: { compact?: boolean }) {
       {verticals.map((vertical, index) => <motion.a className={`vertical-panel panel-${vertical.imageKey} ${vertical.bridge ? `panel-${vertical.bridge}` : ''} ${expanded === index ? 'panel-active' : ''}`} href={`/${vertical.slug}`} key={vertical.slug} aria-label={vertical.name} initial={false} animate={desktop === null ? {} : { flexGrow: desktop ? (expanded === index ? 2.4 : 1) : 0 }} transition={{ duration: reduced ? 0 : .5, ease: 'easeOut' }} onMouseEnter={() => setHovered(index)} onFocus={() => setFocused(index)} onBlur={() => setFocused(null)}>
         <img className="panel-photo" src={media[vertical.imageKey].src} alt="" width={media[vertical.imageKey].width} height={media[vertical.imageKey].height} loading="lazy" />
         <span className="panel-shade" aria-hidden="true" />
-        {vertical.bridge && <div className="panel-brand"><img className={`panel-logo ${vertical.bridge}`} src={brand[vertical.bridge]} alt={vertical.name} width={brandDimensions[vertical.bridge].width} height={brandDimensions[vertical.bridge].height} loading="lazy" /><span className="group-seal">Empresa do Grupo irbroker</span></div>}
+        {vertical.bridge && <div className="panel-brand"><img className={`panel-logo ${vertical.bridge}`} src={brand[vertical.bridge]} alt={vertical.name} width={brandDimensions[vertical.bridge].width} height={brandDimensions[vertical.bridge].height} loading="lazy" /></div>}
         <div className="panel-copy"><h3 className={vertical.bridge ? 'sr-only' : undefined}>{vertical.name}</h3><div className="panel-details" aria-hidden={desktop === true && expanded !== index ? true : undefined}><p>{vertical.tagline}</p><span className="panel-link">Conhecer</span></div></div>
       </motion.a>)}
     </div>
