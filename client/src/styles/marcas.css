@@ -134,21 +134,25 @@
 }
 /* Botão do topo e convite do rodapé na cor de cada marca. */
 .theme-comex .button-solid,
-.site-comex .site-footer .footer-editorial-closure .button-solid {
+.site-comex .site-footer .footer-editorial-closure .button-solid,
+.site-comex .barra-contato .button-solid {
   background: var(--comex-gold);
   color: var(--comex-navy);
 }
 .theme-comex .button-solid:hover,
-.site-comex .site-footer .footer-editorial-closure .button-solid:hover {
+.site-comex .site-footer .footer-editorial-closure .button-solid:hover,
+.site-comex .barra-contato .button-solid:hover {
   background: var(--comex-gold-light);
 }
 .theme-wellcare .button-solid,
-.site-wellcare .site-footer .footer-editorial-closure .button-solid {
+.site-wellcare .site-footer .footer-editorial-closure .button-solid,
+.site-wellcare .barra-contato .button-solid {
   background: var(--wellcare-blue);
   color: var(--white);
 }
 .theme-wellcare .button-solid:hover,
-.site-wellcare .site-footer .footer-editorial-closure .button-solid:hover {
+.site-wellcare .site-footer .footer-editorial-closure .button-solid:hover,
+.site-wellcare .barra-contato .button-solid:hover {
   background: var(--wellcare-blue-dark);
 }
 /* Escurecimento local atrás do título e do subtítulo: leitura estável em quadros claros do vídeo. */

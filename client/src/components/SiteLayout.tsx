@@ -224,6 +224,22 @@ function WhatsAppLink({ floating = false, suppressed = false }: { floating?: boo
   return <a ref={floating ? link : undefined} className={floating ? 'whatsapp-link' : 'button button-outline footer-whatsapp-link'} href="https://wa.me/5541963491818" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp (abre em nova aba)" hidden={suppressed || undefined}><WhatsAppIcon /><span className="whatsapp-label">Falar no WhatsApp</span></a>;
 }
 
+// Barra de contato do celular (12/11): aparece quando o topo da página sai da tela, para não repetir o botão do topo.
+function BarraContato({ href, label }: { href: string; label: string }) {
+  const [visivel, setVisivel] = useState(false);
+  useEffect(() => {
+    const topo = document.querySelector('.photo-hero');
+    if (!topo) { setVisivel(true); return; }
+    const observer = new IntersectionObserver(([entrada]) => setVisivel(!entrada.isIntersecting), { threshold: 0 });
+    observer.observe(topo);
+    return () => observer.disconnect();
+  }, []);
+  return <div className={`barra-contato${visivel ? ' is-visivel' : ''}`} aria-hidden={!visivel}>
+    <a className="button button-solid" href={href} tabIndex={visivel ? undefined : -1}>{label}</a>
+    <a className="barra-contato-whatsapp" href="https://wa.me/5541963491818" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp (abre em nova aba)" tabIndex={visivel ? undefined : -1}><WhatsAppIcon /></a>
+  </div>;
+}
+
 function InstagramIcon() {
   return <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
     <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" fill="none" stroke="currentColor" strokeWidth="1.3" />
@@ -302,6 +318,7 @@ export function Footer({ path = '/' }: { path?: string }) {
       <h2 id="privacy-policy-title">Política de privacidade</h2><p>[A PREENCHER]</p>
     </dialog>
     <WhatsAppLink floating suppressed={contactPage} />
+    {!contactPage && <BarraContato href={footerCtaHref} label={footerCtaLabel} />}
   </>;
 }
 

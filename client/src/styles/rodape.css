@@ -328,3 +328,59 @@
     transition: none;
   }
 }
+
+/* Barra de contato do celular (12/11): substitui a bolinha do WhatsApp e entra quando o topo sai da tela. */
+.barra-contato {
+  display: none;
+}
+@media (max-width: 767px) {
+  .whatsapp-link {
+    display: none !important;
+  }
+  .barra-contato {
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 35;
+    display: flex;
+    gap: 10px;
+    padding: 10px max(16px, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+    background: var(--graphite);
+    border-top: 1px solid var(--white-a12);
+    transform: translateY(100%);
+    transition: transform 220ms ease-out;
+  }
+  .barra-contato.is-visivel {
+    transform: none;
+  }
+  .site.site--menu-open .barra-contato {
+    display: none;
+  }
+  .barra-contato .button {
+    flex: 1;
+    min-height: 48px;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  .barra-contato-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    flex: none;
+    border: 1px solid var(--paper-a47);
+    color: var(--paper);
+  }
+  .barra-contato-whatsapp .whatsapp-icon {
+    width: 22px;
+    height: 22px;
+  }
+  .site-footer {
+    padding-bottom: 72px; /* a barra não cobre a linha final do rodapé */
+  }
+}
+@media (max-width: 767px) and (prefers-reduced-motion: reduce) {
+  .barra-contato {
+    transition: none;
+  }
+}
