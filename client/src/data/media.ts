@@ -106,7 +106,7 @@ export const brand = {
   light: "/media/irbroker-logo-branco_0c489336.webp",
   dark: "/media/irbroker-logo-escuro_e701814b.webp",
   symbol: "/media/irbroker-simbolo_bd6c0f49.webp",
-  comex: "/brand/comex-broker-horizontal-mono-branco.svg",
+  comex: "/brand/comex-broker-horizontal-escuro-metal.svg",
   wellcare: "/brand/wellcare-broker-empilhada-branco.svg",
 } as const;
 
