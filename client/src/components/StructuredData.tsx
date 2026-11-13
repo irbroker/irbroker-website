@@ -20,7 +20,7 @@ export function structuredData(path: string, origin: string, image: string) {
     areaServed: { "@type": "Country", name: "Brasil" },
     sameAs: [
       "https://www.instagram.com/irbroker_/",
-      "https://br.linkedin.com/company/irbroker",
+      "https://www.linkedin.com/company/irbroker/",
     ],
     address: [
       {

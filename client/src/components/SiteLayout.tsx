@@ -262,6 +262,13 @@ function normalizeSitePath(path: string) {
 }
 
 
+// Contas oficiais informadas pelo usuário em 12/11/2026.
+const REDES = {
+  irbroker: { nome: 'irbroker', instagram: 'https://www.instagram.com/irbroker_/', linkedin: 'https://www.linkedin.com/company/irbroker/' },
+  comex: { nome: 'Comex Broker', instagram: 'https://www.instagram.com/comexbroker_/', linkedin: 'https://www.linkedin.com/company/comexbroker/' },
+  wellcare: { nome: 'WellCare Broker', instagram: 'https://www.instagram.com/wellcarebroker_/', linkedin: 'https://www.linkedin.com/company/wellcarebroker/' },
+} as const;
+
 export function Footer({ path = '/' }: { path?: string }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const normalizedPath = normalizeSitePath(path);
@@ -273,6 +280,8 @@ export function Footer({ path = '/' }: { path?: string }) {
     ? footerVertical.bridge ? `Falar com a ${footerVertical.name}` : `Falar sobre ${footerVertical.name}`
     : 'Falar com um especialista';
   const footerCtaHref = footerVertical ? `/contato?frente=${encodeURIComponent(footerVertical.name)}` : '/contato';
+  // Redes da marca da página: Comex e WellCare têm contas próprias; o resto do site leva as da irbroker.
+  const redes = REDES[footerVertical?.bridge ?? 'irbroker'];
 
   return <>
     <footer className="site-footer" aria-label="Rodapé">
@@ -300,8 +309,8 @@ export function Footer({ path = '/' }: { path?: string }) {
               <li><button className="footer-editorial-link footer-policy" type="button" aria-haspopup="dialog" onClick={() => dialog.current?.showModal()}>Política de privacidade</button></li>
             </ul></nav>
             <div className="footer-social" role="group" aria-label="Redes sociais">
-              <a className="footer-social-link" href="https://www.instagram.com/irbroker_/" target="_blank" rel="noopener" aria-label="irbroker no Instagram (abre em nova aba)"><InstagramIcon /></a>
-              <a className="footer-social-link" href="https://br.linkedin.com/company/irbroker" target="_blank" rel="noopener" aria-label="irbroker no LinkedIn (abre em nova aba)"><LinkedInIcon /></a>
+              <a className="footer-social-link" href={redes.instagram} target="_blank" rel="noopener" aria-label={`${redes.nome} no Instagram (abre em nova aba)`}><InstagramIcon /></a>
+              <a className="footer-social-link" href={redes.linkedin} target="_blank" rel="noopener" aria-label={`${redes.nome} no LinkedIn (abre em nova aba)`}><LinkedInIcon /></a>
             </div>
           </div>
         </div>
