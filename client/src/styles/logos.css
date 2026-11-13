@@ -162,68 +162,72 @@
 .proof-number-row {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  column-gap: 32px;
-  row-gap: 24px;
 }
+/* 12/11: número grande em cima, legenda embaixo, fio fino entre as colunas. */
 .proof-number {
-  display: flex;
-  gap: 17px;
-  align-items: center;
+  padding: 4px 32px 0;
+  border-left: 1px solid var(--graphite-a18);
+}
+.proof-number:first-child {
+  padding-left: 0;
+  border-left: 0;
 }
 .proof-number strong {
+  display: block;
   font-variant-numeric: tabular-nums;
   font-family: 'Source Serif 4', Georgia, serif;
-  font-size: 42px;
-  line-height: 1.05;
-  font-weight: 400;
+  font-size: clamp(56px, 5.2vw, 80px);
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: -.02em;
   white-space: nowrap;
 }
-.proof-number .number-yellow {
-  color: var(--yellow-dark);
+.proof-sinal {
+  color: var(--teal-dark);
 }
 .proof-number p {
-  font-size: 15px;
+  margin-top: 14px;
+  font-size: 16px;
   line-height: 1.45;
-  max-width: 25ch;
+  max-width: 22ch;
   color: var(--ink-soft);
 }
 .proof-numbers .proof-data-note {
-  font-size: 16px;
+  font-size: 15px;
   color: var(--muted);
   line-height: 1.6;
-  margin-top: 20px;
+  margin-top: 36px;
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .proof-number {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    padding-inline: 20px;
   }
 }
 
 @media (max-width: 767px) {
   .proof-numbers {
-    padding-block: 28px 22px;
+    padding-block: 48px 32px;
   }
   .proof-number-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 26px 22px;
+    row-gap: 32px;
   }
-  .proof-number {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+  .proof-number,
+  .proof-number:first-child {
+    padding: 0 0 0 16px;
+    border-left: 1px solid var(--graphite-a18);
+  }
+  .proof-number:nth-child(odd) {
+    padding-left: 0;
+    border-left: 0;
   }
   .proof-number strong {
-    font-size: 36px;
+    font-size: 52px;
   }
   .proof-number p {
     font-size: 15px;
     line-height: 1.5;
-  }
-  .proof-numbers .proof-data-note {
-    font-size: 16px;
   }
 }
 

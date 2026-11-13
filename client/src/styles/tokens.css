@@ -7,6 +7,7 @@
   --graphite-soft: #2A2E33;
   --teal: #33B3BF; /* destaque irbroker */
   --teal-light: #5DC5CE; /* hover do botão */
+  --teal-dark: #1A747C; /* teal para texto sobre o papel (5:1) */
   --yellow: #FDC61B; /* fio amarelo */
   --yellow-dark: #A47A00; /* número em destaque (contraste AA) */
   --white: #FFF;
