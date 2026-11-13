@@ -14,12 +14,15 @@ export interface Guia {
   corpo: string;
   nota: string;
   fontes: { nome: string; url: string }[];
+  /** Foto do card em Conteúdos (12/11): uma diferente por guia. */
+  imagem: { src: string; alt: string };
 }
 
 export const guides: Guia[] = [
   {
     frente: "Comex Broker",
     slug: "/conteudos/seguros-obrigatorios-do-transportador",
+    imagem: { src: "/media/rodovia-aerea_44bd3e74.webp", alt: "Rodovia vista do alto, com caminhões, entre cidade e áreas verdes." },
     trilha: "Seguros obrigatórios do transportador",
     titulo:
       "RCTR-C, RC-DC e RC-V: os três seguros obrigatórios do transportador",
@@ -55,6 +58,7 @@ export const guides: Guia[] = [
   {
     frente: "Comex Broker",
     slug: "/conteudos/cif-fob-seguro-da-carga",
+    imagem: { src: "/media/navio-porto_9d08e456.webp", alt: "Navio de contêineres chegando a uma cidade portuária, visto do alto." },
     trilha: "CIF, FOB e o seguro da carga",
     titulo:
       "Fechou CIF? Saiba quem contrata o seguro da carga, e com qual cobertura",
@@ -84,6 +88,7 @@ export const guides: Guia[] = [
   {
     frente: "Real Estate",
     slug: "/conteudos/seguro-do-condominio-predio-e-terceiros",
+    imagem: { src: "/media/torres-vidro_1409d25b.webp", alt: "Torres de escritórios espelhadas vistas de baixo, com céu azul." },
     trilha: "Seguro do condomínio",
     titulo:
       "Seguro do condomínio: o prédio e os terceiros são perguntas diferentes",
@@ -111,6 +116,7 @@ export const guides: Guia[] = [
   {
     frente: "WellCare Broker",
     slug: "/conteudos/vida-saude-odonto-beneficios",
+    imagem: { src: "/media/cuidado-colaboradora_770a2105.webp", alt: "Profissional de saúde conversando com uma colaboradora perto da janela." },
     trilha: "Vida, saúde e odonto",
     titulo: "Vida em grupo, saúde e odonto: três benefícios, duas regras",
     seoTitle: "Vida em grupo, plano de saúde e odonto na empresa",

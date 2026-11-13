@@ -109,8 +109,9 @@ export default function Contents({ search = "" }: { search?: string }) {
       <div className="wrap content-feed" aria-live="polite" aria-atomic="false">
         {featured && (
           <article className="guide-featured">
+            <a className="guide-featured-photo" href={featured.slug} tabIndex={-1} aria-hidden="true"><img src={featured.imagem.src} alt="" width="1280" height="800" /></a>
             <div className="guide-featured-copy">
-              <p className="content-meta">{featured.frente}</p>
+              <p className="content-meta">{featured.frente} · {featured.tempoLeitura}</p>
               <h2>{featured.titulo}</h2>
               <p>{featured.linhaFina}</p>
               <a className="button button-solid" href={featured.slug}>
@@ -124,7 +125,8 @@ export default function Contents({ search = "" }: { search?: string }) {
             <h2>{featured ? "Outros guias" : "Guias"}</h2>
             <div className="guide-list">
               {rest.map(guide => (
-                <article className="guide-list-item" key={guide.slug}>
+                <article className="guide-list-item guide-card" key={guide.slug}>
+                  <div className="guide-card-photo"><img src={guide.imagem.src} alt="" width="1280" height="800" loading="lazy" /></div>
                   <p className="content-meta">{guide.frente}</p>
                   <h3>
                     <a href={guide.slug}>{guide.titulo}</a>
@@ -139,6 +141,7 @@ export default function Contents({ search = "" }: { search?: string }) {
         {notes.length > 0 && (
           <section id="radar" className="contents-radar">
             <h2>Radar do mercado</h2>
+            <p className="contents-radar-intro">Notícias do mercado segurador, com fonte e o que muda para a sua empresa.</p>
             <RadarList notes={notes} />
           </section>
         )}
