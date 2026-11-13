@@ -45,4 +45,4 @@ As linhas anteriores de vídeos e fotos ficam como histórico: esses arquivos fo
 
 | Arquivo | Fonte | Autor | Página | Licença |
 |---|---|---|---|---|
-| faria-lima-b32_d3e43a16.webp e og/about.jpg | Wikimedia Commons, "Whale monument - São Paulo - A 03" (B32, Av. Faria Lima) | Mauro Cateb | https://commons.wikimedia.org/wiki/File:Whale_monument_-_S%C3%A3o_Paulo_-_A_03.jpg | CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); redimensionada e recortada; crédito exibido no topo do Sobre |
+| faria-lima-baleia-dia_3d793351.webp e og/about.jpg | Wikimedia Commons, "Avenida Brigadeiro Faria Lima6" (baleia do B32, Av. Faria Lima) | Agent010 | https://commons.wikimedia.org/wiki/File:Avenida_Brigadeiro_Faria_Lima6.jpg | CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); redimensionada e recortada; crédito exibido no topo do Sobre |

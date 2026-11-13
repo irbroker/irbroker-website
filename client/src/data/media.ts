@@ -57,10 +57,10 @@ export const media = {
     height: 1067,
   },
   about: {
-    // Wikimedia Commons, "Whale monument - São Paulo - A 03", Mauro Cateb, CC BY-SA 4.0 (crédito obrigatório: legenda no topo do Sobre e CREDITOS.md)
-    src: "/media/faria-lima-b32_d3e43a16.webp",
+    // Wikimedia Commons, "Avenida Brigadeiro Faria Lima6", Agent010, CC BY-SA 4.0 (crédito obrigatório: legenda no topo do Sobre e CREDITOS.md)
+    src: "/media/faria-lima-baleia-dia_3d793351.webp",
     ogSrc: "/media/og/about.jpg",
-    alt: "A escultura da baleia iluminada diante da torre B32, na Avenida Faria Lima, em São Paulo, à noite.",
+    alt: "A escultura da baleia diante das torres espelhadas da Avenida Faria Lima, em São Paulo, de dia.",
     width: 1920,
     height: 1080,
   },
