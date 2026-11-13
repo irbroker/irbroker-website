@@ -23,6 +23,7 @@ function LogoGrid({ logos, label, gridClass }: LogoGridProps) {
             /* Sem loading="lazy": 31 logos de ~3 KB; a carga preguiçosa podia deixar a grade vazia. */
             decoding="async"
           />
+          {logo.cor && <img className="partner-logo-cor" src={logo.cor} alt="" aria-hidden="true" width={logo.width} height={logo.height} decoding="async" />}
         </div>
       ))}
     </div>

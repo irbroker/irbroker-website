@@ -115,10 +115,33 @@
   opacity: 0.7;
   transition: none;
 }
-.partner-logo:hover img {
-  opacity: 1;
-  filter: none;
-  mix-blend-mode: normal;
+/* Cor original ao passar o mouse (12/11): a versão colorida tem a mesma forma e posição da cinza e
+   aparece por cima dela; só em aparelhos com mouse. */
+.partner-logo {
+  position: relative;
+}
+.partner-logo .partner-logo-cor {
+  display: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .partner-logo .partner-logo-cor {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 220ms ease-out;
+  }
+  .partner-logo img:first-child {
+    transition: opacity 220ms ease-out;
+  }
+  .partner-logo:hover .partner-logo-cor {
+    opacity: 1;
+  }
+  .partner-logo:hover img:first-child {
+    opacity: 0;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
