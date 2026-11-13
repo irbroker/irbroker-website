@@ -9,20 +9,23 @@ const numbers = [
   ['+', 20, '', 'anos de experiência dos profissionais'],
 ] as const;
 
-// Conta de 0 até o valor uma vez, quando a faixa entra na tela (12/11). O HTML gerado já traz o valor final:
+// Conta até o valor sempre que a faixa entra na tela (12/11, pedido do usuário). Começa em ~60% do valor
+// para nunca mostrar um número "zerado" a quem volta para reler. O HTML gerado já traz o valor final:
 // sem JS ou com movimento reduzido, nada se mexe.
 function Contador({ valor }: { valor: number }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const visivel = useInView(ref, { once: true, amount: 0.6 });
+  const visivel = useInView(ref, { amount: 0.6 });
   const reduzido = useReducedMotion();
+  const inicio = Math.round(valor * 0.6);
   const [mostrado, setMostrado] = useState(valor);
   const [armado, setArmado] = useState(false);
-  useEffect(() => { if (!reduzido) { setArmado(true); setMostrado(0); } }, [reduzido]);
+  useEffect(() => { if (!reduzido) setArmado(true); }, [reduzido]);
   useEffect(() => {
-    if (!armado || !visivel) return;
-    const controle = animate(0, valor, { duration: 1.2, ease: [0.16, 1, 0.3, 1], onUpdate: v => setMostrado(Math.round(v)) });
+    if (!armado) return;
+    if (!visivel) { setMostrado(inicio); return; } // fora da tela: prepara a próxima entrada
+    const controle = animate(inicio, valor, { duration: 1.3, ease: [0.33, 1, 0.68, 1], onUpdate: v => setMostrado(Math.round(v)) });
     return () => controle.stop();
-  }, [armado, visivel, valor]);
+  }, [armado, visivel, valor, inicio]);
   return <span ref={ref}>{mostrado}</span>;
 }
 
