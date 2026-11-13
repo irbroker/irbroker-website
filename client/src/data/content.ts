@@ -169,8 +169,14 @@ const verticalData: Vertical[] = [
   },
 ];
 
-/** Ordem das 4 frentes (decisão de 11/11/2026): irbroker (Real Estate e Corporate), Comex Broker e WellCare Broker. */
-export const verticals: Vertical[] = verticalData;
+/** Ordem de exibição (decisão do usuário em 12/11/2026): Comex Broker, WellCare Broker, Corporate e Real Estate.
+ *  Vale para os cards da Home, o menu, o rodapé, o formulário de contato e os filtros de Conteúdos. */
+const ORDEM = ["comex-broker", "wellcare", "corporate", "real-estate"];
+export const verticals: Vertical[] = ORDEM.map(slug => {
+  const vertical = verticalData.find(item => item.slug === slug);
+  if (!vertical) throw new Error(`Especialidade sem dados: ${slug}`);
+  return vertical;
+});
 
 /** Endereços e nomes antigos (antes de 11/11/2026), mantidos para links já distribuídos. */
 export const redirects: Record<string, string> = {
