@@ -14,11 +14,11 @@ const method = [
   ],
   [
     "Acompanhar",
-    "Seguimos com o cliente na renovação, nas mudanças da operação e quando houver sinistro.",
+    "Seguimos com o cliente na renovação e em cada mudança da operação.",
   ],
 ];
 
-const DURACAO = 1.5; // segundos para a linha atravessar os três passos
+const DURACAO = 2.4; // segundos para a linha atravessar os três passos (12/11: mais lento, para ser percebido)
 
 // Momento autoral do site: quando a seção entra na tela, a linha do método se desenha uma vez
 // e acende cada passo ao alcançar o seu nó. Não fixa a rolagem. Sem JS ou com movimento
@@ -26,7 +26,7 @@ const DURACAO = 1.5; // segundos para a linha atravessar os três passos
 export default function MethodSteps() {
   const line = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
-  const inView = useInView(line, { once: true, amount: 0.6 });
+  const inView = useInView(line, { once: true, amount: 0.5 });
   const drawn = useMotionValue(0);
   // -1 = ainda não começou; 0..2 = passo alcançado; 3 = concluído (todos plenos)
   const [step, setStep] = useState(-1);
