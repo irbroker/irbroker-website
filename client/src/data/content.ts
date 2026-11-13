@@ -135,8 +135,9 @@ const verticalData: Vertical[] = [
   {
     slug: "wellcare",
     name: "WellCare Broker",
-    tagline: "Benefícios desenhados para a equipe da sua empresa.",
-    title: "Benefícios desenhados para a equipe da sua empresa.",
+    // Slogan da WellCare Broker aprovado pelo usuário em 12/11/2026.
+    tagline: "Por pessoas, para pessoas, através de pessoas.",
+    title: "Por pessoas, para pessoas, através de pessoas.",
     intro:
       "Saúde, odonto, vida, previdência e benefícios da equipe, da escolha à renovação. Empresa de benefícios do Grupo irbroker.",
     audience: [
