@@ -20,7 +20,7 @@ const process = [
 
 export default function About() {
   return <>
-    <section className="photo-hero vertical-hero about-hero photo-about"><img className="hero-photo" src={media.about.src} alt="" aria-hidden="true" width={media.about.width} height={media.about.height} fetchPriority="high" /><div className="hero-shade" aria-hidden="true" /><div className="wrap hero-content"><Breadcrumb className="hero-kicker" items={[{ label: 'Sobre' }]} /><h1>Corretora consultiva de seguros e benefícios para empresas.</h1></div></section>
+    <section className="photo-hero vertical-hero about-hero photo-about"><img className="hero-photo" src={media.about.src} alt="" aria-hidden="true" width={media.about.width} height={media.about.height} fetchPriority="high" /><div className="hero-shade" aria-hidden="true" /><p className="photo-credit">Foto: <a href="https://commons.wikimedia.org/wiki/File:Whale_monument_-_S%C3%A3o_Paulo_-_A_03.jpg" target="_blank" rel="noopener noreferrer">Mauro Cateb</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></p><div className="wrap hero-content"><Breadcrumb className="hero-kicker" items={[{ label: 'Sobre' }]} /><h1>Corretora consultiva de seguros e benefícios para empresas.</h1></div></section>
     <section className="section wrap about-intro">
       <h2 className="about-title">Quem somos</h2>
       <div className="about-intro-body">

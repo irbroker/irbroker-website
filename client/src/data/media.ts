@@ -57,10 +57,10 @@ export const media = {
     height: 1067,
   },
   about: {
-    // Pexels 9476576 (torre na Av. Faria Lima, São Paulo). Não é o prédio do escritório da irbroker.
-    src: "/media/faria-lima-torre.webp",
+    // Wikimedia Commons, "Whale monument - São Paulo - A 03", Mauro Cateb, CC BY-SA 4.0 (crédito obrigatório: legenda no topo do Sobre e CREDITOS.md)
+    src: "/media/faria-lima-b32_d3e43a16.webp",
     ogSrc: "/media/og/about.jpg",
-    alt: "Fachada de vidro de um edifício corporativo na Avenida Faria Lima, em São Paulo.",
+    alt: "A escultura da baleia iluminada diante da torre B32, na Avenida Faria Lima, em São Paulo, à noite.",
     width: 1920,
     height: 1080,
   },

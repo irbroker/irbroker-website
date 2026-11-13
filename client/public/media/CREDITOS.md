@@ -40,3 +40,9 @@ Escolhidas pelo usuário em 12/11 para não repetir os vídeos institucionais. T
 | WellCare Broker: wellcare-v2-loop, cuidado-colaboradora | 5252456 |
 
 As linhas anteriores de vídeos e fotos ficam como histórico: esses arquivos foram substituídos pela v2 e removidos do site.
+
+## Sobre (12/11/2026)
+
+| Arquivo | Fonte | Autor | Página | Licença |
+|---|---|---|---|---|
+| faria-lima-b32_d3e43a16.webp e og/about.jpg | Wikimedia Commons, "Whale monument - São Paulo - A 03" (B32, Av. Faria Lima) | Mauro Cateb | https://commons.wikimedia.org/wiki/File:Whale_monument_-_S%C3%A3o_Paulo_-_A_03.jpg | CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); redimensionada e recortada; crédito exibido no topo do Sobre |
