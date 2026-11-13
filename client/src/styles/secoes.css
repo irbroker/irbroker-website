@@ -508,16 +508,16 @@ p {
   font-weight: 300;
 }
 .process-symbol img {
-  width: 91px;
-  height: 106px;
+  width: 120px;
+  height: 140px;
   object-fit: contain;
 }
 /* Símbolo montado pelas duas peças (12/11): mesma caixa do símbolo inteiro. */
 .process-symbol-pecas {
   position: relative;
   display: block;
-  width: 91px;
-  height: 106px;
+  width: 120px;
+  height: 140px;
 }
 .process-symbol-pecas img {
   position: absolute;
