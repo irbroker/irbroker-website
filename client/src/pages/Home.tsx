@@ -16,6 +16,8 @@ const triggers = [
   ['Obra ou locação que exige garantia', 'O seguro garantia e a fiança locatícia substituem caução e fiador, no valor e prazo que o contrato pede.', '/real-estate', 'Real Estate', 'construction'],
 ] as const;
 
+const SLIDE_MS = 5000;
+
 export default function Home() {
   // Troca de foto só no desktop com movimento; sem JS, no celular ou com movimento reduzido fica a foto do porto.
   const [swap, setSwap] = useState(false);
@@ -29,6 +31,14 @@ export default function Home() {
     query.addEventListener('change', update);
     return () => query.removeEventListener('change', update);
   }, []);
+  // Slide (12/11): a cada 5 s a foto passa ao caso seguinte e o caso fica em destaque na lista.
+  // Para enquanto o mouse ou o foco do teclado está no bloco; não roda no celular nem com movimento reduzido.
+  const [pausado, setPausado] = useState(false);
+  useEffect(() => {
+    if (!swap || pausado) return;
+    const id = window.setInterval(() => setPhotos(([current]) => [(current + 1) % triggers.length, current]), SLIDE_MS);
+    return () => window.clearInterval(id);
+  }, [swap, pausado]);
   return <>
     <Hero title="Seguros corporativos começam pela sua operação." description="Corretora consultiva para empresas que precisam proteger patrimônio, operações e pessoas." className="home-hero">
       <Button>Falar com um especialista</Button><Button href="https://wa.me/5541963491818" secondary>Falar no WhatsApp</Button>
@@ -36,13 +46,13 @@ export default function Home() {
     {/* Ordem testada em 12/11: áreas logo após o topo, Método separa as duas faixas de fotos, números + seguradoras + clientes juntos como prova. */}
     <Verticals />
     <MethodSteps />
-    <section className="triggers-split">
+    <section className={`triggers-split${swap && !pausado ? ' is-slide' : ''}`} style={{ '--slide-ms': `${SLIDE_MS}ms` } as React.CSSProperties} onMouseEnter={() => setPausado(true)} onMouseLeave={() => setPausado(false)} onFocus={() => setPausado(true)} onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setPausado(false); }}>
       <div className="trigger-photo-column"><div className="trigger-photo-sticky"><img src={media.triggers.src} alt={swap ? '' : media.triggers.alt} width={media.triggers.width} height={media.triggers.height} loading="lazy" />
         {swap && triggers.map(([title, , , , key], index) => <img key={key} className={`trigger-photo-swap ${active === index ? 'is-active' : previous === index ? 'is-previous' : ''}`} src={media[key].src} alt="" aria-hidden="true" width={media[key].width} height={media[key].height} />)}
       </div></div>
       <div className="trigger-copy">
         <AnimatedHeading>Quando a operação muda, a apólice precisa mudar junto.</AnimatedHeading>
-        <div className="trigger-list">{triggers.map(([title, text, href], index) => <article key={title} className={swap && active === index ? 'is-active' : undefined} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)}><h3><a className="trigger-link" href={href}>{title}</a></h3><p>{text}</p></article>)}</div>
+        <div className="trigger-list">{triggers.map(([title, text, href], index) => <article key={title} className={swap && active === index ? 'is-active' : undefined} onMouseEnter={() => setActive(index)} onFocus={() => setActive(index)}>{swap && active === index && <span key={`tempo-${active}`} className="trigger-tempo" aria-hidden="true" />}<h3><a className="trigger-link" href={href}>{title}</a></h3><p>{text}</p></article>)}</div>
       </div>
     </section>
     <ProofBand />
