@@ -512,6 +512,17 @@ p {
   height: 106px;
   object-fit: contain;
 }
+/* Símbolo montado pelas duas peças (12/11): mesma caixa do símbolo inteiro. */
+.process-symbol-pecas {
+  position: relative;
+  display: block;
+  width: 91px;
+  height: 106px;
+}
+.process-symbol-pecas img {
+  position: absolute;
+  inset: 0;
+}
 .process-connector {
   display: block;
   position: relative;
@@ -623,7 +634,7 @@ p {
 }
 .process-connector {
   background: none;
-  color: var(--connector);
+  color: var(--accent); /* linha teal, desenhada pela animação (12/11) */
   height: 2px;
 }
 .process-connector::after {
