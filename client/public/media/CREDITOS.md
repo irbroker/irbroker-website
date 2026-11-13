@@ -46,3 +46,7 @@ As linhas anteriores de vídeos e fotos ficam como histórico: esses arquivos fo
 | Arquivo | Fonte | Autor | Página | Licença |
 |---|---|---|---|---|
 | faria-lima-baleia-dia_3d793351.webp e og/about.jpg | Wikimedia Commons, "Avenida Brigadeiro Faria Lima6" (baleia do B32, Av. Faria Lima) | Agent010 | https://commons.wikimedia.org/wiki/File:Avenida_Brigadeiro_Faria_Lima6.jpg | CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); redimensionada e recortada; crédito exibido no topo do Sobre |
+
+## Conteúdos (12/11/2026)
+
+Fotos do Pexels (licença Pexels), exclusivas desta página: guias guia-cif 33675681, guia-condominio 16821468, guia-beneficios 4269274, rodovia-aerea 35371932; Radar radar-frete 12770545, radar-norma 7054502, radar-antt 37124290, radar-tcu 6077326, radar-ans 6129147. Fotos das notícias originais não são usadas (direitos dos veículos; gov.br é CC BY-ND, sem recorte).

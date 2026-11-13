@@ -5,6 +5,8 @@ export type RadarNote = {
   resumo: string;
   oQueMuda: string;
   fontes: { nome: string; url: string }[];
+  /** Foto da nota (Pexels, 12/11): fotos das próprias notícias têm direitos dos veículos. */
+  imagem?: string;
 };
 
 // Só notas conferidas na fonte oficial (WellCare e Construção conferidas em 10/11/2026).
@@ -12,6 +14,7 @@ export const radar: RadarNote[] = [
   {
     "frente": "Comex Broker",
     "data": "05/10/2026",
+    "imagem": "/media/radar-frete_c8f789a4.webp",
     "titulo": "Frete de contêiner sobe quase 300% em cinco meses e atrasos mudam rotas nos portos",
     "resumo": "Segundo reportagem da CNN Brasil, o frete internacional de contêineres chegou a subir quase 300% em cinco meses, pressionado pelo custo do combustível dos navios. A Associação Brasileira dos Terminais Portuários (ABTP) relata mais de 700 linhas marítimas afetadas, navios chegando concentrados, com filas para atracar, e empresas deslocando cargas entre portos.",
     "oQueMuda": "Atraso e troca de porto alongam o tempo da carga em trânsito e podem mudar o trajeto previsto. Vale conferir se o seguro da viagem acompanha a rota real, o destino final e o prazo do embarque, e se o valor declarado reflete os custos atuais.",
@@ -25,6 +28,7 @@ export const radar: RadarNote[] = [
   {
     "frente": "Comex Broker",
     "data": "01/07/2026",
+    "imagem": "/media/radar-antt_16150345.webp",
     "titulo": "Verificação automática dos seguros obrigatórios entrou na fase de produção na ANTT",
     "resumo": "Pelo cronograma da ANTT, o sistema que recebe das seguradoras os dados do RCTR-C, do RC-DC e do RC-V passou do período de homologação para o ambiente de produção a partir de 1º de julho de 2026, para inscrição e manutenção do RNTRC. Segundo a agência, o descumprimento das regras de comprovação pode levar à suspensão do RNTRC.",
     "oQueMuda": "A comprovação deixa de depender de papel. Se uma das três apólices vencer ou não estiver vinculada ao RNTRC, a falha aparece no cruzamento de dados. Vale conferir vigência e vínculo das três antes da próxima renovação.",
@@ -42,6 +46,7 @@ export const radar: RadarNote[] = [
   {
     "frente": "Corporate",
     "data": "19/08/2026",
+    "imagem": "/media/radar-norma_6d23d579.webp",
     "titulo": "Nova norma dos seguros de danos vale para contratos formados ou renovados a partir de 5 de janeiro de 2027",
     "resumo": "A Resolução CNSP 496/2026 fixa regras gerais para os contratos de seguros de danos e revoga a Resolução CNSP 407/2021. Segundo a Susep, as seguradoras têm até 4 de janeiro de 2027 para adaptar os planos, e a regra passa a ser obrigatória para contratos formados ou renovados a partir de 5 de janeiro de 2027. A norma fixa prazo máximo de 30 dias para a seguradora regular o sinistro e se manifestar sobre a cobertura.",
     "oQueMuda": "Renovações de patrimonial, responsabilidade civil e outros seguros de danos a partir de janeiro seguem as novas regras. Revise as condições antes da renovação de janeiro.",
@@ -55,6 +60,7 @@ export const radar: RadarNote[] = [
   {
     "frente": "WellCare Broker",
     "data": "2026 (Agenda Regulatória 2026-2028)",
+    "imagem": "/media/radar-ans_e6b0cbcf.webp",
     "titulo": "ANS prevê para o 4º trimestre de 2026 a decisão sobre o aprimoramento das regras de reajuste dos planos coletivos",
     "resumo": "A Agenda Regulatória 2026-2028 da ANS inclui o tema “Reajuste coletivo”: concluir o aprimoramento das regras de reajuste dos planos coletivos, para reduzir a assimetria de informação. A deliberação final está prevista para o 4º trimestre de 2026.",
     "oQueMuda": "A ANS fixa o percentual máximo de reajuste só para os planos individuais e familiares. No coletivo empresarial com 30 vidas ou mais, o reajuste é negociado entre a empresa e a operadora; com menos de 30 vidas, vale um percentual único para todos os contratos agrupados da operadora. Vale acompanhar o tema e revisar o contrato antes da próxima data de reajuste.",
@@ -72,6 +78,7 @@ export const radar: RadarNote[] = [
   {
     "frente": "Corporate",
     "data": "10/06/2026",
+    "imagem": "/media/radar-tcu_19f43e5a.webp",
     "titulo": "TCU aponta como indevida a exigência simultânea de garantia de execução e de seguro-garantia com cláusula de retomada",
     "resumo": "No Acórdão 1513/2026-Plenário, de 10/06/2026, o TCU analisou a licitação da nova sede do Crea/SP. O tribunal considerou indevido exigir ao mesmo tempo a garantia de execução do art. 96 da Lei 14.133/2021 e o seguro-garantia com cláusula de retomada do art. 102, porque este é uma espécie do próprio seguro-garantia. Também apontou que fixar 10% para a garantia com retomada, acima do patamar de 5%, exige motivação técnica prévia.",
     "oQueMuda": "Em editais de obras regidos pela Lei 14.133/2021, a exigência das duas garantias ao mesmo tempo, ou um percentual acima de 5% sem justificativa técnica, pode ser questionada. Antes de precificar a garantia de uma licitação, vale ler o edital com a corretora.",

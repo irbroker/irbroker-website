@@ -89,8 +89,9 @@ export function RadarList({ notes }: { notes: RadarNote[] }) {
     <ul className="radar-list">
       {notes.map(note => (
         <li key={note.titulo}>
-          <details className="radar-item" id={radarId(note)}>
+          <details className={`radar-item${note.imagem ? ' radar-item--foto' : ''}`} id={radarId(note)}>
             <summary>
+              {note.imagem && <img className="radar-thumb" src={note.imagem} alt="" width="640" height="400" loading="lazy" />}
               <RadarMeta note={note} />
               <h3>{note.titulo}</h3>
             </summary>
