@@ -718,3 +718,51 @@ p {
     font-size: 25px;
   }
 }
+
+/* Perguntas frequentes das especialidades (12/11): <details> nativo, acessível por teclado. */
+.faq-list {
+  border-top: 1px solid var(--line);
+}
+.faq-list details {
+  border-bottom: 1px solid var(--line);
+}
+.faq-list summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: 22px;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: clamp(20px, 1.8vw, 24px);
+  font-weight: 400;
+  line-height: 1.35;
+  cursor: pointer;
+  list-style: none;
+}
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+.faq-list summary::after {
+  content: '+';
+  flex: none;
+  color: var(--accent);
+  font-size: 1.2em;
+  line-height: 1;
+  transition: transform 180ms ease-out;
+}
+.faq-list details[open] summary::after {
+  transform: rotate(45deg);
+}
+.faq-list details p {
+  max-width: 68ch;
+  margin: -6px 0 24px;
+  color: var(--body);
+  font-size: 17px;
+  line-height: 1.65;
+}
+@media (prefers-reduced-motion: reduce) {
+  .faq-list summary::after {
+    transition: none;
+  }
+}
+

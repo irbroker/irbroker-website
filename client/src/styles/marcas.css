@@ -164,3 +164,11 @@
   pointer-events: none;
   background: radial-gradient(ellipse 60% 55% at 28% 62%, rgba(13,27,42,.6) 0%, rgba(13,27,42,.35) 55%, rgba(13,27,42,0) 100%);
 }
+/* Perguntas frequentes na tipografia de cada marca. */
+.theme-comex .faq-list summary {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+.theme-wellcare .faq-list summary {
+  font-family: 'Figtree', sans-serif;
+}

@@ -2,7 +2,7 @@
 // para usar a mesma origem do canonical e não depender da hidratação.
 import { brand } from "../data/media";
 import { guides } from "../data/guides";
-import { routes } from "../data/content";
+import { routes, verticals } from "../data/content";
 
 const PUBLISHED = "2026-11-09";
 
@@ -62,6 +62,18 @@ export function structuredData(path: string, origin: string, image: string) {
       item: abs(item.path),
     })),
   });
+
+  // Perguntas frequentes da especialidade: o mesmo texto que aparece na página.
+  const faq = verticals.find(item => `/${item.slug}` === path)?.faq;
+  if (faq)
+    graph.push({
+      "@type": "FAQPage",
+      mainEntity: faq.map(([pergunta, resposta]) => ({
+        "@type": "Question",
+        name: pergunta,
+        acceptedAnswer: { "@type": "Answer", text: resposta },
+      })),
+    });
 
   if (guide) {
     const publisher = {

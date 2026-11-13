@@ -18,6 +18,8 @@ export type Vertical = {
   signals: string[];
   imageKey: VerticalImageKey;
   bridge?: "comex" | "wellcare";
+  /** Perguntas frequentes da página (base: cérebro da Lia, 12/11/2026). */
+  faq?: [string, string][];
   /** Nota de aceitação própria (saúde: quem aceita é a operadora). */
   acceptance?: string;
 };
@@ -51,6 +53,13 @@ const verticalData: Vertical[] = [
       "Aditivo que aumentou o valor do contrato",
       "Fiador que desistiu ou caução travando o caixa",
     ],
+    faq: [
+      ["A irbroker faz seguro garantia para licitações e contratos?", "Sim. Trabalhamos com garantias contratuais, como a garantia de proposta e a de execução, em licitações e contratos privados. A aceitação e as condições dependem da análise da seguradora sobre a empresa e o contrato."],
+      ["Qual a diferença entre garantia de proposta e garantia de execução?", "A de proposta acompanha a participação na licitação. A de execução garante que o contrato será cumprido depois de assinado. O edital ou o contrato diz qual é exigida e em que condições."],
+      ["Dá para usar seguro no lugar do fiador na locação?", "Sim. A fiança locatícia substitui o fiador ou o depósito caução e garante ao proprietário o aluguel e os encargos previstos no contrato. A aprovação depende da análise de quem aluga."],
+      ["O seguro garantia cobre danos à obra?", "Não, são proteções diferentes. A garantia de execução cobre o cumprimento do contrato; danos à própria obra são tema do seguro de riscos de engenharia, e danos a vizinhos e terceiros, da responsabilidade civil de obras."],
+      ["A irbroker atende fundos imobiliários e condomínios logísticos?", "Sim. Fundos e investidores, incorporadoras, construtoras, condomínios logísticos e torres de escritórios estão entre os perfis que atendemos, com garantias, seguro patrimonial e responsabilidades."],
+    ],
     imageKey: "construction",
   },
   {
@@ -78,6 +87,13 @@ const verticalData: Vertical[] = [
       "Edital ou cliente grande exigindo garantia, RC ou seguro de riscos cibernéticos",
       "Depósito judicial travando o caixa",
     ],
+    faq: [
+      ["O que é o seguro D&O?", "É o seguro de responsabilidade de diretores e administradores por atos de gestão. Protege o patrimônio pessoal dos gestores, com custos de defesa e indenizações conforme a apólice."],
+      ["Qual a diferença entre RC geral e D&O?", "O RC geral responde por danos a terceiros causados pela atividade da empresa. O D&O protege os gestores por reclamações ligadas a decisões de gestão. São riscos diferentes, e um não substitui o outro."],
+      ["O que o seguro de riscos cibernéticos costuma cobrir?", "Em geral, as consequências de incidentes como vazamento de dados ou ataque: custos de resposta e recuperação e reclamações de terceiros, conforme a apólice. O desenho muda bastante de uma empresa para outra."],
+      ["O seguro garantia pode substituir um depósito judicial?", "A garantia judicial existe para ser usada no processo no lugar de depósito ou penhora, conforme o que o juízo aceitar. Se cabe no seu processo depende da análise do caso."],
+      ["A irbroker atende pequenas e médias empresas?", "Sim. Trabalhamos com seguro empresarial e patrimonial para pequenas, médias e grandes empresas, além das linhas de responsabilidade e garantias."],
+    ],
     imageKey: "corporate",
   },
   {
@@ -102,6 +118,14 @@ const verticalData: Vertical[] = [
       "Novas origens, destinos ou mercadorias",
       "Compra em CIF sem saber o que o seguro do fornecedor cobre",
       "Dúvida se toda carga está averbada, com limite acima da carga mais cara",
+    ],
+    faq: [
+      ["A Comex Broker faz frete ou despacho aduaneiro?", "Não. A Comex Broker é corretora de seguros, empresa do Grupo irbroker, e cuida do seguro de transporte de cargas, internacional e nacional. Frete e despacho ficam com transportadoras, agentes de carga e despachantes."],
+      ["Comprei em CIF. Minha carga já está protegida?", "No CIF quem contrata o seguro é o vendedor, e a regra pede apenas uma cobertura mínima, mais restrita. Se o embarque está protegido, e em que condições, depende da apólice que foi feita."],
+      ["Comprei em FOB. Preciso contratar seguro?", "No FOB o seguro não está entre as obrigações do vendedor, e o risco passa ao comprador em um ponto da viagem. Contratar é decisão de quem compra, e muitos importadores preferem ter apólice própria."],
+      ["Quais seguros a transportadora rodoviária precisa ter?", "Desde a Lei 14.599/2023, o RCTR-C, o RC-DC e o RC-V são os três seguros obrigatórios do transportador rodoviário de cargas, cada um para um risco diferente."],
+      ["O RCTR-C cobre roubo de carga?", "Não. O RCTR-C responde por danos à carga em acidentes com o veículo, como colisão, tombamento ou incêndio. Roubo e furto são assunto do RC-DC."],
+      ["O que é averbação?", "É a comunicação de cada embarque à seguradora, com os dados da carga. Embarque não averbado, ou averbado fora do prazo, pode ficar sem proteção."],
     ],
     imageKey: "port",
     bridge: "comex",
@@ -131,6 +155,13 @@ const verticalData: Vertical[] = [
       "Aviso de reajuste ou aniversário do contrato",
       "Equipe nova em outra cidade",
       "Pedido de odonto, dependentes ou vida em grupo",
+    ],
+    faq: [
+      ["A WellCare Broker é uma operadora de plano de saúde?", "Não. A WellCare Broker é corretora, empresa de benefícios do Grupo irbroker. Entende o perfil da equipe, busca alternativas junto às operadoras e seguradoras e acompanha a empresa depois da contratação."],
+      ["O que é carência?", "É o período depois da contratação em que alguns procedimentos ainda não podem ser usados. O prazo muda conforme o procedimento e o contrato."],
+      ["O que é coparticipação?", "É quando o colaborador paga uma parte da consulta ou do exame no momento em que usa. Muitas empresas adotam para equilibrar o custo do plano."],
+      ["Seguro de vida é a mesma coisa que plano de saúde?", "Não. O plano de saúde cuida das despesas com atendimento médico; o seguro de vida é uma proteção financeira para a família em caso de morte ou invalidez, conforme a apólice."],
+      ["Dá para incluir dependentes no plano da empresa?", "Em geral os planos empresariais permitem dependentes, mas quem pode entrar depende das regras de cada contrato."],
     ],
     imageKey: "wellcare",
     bridge: "wellcare",
