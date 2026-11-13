@@ -10,10 +10,10 @@ import MethodSteps from '../components/MethodSteps';
 
 // Cada caso: título, texto, página da área e foto que entra na coluna da esquerda (desktop).
 const triggers = [
-  ['Contrato ou edital que exige garantia', 'Seguro garantia substitui fiança e caução, no valor e prazo que o contrato pede.', '/real-estate', 'Real Estate', 'construction'],
-  ['Conselho ou investidor que pede D&O', 'O D&O protege o patrimônio pessoal de diretores e conselheiros.', '/corporate', 'Corporate', 'corporate'],
-  ['Equipe que cresceu', 'O benefício que servia para dez pessoas pode não servir para cinquenta.', '/wellcare', 'WellCare Broker', 'wellcare'],
   ['Carga em uma rota nova', 'Mudanças na rota ou na mercadoria podem mexer nas condições da apólice de transporte.', '/comex-broker', 'Comex Broker', 'port'],
+  ['Equipe que cresceu', 'O benefício que servia para dez pessoas pode não servir para cinquenta.', '/wellcare', 'WellCare Broker', 'wellcare'],
+  ['Conselho ou investidor que pede D&O', 'O D&O protege o patrimônio pessoal de diretores e conselheiros.', '/corporate', 'Corporate', 'corporate'],
+  ['Obra ou locação que exige garantia', 'O seguro garantia e a fiança locatícia substituem caução e fiador, no valor e prazo que o contrato pede.', '/real-estate', 'Real Estate', 'construction'],
 ] as const;
 
 export default function Home() {

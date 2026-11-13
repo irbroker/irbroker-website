@@ -54,8 +54,8 @@ const verticalData: Vertical[] = [
       "Fiador que desistiu ou caução travando o caixa",
     ],
     faq: [
-      ["A irbroker faz seguro garantia para licitações e contratos?", "Sim. Trabalhamos com garantias contratuais, como a garantia de proposta e a de execução, em licitações e contratos privados. A aceitação e as condições dependem da análise da seguradora sobre a empresa e o contrato."],
-      ["Qual a diferença entre garantia de proposta e garantia de execução?", "A de proposta acompanha a participação na licitação. A de execução garante que o contrato será cumprido depois de assinado. O edital ou o contrato diz qual é exigida e em que condições."],
+      ["A irbroker faz seguro garantia para obras e contratos imobiliários?", "Sim. Trabalhamos com garantias contratuais para obras, incorporações e contratos de locação, além de fiança locatícia e título de capitalização. A aceitação e as condições dependem da análise da seguradora sobre a empresa e o contrato."],
+      ["O que é o título de capitalização usado no aluguel?", "É um título com regras próprias que pode ser usado como garantia no contrato de locação. Em geral o valor fica aplicado durante o contrato e pode ser resgatado no final, conforme as regras do título. Não é seguro, e vale comparar com as outras garantias."],
       ["Dá para usar seguro no lugar do fiador na locação?", "Sim. A fiança locatícia substitui o fiador ou o depósito caução e garante ao proprietário o aluguel e os encargos previstos no contrato. A aprovação depende da análise de quem aluga."],
       ["O seguro garantia cobre danos à obra?", "Não, são proteções diferentes. A garantia de execução cobre o cumprimento do contrato; danos à própria obra são tema do seguro de riscos de engenharia, e danos a vizinhos e terceiros, da responsabilidade civil de obras."],
       ["A irbroker atende fundos imobiliários e condomínios logísticos?", "Sim. Fundos e investidores, incorporadoras, construtoras, condomínios logísticos e torres de escritórios estão entre os perfis que atendemos, com garantias, seguro patrimonial e responsabilidades."],
@@ -91,6 +91,7 @@ const verticalData: Vertical[] = [
       ["O que é o seguro D&O?", "É o seguro de responsabilidade de diretores e administradores por atos de gestão. Protege o patrimônio pessoal dos gestores, com custos de defesa e indenizações conforme a apólice."],
       ["Qual a diferença entre RC geral e D&O?", "O RC geral responde por danos a terceiros causados pela atividade da empresa. O D&O protege os gestores por reclamações ligadas a decisões de gestão. São riscos diferentes, e um não substitui o outro."],
       ["O que o seguro de riscos cibernéticos costuma cobrir?", "Em geral, as consequências de incidentes como vazamento de dados ou ataque: custos de resposta e recuperação e reclamações de terceiros, conforme a apólice. O desenho muda bastante de uma empresa para outra."],
+      ["Qual a diferença entre garantia de proposta e garantia de execução?", "A de proposta acompanha a participação na licitação. A de execução garante que o contrato será cumprido depois de assinado. O edital ou o contrato diz qual é exigida e em que condições."],
       ["O seguro garantia pode substituir um depósito judicial?", "A garantia judicial existe para ser usada no processo no lugar de depósito ou penhora, conforme o que o juízo aceitar. Se cabe no seu processo depende da análise do caso."],
       ["A irbroker atende pequenas e médias empresas?", "Sim. Trabalhamos com seguro empresarial e patrimonial para pequenas, médias e grandes empresas, além das linhas de responsabilidade e garantias."],
     ],
@@ -100,22 +101,23 @@ const verticalData: Vertical[] = [
     slug: "comex-broker",
     name: "Comex Broker",
     tagline: "Seguro e gestão de riscos para o transporte de cargas, internacional e nacional.",
-    title: "O seguro da carga, da estrada ao porto.",
+    title: "O seguro da carga, do porto à estrada.",
     intro:
-      "Seguro e gestão de riscos para o transporte de cargas, internacional e nacional. Para quem transporta, embarca, importa e exporta. Empresa de seguro de transporte do Grupo irbroker.",
+      "Seguro e gestão de riscos para o transporte de cargas, internacional e nacional. Para quem importa, exporta, embarca e transporta. Empresa de seguro de transporte do Grupo irbroker.",
     audience: [
-      "Transportadoras e operadores logísticos",
-      "Embarcadores e indústrias",
       "Importadores, exportadores e tradings",
       "Agentes de carga e despachantes aduaneiros",
+      "Embarcadores e indústrias",
+      "Transportadoras e operadores logísticos",
     ],
     solutions: [
       "Seguro de transporte internacional e nacional",
       "RCTR-C, RC-DC e RC-V (seguros obrigatórios do transportador)",
+      "Certificado do embarque emitido na hora, com as informações em mãos",
     ],
     signals: [
-      "Nova rota, novo tipo de carga ou frota maior",
       "Novas origens, destinos ou mercadorias",
+      "Nova rota, novo tipo de carga ou frota maior",
       "Compra em CIF sem saber o que o seguro do fornecedor cobre",
       "Dúvida se toda carga está averbada, com limite acima da carga mais cara",
     ],
@@ -136,7 +138,7 @@ const verticalData: Vertical[] = [
     tagline: "Benefícios desenhados para a equipe da sua empresa.",
     title: "Benefícios desenhados para a equipe da sua empresa.",
     intro:
-      "Saúde, odonto, vida e acidentes pessoais, da escolha à renovação. Empresa de benefícios do Grupo irbroker.",
+      "Saúde, odonto, vida, previdência e benefícios da equipe, da escolha à renovação. Empresa de benefícios do Grupo irbroker.",
     audience: [
       "Empresas de todos os portes",
       "RH e gestão de benefícios",
@@ -222,19 +224,19 @@ const metadata: Record<string, PageMeta> = {
   "/": {
     title: "Corretora de seguros corporativos em São Paulo | irbroker",
     description:
-      "Corretora de seguros para empresas em São Paulo (Faria Lima) e São Bernardo do Campo: mercado imobiliário, corporate, transporte de cargas e benefícios.",
+      "Corretora de seguros para empresas em São Paulo (Faria Lima) e São Bernardo do Campo: transporte de cargas, benefícios, corporate e mercado imobiliário.",
     imageKey: "hero",
   },
   "/comex-broker": {
     title: "Seguro de transporte de cargas internacional e nacional | Comex Broker",
     description:
-      "Seguro e gestão de riscos para o transporte de cargas, internacional e nacional, de transportadoras a importadores e exportadores. RCTR-C, RC-DC e RC-V.",
+      "Seguro e gestão de riscos para o transporte de cargas, internacional e nacional, de importadores e exportadores a transportadoras. RCTR-C, RC-DC e RC-V.",
     imageKey: "comexHero",
   },
   "/wellcare": {
     title: "Plano de saúde e benefícios empresariais | WellCare Broker",
     description:
-      "Plano de saúde, odonto, vida em grupo e acidentes pessoais para empresas, da escolha à renovação. A WellCare Broker é a empresa de benefícios do Grupo irbroker.",
+      "Plano de saúde, odonto, vida em grupo, acidentes pessoais e previdência para empresas, da escolha à renovação. A WellCare Broker é a empresa de benefícios do Grupo irbroker.",
     imageKey: "wellcare",
   },
   "/real-estate": {
@@ -258,7 +260,7 @@ const metadata: Record<string, PageMeta> = {
   "/conteudos": {
     title: "Radar do mercado e guias de seguros para empresas | irbroker",
     description:
-      "Notícias do mercado segurador e guias de seguros para empresas, por especialidade do Grupo irbroker: mercado imobiliário, corporate, transporte de cargas e benefícios.",
+      "Notícias do mercado segurador e guias de seguros para empresas, por especialidade do Grupo irbroker: transporte de cargas, benefícios, corporate e mercado imobiliário.",
     imageKey: "contents",
   },
   "/contato": {
