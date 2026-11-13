@@ -145,51 +145,20 @@ export default function Contact() {
   }
 
   return (
+    <>
+    {/* Contato v3 (12/11): topo com foto como as outras páginas, formulário largo no centro e faixa curta no fim.
+        Os endereços ficam só no rodapé (sem repetir). */}
+    <section className="photo-hero vertical-hero contact-hero">
+      <img className="hero-photo" src="/media/contato-reuniao_6d512840.webp" alt="" aria-hidden="true" width="1920" height="1080" fetchPriority="high" />
+      <div className="hero-shade" aria-hidden="true" />
+      <div className="wrap hero-content">
+        <Breadcrumb className="hero-kicker" items={[{ label: "Contato" }]} />
+        <h1>Conte como a sua empresa opera.</h1>
+        <p className="hero-description">Um especialista da irbroker retorna pelo telefone ou e-mail informado.</p>
+      </div>
+    </section>
     <section className="contact-page">
-      <div className="contact-page__layout">
-        <div className="contact-aside">
-          <div className="contact-aside__intro">
-            <Breadcrumb
-              className="contact-aside__label section-label"
-              items={[{ label: "Contato" }]}
-            />
-            <h1>Conte como a sua empresa opera.</h1>
-            <p className="contact-aside__lead">
-              Um especialista da irbroker retorna pelo telefone ou e-mail
-              informado.
-            </p>
-            {/* 12/11: o que acontece depois do envio, em passos (antes era uma nota solta sob o botão). */}
-            <ol className="contact-steps">
-              <li><strong>Você conta como a empresa opera</strong><span>Atividade, contratos, equipe ou cargas: o que pesa hoje.</span></li>
-              <li><strong>Um especialista retorna</strong><span>Pelo telefone ou e-mail informado, para entender o caso.</span></li>
-              <li><strong>Você recebe alternativas comparadas</strong><span>Opções entre seguradoras, explicadas para você decidir.</span></li>
-            </ol>
-          </div>
-
-          <div className="contact-aside__block">
-            <h2>Outros caminhos</h2>
-            <a
-              className="contact-aside__whatsapp"
-              href="https://wa.me/5541963491818"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Falar no WhatsApp
-              <span className="sr-only"> (abre em nova aba)</span>
-            </a>
-            <p className="contact-aside__lia">
-              No WhatsApp, o primeiro atendimento é da Lia, a assistente virtual
-              da irbroker. Ela tira dúvidas gerais e passa o seu caso para uma
-              consultora.
-            </p>
-            <div className="contact-aside__direct-links">
-              <a href="mailto:comercial@irbroker.com.br">
-                comercial@irbroker.com.br
-              </a>
-            </div>
-          </div>
-        </div>
-
+      <div className="wrap contact-form-wrap">
         <div className="contact-form-column">
           {success ? (
             <p
@@ -344,43 +313,29 @@ export default function Contact() {
             </form>
           )}
         </div>
-
-        <div className="contact-aside contact-aside__offices">
+      </div>
+    </section>
+    <section className="contact-strip" aria-label="Outros caminhos">
+      <div className="wrap contact-strip-grid">
+        <div>
+          <h2>WhatsApp</h2>
+          <p>O primeiro atendimento é da Lia, a assistente virtual da irbroker, que passa o seu caso para uma consultora.</p>
+          <a href="https://wa.me/5541963491818" target="_blank" rel="noopener noreferrer">Falar no WhatsApp<span className="sr-only"> (abre em nova aba)</span></a>
+        </div>
+        <div>
+          <h2>E-mail</h2>
+          <p>Para enviar documentos ou falar direto com o comercial.</p>
+          <a href="mailto:comercial@irbroker.com.br">comercial@irbroker.com.br</a>
+        </div>
+        <div>
           <h2>Escritórios</h2>
-          <div className="contact-office">
-            <h3>Matriz</h3>
-            <p>
-              Rua José Versolato, 101, 12º andar, Torre A, Centro, São
-              Bernardo do Campo/SP, 09750-730
-            </p>
-            <a
-              className="contact-map-link"
-              href="https://www.google.com/maps/search/?api=1&query=Rua+Jos%C3%A9+Versolato+101+S%C3%A3o+Bernardo+do+Campo+SP"
-              target="_blank"
-              rel="noopener"
-              aria-label="Ver Matriz no mapa (abre em nova aba)"
-            >
-              Ver no mapa
-            </a>
-          </div>
-          <div className="contact-office">
-            <h3>Filial</h3>
-            <p>
-              Av. Presidente Juscelino Kubitschek, 1455, 4º andar, Faria Lima,
-              São Paulo/SP, 04543-011
-            </p>
-            <a
-              className="contact-map-link"
-              href="https://www.google.com/maps/search/?api=1&query=Av.+Presidente+Juscelino+Kubitschek+1455+S%C3%A3o+Paulo+SP"
-              target="_blank"
-              rel="noopener"
-              aria-label="Ver Filial no mapa (abre em nova aba)"
-            >
-              Ver no mapa
-            </a>
-          </div>
+          <p>Matriz em São Bernardo do Campo e filial na Faria Lima, em São Paulo.</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Rua+Jos%C3%A9+Versolato+101+S%C3%A3o+Bernardo+do+Campo+SP" target="_blank" rel="noopener">Matriz no mapa<span className="sr-only"> (abre em nova aba)</span></a>
+          {" · "}
+          <a href="https://www.google.com/maps/search/?api=1&query=Av.+Presidente+Juscelino+Kubitschek+1455+S%C3%A3o+Paulo+SP" target="_blank" rel="noopener">Filial no mapa<span className="sr-only"> (abre em nova aba)</span></a>
         </div>
       </div>
     </section>
+    </>
   );
 }
