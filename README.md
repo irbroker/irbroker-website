@@ -1,6 +1,6 @@
 # Site do Grupo irbroker
 
-Site estático (React + Vite, páginas geradas no build). Repositório: https://github.com/jeffersonvieira-cpu/site-irbroker
+Site estático (React + Vite, páginas geradas no build). Repositório: https://github.com/irbroker/irbroker-website
 
 - `corepack pnpm dev`: servidor local de desenvolvimento.
 - `corepack pnpm check`: verificação de tipos.
